@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { TrendingUp, Users2, Banknote, Building2 } from 'lucide-react';
+import { Activity, Heart, Zap, Target } from 'lucide-react';
 
 const Statistics = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -25,67 +25,63 @@ const Statistics = () => {
   }, []);
   
   return (
-    <section className="section bg-gradient-to-b from-blue-50 to-white py-12" ref={sectionRef}>
+    <section className="section bg-gradient-to-b from-orange-50 to-white py-12" ref={sectionRef}>
       <div className="container text-center">
-        <h2 className="text-4xl font-extrabold text-blue-800 mb-4">Our Promise</h2>
-        <p className="text-xl text-blue-600 mb-10 max-w-3xl mx-auto">
-          Partner with us to transform your workforce and drive sustainable growth
+        <h2 className="text-4xl font-extrabold text-gray-800 mb-4">Why Choose YCFITNESS</h2>
+        <p className="text-xl text-[#FF6B35] mb-10 max-w-3xl mx-auto">
+          Experience the benefits of personalized online training
         </p>
-        
+
         <div className="grid md:grid-cols-4 gap-8">
-          {/* Productivity Boost */}
           <div className="fade-in stat-card group">
-            <div className="w-20 h-20 mx-auto mb-6 bg-[#5BB6FF] rounded-2xl shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-              <TrendingUp className="w-10 h-10 text-white" />
+            <div className="w-20 h-20 mx-auto mb-6 bg-[#FF6B35] rounded-2xl shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+              <Activity className="w-10 h-10 text-white" />
             </div>
-            <div className="text-3xl font-bold text-blue-600 mb-2"></div>
-            <div className="text-xl text-blue-800 font-semibold mb-2">
-              Boost Productivity
+            <div className="text-3xl font-bold text-[#FF6B35] mb-2"></div>
+            <div className="text-xl text-gray-800 font-semibold mb-2">
+              Proven Results
             </div>
-            <p className="text-blue-600">
-              Fresh perspectives and innovative approaches drive efficiency
+            <p className="text-gray-600">
+              Science-backed training methods that deliver measurable progress
             </p>
           </div>
-          
-          {/* Team Growth */}
+
           <div className="fade-in stat-card group" style={{transitionDelay: '0.2s'}}>
-            <div className="w-20 h-20 mx-auto mb-6 bg-[#5BB6FF] rounded-2xl shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-              <Users2 className="w-10 h-10 text-white" />
+            <div className="w-20 h-20 mx-auto mb-6 bg-[#FF6B35] rounded-2xl shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+              <Heart className="w-10 h-10 text-white" />
             </div>
-            <div className="text-3xl font-bold text-blue-600 mb-2"></div>
-            <div className="text-xl text-blue-800 font-semibold mb-2">
-              Team Satisfaction
+            <div className="text-3xl font-bold text-[#FF6B35] mb-2"></div>
+            <div className="text-xl text-gray-800 font-semibold mb-2">
+              Personalized Care
             </div>
-            <p className="text-blue-600">
-              Enhanced workplace culture and collaboration
+            <p className="text-gray-600">
+              One-on-one attention tailored to your unique needs and goals
             </p>
           </div>
-          
-          {/* Cost Savings */}
+
           <div className="fade-in stat-card group" style={{transitionDelay: '0.4s'}}>
-            <div className="w-20 h-20 mx-auto mb-6 bg-[#5BB6FF] rounded-2xl shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-              <Banknote className="w-10 h-10 text-white" />
+            <div className="w-20 h-20 mx-auto mb-6 bg-[#FF6B35] rounded-2xl shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+              <Zap className="w-10 h-10 text-white" />
             </div>
-            <div className="text-3xl font-bold text-blue-600 mb-2"></div>
-            <div className="text-xl text-blue-800 font-semibold mb-2">
-              Cost Reduction
+            <div className="text-3xl font-bold text-[#FF6B35] mb-2"></div>
+            <div className="text-xl text-gray-800 font-semibold mb-2">
+              Train Anywhere
             </div>
-            <p className="text-blue-600">
-              Lower recruitment, wages and time expenses
+            <p className="text-gray-600">
+              Flexibility to workout at home, gym, or on the road
             </p>
           </div>
-          
-          {/* Retention */}
+
           <div className="fade-in stat-card group" style={{transitionDelay: '0.6s'}}>
-            <div className="w-20 h-20 mx-auto mb-6 bg-[#5BB6FF] rounded-2xl shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-              <Building2 className="w-10 h-10 text-white" />
+            <div className="w-20 h-20 mx-auto mb-6 bg-[#FF6B35] rounded-2xl shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+              <Target className="w-10 h-10 text-white" />
             </div>
-            <div className="text-3xl font-bold text-blue-600 mb-2"></div>
-            <div className="text-xl text-blue-800 font-semibold mb-2">
-              Retention Rate
+            <div className="text-3xl font-bold text-[#FF6B35] mb-2"></div>
+            <div className="text-xl text-gray-800 font-semibold mb-2">
+              Expert Guidance
             </div>
-            <p className="text-blue-600">
-              Long-term workforce stability and growth
+            <p className="text-gray-600">
+              Certified trainers with years of experience and proven track records
             </p>
           </div>
         </div>

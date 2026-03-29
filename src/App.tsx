@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Process from "./components/Process";
 import Statistics from "./components/Statistics";
-import Universities from "./components/Universities";
+import Testimonials from "./components/Testimonials";
 import Articles from "./components/Articles";
 import ContactForm from "./components/ContactForm";
 import Pricing from "./components/Pricing";
@@ -36,7 +36,7 @@ function App() {
         <About />
         <Process />
         <Statistics />
-        <Universities />
+        <Testimonials />
         <Articles />
         <ContactForm />
         <Pricing />

@@ -25,28 +25,28 @@ const Articles = () => {
 
   const articles = [
   {
-    title: 'Corporate Crisis: Employee Turnover Solutions',
-    image: 'https://images.pexels.com/photos/8062287/pexels-photo-8062287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    desc: 'Learn how integrating university students into your workforce can address high turnover rates and build a sustainable talent pipeline.',
-    link: 'https://www.shrm.org/topics-tools/news/all-things-work/reducing-employee-turnover',
-    alt: 'Office team discussing ideas',
-    date: 'March 18, 2025',
+    title: 'The Science of Effective Online Personal Training',
+    image: 'https://images.pexels.com/photos/4162449/pexels-photo-4162449.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    desc: 'Discover how virtual coaching combines cutting-edge technology with proven training principles to deliver results that match or exceed in-person training.',
+    link: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8555781/',
+    alt: 'Person training with online guidance',
+    date: 'January 15, 2024',
   },
   {
-    title: 'Students Are Changing the Corporate World',
-    image: 'https://images.pexels.com/photos/9783812/pexels-photo-9783812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    desc: 'Discover how university students are bringing technological proficiency, adaptability, and fresh perspectives that are reshaping traditional business models.',
-    link: 'https://www.aacsb.edu/insights/articles/2024/06/equipping-business-students-for-a-dynamic-future',
-    alt: 'Students collaborating with professionals',
-    date: 'June 18, 2024',
+    title: 'Building Sustainable Fitness Habits',
+    image: 'https://images.pexels.com/photos/4058220/pexels-photo-4058220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    desc: 'Learn the psychology behind lasting lifestyle changes and how personalized coaching helps create habits that stick for the long term.',
+    link: 'https://www.healthline.com/nutrition/how-to-build-healthy-habits',
+    alt: 'Healthy lifestyle habits',
+    date: 'February 8, 2024',
   },
   {
-    title: 'Why You Need to Hire University Students',
-    image: 'https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg',
-    desc: 'University students bring fresh perspectives, innovative ideas, and digital-native skills that can transform your business operations and culture.',
-    link: 'https://www.gradleaders.com/hireuniversitytalent/',
-    alt: 'Young professionals brainstorming',
-    date: 'May 25, 2023',
+    title: 'Why Personalization Matters in Fitness',
+    image: 'https://images.pexels.com/photos/4498606/pexels-photo-4498606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    desc: 'Generic workout plans fail because everyone is unique. Explore how customized training programs accelerate your progress and prevent burnout.',
+    link: 'https://www.verywellfit.com/benefits-of-personal-training-1231142',
+    alt: 'Personalized fitness coaching',
+    date: 'March 3, 2024',
   }
 ]
 ;
@@ -69,7 +69,7 @@ const Articles = () => {
         <p className="text-gray-600 mb-4">{article.desc}</p>
         <a
           href={article.link}
-          className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
+          className="text-[#FF6B35] font-semibold hover:text-[#E55A2B] transition-colors"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -80,12 +80,12 @@ const Articles = () => {
   );
 
   return (
-    <section id="articles" className="section bg-gradient-to-b from-white to-blue-50" ref={sectionRef}>
+    <section id="articles" className="section bg-gradient-to-b from-white to-orange-50" ref={sectionRef}>
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="fade-in mb-6">Industry Insights</h2>
+          <h2 className="fade-in mb-6">Fitness Insights</h2>
           <p className="fade-in text-lg text-gray-600">
-            Discover how university students are transforming the corporate landscape and why your business should be part of this evolution.
+            Expert knowledge and science-backed strategies to help you achieve your fitness goals smarter, not harder.
           </p>
         </div>
 

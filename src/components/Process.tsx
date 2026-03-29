@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { ClipboardCheck, Phone, Users, CheckSquare } from 'lucide-react';
+import { MessageSquare, Calendar, Zap, Trophy } from 'lucide-react';
 
 const Process = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -27,27 +27,27 @@ const Process = () => {
   const steps = [
     {
       step: '1',
-      title: 'Fill Out Initial Form',
-      icon: ClipboardCheck,
-      description: 'Complete our simple contact form with your company details and requirements.',
+      title: 'Free Consultation',
+      icon: MessageSquare,
+      description: 'Share your fitness goals, current level, and any challenges. We discuss what success looks like for you.',
     },
     {
       step: '2',
-      title: 'Consultation Call',
-      icon: Phone,
-      description: "We'll discuss your needs, any staffing challenges, and the ideal candidate profile.",
+      title: 'Custom Program Design',
+      icon: Calendar,
+      description: "Get a personalized training and nutrition plan built around your goals, schedule, and available equipment.",
     },
     {
       step: '3',
-      title: 'Candidate Selection',
-      icon: Users,
-      description: "We'll present you with pre-screened candidates matching your requirements.",
+      title: 'Start Training',
+      icon: Zap,
+      description: "Begin your journey with ongoing coaching support, form feedback, and program adjustments as you progress.",
     },
     {
       step: '4',
-      title: 'Onboarding Support',
-      icon: CheckSquare,
-      description: "We'll help ensure a smooth transition for both you and the student.",
+      title: 'Achieve Your Goals',
+      icon: Trophy,
+      description: "Track your transformation with regular check-ins, celebrate milestones, and build sustainable habits for life.",
     },
   ];
 
@@ -55,17 +55,17 @@ const Process = () => {
     <section id="process" className="section bg-white relative" ref={sectionRef}>
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="fade-in text-3xl font-bold mb-4">How Easy It Is To Work With Us</h2>
-          <p className="fade-in text-lg text-[#5BB6FF] mb-4">
-            We can have candidates ready for you within the next 7 days.
+          <h2 className="fade-in text-3xl font-bold mb-4">Your Journey to Success</h2>
+          <p className="fade-in text-lg text-[#FF6B35] mb-4">
+            Start seeing real results in just 4 weeks.
           </p>
           <p className="fade-in text-gray-600">
-            We are with you throughout every step of the process. Real people from Australia to speak to, real people you can trust.
+            Simple, effective, and personalized. We guide you every step of the way.
           </p>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="absolute left-1/2 top-[3rem] md:top-[2.5rem] bottom-0 w-0.5 bg-[#A5D8FF] transform -translate-x-1/2 z-0 pointer-events-none" />
+          <div className="absolute left-1/2 top-[3rem] md:top-[2.5rem] bottom-0 w-0.5 bg-[#FFB399] transform -translate-x-1/2 z-0 pointer-events-none" />
 
           <div className="relative space-y-20 z-10">
             {steps.map(({ step, title, icon: Icon, description }, index) => {
@@ -85,13 +85,13 @@ const Process = () => {
                 >
                   <div className="relative md:w-1/2 bg-gray-50 rounded-xl p-6 shadow-md">
                     <div
-                      className={`absolute top-[-1.5rem] md:top-1/2 md:-translate-y-1/2 w-10 h-10 bg-[#5BB6FF] rounded-full flex items-center justify-center text-white font-bold text-sm ${numberPosition} ${numberTranslate}`}
+                      className={`absolute top-[-1.5rem] md:top-1/2 md:-translate-y-1/2 w-10 h-10 bg-[#FF6B35] rounded-full flex items-center justify-center text-white font-bold text-sm ${numberPosition} ${numberTranslate}`}
                     >
                       {step}
                     </div>
 
-                    <div className="w-12 h-12 bg-[#CDEBFF] rounded-full flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-[#5BB6FF]" />
+                    <div className="w-12 h-12 bg-[#FFE5DC] rounded-full flex items-center justify-center mb-4">
+                      <Icon className="w-6 h-6 text-[#FF6B35]" />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">{title}</h3>
                     <p className="text-gray-600">{description}</p>
@@ -105,9 +105,9 @@ const Process = () => {
         <div className="mt-16 text-center">
           <a
             href="#contact"
-            className="fade-in inline-block px-6 py-3 rounded-full font-semibold text-white bg-[#5BB6FF] hover:bg-[#48A3EB] transition-colors duration-300 shadow-md"
+            className="fade-in inline-block px-6 py-3 rounded-full font-semibold text-white bg-[#FF6B35] hover:bg-[#E55A2B] transition-colors duration-300 shadow-md"
           >
-            Get Started Today
+            Start Your Transformation
           </a>
         </div>
       </div>
