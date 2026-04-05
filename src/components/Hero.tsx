@@ -82,7 +82,7 @@ const Hero = () => {
               href="#pricing"
               className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all shadow-md font-medium sm:font-semibold text-base sm:text-lg text-center border border-white/30"
             >
-              View Packages
+              Meet coach Zak
             </a>
           </div>
         </div>
