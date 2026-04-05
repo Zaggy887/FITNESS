@@ -76,7 +76,7 @@ const Hero = () => {
               href="#contact"
               className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-white bg-[#FF6B35] hover:bg-[#E55A2B] transition-all shadow-md font-medium sm:font-semibold text-base sm:text-lg text-center"
             >
-              Start Your Journey
+              Book a free call
             </a>
             <a
               href="#pricing"
