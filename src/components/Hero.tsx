@@ -27,7 +27,7 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-black text-white">
-      {/* Background images */}
+      {/* Background slider */}
       <div className="absolute inset-0">
         {backgroundImages.map((img, index) => {
           let backgroundPosition = "center center";
@@ -52,26 +52,23 @@ const Hero = () => {
           );
         })}
 
-        {/* cinematic overlay */}
-        <div className="absolute inset-0 bg-black/35" />
-
-        {/* fade darker toward bottom */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black" />
-
-        {/* darker lower half, but blended not harsh */}
-        <div className="absolute bottom-0 left-0 right-0 h-[46%] bg-gradient-to-b from-transparent to-black" />
+        {/* overlays */}
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black" />
+        <div className="absolute bottom-0 left-0 right-0 h-[42%] bg-black" />
       </div>
 
-      {/* Hero content */}
-      <div className="relative z-10 flex min-h-screen flex-col justify-end px-6 pb-20 pt-28 sm:pb-24 sm:pt-32 lg:pb-28 lg:pt-36">
-        <div className="mx-auto w-full max-w-6xl text-center">
+      {/* Content only, no duplicate nav */}
+      <div className="relative z-10 flex min-h-screen items-end justify-center px-6 pb-16 pt-32 text-center sm:pb-20 sm:pt-36 lg:pb-24 lg:pt-40">
+        <div className="w-full max-w-5xl">
           <div className="mx-auto max-w-4xl">
-            <h1 className="text-5xl font-bold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-[5.5rem]">
-              Personal Training Studio in
+            <h1 className="text-5xl font-bold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
+              Personal Training <br />
+              Studio in
               <span className="block text-[#8C8267]">Elwood</span>
             </h1>
 
-            <p className="mx-auto mt-5 max-w-3xl text-base font-semibold leading-relaxed text-white sm:text-lg md:text-[1.45rem] md:leading-[1.5]">
+            <p className="mx-auto mt-6 max-w-4xl text-lg font-semibold leading-8 text-white sm:text-xl">
               Expert trainers in body composition, dedicated to transforming
               physiques and changing lives with private{" "}
               <span className="text-[#8C8267] underline underline-offset-4">
@@ -84,10 +81,10 @@ const Hero = () => {
               and surrounding suburbs.
             </p>
 
-            <div className="mt-9">
+            <div className="mt-10">
               <a
                 href="#contact"
-                className="inline-flex min-w-[280px] items-center justify-center bg-[#2F3A35] px-10 py-5 text-sm font-semibold uppercase tracking-[0.08em] text-white transition hover:bg-[#39453f]"
+                className="inline-flex min-w-[280px] items-center justify-center bg-[#2F3A35] px-8 py-5 text-sm font-semibold uppercase tracking-[0.08em] text-white transition hover:bg-[#39453f]"
               >
                 Book Free Consultation
               </a>
@@ -96,9 +93,9 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Reviews badge */}
-      <div className="absolute bottom-6 left-4 z-20 sm:bottom-8 sm:left-6">
-        <div className="flex w-[215px] items-start justify-between rounded-2xl bg-white px-5 py-4 text-black shadow-2xl">
+      {/* Review card */}
+      <div className="absolute bottom-6 left-4 z-20 sm:left-6">
+        <div className="flex w-[220px] items-start justify-between rounded-2xl bg-white px-5 py-4 text-black shadow-2xl">
           <div>
             <div className="text-4xl font-semibold leading-none text-[#4285F4]">
               G
