@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Instagram } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -67,44 +67,61 @@ const Navbar = () => {
     }
   };
 
-  const linkClass = (id: string) =>
-    `text-sm font-light tracking-wide transition-colors ${
-      activeSection === id
-        ? 'text-white border-b border-white pb-0.5'
-        : 'text-white/80 hover:text-white'
-    }`;
+  const navLink = (id: string, label: string, mobile = false) => {
+    const base = mobile
+      ? "text-white text-lg font-light hover:text-[#5BB6FF] transition-colors"
+      : `transition-colors ${
+          activeSection === id
+            ? "text-[#5BB6FF] font-medium"
+            : isScrolled
+            ? "text-gray-700 hover:text-[#5BB6FF]"
+            : "text-white hover:text-[#5BB6FF]"
+        }`;
 
-  const mobileLinkClass = (id: string) =>
-    `text-white text-xl font-light tracking-widest uppercase transition-colors hover:text-white/70 ${
-      activeSection === id ? 'border-b border-white pb-0.5' : ''
-    }`;
+    return (
+      <button onClick={() => scrollToSection(id)} className={base}>
+        {label}
+      </button>
+    );
+  };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-black/40 backdrop-blur-sm">
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="/" className="flex flex-col leading-none">
-          <span className="text-white font-black text-xl tracking-tight uppercase">YTC</span>
-          <span className="text-white font-black text-xl tracking-tight uppercase">FITNESS</span>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+      }`}
+    >
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/" className="text-2xl font-bold">
+          <span className={isScrolled ? 'text-black' : 'text-white'}>ONLY</span>
+          <span className="text-[#5BB6FF]">U</span>
+          <span className={isScrolled ? 'text-black' : 'text-white'}>grads</span>
         </a>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center space-x-8">
-          <button onClick={() => scrollToSection('hero')} className={linkClass('hero')}>Home</button>
-          <button onClick={() => scrollToSection('about')} className={linkClass('about')}>About</button>
-          <button onClick={() => scrollToSection('process')} className={linkClass('process')}>Transformations</button>
-          <button onClick={() => scrollToSection('universities')} className={linkClass('universities')}>Elite Program</button>
-          <button onClick={() => scrollToSection('articles')} className={linkClass('articles')}>Nutrition</button>
-          <button onClick={() => scrollToSection('pricing')} className={linkClass('pricing')}>Blog</button>
-          <button onClick={() => scrollToSection('contact')} className={linkClass('contact')}>Contact Us</button>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
-            <Instagram size={18} />
-          </a>
+        <div className="hidden md:flex items-center space-x-6">
+          {navLink("about", "About")}
+          {navLink("process", "Process")}
+          {navLink("universities", "Universities")}
+          {navLink("articles", "Insights")}
+          {navLink("pricing", "Pricing")}
+          {navLink("referral", "Referral")}
+          <button
+            onClick={() => scrollToSection("contact")}
+            className={`px-6 py-2 rounded-full text-white transition-all duration-300 ${
+              activeSection === "contact"
+                ? "bg-[#5BB6FF] bg-opacity-90"
+                : "bg-[#5BB6FF] hover:bg-[#48A3EB]"
+            }`}
+          >
+            Contact Us
+          </button>
         </div>
 
         {/* Hamburger */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-white transition-colors"
+          className={`md:hidden ${isScrolled ? "text-black" : "text-white"} transition-colors`}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -112,30 +129,32 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-lg transition-opacity duration-300 ${
+        className={`md:hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-lg transition-opacity duration-300 ${
           isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
         <div className="absolute top-4 right-4">
           <button
             onClick={() => setIsMenuOpen(false)}
-            className="text-white hover:text-white/70 transition-colors"
+            className="text-white hover:text-[#48A3EB] transition-colors"
           >
             <X size={28} />
           </button>
         </div>
 
-        <div className="h-full flex flex-col items-center justify-center space-y-8 px-6">
-          <button onClick={() => scrollToSection('hero')} className={mobileLinkClass('hero')}>Home</button>
-          <button onClick={() => scrollToSection('about')} className={mobileLinkClass('about')}>About</button>
-          <button onClick={() => scrollToSection('process')} className={mobileLinkClass('process')}>Transformations</button>
-          <button onClick={() => scrollToSection('universities')} className={mobileLinkClass('universities')}>Elite Program</button>
-          <button onClick={() => scrollToSection('articles')} className={mobileLinkClass('articles')}>Nutrition</button>
-          <button onClick={() => scrollToSection('pricing')} className={mobileLinkClass('pricing')}>Blog</button>
-          <button onClick={() => scrollToSection('contact')} className={mobileLinkClass('contact')}>Contact Us</button>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
-            <Instagram size={22} />
-          </a>
+        <div className="h-full flex flex-col items-center justify-center space-y-6 px-6 animate-mobile-nav">
+          {navLink("about", "About", true)}
+          {navLink("process", "Process", true)}
+          {navLink("universities", "Universities", true)}
+          {navLink("articles", "Insights", true)}
+          {navLink("pricing", "Pricing", true)}
+          {navLink("referral", "Referral", true)}
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="mt-4 bg-[#5BB6FF] text-white px-6 py-2 rounded-full text-lg font-medium hover:bg-[#48A3EB] transition"
+          >
+            Contact Us
+          </button>
         </div>
       </div>
     </nav>
