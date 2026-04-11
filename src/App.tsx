@@ -2,7 +2,6 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import StatsBanner from "./components/StatsBanner";
 import UniqueAbout from "./components/UniqueAbout";
-import About from "./components/About";
 import Process from "./components/Process";
 import Statistics from "./components/Statistics";
 import Testimonials from "./components/Testimonials";
@@ -17,7 +16,6 @@ function App() {
       <Hero />
       <StatsBanner />
       <UniqueAbout />
-      <About />
       <Process />
       <Statistics />
       <Testimonials />
