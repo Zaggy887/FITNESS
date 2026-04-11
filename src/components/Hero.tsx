@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Instagram, X } from "lucide-react";
+import { X } from "lucide-react";
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -28,6 +28,7 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-black text-white">
+      {/* Background images */}
       <div className="absolute inset-0 z-0">
         {backgroundImages.map((img, index) => {
           let backgroundPosition = "center";
@@ -50,58 +51,13 @@ const Hero = () => {
           );
         })}
 
+        {/* overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-black/15 to-black/45" />
       </div>
 
-      <header className="absolute top-0 left-0 right-0 z-20">
-        <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-6 lg:px-10">
-          <a href="#" className="leading-none">
-            <div className="text-[34px] font-extrabold tracking-tight uppercase">
-              <span className="block">ELITE</span>
-              <span className="flex items-start gap-1">
-                <span>PHYSIQUES</span>
-                <span className="mt-1 text-[10px] font-semibold tracking-wider">
-                  HQ
-                </span>
-              </span>
-            </div>
-          </a>
-
-          <nav className="hidden items-center gap-8 text-[15px] font-medium text-white/90 lg:flex">
-            <a href="#" className="border-b border-white pb-1">
-              Home
-            </a>
-            <a href="#about" className="hover:text-white">
-              About
-            </a>
-            <a href="#transformations" className="hover:text-white">
-              Transformations
-            </a>
-            <a href="#program" className="hover:text-white">
-              Elite Program
-            </a>
-            <a href="#nutrition" className="hover:text-white">
-              Nutrition
-            </a>
-            <a href="#blog" className="hover:text-white">
-              Blog
-            </a>
-            <a href="#contact" className="hover:text-white">
-              Contact Us
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-white"
-            >
-              <Instagram size={18} strokeWidth={2} />
-            </a>
-          </nav>
-        </div>
-      </header>
-
+      {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col">
+        {/* pushes content down like screenshot */}
         <div className="h-[56vh] sm:h-[58vh] lg:h-[60vh]" />
 
         <div className="flex-1 bg-black px-6 pb-16 pt-10 sm:px-8 sm:pt-14 lg:px-10 lg:pt-16">
@@ -134,6 +90,7 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* Google review card */}
       <div className="absolute bottom-10 left-5 z-30 w-[210px] rounded-2xl bg-white p-4 text-black shadow-2xl sm:left-8">
         <button className="absolute right-2 top-2 text-gray-500 hover:text-black">
           <X size={16} />
