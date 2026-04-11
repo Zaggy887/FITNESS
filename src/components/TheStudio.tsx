@@ -7,12 +7,11 @@ const TheStudio = () => {
           <span className="text-[#7A725E]">STUDIO</span>
         </h2>
 
-        <div className="w-full overflow-hidden mb-6" style={{ maxHeight: '260px' }}>
+        <div className="w-full overflow-hidden mb-6">
           <img
             src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="The Studio"
-            className="w-full object-cover object-center"
-            style={{ height: '260px' }}
+            className="w-full object-cover object-center h-[140px] sm:h-[260px]"
             loading="lazy"
           />
         </div>
