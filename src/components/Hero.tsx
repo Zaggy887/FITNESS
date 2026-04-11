@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-import { X } from "lucide-react";
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-  const [reviewVisible, setReviewVisible] = useState(true);
 
   const backgroundImages = [
     "/Background_2.jpg",
@@ -54,30 +52,6 @@ const Hero = () => {
 
         <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-black/15 to-black/30" />
 
-        {/* Google review card */}
-        {reviewVisible && (
-          <div className="absolute bottom-6 left-5 z-30 w-[200px] rounded-2xl bg-white p-4 text-black shadow-2xl sm:left-8">
-            <button
-              className="absolute right-2 top-2 text-gray-500 hover:text-black"
-              onClick={() => setReviewVisible(false)}
-            >
-              <X size={16} />
-            </button>
-
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-xl font-bold text-[#4285F4] shadow">
-                G
-              </div>
-              <div>
-                <div className="text-3xl font-bold leading-none">5.0</div>
-                <div className="mt-1 text-[22px] leading-none text-[#fbbc05]">
-                  ★★★★★
-                </div>
-                <div className="mt-2 text-sm text-gray-600">82 reviews</div>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
 
       {/* Text content section */}
