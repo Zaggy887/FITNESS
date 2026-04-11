@@ -7,7 +7,6 @@ import Statistics from "./components/Statistics";
 import Testimonials from "./components/Testimonials";
 import Articles from "./components/Articles";
 import ContactForm from "./components/ContactForm";
-import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
 
@@ -39,7 +38,6 @@ function App() {
         <Testimonials />
         <Articles />
         <ContactForm />
-        <Pricing />
         <Footer />
       </div>
     </>
