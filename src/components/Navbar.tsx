@@ -91,12 +91,6 @@ const Navbar = () => {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center space-x-6">
-          {navLink("about", "About")}
-          {navLink("process", "Process")}
-          {navLink("universities", "Universities")}
-          {navLink("articles", "Insights")}
-          {navLink("pricing", "Pricing")}
-          {navLink("referral", "Referral")}
           <button
             onClick={() => scrollToSection("contact")}
             className={`px-6 py-2 rounded-full text-white transition-all duration-300 ${
