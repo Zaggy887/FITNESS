@@ -1,24 +1,24 @@
 const TheStudio = () => {
   return (
-    <section className="bg-[#0a0a0a] text-white py-16">
+    <section className="bg-[#0a0a0a] text-white py-8">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-5xl font-black mb-8 tracking-tight">
+        <h2 className="text-center text-4xl font-black mb-4 tracking-tight">
           <span className="text-white">THE </span>
           <span className="text-[#7A725E]">STUDIO</span>
         </h2>
 
-        <div className="w-full overflow-hidden mb-10" style={{ maxHeight: '420px' }}>
+        <div className="w-full overflow-hidden mb-6" style={{ maxHeight: '260px' }}>
           <img
             src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="The Studio"
             className="w-full object-cover object-center"
-            style={{ height: '420px' }}
+            style={{ height: '260px' }}
             loading="lazy"
           />
         </div>
 
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-white/80 text-base leading-relaxed mb-8">
+          <p className="text-white/80 text-sm leading-relaxed mb-6">
             As Melbourne's only dedicated graduate recruitment agency, we specialise in helping
             companies find exceptional university graduates from top institutions. We also offer
             tailored{' '}
@@ -37,7 +37,7 @@ const TheStudio = () => {
 
           <a
             href="#contact"
-            className="inline-block px-10 py-4 bg-[#2e3d30] text-white font-bold tracking-widest text-sm uppercase hover:opacity-90 transition-opacity"
+            className="inline-block px-10 py-3 bg-[#2e3d30] text-white font-bold tracking-widest text-sm uppercase hover:opacity-90 transition-opacity"
           >
             BOOK FREE CONSULTATION
           </a>
