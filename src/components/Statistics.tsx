@@ -3,7 +3,7 @@ import { Activity, Heart, Zap, Target } from 'lucide-react';
 
 const Statistics = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -15,83 +15,44 @@ const Statistics = () => {
       },
       { threshold: 0.1 }
     );
-    
+
     const elements = sectionRef.current?.querySelectorAll('.fade-in');
     elements?.forEach((el) => observer.observe(el));
-    
+
     return () => {
       elements?.forEach((el) => observer.unobserve(el));
     };
   }, []);
-  
+
   return (
-    <section className="section bg-gradient-to-b from-orange-50 to-white py-12" ref={sectionRef}>
+    <section className="section bg-[#0a0a0a] py-16" ref={sectionRef}>
       <div className="container text-center">
-        <h2 className="text-4xl font-extrabold text-gray-800 mb-4">Why Choose YCFITNESS</h2>
-        <p className="text-xl text-[#FF6B35] mb-10 max-w-3xl mx-auto">
-          Experience the benefits of personalized online training
+        <h2 className="text-3xl font-extrabold text-white mb-3">Why ONLYUgrads</h2>
+        <p className="text-[#7A725E] mb-10 max-w-3xl mx-auto">
+          The edge that sets our candidates apart
         </p>
 
-        <div className="grid md:grid-cols-4 gap-8">
-          <div className="fade-in stat-card group">
-            <div className="w-20 h-20 mx-auto mb-6 bg-[#FF6B35] rounded-2xl shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-              <Activity className="w-10 h-10 text-white" />
+        <div className="grid md:grid-cols-4 gap-6">
+          {[
+            { icon: Activity, label: 'Proven Results', desc: 'Every placement backed by our 90-day guarantee' },
+            { icon: Heart, label: 'Personalised Matching', desc: 'Candidates shortlisted for your role, not a database search' },
+            { icon: Zap, label: 'Fast Turnaround', desc: 'Shortlists delivered within days, not weeks' },
+            { icon: Target, label: 'University Network', desc: 'Direct access to Melbourne\'s top graduating talent' },
+          ].map(({ icon: Icon, label, desc }, i) => (
+            <div
+              key={i}
+              className="fade-in bg-[#111] border border-white/10 rounded-xl p-8 hover:border-[#7A725E]/40 transition-colors duration-300"
+              style={{ transitionDelay: `${i * 0.15}s` }}
+            >
+              <div className="w-14 h-14 mx-auto mb-5 bg-[#7A725E]/20 rounded-xl flex items-center justify-center">
+                <Icon className="w-7 h-7 text-[#7A725E]" />
+              </div>
+              <div className="text-lg text-white font-semibold mb-2">{label}</div>
+              <p className="text-white/55 text-sm">{desc}</p>
             </div>
-            <div className="text-3xl font-bold text-[#FF6B35] mb-2"></div>
-            <div className="text-xl text-gray-800 font-semibold mb-2">
-              Proven Results
-            </div>
-            <p className="text-gray-600">
-              Science-backed training methods that deliver measurable progress
-            </p>
-          </div>
-
-          <div className="fade-in stat-card group" style={{transitionDelay: '0.2s'}}>
-            <div className="w-20 h-20 mx-auto mb-6 bg-[#FF6B35] rounded-2xl shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-              <Heart className="w-10 h-10 text-white" />
-            </div>
-            <div className="text-3xl font-bold text-[#FF6B35] mb-2"></div>
-            <div className="text-xl text-gray-800 font-semibold mb-2">
-              Personalized Care
-            </div>
-            <p className="text-gray-600">
-              One-on-one attention tailored to your unique needs and goals
-            </p>
-          </div>
-
-          <div className="fade-in stat-card group" style={{transitionDelay: '0.4s'}}>
-            <div className="w-20 h-20 mx-auto mb-6 bg-[#FF6B35] rounded-2xl shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-              <Zap className="w-10 h-10 text-white" />
-            </div>
-            <div className="text-3xl font-bold text-[#FF6B35] mb-2"></div>
-            <div className="text-xl text-gray-800 font-semibold mb-2">
-              Train Anywhere
-            </div>
-            <p className="text-gray-600">
-              Flexibility to workout at home, gym, or on the road
-            </p>
-          </div>
-
-          <div className="fade-in stat-card group" style={{transitionDelay: '0.6s'}}>
-            <div className="w-20 h-20 mx-auto mb-6 bg-[#FF6B35] rounded-2xl shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-              <Target className="w-10 h-10 text-white" />
-            </div>
-            <div className="text-3xl font-bold text-[#FF6B35] mb-2"></div>
-            <div className="text-xl text-gray-800 font-semibold mb-2">
-              Expert Guidance
-            </div>
-            <p className="text-gray-600">
-              Certified trainers with years of experience and proven track records
-            </p>
-          </div>
+          ))}
         </div>
       </div>
-
-      <style jsx>{`
-        .stat-card {
-          @apply bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300;
-        }
-      `}</style>
     </section>
   );
 };

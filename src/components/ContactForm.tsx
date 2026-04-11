@@ -90,51 +90,42 @@ const ContactForm = () => {
     }
   };
 
-  const sectionStyle = formType === 'student' 
-    ? 'section bg-gradient-to-b from-purple-50 to-white relative'
-    : 'section bg-gradient-to-b from-sky-100 to-white relative';
-
-  const buttonStyle = formType === 'student'
-    ? 'bg-purple-600 hover:bg-purple-700'
-    : 'bg-sky-400 hover:bg-sky-500';
-
-  const accentColor = formType === 'student' ? 'text-purple-600' : 'text-sky-400';
+  const inputClass = `w-full px-4 py-3 rounded-lg bg-[#111] border border-white/15 text-white placeholder-white/30 focus:ring-2 focus:ring-[#7A725E] focus:border-[#7A725E] outline-none`;
 
   return (
     <section
       id="contact"
-      className={sectionStyle}
+      className="section bg-[#0a0a0a] relative"
       ref={sectionRef}
     >
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="fade-in mb-6">
-            <span className={accentColor}>Start Your Journey</span> With Us
+          <h2 className="fade-in mb-6 text-3xl font-bold text-white">
+            <span className="text-[#7A725E]">Start Your Journey</span> With Us
           </h2>
-          <p className="fade-in text-lg text-gray-600">
+          <p className="fade-in text-lg text-white/60">
             Whether you're a company looking for talent or a student seeking opportunities, we're here to help.
           </p>
         </div>
 
-        {/* Form Type Selection */}
         <div className="max-w-2xl mx-auto mb-8">
           <div className="flex justify-center gap-4">
             <button
               onClick={() => setFormType('company')}
-              className={`px-6 py-3 rounded-full transition-all ${
+              className={`px-6 py-3 transition-all font-medium ${
                 formType === 'company'
-                  ? 'bg-sky-400 text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  ? 'bg-[#7A725E] text-white'
+                  : 'bg-[#111] border border-white/15 text-white/60 hover:border-[#7A725E]/40'
               }`}
             >
               I'm a Company
             </button>
             <button
               onClick={() => setFormType('student')}
-              className={`px-6 py-3 rounded-full transition-all ${
+              className={`px-6 py-3 transition-all font-medium ${
                 formType === 'student'
-                  ? 'bg-purple-600 text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  ? 'bg-[#7A725E] text-white'
+                  : 'bg-[#111] border border-white/15 text-white/60 hover:border-[#7A725E]/40'
               }`}
             >
               I'm a Student
@@ -143,12 +134,12 @@ const ContactForm = () => {
         </div>
 
         {showConfirmation ? (
-          <div className="max-w-md mx-auto text-center bg-white rounded-xl shadow-lg p-8 animate-fade-in">
+          <div className="max-w-md mx-auto text-center bg-[#111] border border-white/10 rounded-xl p-8">
             <div className="mb-6">
-              <CheckCircle className={`w-24 h-24 ${accentColor} mx-auto`} />
+              <CheckCircle className="w-24 h-24 text-[#7A725E] mx-auto" />
             </div>
-            <h3 className={`text-2xl font-bold ${formType === 'student' ? 'text-purple-800' : 'text-sky-600'} mb-2`}>Thank you!</h3>
-            <p className={formType === 'student' ? 'text-purple-700' : 'text-sky-500'}>We'll be in touch with you shortly.</p>
+            <h3 className="text-2xl font-bold text-white mb-2">Thank you!</h3>
+            <p className="text-white/60">We'll be in touch with you shortly.</p>
           </div>
         ) : (
           <div className="max-w-2xl mx-auto">
@@ -156,7 +147,7 @@ const ContactForm = () => {
               name={formType === 'company' ? "contact" : "student-contact"}
               method="POST"
               onSubmit={handleSubmit}
-              className="fade-in bg-white rounded-xl shadow-lg p-8"
+              className="fade-in bg-[#111] border border-white/10 rounded-xl p-8"
               data-netlify="true"
             >
               <input type="hidden" name="form-name" value={formType === 'company' ? "contact" : "student-contact"} />
@@ -168,7 +159,7 @@ const ContactForm = () => {
 
               <div className="space-y-6">
                 <div>
-                  <label htmlFor="fullName" className="block mb-2 font-medium text-gray-700">
+                  <label htmlFor="fullName" className="block mb-2 font-medium text-white/60">
                     Full Name *
                   </label>
                   <input
@@ -178,14 +169,12 @@ const ContactForm = () => {
                     value={formData.fullName}
                     onChange={handleChange}
                     required
-                    className={`w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 ${
-                      formType === 'student' ? 'focus:ring-purple-500 focus:border-purple-500' : 'focus:ring-sky-400 focus:border-sky-400'
-                    }`}
+                    className={inputClass}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block mb-2 font-medium text-gray-700">
+                  <label htmlFor="email" className="block mb-2 font-medium text-white/60">
                     Email *
                   </label>
                   <input
@@ -195,14 +184,12 @@ const ContactForm = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className={`w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 ${
-                      formType === 'student' ? 'focus:ring-purple-500 focus:border-purple-500' : 'focus:ring-sky-400 focus:border-sky-400'
-                    }`}
+                    className={inputClass}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block mb-2 font-medium text-gray-700">
+                  <label htmlFor="phone" className="block mb-2 font-medium text-white/60">
                     Phone Number *
                   </label>
                   <input
@@ -212,14 +199,12 @@ const ContactForm = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className={`w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 ${
-                      formType === 'student' ? 'focus:ring-purple-500 focus:border-purple-500' : 'focus:ring-sky-400 focus:border-sky-400'
-                    }`}
+                    className={inputClass}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block mb-2 font-medium text-gray-700">
+                  <label htmlFor="message" className="block mb-2 font-medium text-white/60">
                     Additional Information
                   </label>
                   <textarea
@@ -228,10 +213,8 @@ const ContactForm = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className={`w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 ${
-                      formType === 'student' ? 'focus:ring-purple-500 focus:border-purple-500' : 'focus:ring-sky-400 focus:border-sky-400'
-                    }`}
-                    placeholder={formType === 'company' 
+                    className={inputClass}
+                    placeholder={formType === 'company'
                       ? "e.g., Employment type (Full-time, Part-time), Role (Accountant, Finance), Industry, Location"
                       : "e.g., University, Course, Year Level, Areas of Interest"
                     }
@@ -243,7 +226,7 @@ const ContactForm = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full btn flex items-center justify-center text-white ${buttonStyle}`}
+                  className="w-full bg-[#2e3d30] hover:opacity-90 text-white py-4 px-6 font-bold uppercase tracking-wider transition-opacity flex items-center justify-center"
                 >
                   {isSubmitting ? (
                     <>

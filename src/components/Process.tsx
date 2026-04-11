@@ -29,43 +29,43 @@ const Process = () => {
       step: '1',
       title: 'Free Consultation',
       icon: MessageSquare,
-      description: 'Share your fitness goals, current level, and any challenges. We discuss what success looks like for you.',
+      description: 'Tell us about the role, your team, and what you need. We listen before we act.',
     },
     {
       step: '2',
-      title: 'Custom Program Design',
+      title: 'Tailored Shortlist',
       icon: Calendar,
-      description: "Get a personalized training and nutrition plan built around your goals, schedule, and available equipment.",
+      description: 'We match and present only candidates that fit your brief — no noise, no bulk sends.',
     },
     {
       step: '3',
-      title: 'Start Training',
+      title: 'Interviews & Placement',
       icon: Zap,
-      description: "Begin your journey with ongoing coaching support, form feedback, and program adjustments as you progress.",
+      description: 'We coordinate interviews and manage the process from first contact to signed offer.',
     },
     {
       step: '4',
-      title: 'Achieve Your Goals',
+      title: 'Ongoing Support',
       icon: Trophy,
-      description: "Track your transformation with regular check-ins, celebrate milestones, and build sustainable habits for life.",
+      description: 'We follow up through the first 90 days. If something changes, we make it right.',
     },
   ];
 
   return (
-    <section id="process" className="section bg-white relative" ref={sectionRef}>
+    <section id="process" className="section bg-[#111] relative" ref={sectionRef}>
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="fade-in text-3xl font-bold mb-4">Your Journey to Success</h2>
-          <p className="fade-in text-lg text-[#FF6B35] mb-4">
-            Start seeing real results in just 4 weeks.
+          <h2 className="fade-in text-3xl font-bold mb-4 text-white">How It Works</h2>
+          <p className="fade-in text-lg text-[#7A725E] mb-4">
+            Simple, fast, and built around your needs.
           </p>
-          <p className="fade-in text-gray-600">
-            Simple, effective, and personalized. We guide you every step of the way.
+          <p className="fade-in text-white/60">
+            We handle the complexity so you can focus on building your team.
           </p>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="absolute left-1/2 top-[3rem] md:top-[2.5rem] bottom-0 w-0.5 bg-[#FFB399] transform -translate-x-1/2 z-0 pointer-events-none" />
+          <div className="absolute left-1/2 top-[3rem] md:top-[2.5rem] bottom-0 w-0.5 bg-[#7A725E]/30 transform -translate-x-1/2 z-0 pointer-events-none" />
 
           <div className="relative space-y-20 z-10">
             {steps.map(({ step, title, icon: Icon, description }, index) => {
@@ -83,18 +83,18 @@ const Process = () => {
                   className={`relative fade-in md:flex ${alignment} items-start`}
                   style={{ transitionDelay: delay }}
                 >
-                  <div className="relative md:w-1/2 bg-gray-50 rounded-xl p-6 shadow-md">
+                  <div className="relative md:w-1/2 bg-[#1a1a1a] border border-white/10 rounded-xl p-6">
                     <div
-                      className={`absolute top-[-1.5rem] md:top-1/2 md:-translate-y-1/2 w-10 h-10 bg-[#FF6B35] rounded-full flex items-center justify-center text-white font-bold text-sm ${numberPosition} ${numberTranslate}`}
+                      className={`absolute top-[-1.5rem] md:top-1/2 md:-translate-y-1/2 w-10 h-10 bg-[#7A725E] rounded-full flex items-center justify-center text-white font-bold text-sm ${numberPosition} ${numberTranslate}`}
                     >
                       {step}
                     </div>
 
-                    <div className="w-12 h-12 bg-[#FFE5DC] rounded-full flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-[#FF6B35]" />
+                    <div className="w-12 h-12 bg-[#7A725E]/20 rounded-full flex items-center justify-center mb-4">
+                      <Icon className="w-6 h-6 text-[#7A725E]" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">{title}</h3>
-                    <p className="text-gray-600">{description}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
+                    <p className="text-white/60">{description}</p>
                   </div>
                 </div>
               );
@@ -105,24 +105,12 @@ const Process = () => {
         <div className="mt-16 text-center">
           <a
             href="#contact"
-            className="fade-in inline-block px-6 py-3 rounded-full font-semibold text-white bg-[#FF6B35] hover:bg-[#E55A2B] transition-colors duration-300 shadow-md"
+            className="fade-in inline-block px-8 py-3 font-semibold text-white bg-[#2e3d30] hover:opacity-90 transition-opacity duration-300"
           >
-            Start Your Transformation
+            Get Started
           </a>
         </div>
       </div>
-
-      <style jsx>{`
-        .fade-in {
-          opacity: 0;
-          transform: translateY(20px);
-          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in.visible {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      `}</style>
     </section>
   );
 };

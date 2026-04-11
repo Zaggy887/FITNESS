@@ -96,34 +96,21 @@ const ReferralForm = () => {
     }
   };
 
-  const getAccentColor = (type: 'text' | 'bg' | 'border' | 'hover') => {
-    if (referralType === 'student') {
-      switch (type) {
-        case 'text': return 'text-purple-600';
-        case 'bg': return 'bg-purple-600';
-        case 'border': return 'border-purple-600';
-        case 'hover': return 'hover:bg-purple-700';
-      }
-    }
-    return type === 'text' ? 'text-sky-400' : 
-           type === 'bg' ? 'bg-sky-400' : 
-           type === 'border' ? 'border-sky-400' : 
-           'hover:bg-sky-500';
-  };
+  const inputClass = `w-full px-4 py-3 rounded-lg bg-[#0a0a0a] border border-white/15 text-white placeholder-white/30 focus:ring-2 focus:ring-[#7A725E] focus:border-[#7A725E] outline-none`;
 
   return (
     <div className="max-w-4xl mx-auto">
       {showConfirmation ? (
-        <div className="text-center bg-white rounded-xl shadow-lg p-8 animate-fade-in">
+        <div className="text-center bg-[#1a1a1a] border border-white/10 rounded-xl p-8">
           <div className="mb-6">
-            <CheckCircle className={`w-24 h-24 ${referralType === 'student' ? 'text-purple-600' : 'text-sky-400'} mx-auto`} />
+            <CheckCircle className="w-24 h-24 text-[#7A725E] mx-auto" />
           </div>
-          <h3 className={`text-2xl font-bold ${referralType === 'student' ? 'text-purple-800' : 'text-sky-600'} mb-2`}>Thank you!</h3>
-          <p className={referralType === 'student' ? 'text-purple-700' : 'text-sky-500'}>We'll be in touch with you shortly.</p>
-          
+          <h3 className="text-2xl font-bold text-white mb-2">Thank you!</h3>
+          <p className="text-white/60">We'll be in touch with you shortly.</p>
+
           <button
             onClick={resetForm}
-            className={`inline-flex items-center justify-center px-6 py-3 ${referralType === 'student' ? 'bg-purple-600 hover:bg-purple-700' : 'bg-sky-400 hover:bg-sky-500'} text-white rounded-full transition-colors mt-6`}
+            className="inline-flex items-center justify-center px-6 py-3 bg-[#2e3d30] text-white rounded-none transition-opacity hover:opacity-90 mt-6"
           >
             <ArrowRight className="w-5 h-5 mr-2" />
             Submit Another Referral
@@ -132,58 +119,56 @@ const ReferralForm = () => {
       ) : (
         <>
           <div className="grid md:grid-cols-2 gap-6 mb-8">
-            {/* Company Referral Card */}
             <div
-              className={`p-6 rounded-xl shadow-md cursor-pointer transition-all duration-300 ${
-                referralType === 'company' 
-                  ? 'bg-sky-50 border-2 border-sky-400' 
-                  : 'bg-white hover:bg-sky-50 border border-gray-200'
+              className={`p-6 rounded-xl cursor-pointer transition-all duration-300 border ${
+                referralType === 'company'
+                  ? 'bg-[#7A725E]/10 border-[#7A725E]'
+                  : 'bg-[#1a1a1a] border-white/10 hover:border-[#7A725E]/40'
               }`}
               onClick={() => handleReferralTypeSelect('company')}
             >
               <div className="flex items-center mb-4">
-                <Gift className={`w-8 h-8 ${referralType === 'company' ? 'text-sky-400' : 'text-gray-400'}`} />
-                <h3 className="text-xl font-semibold ml-3">Refer a Company</h3>
+                <Gift className={`w-8 h-8 ${referralType === 'company' ? 'text-[#7A725E]' : 'text-white/40'}`} />
+                <h3 className="text-xl font-semibold ml-3 text-white">Refer a Company</h3>
               </div>
-              
+
               <div className="mb-4">
-                <div className="text-3xl font-bold text-sky-400">$1000</div>
-                <p className="text-gray-600">Reward per successful hire</p>
+                <div className="text-3xl font-bold text-[#7A725E]">$1000</div>
+                <p className="text-white/50">Reward per successful hire</p>
               </div>
-              
-              <p className="text-gray-600 text-sm">
+
+              <p className="text-white/50 text-sm">
                 Know a company looking for top student talent? Help them find exceptional graduates while earning rewards.
               </p>
             </div>
 
-            {/* Student Referral Card */}
             <div
-              className={`p-6 rounded-xl shadow-md cursor-pointer transition-all duration-300 ${
-                referralType === 'student' 
-                  ? 'bg-purple-50 border-2 border-purple-600' 
-                  : 'bg-white hover:bg-purple-50 border border-gray-200'
+              className={`p-6 rounded-xl cursor-pointer transition-all duration-300 border ${
+                referralType === 'student'
+                  ? 'bg-[#7A725E]/10 border-[#7A725E]'
+                  : 'bg-[#1a1a1a] border-white/10 hover:border-[#7A725E]/40'
               }`}
               onClick={() => handleReferralTypeSelect('student')}
             >
               <div className="flex items-center mb-4">
-                <Users className={`w-8 h-8 ${referralType === 'student' ? 'text-purple-600' : 'text-gray-400'}`} />
-                <h3 className="text-xl font-semibold ml-3">Refer a Student</h3>
+                <Users className={`w-8 h-8 ${referralType === 'student' ? 'text-[#7A725E]' : 'text-white/40'}`} />
+                <h3 className="text-xl font-semibold ml-3 text-white">Refer a Student</h3>
               </div>
-              
+
               <div className="mb-4">
-                <div className="text-3xl font-bold text-purple-600">$250</div>
-                <p className="text-gray-600">Reward per successful hire</p>
+                <div className="text-3xl font-bold text-[#7A725E]">$250</div>
+                <p className="text-white/50">Reward per successful hire</p>
               </div>
-              
-              <p className="text-gray-600 text-sm">
+
+              <p className="text-white/50 text-sm">
                 Know a talented student seeking opportunities? Help them kickstart their career journey.
               </p>
             </div>
           </div>
 
           {referralType && (
-            <div ref={formRef} className="bg-white rounded-xl shadow-md p-8 transition-all duration-300 border border-gray-200">
-              <h3 className={`text-2xl font-bold text-center mb-8 ${getAccentColor('text')}`}>
+            <div ref={formRef} className="bg-[#1a1a1a] border border-white/10 rounded-xl p-8 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-center mb-8 text-[#7A725E]">
                 {referralType === 'company' ? 'Company Referral Form' : 'Student Referral Form'}
               </h3>
 
@@ -203,37 +188,29 @@ const ReferralForm = () => {
                 </p>
 
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-700 mb-4">Your Information</h4>
+                  <h4 className="text-lg font-semibold text-white/80 mb-4">Your Information</h4>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block mb-2 font-medium text-gray-600">Your Name *</label>
+                      <label className="block mb-2 font-medium text-white/60">Your Name *</label>
                       <input
                         type="text"
                         name="referrerName"
                         value={formData.referrerName}
                         onChange={handleChange}
                         required
-                        className={`w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 ${
-                          referralType === 'student' 
-                            ? 'focus:ring-purple-500 focus:border-purple-500' 
-                            : 'focus:ring-sky-400 focus:border-sky-400'
-                        }`}
+                        className={inputClass}
                         placeholder="Enter your full name"
                       />
                     </div>
                     <div>
-                      <label className="block mb-2 font-medium text-gray-600">Your Email *</label>
+                      <label className="block mb-2 font-medium text-white/60">Your Email *</label>
                       <input
                         type="email"
                         name="referrerEmail"
                         value={formData.referrerEmail}
                         onChange={handleChange}
                         required
-                        className={`w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 ${
-                          referralType === 'student' 
-                            ? 'focus:ring-purple-500 focus:border-purple-500' 
-                            : 'focus:ring-sky-400 focus:border-sky-400'
-                        }`}
+                        className={inputClass}
                         placeholder="Enter your email"
                       />
                     </div>
@@ -245,24 +222,20 @@ const ReferralForm = () => {
                         name="isAnonymous"
                         checked={formData.isAnonymous}
                         onChange={handleChange}
-                        className={`form-checkbox h-5 w-5 rounded border-gray-300 ${
-                          referralType === 'student' 
-                            ? 'text-purple-600 focus:ring-purple-500' 
-                            : 'text-sky-400 focus:ring-sky-400'
-                        }`}
+                        className="form-checkbox h-5 w-5 rounded border-white/20 text-[#7A725E] focus:ring-[#7A725E]"
                       />
-                      <span className="ml-2 text-gray-600">Keep my referral anonymous</span>
+                      <span className="ml-2 text-white/60">Keep my referral anonymous</span>
                     </label>
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-700 mb-4">
+                  <h4 className="text-lg font-semibold text-white/80 mb-4">
                     {referralType === 'company' ? 'Company Information' : 'Student Information'}
                   </h4>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block mb-2 font-medium text-gray-600">
+                      <label className="block mb-2 font-medium text-white/60">
                         {referralType === 'company' ? 'Company Name *' : 'Student Name *'}
                       </label>
                       <input
@@ -271,16 +244,12 @@ const ReferralForm = () => {
                         value={formData.referralName}
                         onChange={handleChange}
                         required
-                        className={`w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 ${
-                          referralType === 'student' 
-                            ? 'focus:ring-purple-500 focus:border-purple-500' 
-                            : 'focus:ring-sky-400 focus:border-sky-400'
-                        }`}
+                        className={inputClass}
                         placeholder={`Enter ${referralType === 'company' ? 'company' : 'student'} name`}
                       />
                     </div>
                     <div>
-                      <label className="block mb-2 font-medium text-gray-600">
+                      <label className="block mb-2 font-medium text-white/60">
                         {referralType === 'company' ? 'Company Email *' : 'Student Email *'}
                       </label>
                       <input
@@ -289,16 +258,12 @@ const ReferralForm = () => {
                         value={formData.referralEmail}
                         onChange={handleChange}
                         required
-                        className={`w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 ${
-                          referralType === 'student' 
-                            ? 'focus:ring-purple-500 focus:border-purple-500' 
-                            : 'focus:ring-sky-400 focus:border-sky-400'
-                        }`}
+                        className={inputClass}
                         placeholder={`Enter ${referralType === 'company' ? 'company' : 'student'} email`}
                       />
                     </div>
                     <div>
-                      <label className="block mb-2 font-medium text-gray-600">
+                      <label className="block mb-2 font-medium text-white/60">
                         {referralType === 'company' ? 'Company Phone' : 'Student Phone'}
                       </label>
                       <input
@@ -306,26 +271,18 @@ const ReferralForm = () => {
                         name="referralPhone"
                         value={formData.referralPhone}
                         onChange={handleChange}
-                        className={`w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 ${
-                          referralType === 'student' 
-                            ? 'focus:ring-purple-500 focus:border-purple-500' 
-                            : 'focus:ring-sky-400 focus:border-sky-400'
-                        }`}
+                        className={inputClass}
                         placeholder="Enter phone number (optional)"
                       />
                     </div>
                     <div className="md:col-span-2">
-                      <label className="block mb-2 font-medium text-gray-600">Additional Information</label>
+                      <label className="block mb-2 font-medium text-white/60">Additional Information</label>
                       <textarea
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
                         rows={4}
-                        className={`w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 ${
-                          referralType === 'student' 
-                            ? 'focus:ring-purple-500 focus:border-purple-500' 
-                            : 'focus:ring-sky-400 focus:border-sky-400'
-                        }`}
+                        className={inputClass}
                         placeholder={referralType === 'company'
                           ? "Tell us about the company (e.g., industry, size, location)"
                           : "Tell us about the student (e.g., university, major, graduation year)"}
@@ -338,7 +295,7 @@ const ReferralForm = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full ${getAccentColor('bg')} ${getAccentColor('hover')} text-white py-3 px-6 rounded-full font-medium transition-colors flex items-center justify-center`}
+                    className="w-full bg-[#2e3d30] hover:opacity-90 text-white py-3 px-6 font-medium transition-opacity flex items-center justify-center"
                   >
                     {isSubmitting ? (
                       <>
@@ -349,7 +306,7 @@ const ReferralForm = () => {
                       'Submit Referral'
                     )}
                   </button>
-                  <p className="text-xs text-gray-500 text-center mt-4">
+                  <p className="text-xs text-white/30 text-center mt-4">
                     * Terms and conditions apply. Rewards are paid on the condition of successful placement and after completion of probation period.
                   </p>
                 </div>
