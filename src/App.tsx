@@ -3,7 +3,6 @@ import Hero from "./components/Hero";
 import StatsBanner from "./components/StatsBanner";
 import UniqueAbout from "./components/UniqueAbout";
 import Process from "./components/Process";
-import WhyUs from "./components/WhyUs";
 import Testimonials from "./components/Testimonials";
 import Articles from "./components/Articles";
 import ContactForm from "./components/ContactForm";
@@ -17,7 +16,6 @@ function App() {
       <StatsBanner />
       <UniqueAbout />
       <Process />
-      <WhyUs />
       <Testimonials />
       <Articles />
       <ContactForm />
