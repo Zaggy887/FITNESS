@@ -62,7 +62,7 @@ const Hero = () => {
               Personal Training Studio{" "}
               <span className="text-[#7A725E]">in</span>
             </span>
-            <span className="block text-[#7A725E] text-5xl sm:text-6xl lg:text-[78px] mt-1">
+            <span className="block text-[#7A725E] text-4xl sm:text-5xl lg:text-[62px] mt-1">
               Elwood
             </span>
           </h1>
