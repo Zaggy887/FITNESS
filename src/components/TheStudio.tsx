@@ -6,16 +6,18 @@ const TheStudio = () => {
           <span className="text-white">THE </span>
           <span className="text-[#7A725E]">STUDIO</span>
         </h2>
+      </div>
 
-        <div className="w-full overflow-hidden mb-6">
-          <img
-            src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt="The Studio"
-            className="w-full object-cover object-center h-[140px] sm:h-[260px]"
-            loading="lazy"
-          />
-        </div>
+      <div className="w-full overflow-hidden mb-6">
+        <img
+          src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1600"
+          alt="The Studio"
+          className="w-full object-cover object-center h-[140px] sm:h-[260px]"
+          loading="lazy"
+        />
+      </div>
 
+      <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-white/80 text-sm leading-relaxed mb-6">
             As Melbourne's only dedicated graduate recruitment agency, we specialise in helping
@@ -41,7 +43,7 @@ const TheStudio = () => {
             BOOK FREE CONSULTATION
           </a>
         </div>
-      </div>
+        </div>
     </section>
   );
 };
