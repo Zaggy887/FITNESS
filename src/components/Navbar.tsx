@@ -2,14 +2,11 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-
       const sections = document.querySelectorAll('section[id]');
       let current = '';
       let maxVisible = 0;
@@ -39,7 +36,7 @@ const Navbar = () => {
       setActiveSection(current);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -73,8 +70,6 @@ const Navbar = () => {
       : `transition-colors ${
           activeSection === id
             ? "text-[#5BB6FF] font-medium"
-            : isScrolled
-            ? "text-gray-700 hover:text-[#5BB6FF]"
             : "text-white hover:text-[#5BB6FF]"
         }`;
 
@@ -86,16 +81,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
-      }`}
-    >
+    <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="/" className="text-2xl font-bold">
-          <span className={isScrolled ? 'text-black' : 'text-white'}>ONLY</span>
+          <span className="text-white">ONLY</span>
           <span className="text-[#5BB6FF]">U</span>
-          <span className={isScrolled ? 'text-black' : 'text-white'}>grads</span>
+          <span className="text-white">grads</span>
         </a>
 
         {/* Desktop */}
@@ -121,7 +112,7 @@ const Navbar = () => {
         {/* Hamburger */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className={`md:hidden ${isScrolled ? "text-black" : "text-white"} transition-colors`}
+          className="md:hidden text-white transition-colors"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
