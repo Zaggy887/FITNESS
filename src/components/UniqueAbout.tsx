@@ -39,10 +39,6 @@ const UniqueAbout = () => {
         <h2 className="fade-in text-4xl md:text-5xl font-extrabold text-white uppercase leading-tight mb-1 tracking-tight">
           WHAT <span className="text-[#7A725E]">WE GIVE YOU</span>
         </h2>
-        <h2 className="fade-in text-4xl md:text-5xl font-extrabold text-[#7A725E] uppercase leading-tight mb-10 tracking-tight">
-          StrengthHubOnline
-        </h2>
-
         <p className="fade-in text-white font-semibold text-sm uppercase tracking-widest mb-6">
           Give a man a fish and he eats for a day. Teach him to fish and he eats for a lifetime.
         </p>
