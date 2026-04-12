@@ -83,10 +83,17 @@ const Navbar = () => {
   return (
     <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        
+        {/* Logo */}
         <a href="/" className="flex flex-col leading-none">
-          <span className="text-white font-black uppercase tracking-tight text-2xl sm:text-3xl">STRENGTH</span>
+          <span className="text-white font-black uppercase tracking-tight text-2xl sm:text-3xl">
+            STRENGTH
+          </span>
           <span className="text-white font-black italic uppercase tracking-tight text-xl sm:text-2xl -mt-1">
-            HUB<sup className="text-white text-xs font-bold not-italic align-super ml-0.5">ONLINE</sup>
+            HUB
+            <sup className="text-white text-xs font-bold not-italic align-super ml-0.5">
+              ONLINE
+            </sup>
           </span>
         </a>
 
@@ -94,11 +101,11 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-6">
           <button
             onClick={() => scrollToSection("contact")}
-            className={`px-6 py-2 rounded-full text-black font-semibold transition-all duration-300 ${
-              activeSection === "contact"
-                ? "bg-white bg-opacity-90"
-                : "bg-white hover:bg-gray-200"
-            }`}
+            className="px-5 py-2 rounded-full text-white/90 font-medium 
+                       border border-white/30 
+                       bg-white/10 backdrop-blur-md 
+                       hover:bg-white/20 hover:border-white/50 
+                       transition-all duration-300"
           >
             Contact Us
           </button>
@@ -107,7 +114,11 @@ const Navbar = () => {
         {/* Mobile Contact Button */}
         <button
           onClick={() => scrollToSection("contact")}
-          className="md:hidden px-5 py-2 rounded-full text-black font-semibold bg-white hover:bg-gray-200 transition-all duration-300"
+          className="md:hidden px-5 py-2 rounded-full text-white/90 font-medium 
+                     border border-white/30 
+                     bg-white/10 backdrop-blur-md 
+                     hover:bg-white/20 hover:border-white/50 
+                     transition-all duration-300"
         >
           Contact Us
         </button>
@@ -119,6 +130,7 @@ const Navbar = () => {
           isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
+        {/* Close */}
         <div className="absolute top-4 right-4">
           <button
             onClick={() => setIsMenuOpen(false)}
@@ -128,6 +140,7 @@ const Navbar = () => {
           </button>
         </div>
 
+        {/* Links */}
         <div className="h-full flex flex-col items-center justify-center space-y-6 px-6 animate-mobile-nav">
           {navLink("about", "About", true)}
           {navLink("process", "Process", true)}
@@ -135,9 +148,15 @@ const Navbar = () => {
           {navLink("articles", "Insights", true)}
           {navLink("pricing", "Pricing", true)}
           {navLink("referral", "Referral", true)}
+
+          {/* Mobile CTA */}
           <button
             onClick={() => scrollToSection("contact")}
-            className="mt-4 bg-[#5BB6FF] text-white px-6 py-2 rounded-full text-lg font-medium hover:bg-[#48A3EB] transition"
+            className="mt-4 px-6 py-2 rounded-full text-white/90 font-medium 
+                       border border-white/30 
+                       bg-white/10 backdrop-blur-md 
+                       hover:bg-white/20 hover:border-white/50 
+                       transition-all duration-300"
           >
             Contact Us
           </button>
