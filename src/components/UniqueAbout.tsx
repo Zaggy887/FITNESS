@@ -44,15 +44,15 @@ const UniqueAbout = () => {
         </h2>
 
         <p className="fade-in text-white font-semibold text-sm uppercase tracking-widest mb-6">
-          We're not a generic fitness app — we are online personal training specialists.
+          Built for people who want structure, support, and a program that actually fits their life.
         </p>
 
         <p className="fade-in text-white font-bold text-lg md:text-xl leading-relaxed mb-6">
-          Every client we work with receives an individually designed program based on their goals, training history, and lifestyle — ensuring you only follow a plan that's built to work for you from day one.
+          We tailor every program to the individual, taking into account your goals, experience level, schedule, and lifestyle. We also place a strong focus on accountability, helping you stay consistent and make progress over time.
         </p>
 
         <p className="fade-in text-white/70 font-semibold italic text-sm md:text-base leading-relaxed">
-          Whether you want to lose body fat, build muscle, or improve your overall fitness, we design a personalised program and support you through every step of your transformation.
+          Our coaching team includes experienced bodybuilding, powerlifting, lifestyle, and weight loss coaches, so whether you are new to training or looking to take things further, you can work with someone who suits your goals.
         </p>
       </div>
     </section>
