@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { MessageSquare, Calendar, Zap, Trophy } from 'lucide-react';
+import { MessageSquare, Phone, Rocket } from 'lucide-react';
 
 const Process = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -27,27 +27,21 @@ const Process = () => {
   const steps = [
     {
       step: '1',
-      title: 'Free Consultation',
+      title: 'Get in Touch',
       icon: MessageSquare,
-      description: 'Tell us about your goals, training history, and lifestyle. We listen before we build.',
+      description: 'Contact us below and tell us a bit about yourself, your goals, and what you\'re looking to achieve.',
     },
     {
       step: '2',
-      title: 'Custom Program Design',
-      icon: Calendar,
-      description: 'We create a fully personalised training and nutrition plan built around you — not a template.',
+      title: 'Free Consultation',
+      icon: Phone,
+      description: 'We\'ll organise a free consultation to discuss your goals in detail and how we can best support you.',
     },
     {
       step: '3',
-      title: 'Start Training',
-      icon: Zap,
-      description: 'Access your program online, train on your schedule, and log your sessions with ease.',
-    },
-    {
-      step: '4',
-      title: 'Ongoing Coaching',
-      icon: Trophy,
-      description: 'Regular check-ins, program adjustments, and support to keep you progressing every week.',
+      title: 'Start Your Journey',
+      icon: Rocket,
+      description: 'If it\'s a good fit, we\'ll get you set up straight away with a clear plan and ongoing support to put you in the best position to succeed.',
     },
   ];
 
