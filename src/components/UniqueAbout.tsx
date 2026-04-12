@@ -52,7 +52,7 @@ const UniqueAbout = () => {
         </p>
 
         <p className="fade-in text-white/80 font-semibold text-sm md:text-base leading-relaxed mb-4">
-          Our coaches have real experience across powerlifting, bodybuilding, lifestyle coaching and weight loss, so you are learning from people who have genuinely been through it themselves.
+          Our coaches have real experience across powerlifting, bodybuilding, weight loss and overall lifestyle consulting, so you'll be taught from people who have genuinely been through it themselves.
         </p>
 
         <p className="fade-in text-white/70 italic text-sm md:text-base leading-relaxed">
