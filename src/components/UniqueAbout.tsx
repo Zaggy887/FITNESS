@@ -37,7 +37,7 @@ const UniqueAbout = () => {
 
       <div className="container relative z-10 text-center max-w-3xl mx-auto">
         <h2 className="fade-in text-4xl md:text-5xl font-extrabold text-white uppercase leading-tight mb-1 tracking-tight">
-          WHAT <span className="text-[#7A725E]">WE GIVE YOU</span>
+          WHAT <span className="text-[#7A725E]">WE'll GIVE YOU</span>
         </h2>
         <p className="fade-in text-white font-semibold text-sm uppercase tracking-widest mb-6">
           "If I give you a fish, you'll eat for a day. If I teach you how to fish, you'll eat for a lifetime."
