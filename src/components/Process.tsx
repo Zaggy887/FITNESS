@@ -49,7 +49,7 @@ const Process = () => {
     <section id="process" className="section bg-[#111] relative" ref={sectionRef}>
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="fade-in text-3xl font-bold mb-4">How to <span className="text-[#7A725E]">Begin</span></h2>
+          <h2 className="fade-in text-3xl font-bold mb-4">Where to <span className="text-[#7A725E]">Start</span></h2>
           <p className="fade-in text-lg text-[#7A725E] mb-4">
             It's simple, effective, and built around your life.
           </p>
