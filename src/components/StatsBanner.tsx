@@ -13,27 +13,27 @@ const StatsBanner = () => {
           OF CLIENTS
         </h2>
 
-        <div className="flex flex-col md:flex-row justify-center gap-12 md:gap-24">
-          <div className="flex flex-col items-center text-center">
-            <Handshake className="w-9 h-9 text-[#7A725E] mb-4" strokeWidth={1.5} />
-            <span className="text-white font-bold text-3xl">200+</span>
-            <span className="text-white/60 text-sm font-semibold uppercase tracking-widest mt-1 leading-tight">
+        <div className="flex flex-row md:flex-row justify-center gap-6 md:gap-24">
+          <div className="flex flex-col items-center text-center flex-1 md:flex-none">
+            <Handshake className="w-6 h-6 md:w-9 md:h-9 text-[#7A725E] mb-2 md:mb-4" strokeWidth={1.5} />
+            <span className="text-white font-bold text-xl md:text-3xl">200+</span>
+            <span className="text-white/60 text-[10px] md:text-sm font-semibold uppercase tracking-widest mt-1 leading-tight">
               CLIENTS<br />COACHED
             </span>
           </div>
 
-          <div className="flex flex-col items-center text-center">
-            <Star className="w-9 h-9 text-[#7A725E] mb-4" strokeWidth={1.5} />
-            <span className="text-white font-bold text-3xl">5★</span>
-            <span className="text-white/60 text-sm font-semibold uppercase tracking-widest mt-1 leading-tight">
+          <div className="flex flex-col items-center text-center flex-1 md:flex-none">
+            <Star className="w-6 h-6 md:w-9 md:h-9 text-[#7A725E] mb-2 md:mb-4" strokeWidth={1.5} />
+            <span className="text-white font-bold text-xl md:text-3xl">5★</span>
+            <span className="text-white/60 text-[10px] md:text-sm font-semibold uppercase tracking-widest mt-1 leading-tight">
               AVERAGE<br />RATING
             </span>
           </div>
 
-          <div className="flex flex-col items-center text-center">
-            <Briefcase className="w-9 h-9 text-[#7A725E] mb-4" strokeWidth={1.5} />
-            <span className="text-white font-bold text-3xl">15+</span>
-            <span className="text-white/60 text-sm font-semibold uppercase tracking-widest mt-1 leading-tight">
+          <div className="flex flex-col items-center text-center flex-1 md:flex-none">
+            <Briefcase className="w-6 h-6 md:w-9 md:h-9 text-[#7A725E] mb-2 md:mb-4" strokeWidth={1.5} />
+            <span className="text-white font-bold text-xl md:text-3xl">15+</span>
+            <span className="text-white/60 text-[10px] md:text-sm font-semibold uppercase tracking-widest mt-1 leading-tight">
               COUNTRIES<br />SERVED
             </span>
           </div>
