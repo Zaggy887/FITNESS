@@ -21,23 +21,23 @@ const Hero = () => {
         <div className="mx-auto max-w-[860px] text-center">
           <h1 className="font-extrabold tracking-tight leading-tight">
             <span className="block text-white text-3xl sm:text-4xl lg:text-[48px]">
-              Personal Training Studio{" "}
-              <span className="text-[#7A725E]">in</span>
+              Online Personal Training{" "}
+              <span className="text-[#7A725E]">built for</span>
             </span>
             <span className="block text-[#7A725E] text-3xl sm:text-4xl lg:text-[48px] mt-1">
-              Elwood
+              Real Results
             </span>
           </h1>
 
           <p className="mx-auto mt-5 max-w-[700px] text-sm font-bold leading-6 text-white sm:text-base sm:leading-7">
-            Expert trainers in body composition, dedicated to transforming
-            physiques and changing lives with private{" "}
-            <span className="text-[#7A725E] underline underline-offset-2">1-on-1 training in Elwood</span>.{" "}
-            Also proudly supporting clients across{" "}
+            Expert coaches in body composition, dedicated to transforming
+            physiques and changing lives with{" "}
+            <span className="text-[#7A725E] underline underline-offset-2">personalised 1-on-1 online coaching</span>.{" "}
+            Train from anywhere with{" "}
             <span className="text-[#7A725E] underline underline-offset-2">
-              Elwood, Elsternwick, Brighton, St Kilda, Balaclava
+              StrengthHubOnline
             </span>{" "}
-            and surrounding suburbs.
+            — your coach, your schedule, your results.
           </p>
 
           <div className="mt-7">

@@ -27,20 +27,20 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: 'Sarah M.',
-      result: 'Hired within 2 weeks',
-      quote: 'ONLYUgrads sent us three candidates. All three were exceptional. We ended up hiring one full-time and bringing another back as a contractor. The quality was unlike anything we\'d seen from traditional job boards.',
+      result: 'Lost 12kg in 4 months',
+      quote: 'StrengthHubOnline completely changed how I approach fitness. The personalised plan fit around my work schedule and the weekly check-ins kept me accountable. I\'ve never felt stronger or more confident.',
       image: 'https://images.pexels.com/photos/3768722/pexels-photo-3768722.jpeg?auto=compress&cs=tinysrgb&w=400',
     },
     {
       name: 'Michael T.',
-      result: 'Finance graduate placed',
-      quote: 'I was hesitant about using a recruiter, but ONLYUgrads actually understood what we needed. They didn\'t waste our time with irrelevant CVs. Straightforward, professional, and the hire has been fantastic.',
+      result: 'Gained 8kg of muscle',
+      quote: 'I was sceptical about online coaching but StrengthHubOnline proved me wrong. My coach understood exactly what I needed and the program was tailored perfectly. The results have been incredible.',
       image: 'https://images.pexels.com/photos/4058316/pexels-photo-4058316.jpeg?auto=compress&cs=tinysrgb&w=400',
     },
     {
       name: 'Emma L.',
-      result: 'Internship turned permanent',
-      quote: 'We brought on a Monash grad through ONLYUgrads for a 3-month internship. Twelve months later, she\'s a core part of our team. The 90-day guarantee gave us confidence to take the leap.',
+      result: 'Completed first half marathon',
+      quote: 'I started with StrengthHubOnline to improve my body composition and ended up completely transforming my lifestyle. The nutrition guidance alone was worth it. Best investment I\'ve made in myself.',
       image: 'https://images.pexels.com/photos/4498606/pexels-photo-4498606.jpeg?auto=compress&cs=tinysrgb&w=400',
     },
   ];
@@ -55,7 +55,7 @@ const Testimonials = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="fade-in text-white text-3xl font-bold mb-4">What Our Clients Say</h2>
           <p className="fade-in text-white/60 text-lg">
-            Companies that trusted us to find their next great hire
+            Clients who trusted us to transform their bodies
           </p>
         </div>
 
@@ -120,7 +120,7 @@ const Testimonials = () => {
             href="#contact"
             className="inline-block px-8 py-3 bg-[#2e3d30] text-white font-semibold hover:opacity-90 transition-opacity"
           >
-            Start Your Search
+            Start Your Transformation
           </a>
         </div>
       </div>

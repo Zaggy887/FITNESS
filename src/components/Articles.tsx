@@ -84,7 +84,7 @@ const Articles = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="fade-in mb-6 text-3xl font-bold text-white">Insights</h2>
           <p className="fade-in text-lg text-white/60">
-            Expert perspectives and industry knowledge to help companies and candidates make better decisions.
+            Expert perspectives and coaching knowledge to help you train smarter and achieve lasting results.
           </p>
         </div>
 

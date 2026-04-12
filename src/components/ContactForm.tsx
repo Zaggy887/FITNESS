@@ -104,7 +104,7 @@ const ContactForm = () => {
             <span className="text-[#7A725E]">Start Your Journey</span> With Us
           </h2>
           <p className="fade-in text-lg text-white/60">
-            Whether you're a company looking for talent or a student seeking opportunities, we're here to help.
+            Whether you're ready to transform your physique or just want to explore your options, we're here to help.
           </p>
         </div>
 
@@ -118,7 +118,7 @@ const ContactForm = () => {
                   : 'bg-[#111] border border-white/15 text-white/60 hover:border-[#7A725E]/40'
               }`}
             >
-              I'm a Company
+              I'm a New Client
             </button>
             <button
               onClick={() => setFormType('student')}
@@ -128,7 +128,7 @@ const ContactForm = () => {
                   : 'bg-[#111] border border-white/15 text-white/60 hover:border-[#7A725E]/40'
               }`}
             >
-              I'm a Student
+              I Have a Question
             </button>
           </div>
         </div>
@@ -215,8 +215,8 @@ const ContactForm = () => {
                     rows={4}
                     className={inputClass}
                     placeholder={formType === 'company'
-                      ? "e.g., Employment type (Full-time, Part-time), Role (Accountant, Finance), Industry, Location"
-                      : "e.g., University, Course, Year Level, Areas of Interest"
+                      ? "e.g., Current fitness level, main goal (fat loss, muscle gain), training experience, equipment available"
+                      : "e.g., Any questions about our coaching, pricing, or how to get started"
                     }
                   />
                 </div>

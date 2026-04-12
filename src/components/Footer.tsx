@@ -7,10 +7,10 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center md:justify-between space-y-8 md:space-y-0">
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold text-white">
-              ONLY<span className="text-[#7A725E]">U</span>grads
+              Strength<span className="text-[#7A725E]">Hub</span>Online
             </h3>
             <p className="mt-2 text-white/50 max-w-md">
-              Connecting Melbourne's top university students with leading companies.
+              Expert online personal training for clients worldwide, built around real results.
             </p>
           </div>
 
@@ -18,15 +18,15 @@ const Footer = () => {
             <h4 className="text-white/70 font-semibold mb-4">Connect with Us</h4>
             <div className="flex flex-col items-center md:items-end space-y-4">
               <a
-                href="mailto:contact@onlyugrads.com"
+                href="mailto:contact@strengthhubonline.com"
                 className="flex items-center text-white/60 hover:text-white transition-colors"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                contact@onlyugrads.com
+                contact@strengthhubonline.com
               </a>
               <div className="flex items-center space-x-6">
                 <a
-                  href="https://www.linkedin.com/company/onlyugrads"
+                  href="https://www.linkedin.com/company/strengthhubonline"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center text-white/50 hover:text-white transition-colors"
@@ -35,7 +35,7 @@ const Footer = () => {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://www.facebook.com/onlyugrads"
+                  href="https://www.facebook.com/strengthhubonline"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center text-white/50 hover:text-white transition-colors"
@@ -44,7 +44,7 @@ const Footer = () => {
                   <Facebook className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://www.instagram.com/onlyugrads"
+                  href="https://www.instagram.com/strengthhubonline"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center text-white/50 hover:text-white transition-colors"
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 mt-10 pt-6 text-center text-sm text-white/30">
-          © {new Date().getFullYear()} ONLYUgrads. All rights reserved.
+          © {new Date().getFullYear()} StrengthHubOnline. All rights reserved.
         </div>
       </div>
     </footer>

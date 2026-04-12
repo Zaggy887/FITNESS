@@ -4,7 +4,7 @@ const TheStudio = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-center text-4xl font-black mb-4 tracking-tight">
           <span className="text-white">THE </span>
-          <span className="text-[#7A725E]">STUDIO</span>
+          <span className="text-[#7A725E]">PLATFORM</span>
         </h2>
       </div>
 
@@ -20,20 +20,20 @@ const TheStudio = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-white/80 text-sm leading-relaxed mb-6">
-            As Melbourne's only dedicated graduate recruitment agency, we specialise in helping
-            companies find exceptional university graduates from top institutions. We also offer
+            As a fully online personal training service, we specialise in helping
+            clients achieve their body composition goals from anywhere in the world. We offer
             tailored{' '}
-            <span className="underline underline-offset-2 text-white/90 cursor-pointer">internship placement</span>{' '}
-            programs to help you find and develop emerging talent — with expert{' '}
-            <span className="underline underline-offset-2 text-white/90 cursor-pointer">candidate screening</span>{' '}
-            to support results beyond the application stage. While our focus is on Melbourne graduates,
-            we proudly work with companies from nearby areas including{' '}
-            <span className="underline underline-offset-2 text-white/90 cursor-pointer">Sydney</span>,{' '}
-            <span className="underline underline-offset-2 text-white/90 cursor-pointer">Brisbane</span>,{' '}
-            <span className="underline underline-offset-2 text-white/90 cursor-pointer">Perth</span>, and{' '}
-            <span className="underline underline-offset-2 text-white/90 cursor-pointer">Adelaide</span>. Our
-            personalised approach ensures that a qualified, motivated graduate is within reach for
-            growing businesses and established enterprises alike, no matter your industry.
+            <span className="underline underline-offset-2 text-white/90 cursor-pointer">training programs</span>{' '}
+            designed around your lifestyle — with expert{' '}
+            <span className="underline underline-offset-2 text-white/90 cursor-pointer">nutrition guidance</span>{' '}
+            to support your results beyond the gym. While our coaches are based in{' '}
+            <span className="underline underline-offset-2 text-white/90 cursor-pointer">Australia</span>,{' '}
+            we proudly work with clients from{' '}
+            <span className="underline underline-offset-2 text-white/90 cursor-pointer">the UK</span>,{' '}
+            <span className="underline underline-offset-2 text-white/90 cursor-pointer">the US</span>, and{' '}
+            <span className="underline underline-offset-2 text-white/90 cursor-pointer">beyond</span>. Our
+            personalised approach ensures that expert coaching is within reach for
+            anyone serious about transforming their physique, no matter where you are.
           </p>
 
           <a

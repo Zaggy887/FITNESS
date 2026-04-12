@@ -29,25 +29,25 @@ const Process = () => {
       step: '1',
       title: 'Free Consultation',
       icon: MessageSquare,
-      description: 'Tell us about the role, your team, and what you need. We listen before we act.',
+      description: 'Tell us about your goals, training history, and lifestyle. We listen before we build.',
     },
     {
       step: '2',
-      title: 'Tailored Shortlist',
+      title: 'Custom Program Design',
       icon: Calendar,
-      description: 'We match and present only candidates that fit your brief — no noise, no bulk sends.',
+      description: 'We create a fully personalised training and nutrition plan built around you — not a template.',
     },
     {
       step: '3',
-      title: 'Interviews & Placement',
+      title: 'Start Training',
       icon: Zap,
-      description: 'We coordinate interviews and manage the process from first contact to signed offer.',
+      description: 'Access your program online, train on your schedule, and log your sessions with ease.',
     },
     {
       step: '4',
-      title: 'Ongoing Support',
+      title: 'Ongoing Coaching',
       icon: Trophy,
-      description: 'We follow up through the first 90 days. If something changes, we make it right.',
+      description: 'Regular check-ins, program adjustments, and support to keep you progressing every week.',
     },
   ];
 
@@ -57,10 +57,10 @@ const Process = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="fade-in text-3xl font-bold mb-4 text-white">How It Works</h2>
           <p className="fade-in text-lg text-[#7A725E] mb-4">
-            Simple, fast, and built around your needs.
+            Simple, effective, and built around your life.
           </p>
           <p className="fade-in text-white/60">
-            We handle the complexity so you can focus on building your team.
+            We handle the programming so you can focus on showing up.
           </p>
         </div>
 

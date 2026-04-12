@@ -40,19 +40,19 @@ const UniqueAbout = () => {
           What's Unique About
         </h2>
         <h2 className="fade-in text-4xl md:text-5xl font-extrabold text-[#7A725E] uppercase leading-tight mb-10 tracking-tight">
-          ONLYUgrads
+          StrengthHubOnline
         </h2>
 
         <p className="fade-in text-white font-semibold text-sm uppercase tracking-widest mb-6">
-          We're not a generic job board — we are graduate placement specialists.
+          We're not a generic fitness app — we are online personal training specialists.
         </p>
 
         <p className="fade-in text-white font-bold text-lg md:text-xl leading-relaxed mb-6">
-          Every candidate we present has been individually assessed for academic achievement, communication ability, and professional ambition — ensuring you only meet graduates who are genuinely ready to contribute from day one.
+          Every client we work with receives an individually designed program based on their goals, training history, and lifestyle — ensuring you only follow a plan that's built to work for you from day one.
         </p>
 
         <p className="fade-in text-white/70 font-semibold italic text-sm md:text-base leading-relaxed">
-          Whether you need a driven analyst, a sharp marketing graduate, or an ambitious operations hire, we build a personalised shortlist and support you through every step of the placement process.
+          Whether you want to lose body fat, build muscle, or improve your overall fitness, we design a personalised program and support you through every step of your transformation.
         </p>
       </div>
     </section>

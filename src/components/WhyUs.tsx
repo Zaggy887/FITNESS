@@ -5,22 +5,22 @@ const cards = [
   {
     icon: Activity,
     title: 'Proven Results',
-    description: 'Every placement backed by our 90-day guarantee',
+    description: 'Science-backed programming that delivers measurable body composition changes',
   },
   {
     icon: Heart,
-    title: 'Personalised Matching',
-    description: 'Candidates shortlisted for your role, not a database search',
+    title: 'Personalised Coaching',
+    description: 'Programs built around your goals, lifestyle, and equipment — not a one-size-fits-all plan',
   },
   {
     icon: Zap,
-    title: 'Fast Turnaround',
-    description: 'Shortlists delivered within days, not weeks',
+    title: 'Train Anywhere',
+    description: 'Full access to your coach and program from any device, at any time, anywhere in the world',
   },
   {
     icon: Target,
-    title: 'University Network',
-    description: "Direct access to Melbourne's top graduating talent",
+    title: 'Accountability First',
+    description: 'Regular check-ins, progress tracking, and adjustments to keep you moving forward',
   },
 ];
 
@@ -51,8 +51,8 @@ const WhyUs = () => {
     <section className="section bg-[#0a0a0a] py-20 border-t border-white/10" ref={sectionRef}>
       <div className="container">
         <div className="text-center mb-14">
-          <h2 className="fade-in text-3xl font-bold text-white mb-3">Why ONLYUgrads</h2>
-          <p className="fade-in text-white/50 text-base">The edge that sets our candidates apart</p>
+          <h2 className="fade-in text-3xl font-bold text-white mb-3">Why StrengthHubOnline</h2>
+          <p className="fade-in text-white/50 text-base">The edge that sets our coaching apart</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
