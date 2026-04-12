@@ -57,7 +57,7 @@ const Process = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="fade-in text-3xl font-bold mb-4 text-white">How You'll Begin</h2>
           <p className="fade-in text-lg text-[#7A725E] mb-4">
-            Simple, effective, and built around your life.
+            It's simple, effective, and built around your life.
           </p>
           <p className="fade-in text-white/60">
             We handle the programming so you can focus on showing up.
