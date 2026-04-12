@@ -15,13 +15,6 @@ const bonusOfferings = [
 const TheStudio = () => {
   return (
     <section className="bg-[#0a0a0a] text-white py-10 sm:py-14">
-      <div className="container mx-auto px-4">
-        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black mb-5 tracking-tight">
-          <span className="text-white">OUR OFFER TO </span>
-          <span className="text-[#7A725E]">YOU</span>
-        </h2>
-      </div>
-
       <div className="w-full overflow-hidden mb-8">
         <img
           src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1600"
@@ -29,6 +22,13 @@ const TheStudio = () => {
           className="w-full object-cover object-center h-[150px] sm:h-[260px] md:h-[320px]"
           loading="lazy"
         />
+      </div>
+
+      <div className="container mx-auto px-4">
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black mb-5 tracking-tight">
+          <span className="text-white">OUR OFFER TO </span>
+          <span className="text-[#7A725E]">YOU</span>
+        </h2>
       </div>
 
       <div className="container mx-auto px-4">
