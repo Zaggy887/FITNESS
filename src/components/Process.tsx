@@ -55,7 +55,7 @@ const Process = () => {
     <section id="process" className="section bg-[#111] relative" ref={sectionRef}>
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="fade-in text-3xl font-bold mb-4 text-white">How It Works</h2>
+          <h2 className="fade-in text-3xl font-bold mb-4 text-white">How You Start</h2>
           <p className="fade-in text-lg text-[#7A725E] mb-4">
             Simple, effective, and built around your life.
           </p>
