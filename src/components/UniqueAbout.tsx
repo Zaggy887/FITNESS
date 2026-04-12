@@ -48,7 +48,7 @@ const UniqueAbout = () => {
         </p>
 
         <p className="fade-in text-white/90 font-semibold text-sm md:text-base leading-relaxed mb-4">
-          You will be held accountable throughout the process, with regular check ins and updates to your program so you keep moving forward.
+          You will be held accountable throughout the process, with regular check ins and updates to your program so you keep progressing.
         </p>
 
         <p className="fade-in text-white/80 font-semibold text-sm md:text-base leading-relaxed mb-4">
