@@ -37,7 +37,7 @@ const UniqueAbout = () => {
 
       <div className="container relative z-10 text-center max-w-3xl mx-auto">
         <h2 className="fade-in text-4xl md:text-5xl font-extrabold text-white uppercase leading-tight mb-1 tracking-tight">
-          What's Unique About
+          WHAT <span className="text-[#7A725E]">WE'LL DO</span>
         </h2>
         <h2 className="fade-in text-4xl md:text-5xl font-extrabold text-[#7A725E] uppercase leading-tight mb-10 tracking-tight">
           StrengthHubOnline
