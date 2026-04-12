@@ -1,57 +1,19 @@
-import { useEffect, useState } from "react";
-
 const Hero = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  const backgroundImages = [
-    "/Background_2.jpg",
-    "/Background_3.jpg",
-    "/Background_1.jpg",
-  ];
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 640);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % backgroundImages.length);
-    }, 5000);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      clearInterval(interval);
-    };
-  }, [backgroundImages.length]);
-
   return (
     <div className="bg-black text-white">
-      {/* Image section */}
       <div className="relative h-[40vh] sm:h-[50vh] lg:h-[55vh] overflow-hidden">
-        {backgroundImages.map((img, index) => {
-          let backgroundPosition = "center";
-          if (index === 2 && isMobile) backgroundPosition = "70% center";
-
-          return (
-            <div
-              key={index}
-              className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${
-                currentImageIndex === index ? "opacity-100" : "opacity-0"
-              }`}
-              style={{
-                backgroundImage: `url("${img}")`,
-                backgroundSize: "cover",
-                backgroundPosition,
-                backgroundRepeat: "no-repeat",
-                filter: "brightness(0.45)",
-              }}
-            />
-          );
-        })}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: "brightness(0.45)" }}
+        >
+          <source src="/homevid.mp4" type="video/mp4" />
+        </video>
 
         <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-black/15 to-black/30" />
-
       </div>
 
       {/* Text content section */}
