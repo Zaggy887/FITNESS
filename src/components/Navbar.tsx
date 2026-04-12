@@ -86,7 +86,7 @@ const Navbar = () => {
         <a href="/" className="flex flex-col leading-none">
           <span className="text-white font-black uppercase tracking-tight text-2xl sm:text-3xl">STRENGTH</span>
           <span className="text-white font-black italic uppercase tracking-tight text-xl sm:text-2xl -mt-1">
-            HUB<sup className="text-[#5BB6FF] text-xs font-bold not-italic align-super ml-0.5">ONLINE</sup>
+            HUB<sup className="text-white text-xs font-bold not-italic align-super ml-0.5">ONLINE</sup>
           </span>
         </a>
 
@@ -94,10 +94,10 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-6">
           <button
             onClick={() => scrollToSection("contact")}
-            className={`px-6 py-2 rounded-full text-white transition-all duration-300 ${
+            className={`px-6 py-2 rounded-full text-black font-semibold transition-all duration-300 ${
               activeSection === "contact"
-                ? "bg-[#5BB6FF] bg-opacity-90"
-                : "bg-[#5BB6FF] hover:bg-[#48A3EB]"
+                ? "bg-white bg-opacity-90"
+                : "bg-white hover:bg-gray-200"
             }`}
           >
             Contact Us

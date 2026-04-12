@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="flex flex-col leading-none">
               <span className="text-white font-black uppercase tracking-tight text-2xl">STRENGTH</span>
               <span className="text-white font-black italic uppercase tracking-tight text-xl -mt-1">
-                HUB<sup className="text-[#5BB6FF] text-xs font-bold not-italic align-super ml-0.5">ONLINE</sup>
+                HUB<sup className="text-white text-xs font-bold not-italic align-super ml-0.5">ONLINE</sup>
               </span>
             </div>
             <p className="mt-2 text-white/50 max-w-md">
