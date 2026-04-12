@@ -44,19 +44,23 @@ const UniqueAbout = () => {
         </h2>
 
         <p className="fade-in text-white font-semibold text-sm uppercase tracking-widest mb-6">
-          No generic plans. No guesswork. Just structure, support, and real progress.
+          Give a man a fish and he eats for a day. Teach him to fish and he eats for a lifetime.
         </p>
 
         <p className="fade-in text-white font-bold text-lg md:text-xl leading-relaxed mb-6">
-          Every program is built specifically for you — your goals, your schedule, and your lifestyle — so you are not trying to fit into someone else’s plan. Alongside that, we prioritise accountability, giving you consistent guidance and support to keep you on track and progressing week after week.
+          We focus on more than just giving you a program. We show you how to train properly, stay consistent, and build habits that actually last.
+        </p>
+
+        <p className="fade-in text-white/90 font-semibold text-sm md:text-base leading-relaxed mb-4">
+          You will be held accountable throughout the process, with regular check ins and updates to your program so you keep moving forward.
         </p>
 
         <p className="fade-in text-white/80 font-semibold text-sm md:text-base leading-relaxed mb-4">
-          You will have access to a team of experienced coaches across bodybuilding, powerlifting, lifestyle, and weight loss, meaning you are matched with someone who understands exactly what you are trying to achieve.
+          Our coaches have real experience across powerlifting, bodybuilding, lifestyle coaching and weight loss, so you are learning from people who have genuinely been through it themselves.
         </p>
 
         <p className="fade-in text-white/70 italic text-sm md:text-base leading-relaxed">
-          Whether you are just getting started or looking to take your training to the next level, everything is designed to make progress feel clear, structured, and sustainable.
+          The goal is to help you build a balanced lifestyle where your health supports everything else you do, without taking away from your work, your social life, or your relationships.
         </p>
       </div>
     </section>
