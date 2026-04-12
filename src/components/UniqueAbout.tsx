@@ -44,7 +44,7 @@ const UniqueAbout = () => {
         </p>
 
         <p className="fade-in text-white font-bold text-lg md:text-xl leading-relaxed mb-6">
-          We focus on more than just giving you a program. We show you how to train properly, stay consistent, and build habits that actually last.
+          We focus on more than just giving you a program. We show you how to train properly, stay consistent, and build habits that you want to last.
         </p>
 
         <p className="fade-in text-white/90 font-semibold text-sm md:text-base leading-relaxed mb-4">
