@@ -37,8 +37,8 @@ const TheStudio = () => {
           {/* MAIN OFFERINGS */}
           <ul className="mb-10 space-y-6">
             {offerings.map((item, i) => (
-              <li key={i} className="flex items-start gap-4 group">
-                
+              <li key={i} className="flex items-start gap-4 group md:justify-center">
+
                 {/* Number */}
                 <div className="flex-shrink-0">
                   <span className="text-[#7A725E] text-sm font-semibold tracking-widest">
@@ -58,13 +58,13 @@ const TheStudio = () => {
           </ul>
 
           {/* BONUS */}
-          <p className="text-[#7A725E] font-bold tracking-[0.25em] text-xs uppercase mb-4">
+          <p className="text-[#7A725E] font-bold tracking-[0.25em] text-xs uppercase mb-4 md:text-center">
             Bonus
           </p>
 
           <ul className="mb-10 space-y-4">
             {bonusOfferings.map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
+              <li key={i} className="flex items-start gap-3 md:justify-center">
                 <span className="mt-[7px] w-2 h-2 rounded-full bg-[#7A725E] flex-shrink-0" />
                 <p className="text-white/80 text-sm sm:text-[15px] leading-relaxed">
                   {item}
