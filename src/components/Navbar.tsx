@@ -83,10 +83,11 @@ const Navbar = () => {
   return (
     <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="/" className="text-2xl font-bold">
-          <span className="text-white">Strength</span>
-          <span className="text-[#5BB6FF]">Hub</span>
-          <span className="text-white">Online</span>
+        <a href="/" className="flex flex-col leading-none">
+          <span className="text-white font-black uppercase tracking-tight text-2xl sm:text-3xl">STRENGTH</span>
+          <span className="text-white font-black italic uppercase tracking-tight text-xl sm:text-2xl -mt-1">
+            HUB<sup className="text-[#5BB6FF] text-xs font-bold not-italic align-super ml-0.5">ONLINE</sup>
+          </span>
         </a>
 
         {/* Desktop */}

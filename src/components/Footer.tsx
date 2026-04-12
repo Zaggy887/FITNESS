@@ -6,9 +6,12 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center md:justify-between space-y-8 md:space-y-0">
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold text-white">
-              Strength<span className="text-[#7A725E]">Hub</span>Online
-            </h3>
+            <div className="flex flex-col leading-none">
+              <span className="text-white font-black uppercase tracking-tight text-2xl">STRENGTH</span>
+              <span className="text-white font-black italic uppercase tracking-tight text-xl -mt-1">
+                HUB<sup className="text-[#5BB6FF] text-xs font-bold not-italic align-super ml-0.5">ONLINE</sup>
+              </span>
+            </div>
             <p className="mt-2 text-white/50 max-w-md">
               Expert online personal training for clients worldwide, built around real results.
             </p>
