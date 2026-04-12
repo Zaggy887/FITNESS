@@ -60,8 +60,7 @@ const Process = () => {
             It's simple, effective, and built around your life.
           </p>
           <p className="fade-in text-white/60">
-            We handle the programming so you can focus on showing up.
-          </p>
+                      </p>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
