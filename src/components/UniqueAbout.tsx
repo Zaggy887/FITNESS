@@ -56,7 +56,7 @@ const UniqueAbout = () => {
         </p>
 
         <p className="fade-in text-white/70 italic text-sm md:text-base leading-relaxed">
-          We want to help you build a balanced lifestyle where your biggest asset is optimised to support everything else you do, without taking away from your work, your social life, or your relationships.
+          We want to help you build a balanced lifestyle where your biggest asset (your health) is optimised to support everything else you do, without taking away from your work, your social life, or your relationships.
         </p>
       </div>
     </section>
