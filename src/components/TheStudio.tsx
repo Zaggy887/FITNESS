@@ -14,52 +14,75 @@ const bonusOfferings = [
 
 const TheStudio = () => {
   return (
-    <section className="bg-[#0a0a0a] text-white py-8">
+    <section className="bg-[#0a0a0a] text-white py-10 sm:py-14">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-4xl font-black mb-4 tracking-tight">
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black mb-5 tracking-tight">
           <span className="text-white">OUR OFFER TO </span>
           <span className="text-[#7A725E]">YOU</span>
         </h2>
       </div>
 
-      <div className="w-full overflow-hidden mb-6">
+      <div className="w-full overflow-hidden mb-8">
         <img
           src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1600"
           alt="Our Offer"
-          className="w-full object-cover object-center h-[140px] sm:h-[260px]"
+          className="w-full object-cover object-center h-[150px] sm:h-[260px] md:h-[320px]"
           loading="lazy"
         />
       </div>
 
       <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto">
-          <ul className="mb-6 space-y-3">
+        <div className="max-w-4xl mx-auto">
+
+          {/* MAIN OFFERINGS */}
+          <ul className="mb-10 space-y-6">
             {offerings.map((item, i) => (
-              <li key={i} className="flex items-start gap-3 text-white/80 text-sm leading-relaxed">
-                <span className="mt-1 w-1.5 h-1.5 rounded-full bg-[#7A725E] flex-shrink-0" />
-                {item}
+              <li key={i} className="flex items-start gap-4 group">
+                
+                {/* Number */}
+                <div className="flex-shrink-0">
+                  <span className="text-[#7A725E] text-sm font-semibold tracking-widest">
+                    {`0${i + 1}`}
+                  </span>
+                </div>
+
+                {/* Divider line */}
+                <div className="w-[1px] h-full bg-white/10 group-hover:bg-[#7A725E]/40 transition-colors" />
+
+                {/* Text */}
+                <p className="text-white/85 text-sm sm:text-[15px] leading-relaxed max-w-xl">
+                  {item}
+                </p>
               </li>
             ))}
           </ul>
 
-          <p className="text-[#7A725E] font-bold tracking-widest text-xs uppercase mb-3">Bonus</p>
-          <ul className="mb-8 space-y-3">
+          {/* BONUS */}
+          <p className="text-[#7A725E] font-bold tracking-[0.25em] text-xs uppercase mb-4">
+            Bonus
+          </p>
+
+          <ul className="mb-10 space-y-4">
             {bonusOfferings.map((item, i) => (
-              <li key={i} className="flex items-start gap-3 text-white/80 text-sm leading-relaxed">
-                <span className="mt-1 w-1.5 h-1.5 rounded-full bg-[#7A725E] flex-shrink-0" />
-                {item}
+              <li key={i} className="flex items-start gap-3">
+                <span className="mt-[7px] w-2 h-2 rounded-full bg-[#7A725E] flex-shrink-0" />
+                <p className="text-white/80 text-sm sm:text-[15px] leading-relaxed">
+                  {item}
+                </p>
               </li>
             ))}
           </ul>
 
+          {/* CTA */}
           <div className="text-center">
             <a
               href="#contact"
-              className="inline-block px-10 py-3 bg-[#2e3d30] text-white font-bold tracking-widest text-sm uppercase hover:opacity-90 transition-opacity"
+              className="inline-block rounded-full px-8 sm:px-10 py-3.5 bg-[#2e3d30] text-white font-bold tracking-[0.18em] text-xs sm:text-sm uppercase hover:opacity-90 transition-opacity"
             >
-              BOOK FREE CONSULTATION
+              Book Free Consultation
             </a>
           </div>
+
         </div>
       </div>
     </section>
