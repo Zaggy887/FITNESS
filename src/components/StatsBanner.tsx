@@ -5,12 +5,17 @@ const StatsBanner = () => {
     <section className="bg-[#0a0a0a] py-16 px-6 border-b border-white/10">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-white font-black text-4xl md:text-6xl lg:text-7xl uppercase leading-none mb-12 tracking-tight">
-          WE'VE TRANSFORMED{' '}
+          THERE'S{' '}
           <span className="relative inline-block">
-            HUNDREDS
+            NO REASON
             <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#7A725E]" />
           </span>{' '}
-          OF CLIENTS
+          YOU{' '}
+          <span className="relative inline-block">
+            CAN'T
+            <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#7A725E]" />
+          </span>{' '}
+          DO IT
         </h2>
 
         <div className="flex flex-row md:flex-row justify-center gap-6 md:gap-24">
