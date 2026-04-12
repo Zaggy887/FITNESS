@@ -34,7 +34,8 @@ const Hero = () => {
             <span className="text-[#7A725E] underline underline-offset-2">personalised 1-on-1 online coaching</span>.{" "}
             Train on your schedule with a{" "}
             <span className="text-[#7A725E] underline underline-offset-2">clear plan</span>,{" "}
-            <span className="text-[#7A725E] underline underline-offset-2">strong accountability</span>, and guidance that keeps you moving forward.
+            <span className="text-[#7A725E] underline underline-offset-2">accountability</span>, and{" "}
+            <span className="text-[#7A725E] underline underline-offset-2">guidance</span> that keeps you moving forward.
           </p>
 
           <div className="mt-7">
