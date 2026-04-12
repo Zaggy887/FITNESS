@@ -40,7 +40,7 @@ const UniqueAbout = () => {
           WHAT <span className="text-[#7A725E]">WE GIVE YOU</span>
         </h2>
         <p className="fade-in text-white font-semibold text-sm uppercase tracking-widest mb-6">
-          "If I give you a fish you'll eat for a day. If I teach you how to fish, you'll eat for a lifetime."
+          "If I give you a fish, you'll eat for a day. If I teach you how to fish, you'll eat for a lifetime."
         </p>
 
         <p className="fade-in text-white font-bold text-lg md:text-xl leading-relaxed mb-6">
