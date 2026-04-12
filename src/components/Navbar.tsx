@@ -104,12 +104,12 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Hamburger */}
+        {/* Mobile Contact Button */}
         <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-white transition-colors"
+          onClick={() => scrollToSection("contact")}
+          className="md:hidden px-5 py-2 rounded-full text-black font-semibold bg-white hover:bg-gray-200 transition-all duration-300"
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          Contact Us
         </button>
       </div>
 
