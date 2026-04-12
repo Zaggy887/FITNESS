@@ -41,7 +41,7 @@ const Process = () => {
       step: '3',
       title: 'Start Your Journey',
       icon: Rocket,
-      description: 'If it\'s a good fit, we\'ll get you set up straight away with a clear plan and ongoing support to put you in the best position to succeed.',
+      description: 'If we're a good fit, we\'ll get you set up straight away with a clear plan and ongoing support to put you in the best position to succeed.',
     },
   ];
 
