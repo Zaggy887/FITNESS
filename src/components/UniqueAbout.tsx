@@ -28,7 +28,7 @@ const UniqueAbout = () => {
       className="relative section py-10 overflow-hidden"
       ref={sectionRef}
       style={{
-        backgroundImage: "url('https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1600')",
+        backgroundImage: "url('https://images.pexels.com/photos/19025671/pexels-photo-19025671.jpeg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
