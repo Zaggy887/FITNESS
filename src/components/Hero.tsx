@@ -30,7 +30,11 @@ const Hero = () => {
           </h1>
 
           <p className="mx-auto mt-5 max-w-[700px] text-sm font-bold leading-6 text-white sm:text-base sm:leading-7">
-            Expert coaches in body composition, delivering real results through personalised 1-on-1 online coaching. Train on your schedule with a clear plan, strong accountability, and guidance that keeps you moving forward.
+            Expert coaches in body composition, delivering real results through{" "}
+            <span className="text-[#7A725E] underline underline-offset-2">personalised 1-on-1 online coaching</span>.{" "}
+            Train on your schedule with a{" "}
+            <span className="text-[#7A725E] underline underline-offset-2">clear plan</span>,{" "}
+            <span className="text-[#7A725E] underline underline-offset-2">strong accountability</span>, and guidance that keeps you moving forward.
           </p>
 
           <div className="mt-7">
