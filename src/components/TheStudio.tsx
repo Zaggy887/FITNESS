@@ -25,7 +25,7 @@ const TheStudio = () => {
       <div className="w-full overflow-hidden mb-8">
         <img
           src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1600"
-          alt="Our Offer"
+          alt="How to"
           className="w-full object-cover object-center h-[150px] sm:h-[260px] md:h-[320px]"
           loading="lazy"
         />
