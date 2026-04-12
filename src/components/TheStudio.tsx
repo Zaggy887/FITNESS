@@ -17,8 +17,8 @@ const TheStudio = () => {
     <section className="bg-[#0a0a0a] text-white py-8">
       <div className="container mx-auto px-4">
         <h2 className="text-center text-4xl font-black mb-4 tracking-tight">
-          <span className="text-white">OUR </span>
-          <span className="text-[#7A725E]">OFFER</span>
+          <span className="text-white">OUR OFFER TO </span>
+          <span className="text-[#7A725E]">YOU</span>
         </h2>
       </div>
 
