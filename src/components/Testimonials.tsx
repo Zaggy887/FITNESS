@@ -29,7 +29,7 @@ const Testimonials = () => {
       name: 'Jake R.',
       result: 'Built strength and confidence',
       quote:
-        'I wanted to take lifting seriously but had no idea where to start. Izak made everything simple and structured, and kept me accountable every week. He’s genuinely different to other trainers, way more invested and actually cares about your progress.',
+        'I wanted to get more serious with lifting but honestly had no clue what I was doing. Izak made it super simple and easy to follow, and kept me accountable the whole time. He’s genuinely different to other trainers, you can tell he actually cares.',
       image:
         'https://images.pexels.com/photos/3768722/pexels-photo-3768722.jpeg?auto=compress&cs=tinysrgb&w=400',
     },
@@ -37,7 +37,7 @@ const Testimonials = () => {
       name: 'Daniel K.',
       result: 'Stayed consistent through a busy college schedule',
       quote:
-        'With college and a constantly changing schedule, I needed something flexible. The programming adapted around my week and made it easy to stay consistent. Izak kept me accountable the whole time and made training fit into my life, not the other way around.',
+        'With college my schedule is always changing, so I needed something flexible. The program just worked around my week which made it so much easier to stay consistent. Izak kept me accountable the whole time and made it all really manageable.',
       image:
         'https://images.pexels.com/photos/4058316/pexels-photo-4058316.jpeg?auto=compress&cs=tinysrgb&w=400',
     },
@@ -45,7 +45,7 @@ const Testimonials = () => {
       name: 'Chris M.',
       result: 'Got in shape while working full time with kids',
       quote:
-        'Working full time with two young kids, I needed something quick and efficient. Having an online PT made it so much easier to stay on track without wasting time. Izak’s approach is genuinely unique and the accountability made all the difference.',
+        'Working full time with two young kids, I don’t have time to overthink training. Having an online PT helped so much with efficiency, I could just get in and get it done. Izak’s approach is honestly different and the accountability made a huge difference.',
       image:
         'https://images.pexels.com/photos/4498606/pexels-photo-4498606.jpeg?auto=compress&cs=tinysrgb&w=400',
     },
