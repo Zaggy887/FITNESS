@@ -10,7 +10,7 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: "brightness(0.45)" }}
         >
-          <source src="/thevid.mp4" type="video/mp4" />
+          <source src="/newhome.mp4" type="video/mp4" />
         </video>
 
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
