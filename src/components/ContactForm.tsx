@@ -108,7 +108,7 @@ const ContactForm = () => {
                     value={formData.fullName}
                     onChange={handleChange}
                     required
-                    placeholder="John Smith"
+                    placeholder="Your full name"
                     className={inputClass}
                   />
                 </div>
@@ -124,7 +124,7 @@ const ContactForm = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    placeholder="john@example.com"
+                    placeholder="your@email.com"
                     className={inputClass}
                   />
                 </div>
@@ -140,7 +140,7 @@ const ContactForm = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    placeholder="+61 400 000 000"
+                    placeholder="Your phone number"
                     className={inputClass}
                   />
                 </div>
@@ -156,7 +156,7 @@ const ContactForm = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    placeholder="Tell us about your current fitness level, what you want to achieve, and any relevant experience or equipment you have..."
+                    placeholder="Tell us about your goals..."
                     className={inputClass}
                   />
                 </div>
