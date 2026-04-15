@@ -97,19 +97,6 @@ const Navbar = () => {
           </span>
         </a>
 
-        {/* Desktop */}
-        <div className="hidden md:flex items-center space-x-6">
-          <button
-            onClick={() => scrollToSection("contact")}
-            className="px-5 py-2 rounded-full text-white/90 font-medium 
-                       border border-white/30 
-                       bg-white/10 backdrop-blur-md 
-                       hover:bg-white/20 hover:border-white/50 
-                       transition-all duration-300"
-          >
-            Contact Us
-          </button>
-        </div>
 
         {/* Mobile Contact Button */}
         <button
