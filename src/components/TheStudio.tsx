@@ -79,7 +79,7 @@ const TheStudio = () => {
               href="#contact"
               className="inline-block rounded-full px-8 sm:px-10 py-3.5 bg-[#2e3d30] text-white font-bold tracking-[0.18em] text-xs sm:text-sm uppercase hover:opacity-90 transition-opacity"
             >
-              Book Free Consultation
+              Contact Us
             </a>
           </div>
 
