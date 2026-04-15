@@ -33,7 +33,7 @@ const Process = () => {
     },
     {
       step: '2',
-      title: 'Let's Chat',
+      title: "Let's Chat",
       icon: Phone,
       description: 'We\'ll organise a free call to discuss your goals in detail and how we can best support you.',
     },
