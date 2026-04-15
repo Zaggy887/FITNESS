@@ -9,26 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="/newhome.mp4" as="video" type="video/mp4">
   </head>
   <body>
     <!-- Hidden forms for Netlify -->
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
       <input type="text" name="fullName" />
       <input type="email" name="email" />
       <input type="tel" name="phone" />
-      <select name="fitnessGoal">
-        <option value="Weight Loss">Weight Loss</option>
-        <option value="Muscle Building">Muscle Building</option>
-        <option value="General Fitness">General Fitness</option>
-        <option value="Athletic Performance">Athletic Performance</option>
-        <option value="Rehabilitation">Rehabilitation</option>
-      </select>
-      <select name="experienceLevel">
-        <option value="Beginner">Beginner</option>
-        <option value="Intermediate">Intermediate</option>
-        <option value="Advanced">Advanced</option>
-      </select>
-      <textarea name="message"></textarea>
+      <textarea name="goals"></textarea>
     </form>
 
     <form name="referral" netlify netlify-honeypot="bot-field" hidden>
