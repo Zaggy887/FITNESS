@@ -1,4 +1,4 @@
-import { Handshake, Star, Briefcase } from 'lucide-react';
+import { Zap, Clock, TrendingUp } from 'lucide-react';
 
 const StatsBanner = () => {
   return (
@@ -20,26 +20,23 @@ const StatsBanner = () => {
 
         <div className="flex flex-row md:flex-row justify-center gap-6 md:gap-24">
           <div className="flex flex-col items-center text-center flex-1 md:flex-none">
-            <Handshake className="w-6 h-6 md:w-9 md:h-9 text-[#7A725E] mb-2 md:mb-4" strokeWidth={1.5} />
-            <span className="text-white font-bold text-xl md:text-3xl">200+</span>
+            <Zap className="w-6 h-6 md:w-9 md:h-9 text-[#7A725E] mb-2 md:mb-4" strokeWidth={1.5} />
             <span className="text-white/60 text-[10px] md:text-sm font-semibold uppercase tracking-widest mt-1 leading-tight">
-              CLIENTS<br />COACHED
+              8–12 WEEK<br />PHYSIQUE TRANSFORMATIONS
             </span>
           </div>
 
           <div className="flex flex-col items-center text-center flex-1 md:flex-none">
-            <Star className="w-6 h-6 md:w-9 md:h-9 text-[#7A725E] mb-2 md:mb-4" strokeWidth={1.5} />
-            <span className="text-white font-bold text-xl md:text-3xl">5★</span>
+            <Clock className="w-6 h-6 md:w-9 md:h-9 text-[#7A725E] mb-2 md:mb-4" strokeWidth={1.5} />
             <span className="text-white/60 text-[10px] md:text-sm font-semibold uppercase tracking-widest mt-1 leading-tight">
-              AVERAGE<br />RATING
+              BUILT FOR<br />BUSY SCHEDULES
             </span>
           </div>
 
           <div className="flex flex-col items-center text-center flex-1 md:flex-none">
-            <Briefcase className="w-6 h-6 md:w-9 md:h-9 text-[#7A725E] mb-2 md:mb-4" strokeWidth={1.5} />
-            <span className="text-white font-bold text-xl md:text-3xl">15+</span>
+            <TrendingUp className="w-6 h-6 md:w-9 md:h-9 text-[#7A725E] mb-2 md:mb-4" strokeWidth={1.5} />
             <span className="text-white/60 text-[10px] md:text-sm font-semibold uppercase tracking-widest mt-1 leading-tight">
-              COUNTRIES<br />SERVED
+              LONG-TERM RESULTS,<br />NOT QUICK FIXES
             </span>
           </div>
         </div>
