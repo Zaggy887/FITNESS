@@ -117,7 +117,7 @@ const ContactForm = () => {
                 onClick={() => setStatus('idle')}
                 className="bg-[#2e3d30] hover:opacity-90 text-white py-3 px-8 font-bold uppercase tracking-widest text-xs transition-opacity"
               >
-                Send Another Message
+                Done
               </button>
             </div>
           ) : (
