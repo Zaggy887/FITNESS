@@ -40,7 +40,7 @@ const Testimonials = () => {
       image: '/Review2.jpg',
     },
     {
-      name: 'Chris M.',
+      name: 'Josh S.',
       result: 'Got in shape while working full time with kids',
       quote:
         "Working full time with two young kids, I don't have time to overthink training. Having an online PT helped so much with efficiency, I could just get in and get it done. Izak's approach is honestly different and the accountability made a huge difference.",
