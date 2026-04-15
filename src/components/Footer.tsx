@@ -1,4 +1,4 @@
-import { Mail, Instagram, Linkedin, Facebook } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -27,35 +27,6 @@ const Footer = () => {
                 <Mail className="w-5 h-5 mr-2" />
                 contact@strengthhubonline.com
               </a>
-              <div className="flex items-center space-x-6">
-                <a
-                  href="https://www.linkedin.com/company/strengthhubonline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-white/50 hover:text-white transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://www.facebook.com/strengthhubonline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-white/50 hover:text-white transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://www.instagram.com/strengthhubonline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-white/50 hover:text-white transition-colors"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="w-5 h-5" />
-                </a>
-              </div>
             </div>
           </div>
         </div>
