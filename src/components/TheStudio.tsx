@@ -19,7 +19,7 @@ const TheStudio = () => {
         <img
           src="/Battleropes.webp"
           alt="How to"
-          className="w-full object-cover object-top h-[150px] sm:h-[260px] md:h-[320px]"
+          className="w-full object-cover h-[150px] sm:h-[260px] md:h-[320px]" style={{ objectPosition: '50% 20%' }}
           loading="lazy"
         />
       </div>
