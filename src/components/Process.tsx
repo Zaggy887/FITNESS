@@ -27,19 +27,19 @@ const Process = () => {
   const steps = [
     {
       step: '1',
-      title: 'Let Us Know',
+      title: 'Let’s Understand You',
       icon: MessageSquare,
       description: 'Contact us below and tell us a bit about yourself, your goals, and what you\'re looking to achieve.',
     },
     {
       step: '2',
-      title: "Let's Chat",
+      title: "Book Your Free Call",
       icon: Phone,
       description: 'We\'ll organise a free call to discuss your goals in detail and how we can best support you.',
     },
     {
       step: '3',
-      title: 'Let the Games Begin',
+      title: 'Your Plan Starts Now',
       icon: Rocket,
       description: "If we're a good fit, we'll get you set up straight away with a clear plan and ongoing support to put you in the best position to succeed.",
     },
