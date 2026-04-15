@@ -10,29 +10,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="preload" href="/newhome.mp4" as="video" type="video/mp4">
-    <script type="module" crossorigin src="/assets/index-DAggseu4.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CmOFGaC9.css">
+    <script type="module" crossorigin src="/assets/index-Dxt5AxdR.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Chs-H4gr.css">
   </head>
   <body>
-    <!-- Hidden forms for Netlify -->
+    <!-- Hidden forms for Netlify detection at build time -->
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
       <input type="hidden" name="form-name" value="contact" />
       <input type="text" name="fullName" />
       <input type="email" name="email" />
       <input type="tel" name="phone" />
       <textarea name="goals"></textarea>
+      <input name="bot-field" />
     </form>
 
-    <form name="referral" netlify netlify-honeypot="bot-field" hidden>
-      <input type="hidden" name="form-name" value="referral" />
+    <form name="referral-company" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="referral-company" />
       <input type="text" name="referrerName" />
       <input type="email" name="referrerEmail" />
+      <input type="checkbox" name="isAnonymous" />
       <input type="text" name="referralName" />
       <input type="email" name="referralEmail" />
       <input type="tel" name="referralPhone" />
       <textarea name="message"></textarea>
+      <input name="bot-field" />
     </form>
-    
+
+    <form name="referral-student" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="referral-student" />
+      <input type="text" name="referrerName" />
+      <input type="email" name="referrerEmail" />
+      <input type="checkbox" name="isAnonymous" />
+      <input type="text" name="referralName" />
+      <input type="email" name="referralEmail" />
+      <input type="tel" name="referralPhone" />
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
+    </form>
+
     <div id="root"></div>
   </body>
 </html>
