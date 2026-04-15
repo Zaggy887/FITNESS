@@ -35,7 +35,7 @@ const Process = () => {
       step: '2',
       title: 'Free Consultation',
       icon: Phone,
-      description: 'We\'ll organise a free consultation to discuss your goals in detail and how we can best support you.',
+      description: 'We\'ll organise a free call to discuss your goals in detail and how we can best support you.',
     },
     {
       step: '3',
