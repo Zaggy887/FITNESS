@@ -35,22 +35,22 @@ const TheStudio = () => {
         <div className="max-w-4xl mx-auto">
 
           {/* MAIN OFFERINGS */}
-          <ul className="mb-10 space-y-6">
+          <ul className="mb-10 space-y-6 md:flex md:flex-col md:items-center">
             {offerings.map((item, i) => (
-              <li key={i} className="flex items-start gap-4 group md:justify-center">
+              <li key={i} className="flex items-start gap-4 group w-full max-w-xl">
 
                 {/* Number */}
-                <div className="flex-shrink-0 w-6 text-right">
-                  <span className="text-[#7A725E] text-sm font-semibold tracking-widest">
+                <div className="flex-shrink-0 w-8">
+                  <span className="text-[#7A725E] text-sm font-semibold tabular-nums tracking-widest">
                     {`0${i + 1}`}
                   </span>
                 </div>
 
                 {/* Divider line */}
-                <div className="w-[1px] h-full bg-white/10 group-hover:bg-[#7A725E]/40 transition-colors" />
+                <div className="w-[1px] self-stretch bg-white/10 group-hover:bg-[#7A725E]/40 transition-colors" />
 
                 {/* Text */}
-                <p className="text-white/85 text-sm sm:text-[15px] leading-relaxed max-w-xl">
+                <p className="text-white/85 text-sm sm:text-[15px] leading-relaxed">
                   {item}
                 </p>
               </li>
