@@ -17,7 +17,7 @@ const TheStudio = () => {
     <section className="bg-[#0a0a0a] text-white pb-10 sm:pb-14">
       <div className="w-full overflow-hidden mb-8">
         <img
-          src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1600"
+          src="/Battleropes.webp"
           alt="How to"
           className="w-full object-cover object-center h-[150px] sm:h-[260px] md:h-[320px]"
           loading="lazy"
