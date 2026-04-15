@@ -174,7 +174,7 @@ const ContactForm = () => {
                       Sending...
                     </>
                   ) : (
-                    'Book Free Consultation'
+                    'Contact Us'
                   )}
                 </button>
               </div>
