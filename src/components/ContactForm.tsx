@@ -174,7 +174,7 @@ const ContactForm = () => {
                       Sending...
                     </>
                   ) : (
-                    'Contact Us'
+                    "I'M READY"
                   )}
                 </button>
               </div>
