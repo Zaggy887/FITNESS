@@ -39,20 +39,29 @@ const ContactForm = () => {
     setErrorMsg('');
 
     try {
-      const { error } = await supabase.from('contact_submissions').insert({
-        full_name: formData.fullName,
+      const netlifyPayload = new URLSearchParams({
+        'form-name': 'contact',
+        fullName: formData.fullName,
         email: formData.email,
         phone: formData.phone,
         goals: formData.goals,
-      });
+      }).toString();
 
-      if (error) throw error;
+      const [netlifyRes] = await Promise.all([
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: netlifyPayload,
+        }),
+        supabase.from('contact_submissions').insert({
+          full_name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          goals: formData.goals,
+        }),
+      ]);
 
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({ 'form-name': 'contact', ...formData }).toString(),
-      }).catch(() => {});
+      if (!netlifyRes.ok) throw new Error(`Netlify form error: ${netlifyRes.status}`);
 
       setStatus('success');
       setFormData({ fullName: '', email: '', phone: '', goals: '' });
