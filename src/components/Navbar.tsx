@@ -98,13 +98,33 @@ const Navbar = () => {
         </a>
 
 
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center gap-6 text-sm font-medium text-white/80">
+          {navLink("about", "About")}
+          {navLink("process", "Process")}
+          {navLink("universities", "Universities")}
+          {navLink("articles", "Insights")}
+          {navLink("pricing", "Pricing")}
+          {navLink("referral", "Referral")}
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="px-5 py-2 rounded-full text-white/90 font-medium
+                       border border-white/30
+                       bg-white/10 backdrop-blur-md
+                       hover:bg-white/20 hover:border-white/50
+                       transition-all duration-300"
+          >
+            Contact Us
+          </button>
+        </div>
+
         {/* Mobile Contact Button */}
         <button
           onClick={() => scrollToSection("contact")}
-          className="md:hidden px-5 py-2 rounded-full text-white/90 font-medium 
-                     border border-white/30 
-                     bg-white/10 backdrop-blur-md 
-                     hover:bg-white/20 hover:border-white/50 
+          className="md:hidden px-5 py-2 rounded-full text-white/90 font-medium
+                     border border-white/30
+                     bg-white/10 backdrop-blur-md
+                     hover:bg-white/20 hover:border-white/50
                      transition-all duration-300"
         >
           Contact Us
