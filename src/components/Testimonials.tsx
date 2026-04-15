@@ -56,8 +56,8 @@ const Testimonials = () => {
     >
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="fade-in text-[#F5F0E8] text-3xl font-bold mb-4">
-            What <span className="text-[#7A725E]">Our</span> Clients Say
+          <h2 className="fade-in text-3xl font-bold mb-4">
+            <span className="text-white">What </span><span className="text-[#7A725E]">Our Clients Say</span>
           </h2>
           <p className="fade-in text-white/60 text-lg">
             Clients who trusted us to transform their bodies
