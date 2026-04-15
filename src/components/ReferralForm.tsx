@@ -8,106 +8,99 @@ interface ReferralFormData {
   referrerEmail: string;
   referralName: string;
   referralEmail: string;
-  referralPhone?: string;
+  referralPhone: string;
   message: string;
-  isAnonymous?: boolean;
+  isAnonymous: boolean;
 }
+
+type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
+
+const EMPTY_FORM: ReferralFormData = {
+  referrerName: '',
+  referrerEmail: '',
+  referralName: '',
+  referralEmail: '',
+  referralPhone: '',
+  message: '',
+  isAnonymous: false,
+};
 
 const ReferralForm = () => {
   const [referralType, setReferralType] = useState<ReferralType | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [status, setStatus] = useState<FormStatus>('idle');
+  const [errorMsg, setErrorMsg] = useState('');
   const formRef = useRef<HTMLDivElement>(null);
-  const [formData, setFormData] = useState<ReferralFormData>({
-    referrerName: '',
-    referrerEmail: '',
-    referralName: '',
-    referralEmail: '',
-    referralPhone: '',
-    message: '',
-    isAnonymous: false,
-  });
+  const [formData, setFormData] = useState<ReferralFormData>(EMPTY_FORM);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value, type } = e.target as HTMLInputElement;
-    const newValue = type === 'checkbox' ? (e.target as HTMLInputElement).checked : value;
-    setFormData((prev) => ({ ...prev, [name]: newValue }));
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const target = e.target as HTMLInputElement;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    setFormData((prev) => ({ ...prev, [target.name]: value }));
   };
 
   const handleReferralTypeSelect = (type: ReferralType) => {
     setReferralType(type);
-    if (formRef.current) {
-      formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    setStatus('idle');
+    setTimeout(() => {
+      formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
   };
 
   const resetForm = () => {
-    setShowConfirmation(false);
+    setStatus('idle');
     setReferralType(null);
-    setFormData({
-      referrerName: '',
-      referrerEmail: '',
-      referralName: '',
-      referralEmail: '',
-      referralPhone: '',
-      message: '',
-      isAnonymous: false,
-    });
+    setFormData(EMPTY_FORM);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    if (!referralType) return;
+
+    setStatus('submitting');
+    setErrorMsg('');
 
     const formName = `referral-${referralType}`;
 
     try {
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-          "form-name": formName,
-          ...formData
-        }).toString()
+      const body = new URLSearchParams({
+        'form-name': formName,
+        referrerName: formData.referrerName,
+        referrerEmail: formData.referrerEmail,
+        referralName: formData.referralName,
+        referralEmail: formData.referralEmail,
+        referralPhone: formData.referralPhone,
+        message: formData.message,
+        isAnonymous: formData.isAnonymous ? 'true' : 'false',
+      }).toString();
+
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body,
       });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+      if (!res.ok) throw new Error(`Server responded with ${res.status}`);
 
-      setShowConfirmation(true);
-      setFormData({
-        referrerName: '',
-        referrerEmail: '',
-        referralName: '',
-        referralEmail: '',
-        referralPhone: '',
-        message: '',
-        isAnonymous: false,
-      });
-
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('There was an error submitting the form. Please try again.');
-    } finally {
-      setIsSubmitting(false);
+      setStatus('success');
+      setFormData(EMPTY_FORM);
+    } catch (err) {
+      console.error(err);
+      setErrorMsg('Something went wrong. Please try again.');
+      setStatus('error');
     }
   };
 
-  const inputClass = `w-full px-4 py-3 rounded-lg bg-[#0a0a0a] border border-white/15 text-white placeholder-white/30 focus:ring-2 focus:ring-[#7A725E] focus:border-[#7A725E] outline-none`;
+  const inputClass = `w-full px-4 py-3 rounded-lg bg-[#0a0a0a] border border-white/15 text-white placeholder-white/30 focus:ring-2 focus:ring-[#7A725E] focus:border-[#7A725E] outline-none transition-colors`;
 
   return (
     <div className="max-w-4xl mx-auto">
-      {showConfirmation ? (
+      {status === 'success' ? (
         <div className="text-center bg-[#1a1a1a] border border-white/10 rounded-xl p-8">
           <div className="mb-6">
             <CheckCircle className="w-24 h-24 text-[#7A725E] mx-auto" />
           </div>
           <h3 className="text-2xl font-bold text-white mb-2">Thank you!</h3>
           <p className="text-white/60">We'll be in touch with you shortly.</p>
-
           <button
             onClick={resetForm}
             className="inline-flex items-center justify-center px-6 py-3 bg-[#2e3d30] text-white rounded-none transition-opacity hover:opacity-90 mt-6"
@@ -131,12 +124,10 @@ const ReferralForm = () => {
                 <Gift className={`w-8 h-8 ${referralType === 'company' ? 'text-[#7A725E]' : 'text-white/40'}`} />
                 <h3 className="text-xl font-semibold ml-3 text-white">Refer a Company</h3>
               </div>
-
               <div className="mb-4">
                 <div className="text-3xl font-bold text-[#7A725E]">$1000</div>
                 <p className="text-white/50">Reward per successful hire</p>
               </div>
-
               <p className="text-white/50 text-sm">
                 Know a company looking for top student talent? Help them find exceptional graduates while earning rewards.
               </p>
@@ -154,12 +145,10 @@ const ReferralForm = () => {
                 <Users className={`w-8 h-8 ${referralType === 'student' ? 'text-[#7A725E]' : 'text-white/40'}`} />
                 <h3 className="text-xl font-semibold ml-3 text-white">Refer a Student</h3>
               </div>
-
               <div className="mb-4">
                 <div className="text-3xl font-bold text-[#7A725E]">$250</div>
                 <p className="text-white/50">Reward per successful hire</p>
               </div>
-
               <p className="text-white/50 text-sm">
                 Know a talented student seeking opportunities? Help them kickstart their career journey.
               </p>
@@ -182,9 +171,7 @@ const ReferralForm = () => {
               >
                 <input type="hidden" name="form-name" value={`referral-${referralType}`} />
                 <p className="hidden">
-                  <label>
-                    Don't fill this out if you're human: <input name="bot-field" />
-                  </label>
+                  <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                 </p>
 
                 <div>
@@ -283,23 +270,29 @@ const ReferralForm = () => {
                         onChange={handleChange}
                         rows={4}
                         className={inputClass}
-                        placeholder={referralType === 'company'
-                          ? "Tell us about the company (e.g., industry, size, location)"
-                          : "Tell us about the student (e.g., university, major, graduation year)"}
+                        placeholder={
+                          referralType === 'company'
+                            ? 'Tell us about the company (e.g., industry, size, location)'
+                            : 'Tell us about the student (e.g., university, major, graduation year)'
+                        }
                       />
                     </div>
                   </div>
                 </div>
 
+                {status === 'error' && (
+                  <p className="text-sm text-red-400">{errorMsg}</p>
+                )}
+
                 <div>
                   <button
                     type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-[#2e3d30] hover:opacity-90 text-white py-3 px-6 font-medium transition-opacity flex items-center justify-center"
+                    disabled={status === 'submitting'}
+                    className="w-full bg-[#2e3d30] hover:opacity-90 disabled:opacity-50 text-white py-3 px-6 font-medium transition-opacity flex items-center justify-center gap-3"
                   >
-                    {isSubmitting ? (
+                    {status === 'submitting' ? (
                       <>
-                        <div className="animate-spin h-5 w-5 mr-3 border-2 border-white border-t-transparent rounded-full" />
+                        <div className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full" />
                         Processing...
                       </>
                     ) : (
