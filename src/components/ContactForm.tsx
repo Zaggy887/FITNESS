@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { CheckCircle } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -38,18 +39,20 @@ const ContactForm = () => {
     setErrorMsg('');
 
     try {
-      const body = new URLSearchParams({
-        'form-name': 'contact',
-        ...formData,
-      }).toString();
-
-      const res = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body,
+      const { error } = await supabase.from('contact_submissions').insert({
+        full_name: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        goals: formData.goals,
       });
 
-      if (!res.ok) throw new Error(`Server responded with ${res.status}`);
+      if (error) throw error;
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ 'form-name': 'contact', ...formData }).toString(),
+      }).catch(() => {});
 
       setStatus('success');
       setFormData({ fullName: '', email: '', phone: '', goals: '' });
