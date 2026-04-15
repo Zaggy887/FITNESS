@@ -40,7 +40,7 @@ const TheStudio = () => {
               <li key={i} className="flex items-start gap-4 group md:justify-center">
 
                 {/* Number */}
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 w-6 text-right">
                   <span className="text-[#7A725E] text-sm font-semibold tracking-widest">
                     {`0${i + 1}`}
                   </span>
