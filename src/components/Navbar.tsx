@@ -98,6 +98,17 @@ const Navbar = () => {
         </a>
 
 
+        {/* Mobile Contact Button */}
+        <button
+          onClick={() => scrollToSection("contact")}
+          className="md:hidden px-5 py-2 rounded-full text-white/90 font-medium 
+                     border border-white/30 
+                     bg-white/10 backdrop-blur-md 
+                     hover:bg-white/20 hover:border-white/50 
+                     transition-all duration-300"
+        >
+          Contact Us
+        </button>
       </div>
 
       {/* Mobile Menu */}
