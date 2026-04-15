@@ -69,7 +69,7 @@ const ContactForm = () => {
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="fade-in mb-4 text-3xl font-bold text-white tracking-tight">
-            <span className="text-[#7A725E]">Start Your Journey</span> With Us
+            <span className="text-[#7A725E]">Conact Us for A</span> Free Consultation
           </h2>
           <p className="fade-in text-white/50 text-sm leading-relaxed">
             Whether you're ready to transform your physique or just want to explore your options, we're here to help.
