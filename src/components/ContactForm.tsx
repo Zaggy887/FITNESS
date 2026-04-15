@@ -77,13 +77,45 @@ const ContactForm = () => {
 
         <div className="max-w-xl mx-auto">
           {status === 'success' ? (
-            <div className="fade-in bg-[#111] border border-white/10 p-8 text-center">
-              <CheckCircle className="w-16 h-16 text-[#7A725E] mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Message Received!</h3>
-              <p className="text-white/50 text-sm mb-6">We'll be in touch with you shortly.</p>
+            <div className="bg-[#111] border border-white/10 p-10 text-center animate-fade-in-up">
+              <div className="relative w-20 h-20 mx-auto mb-6">
+                <svg className="w-20 h-20" viewBox="0 0 80 80">
+                  <circle
+                    cx="40" cy="40" r="36"
+                    fill="none"
+                    stroke="#2e3d30"
+                    strokeWidth="4"
+                  />
+                  <circle
+                    cx="40" cy="40" r="36"
+                    fill="none"
+                    stroke="#7A725E"
+                    strokeWidth="4"
+                    strokeLinecap="round"
+                    strokeDasharray="226"
+                    strokeDashoffset="0"
+                    className="animate-circle-draw"
+                    style={{ transformOrigin: 'center', transform: 'rotate(-90deg)' }}
+                  />
+                  <polyline
+                    points="24,40 35,52 56,28"
+                    fill="none"
+                    stroke="#7A725E"
+                    strokeWidth="4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeDasharray="50"
+                    strokeDashoffset="0"
+                    className="animate-check-draw"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">You're all set!</h3>
+              <p className="text-white/50 text-sm mb-2">We've received your message.</p>
+              <p className="text-white/30 text-xs mb-8">We'll be in touch with you shortly.</p>
               <button
                 onClick={() => setStatus('idle')}
-                className="bg-[#2e3d30] hover:opacity-90 text-white py-3 px-6 font-bold uppercase tracking-widest text-sm transition-opacity"
+                className="bg-[#2e3d30] hover:opacity-90 text-white py-3 px-8 font-bold uppercase tracking-widest text-xs transition-opacity"
               >
                 Send Another Message
               </button>
@@ -91,7 +123,6 @@ const ContactForm = () => {
           ) : (
             <form
               name="contact"
-              method="POST"
               onSubmit={handleSubmit}
               className="fade-in bg-[#111] border border-white/10 p-8"
               data-netlify="true"

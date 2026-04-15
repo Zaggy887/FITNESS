@@ -121,6 +121,34 @@
   animation: slideUp 0.8s ease-out forwards;
 }
 
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes circleDraw {
+  from { stroke-dashoffset: 226; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes checkDraw {
+  from { stroke-dashoffset: 50; }
+  to { stroke-dashoffset: 0; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-circle-draw {
+  animation: circleDraw 0.6s ease-out forwards;
+}
+
+.animate-check-draw {
+  stroke-dashoffset: 50;
+  animation: checkDraw 0.4s ease-out 0.5s forwards;
+}
+
 @media (max-width: 768px) {
   .swipe-container {
     @apply overflow-x-auto snap-x snap-mandatory;
