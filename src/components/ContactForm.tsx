@@ -72,7 +72,7 @@ const ContactForm = () => {
             <span className="text-[#7A725E]">Conact Us for a</span> Free Consultation
           </h2>
           <p className="fade-in text-white/50 text-sm leading-relaxed">
-            Whether you're ready to transform your physique or just want to explore your options, we're here to help.
+            Whether you're ready to transform your physique or you just have a question, there's no hurt in just asking. We're here to help.
           </p>
         </div>
 
