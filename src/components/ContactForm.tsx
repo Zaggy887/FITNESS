@@ -27,9 +27,9 @@ const ContactForm = () => {
           <p className="fade-in text-white/50 text-sm leading-relaxed">
             Whether you're ready to transform your physique or just have a question, there's no hurt in just asking. We're here to help.
           </p>
-          <p className="fade-in text-white/40 text-xs mt-3">
+          <p className="fade-in text-white/70 text-sm mt-4">
             For individual or personal bookings, contact:{' '}
-            <a href="mailto:contact@strengthhub.com" className="text-[#7A725E] hover:underline">contact@strengthhub.com</a>
+            <a href="mailto:contact@strengthhub.com" className="text-[#7A725E] font-semibold hover:underline">contact@strengthhub.com</a>
           </p>
         </div>
       </div>
