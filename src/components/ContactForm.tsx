@@ -41,7 +41,7 @@ const ContactForm = () => {
                 <Mail className="w-5 h-5 text-[#7A725E]" />
               </div>
               <div>
-                <p className="text-white/50 text-xs uppercase tracking-widest mb-1">Individual &amp; Personal Bookings</p>
+                <p className="text-white/50 text-xs uppercase tracking-widest mb-1">Personal &amp; Group Bookings</p>
                 <a
                   href="mailto:contact@strengthhub.com"
                   className="text-white text-lg font-semibold hover:text-[#7A725E] transition-colors"
