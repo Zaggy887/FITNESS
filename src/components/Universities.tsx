@@ -80,7 +80,7 @@ const Universities = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           <div className="fade-in flex items-start">
-            <CheckCircle className="flex-shrink-0 w-6 h-6 text-[#7A725E] mr-3 mt-1" />
+            <CheckCircle className="flex-shrink-0 w-6 h-6 text-[#3CC455] mr-3 mt-1" />
             <div>
               <h3 className="text-white text-xl font-semibold mb-2">Direct University Access</h3>
               <p className="text-white/60">
@@ -90,7 +90,7 @@ const Universities = () => {
           </div>
 
           <div className="fade-in flex items-start" style={{ transitionDelay: '0.2s' }}>
-            <CheckCircle className="flex-shrink-0 w-6 h-6 text-[#7A725E] mr-3 mt-1" />
+            <CheckCircle className="flex-shrink-0 w-6 h-6 text-[#3CC455] mr-3 mt-1" />
             <div>
               <h3 className="text-white text-xl font-semibold mb-2">Top Academic Performers</h3>
               <p className="text-white/60">
@@ -100,7 +100,7 @@ const Universities = () => {
           </div>
 
           <div className="fade-in flex items-start" style={{ transitionDelay: '0.4s' }}>
-            <CheckCircle className="flex-shrink-0 w-6 h-6 text-[#7A725E] mr-3 mt-1" />
+            <CheckCircle className="flex-shrink-0 w-6 h-6 text-[#3CC455] mr-3 mt-1" />
             <div>
               <h3 className="text-white text-xl font-semibold mb-2">Diverse Talent Pool</h3>
               <p className="text-white/60">

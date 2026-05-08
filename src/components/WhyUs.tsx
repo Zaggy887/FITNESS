@@ -61,11 +61,11 @@ const WhyUs = () => {
             return (
               <div
                 key={card.title}
-                className="fade-in bg-[#111] border border-white/10 rounded-xl p-8 flex flex-col items-start hover:border-[#7A725E]/50 transition-colors duration-300"
+                className="fade-in bg-[#111] border border-white/10 rounded-xl p-8 flex flex-col items-start hover:border-[#3CC455]/50 transition-colors duration-300"
                 style={{ transitionDelay: `${i * 0.1}s` }}
               >
                 <div className="bg-[#1a1a1a] rounded-lg p-3 mb-6">
-                  <Icon className="w-6 h-6 text-[#7A725E]" strokeWidth={1.5} />
+                  <Icon className="w-6 h-6 text-[#3CC455]" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-white font-bold text-base mb-3">{card.title}</h3>
                 <p className="text-white/50 text-sm leading-relaxed">{card.description}</p>

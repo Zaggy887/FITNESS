@@ -23,26 +23,26 @@ const Hero = () => {
           <h1 className="font-extrabold tracking-tight leading-tight">
             <span className="block text-white text-3xl sm:text-4xl lg:text-[48px]">
               Online Personal Training{" "}
-              <span className="text-[#7A725E]">built for</span>
+              <span className="text-[#3CC455]">built for</span>
             </span>
-            <span className="block text-[#7A725E] text-3xl sm:text-4xl lg:text-[48px] mt-1">
+            <span className="block text-[#3CC455] text-3xl sm:text-4xl lg:text-[48px] mt-1">
               Real Results
             </span>
           </h1>
 
           <p className="mx-auto mt-5 max-w-[700px] text-sm font-bold leading-6 text-white sm:text-base sm:leading-7">
             Expert coaches in body composition, delivering real results through{" "}
-            <span className="text-[#7A725E] underline underline-offset-2">personalised 1-on-1 online coaching</span>.{" "}
+            <span className="text-[#3CC455] underline underline-offset-2">personalised 1-on-1 online coaching</span>.{" "}
             Train on your schedule with a{" "}
-            <span className="text-[#7A725E] underline underline-offset-2">clear plan</span>,{" "}
-            <span className="text-[#7A725E] underline underline-offset-2">accountability</span>, and{" "}
-            <span className="text-[#7A725E] underline underline-offset-2">guidance</span> that keeps you moving forward.
+            <span className="text-[#3CC455] underline underline-offset-2">clear plan</span>,{" "}
+            <span className="text-[#3CC455] underline underline-offset-2">accountability</span>, and{" "}
+            <span className="text-[#3CC455] underline underline-offset-2">guidance</span> that keeps you moving forward.
           </p>
 
           <div className="mt-7">
             <a
               href="#contact"
-              className="inline-flex min-w-[280px] items-center justify-center bg-[#2e3d30] px-8 py-4 text-sm font-bold uppercase tracking-[0.15em] text-white transition hover:opacity-90"
+              className="inline-flex min-w-[280px] items-center justify-center bg-[#1a3a1f] px-8 py-4 text-sm font-bold uppercase tracking-[0.15em] text-white transition hover:opacity-90"
             >
               Book Free Consultation
             </a>

@@ -66,11 +66,11 @@ const Navbar = () => {
 
   const navLink = (id: string, label: string, mobile = false) => {
     const base = mobile
-      ? "text-white text-lg font-light hover:text-[#5BB6FF] transition-colors"
+      ? "text-white text-lg font-light hover:text-[#3CC455] transition-colors"
       : `transition-colors ${
           activeSection === id
-            ? "text-[#5BB6FF] font-medium"
-            : "text-white hover:text-[#5BB6FF]"
+            ? "text-[#3CC455] font-medium"
+            : "text-white hover:text-[#3CC455]"
         }`;
 
     return (
@@ -133,7 +133,7 @@ const Navbar = () => {
         <div className="absolute top-4 right-4">
           <button
             onClick={() => setIsMenuOpen(false)}
-            className="text-white hover:text-[#48A3EB] transition-colors"
+            className="text-white hover:text-[#3CC455] transition-colors"
           >
             <X size={28} />
           </button>
