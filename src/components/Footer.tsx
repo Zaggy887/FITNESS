@@ -21,11 +21,11 @@ const Footer = () => {
             <h4 className="text-white/70 font-semibold mb-4">Connect with Us</h4>
             <div className="flex flex-col items-center md:items-end space-y-4">
               <a
-                href="mailto:contact@strengthhub.com"
+                href="mailto:info@strengthhub.com"
                 className="flex items-center text-white/60 hover:text-white transition-colors"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                contact@strengthhub.com
+                info@strengthhub.com
               </a>
             </div>
           </div>

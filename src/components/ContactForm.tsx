@@ -43,15 +43,15 @@ const ContactForm = () => {
               <div>
                 <p className="text-white/50 text-xs uppercase tracking-widest mb-1">Individual &amp; Group Bookings</p>
                 <a
-                  href="mailto:contact@strengthhub.com"
+                  href="mailto:info@strengthhub.com"
                   className="text-white text-lg font-semibold hover:text-[#3CC455] transition-colors"
                 >
-                  contact@strengthhub.com
+                  info@strengthhub.com
                 </a>
               </div>
             </div>
             <a
-              href="mailto:contact@strengthhub.com"
+              href="mailto:info@strengthhub.com"
               className="flex-shrink-0 bg-[#1a3a1f] hover:opacity-90 text-white py-3 px-8 font-bold uppercase tracking-widest text-xs transition-opacity"
             >
               Send Us an Email
