@@ -1,18 +1,56 @@
 import { useEffect, useRef } from 'react';
 import { Calendar, Clock, CheckCircle2 } from 'lucide-react';
 
+declare global {
+  interface Window {
+    Calendly?: {
+      initInlineWidget: (opts: { url: string; parentElement: HTMLElement }) => void;
+    };
+  }
+}
+
+const CALENDLY_URL = 'https://calendly.com/strengthhubonline-info';
+const CALENDLY_EMBED_URL = `${CALENDLY_URL}?hide_gdpr_banner=1&background_color=0a0a0a&text_color=ffffff&primary_color=A3E635`;
+
 const ContactForm = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const widgetRef = useRef<HTMLDivElement>(null);
 
-  // Load Calendly's embed script once
   useEffect(() => {
     const scriptId = 'calendly-widget-script';
-    if (!document.getElementById(scriptId)) {
+    const cssId = 'calendly-widget-css';
+
+    if (!document.getElementById(cssId)) {
+      const link = document.createElement('link');
+      link.id = cssId;
+      link.rel = 'stylesheet';
+      link.href = 'https://assets.calendly.com/assets/external/widget.css';
+      document.head.appendChild(link);
+    }
+
+    const initWidget = () => {
+      if (window.Calendly && widgetRef.current) {
+        widgetRef.current.innerHTML = '';
+        window.Calendly.initInlineWidget({
+          url: CALENDLY_EMBED_URL,
+          parentElement: widgetRef.current,
+        });
+      }
+    };
+
+    const existing = document.getElementById(scriptId) as HTMLScriptElement | null;
+    if (!existing) {
       const script = document.createElement('script');
       script.id = scriptId;
       script.src = 'https://assets.calendly.com/assets/external/widget.js';
       script.async = true;
+      script.onload = initWidget;
       document.body.appendChild(script);
+    } else if (window.Calendly) {
+      initWidget();
+    } else {
+      existing.addEventListener('load', initWidget);
+      return () => existing.removeEventListener('load', initWidget);
     }
   }, []);
 
@@ -30,8 +68,6 @@ const ContactForm = () => {
     elements?.forEach((el) => observer.observe(el));
     return () => elements?.forEach((el) => observer.unobserve(el));
   }, []);
-
-  const CALENDLY_URL = 'https://calendly.com/strengthhubonline-info';
 
   return (
     <section id="contact" className="section bg-black relative overflow-hidden py-20" ref={sectionRef}>
@@ -91,8 +127,8 @@ const ContactForm = () => {
           {/* Calendly inline widget — wrapped in the dark themed card */}
           <div className="fade-in relative bg-[#0a0a0a] border border-white/10 rounded-2xl p-2 sm:p-3 hover:border-[#A3E635]/30 transition-colors duration-500 overflow-hidden">
             <div
+              ref={widgetRef}
               className="calendly-inline-widget rounded-xl overflow-hidden"
-              data-url={`${CALENDLY_URL}?hide_gdpr_banner=1&background_color=0a0a0a&text_color=ffffff&primary_color=A3E635`}
               style={{ minWidth: '320px', height: '700px' }}
             />
           </div>
