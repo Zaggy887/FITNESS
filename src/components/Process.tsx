@@ -49,8 +49,8 @@ const Process = () => {
     <section id="process" className="section bg-[#111] relative" ref={sectionRef}>
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="fade-in text-3xl font-bold mb-4"><span className="text-white">Where to </span><span className="text-[#3CC455]">Start</span></h2>
-          <p className="fade-in text-lg text-[#3CC455] mb-4">
+          <h2 className="fade-in text-3xl font-bold mb-4"><span className="text-white">Where to </span><span className="text-[#A3E635]">Start</span></h2>
+          <p className="fade-in text-lg text-[#A3E635] mb-4">
             It's simple, effective, and built around your life.
           </p>
           <p className="fade-in text-white/60">
@@ -58,7 +58,7 @@ const Process = () => {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="absolute left-1/2 top-[3rem] md:top-[2.5rem] bottom-0 w-0.5 bg-[#3CC455]/30 transform -translate-x-1/2 z-0 pointer-events-none" />
+          <div className="absolute left-1/2 top-[3rem] md:top-[2.5rem] bottom-0 w-0.5 bg-[#A3E635]/30 transform -translate-x-1/2 z-0 pointer-events-none" />
 
           <div className="relative space-y-20 z-10">
             {steps.map(({ step, title, icon: Icon, description }, index) => {
@@ -78,13 +78,13 @@ const Process = () => {
                 >
                   <div className="relative md:w-1/2 bg-[#1a1a1a] border border-white/10 rounded-xl p-6">
                     <div
-                      className={`absolute top-[-1.5rem] md:top-1/2 md:-translate-y-1/2 w-10 h-10 bg-[#3CC455] rounded-full flex items-center justify-center text-white font-bold text-sm ${numberPosition} ${numberTranslate}`}
+                      className={`absolute top-[-1.5rem] md:top-1/2 md:-translate-y-1/2 w-10 h-10 bg-[#A3E635] rounded-full flex items-center justify-center text-white font-bold text-sm ${numberPosition} ${numberTranslate}`}
                     >
                       {step}
                     </div>
 
-                    <div className="w-12 h-12 bg-[#3CC455]/20 rounded-full flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-[#3CC455]" />
+                    <div className="w-12 h-12 bg-[#A3E635]/20 rounded-full flex items-center justify-center mb-4">
+                      <Icon className="w-6 h-6 text-[#A3E635]" />
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
                     <p className="text-white/60">{description}</p>
@@ -98,7 +98,7 @@ const Process = () => {
         <div className="mt-16 text-center">
           <a
             href="#contact"
-            className="fade-in inline-block px-8 py-3 font-semibold text-white bg-[#1a3a1f] hover:opacity-90 transition-opacity duration-300"
+            className="fade-in inline-block px-8 py-3 font-semibold text-white bg-[#2a3a0f] hover:opacity-90 transition-opacity duration-300"
           >
             Get Started
           </a>

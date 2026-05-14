@@ -90,20 +90,20 @@ const ReferralForm = () => {
     }
   };
 
-  const inputClass = `w-full px-4 py-3 rounded-lg bg-[#0a0a0a] border border-white/15 text-white placeholder-white/30 focus:ring-2 focus:ring-[#3CC455] focus:border-[#3CC455] outline-none transition-colors`;
+  const inputClass = `w-full px-4 py-3 rounded-lg bg-[#0a0a0a] border border-white/15 text-white placeholder-white/30 focus:ring-2 focus:ring-[#A3E635] focus:border-[#A3E635] outline-none transition-colors`;
 
   return (
     <div className="max-w-4xl mx-auto">
       {status === 'success' ? (
         <div className="text-center bg-[#1a1a1a] border border-white/10 rounded-xl p-8">
           <div className="mb-6">
-            <CheckCircle className="w-24 h-24 text-[#3CC455] mx-auto" />
+            <CheckCircle className="w-24 h-24 text-[#A3E635] mx-auto" />
           </div>
           <h3 className="text-2xl font-bold text-white mb-2">Thank you!</h3>
           <p className="text-white/60">We'll be in touch with you shortly.</p>
           <button
             onClick={resetForm}
-            className="inline-flex items-center justify-center px-6 py-3 bg-[#1a3a1f] text-white rounded-none transition-opacity hover:opacity-90 mt-6"
+            className="inline-flex items-center justify-center px-6 py-3 bg-[#2a3a0f] text-white rounded-none transition-opacity hover:opacity-90 mt-6"
           >
             <ArrowRight className="w-5 h-5 mr-2" />
             Submit Another Referral
@@ -115,17 +115,17 @@ const ReferralForm = () => {
             <div
               className={`p-6 rounded-xl cursor-pointer transition-all duration-300 border ${
                 referralType === 'company'
-                  ? 'bg-[#3CC455]/10 border-[#3CC455]'
-                  : 'bg-[#1a1a1a] border-white/10 hover:border-[#3CC455]/40'
+                  ? 'bg-[#A3E635]/10 border-[#A3E635]'
+                  : 'bg-[#1a1a1a] border-white/10 hover:border-[#A3E635]/40'
               }`}
               onClick={() => handleReferralTypeSelect('company')}
             >
               <div className="flex items-center mb-4">
-                <Gift className={`w-8 h-8 ${referralType === 'company' ? 'text-[#3CC455]' : 'text-white/40'}`} />
+                <Gift className={`w-8 h-8 ${referralType === 'company' ? 'text-[#A3E635]' : 'text-white/40'}`} />
                 <h3 className="text-xl font-semibold ml-3 text-white">Refer a Company</h3>
               </div>
               <div className="mb-4">
-                <div className="text-3xl font-bold text-[#3CC455]">$1000</div>
+                <div className="text-3xl font-bold text-[#A3E635]">$1000</div>
                 <p className="text-white/50">Reward per successful hire</p>
               </div>
               <p className="text-white/50 text-sm">
@@ -136,17 +136,17 @@ const ReferralForm = () => {
             <div
               className={`p-6 rounded-xl cursor-pointer transition-all duration-300 border ${
                 referralType === 'student'
-                  ? 'bg-[#3CC455]/10 border-[#3CC455]'
-                  : 'bg-[#1a1a1a] border-white/10 hover:border-[#3CC455]/40'
+                  ? 'bg-[#A3E635]/10 border-[#A3E635]'
+                  : 'bg-[#1a1a1a] border-white/10 hover:border-[#A3E635]/40'
               }`}
               onClick={() => handleReferralTypeSelect('student')}
             >
               <div className="flex items-center mb-4">
-                <Users className={`w-8 h-8 ${referralType === 'student' ? 'text-[#3CC455]' : 'text-white/40'}`} />
+                <Users className={`w-8 h-8 ${referralType === 'student' ? 'text-[#A3E635]' : 'text-white/40'}`} />
                 <h3 className="text-xl font-semibold ml-3 text-white">Refer a Student</h3>
               </div>
               <div className="mb-4">
-                <div className="text-3xl font-bold text-[#3CC455]">$250</div>
+                <div className="text-3xl font-bold text-[#A3E635]">$250</div>
                 <p className="text-white/50">Reward per successful hire</p>
               </div>
               <p className="text-white/50 text-sm">
@@ -157,7 +157,7 @@ const ReferralForm = () => {
 
           {referralType && (
             <div ref={formRef} className="bg-[#1a1a1a] border border-white/10 rounded-xl p-8 transition-all duration-300">
-              <h3 className="text-2xl font-bold text-center mb-8 text-[#3CC455]">
+              <h3 className="text-2xl font-bold text-center mb-8 text-[#A3E635]">
                 {referralType === 'company' ? 'Company Referral Form' : 'Student Referral Form'}
               </h3>
 
@@ -209,7 +209,7 @@ const ReferralForm = () => {
                         name="isAnonymous"
                         checked={formData.isAnonymous}
                         onChange={handleChange}
-                        className="form-checkbox h-5 w-5 rounded border-white/20 text-[#3CC455] focus:ring-[#3CC455]"
+                        className="form-checkbox h-5 w-5 rounded border-white/20 text-[#A3E635] focus:ring-[#A3E635]"
                       />
                       <span className="ml-2 text-white/60">Keep my referral anonymous</span>
                     </label>
@@ -288,7 +288,7 @@ const ReferralForm = () => {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full bg-[#1a3a1f] hover:opacity-90 disabled:opacity-50 text-white py-3 px-6 font-medium transition-opacity flex items-center justify-center gap-3"
+                    className="w-full bg-[#2a3a0f] hover:opacity-90 disabled:opacity-50 text-white py-3 px-6 font-medium transition-opacity flex items-center justify-center gap-3"
                   >
                     {status === 'submitting' ? (
                       <>

@@ -57,7 +57,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="fade-in text-3xl font-bold mb-4">
-            <span className="text-white">What </span><span className="text-[#3CC455]">Our Clients Say</span>
+            <span className="text-white">What </span><span className="text-[#A3E635]">Our Clients Say</span>
           </h2>
           <p className="fade-in text-white/60 text-lg">
             Clients who trusted us to transform their bodies
@@ -70,7 +70,7 @@ const Testimonials = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="flex-shrink-0 snap-start w-[85%]">
                 <div className="bg-[#111] border border-white/10 rounded-xl p-6 h-full">
-                  <Quote className="w-8 h-8 text-[#3CC455]/60 mb-4" />
+                  <Quote className="w-8 h-8 text-[#A3E635]/60 mb-4" />
                   <p className="text-white/70 mb-6 italic">
                     {testimonial.quote}
                   </p>
@@ -85,7 +85,7 @@ const Testimonials = () => {
                       <p className="font-bold text-white">
                         {testimonial.name}
                       </p>
-                      <p className="text-sm text-[#3CC455]">
+                      <p className="text-sm text-[#A3E635]">
                         {testimonial.result}
                       </p>
                     </div>
@@ -94,7 +94,7 @@ const Testimonials = () => {
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className="w-4 h-4 fill-[#3CC455] text-[#3CC455]"
+                        className="w-4 h-4 fill-[#A3E635] text-[#A3E635]"
                       />
                     ))}
                   </div>
@@ -108,9 +108,9 @@ const Testimonials = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="fade-in bg-[#111] border border-white/10 rounded-xl p-6 hover:border-[#3CC455]/40 transition-colors duration-300"
+                className="fade-in bg-[#111] border border-white/10 rounded-xl p-6 hover:border-[#A3E635]/40 transition-colors duration-300"
               >
-                <Quote className="w-8 h-8 text-[#3CC455]/60 mb-4" />
+                <Quote className="w-8 h-8 text-[#A3E635]/60 mb-4" />
                 <p className="text-white/70 mb-6 italic">
                   {testimonial.quote}
                 </p>
@@ -125,7 +125,7 @@ const Testimonials = () => {
                     <p className="font-bold text-white">
                       {testimonial.name}
                     </p>
-                    <p className="text-sm text-[#3CC455]">
+                    <p className="text-sm text-[#A3E635]">
                       {testimonial.result}
                     </p>
                   </div>
@@ -134,7 +134,7 @@ const Testimonials = () => {
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className="w-4 h-4 fill-[#3CC455] text-[#3CC455]"
+                      className="w-4 h-4 fill-[#A3E635] text-[#A3E635]"
                     />
                   ))}
                 </div>
@@ -146,7 +146,7 @@ const Testimonials = () => {
         <div className="text-center">
           <a
             href="#contact"
-            className="inline-block px-8 py-3 bg-[#1a3a1f] text-white font-semibold hover:opacity-90 transition-opacity"
+            className="inline-block px-8 py-3 bg-[#2a3a0f] text-white font-semibold hover:opacity-90 transition-opacity"
           >
             Start Your Transformation
           </a>

@@ -53,7 +53,7 @@ const Articles = () => {
   const renderArticle = (article: typeof articles[0], index: number) => (
     <article
       key={index}
-      className="fade-in bg-[#111] border border-white/10 rounded-xl overflow-hidden flex flex-col hover:border-[#3CC455]/40 transition-colors duration-300"
+      className="fade-in bg-[#111] border border-white/10 rounded-xl overflow-hidden flex flex-col hover:border-[#A3E635]/40 transition-colors duration-300"
     >
       <div className="h-48 relative overflow-hidden">
         <img
@@ -68,7 +68,7 @@ const Articles = () => {
         <p className="text-white/60 mb-4">{article.desc}</p>
         <a
           href={article.link}
-          className="text-[#3CC455] font-semibold hover:text-white transition-colors"
+          className="text-[#A3E635] font-semibold hover:text-white transition-colors"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -27,7 +27,7 @@ const TheStudio = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black mb-5 tracking-tight">
           <span className="text-white">OUR OFFER TO </span>
-          <span className="text-[#3CC455]">YOU</span>
+          <span className="text-[#A3E635]">YOU</span>
         </h2>
       </div>
 
@@ -41,13 +41,13 @@ const TheStudio = () => {
 
                 {/* Number */}
                 <div className="flex-shrink-0 w-8">
-                  <span className="text-[#3CC455] text-sm font-semibold tabular-nums tracking-widest">
+                  <span className="text-[#A3E635] text-sm font-semibold tabular-nums tracking-widest">
                     {`0${i + 1}`}
                   </span>
                 </div>
 
                 {/* Divider line */}
-                <div className="w-[1px] self-stretch bg-white/10 group-hover:bg-[#3CC455]/40 transition-colors" />
+                <div className="w-[1px] self-stretch bg-white/10 group-hover:bg-[#A3E635]/40 transition-colors" />
 
                 {/* Text */}
                 <p className="text-white/85 text-sm sm:text-[15px] leading-relaxed">
@@ -58,14 +58,14 @@ const TheStudio = () => {
           </ul>
 
           {/* BONUS */}
-          <p className="text-[#3CC455] font-bold tracking-[0.25em] text-xs uppercase mb-4 md:text-center">
+          <p className="text-[#A3E635] font-bold tracking-[0.25em] text-xs uppercase mb-4 md:text-center">
             Bonus
           </p>
 
           <ul className="mb-10 space-y-4">
             {bonusOfferings.map((item, i) => (
               <li key={i} className="flex items-start gap-3 md:justify-center">
-                <span className="mt-[7px] w-2 h-2 rounded-full bg-[#3CC455] flex-shrink-0" />
+                <span className="mt-[7px] w-2 h-2 rounded-full bg-[#A3E635] flex-shrink-0" />
                 <p className="text-white/80 text-sm sm:text-[15px] leading-relaxed">
                   {item}
                 </p>
@@ -77,7 +77,7 @@ const TheStudio = () => {
           <div className="text-center">
             <a
               href="#contact"
-              className="inline-block rounded-full px-8 sm:px-10 py-3.5 bg-[#1a3a1f] text-white font-bold tracking-[0.18em] text-xs sm:text-sm uppercase hover:opacity-90 transition-opacity"
+              className="inline-block rounded-full px-8 sm:px-10 py-3.5 bg-[#2a3a0f] text-white font-bold tracking-[0.18em] text-xs sm:text-sm uppercase hover:opacity-90 transition-opacity"
             >
               Contact Us
             </a>

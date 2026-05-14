@@ -17,7 +17,7 @@ const FacebookFilled = () => (
     width="32"
     height="32"
     viewBox="0 0 24 24"
-    fill="#3CC455"
+    fill="#A3E635"
     stroke="none"
   >
     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -62,8 +62,8 @@ const Pricing = () => {
           </div>
 
           <div className="grid md:grid-cols-1 gap-8">
-            <div className="fade-in bg-[#111] border border-white/10 rounded-2xl p-10 hover:border-[#3CC455]/40 transition-colors duration-300">
-              <h3 className="text-2xl font-bold text-[#3CC455] mb-4">Simple. Transparent. Results-Driven.</h3>
+            <div className="fade-in bg-[#111] border border-white/10 rounded-2xl p-10 hover:border-[#A3E635]/40 transition-colors duration-300">
+              <h3 className="text-2xl font-bold text-[#A3E635] mb-4">Simple. Transparent. Results-Driven.</h3>
               <p className="text-white/60 mb-6">
                 We support you throughout your entire coaching journey. If you're not satisfied within the first 30 days, we'll make it right. We stand behind every program we deliver.
               </p>
@@ -80,7 +80,7 @@ const Pricing = () => {
                   'Ongoing support throughout your journey',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start text-base leading-relaxed">
-                    <CheckSquare className="w-5 h-5 text-[#3CC455] flex-shrink-0 mr-3 mt-[2px]" />
+                    <CheckSquare className="w-5 h-5 text-[#A3E635] flex-shrink-0 mr-3 mt-[2px]" />
                     <span className="flex-1">{item}</span>
                   </li>
                 ))}
@@ -88,7 +88,7 @@ const Pricing = () => {
               <div className="mt-10 flex justify-center">
                 <a
                   href="#contact"
-                  className="bg-[#1a3a1f] text-white font-semibold py-3 px-8 hover:opacity-90 transition-opacity"
+                  className="bg-[#2a3a0f] text-white font-semibold py-3 px-8 hover:opacity-90 transition-opacity"
                 >
                   Start Your Transformation
                 </a>
@@ -111,7 +111,7 @@ const Pricing = () => {
                   <h4 className="text-2xl font-bold text-white mb-6 text-center">Why Refer?</h4>
                   <div className="space-y-6">
                     <div className="flex items-start space-x-4">
-                      <Gift className="w-8 h-8 text-[#3CC455] flex-shrink-0" />
+                      <Gift className="w-8 h-8 text-[#A3E635] flex-shrink-0" />
                       <div>
                         <h5 className="text-lg font-semibold text-white">Earn Rewards</h5>
                         <p className="text-white/55">
@@ -120,7 +120,7 @@ const Pricing = () => {
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
-                      <ArrowRight className="w-8 h-8 text-[#3CC455] flex-shrink-0" />
+                      <ArrowRight className="w-8 h-8 text-[#A3E635] flex-shrink-0" />
                       <div>
                         <h5 className="text-lg font-semibold text-white">Quick &amp; Easy</h5>
                         <p className="text-white/55">
@@ -129,7 +129,7 @@ const Pricing = () => {
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
-                      <Users className="w-8 h-8 text-[#3CC455] flex-shrink-0" />
+                      <Users className="w-8 h-8 text-[#A3E635] flex-shrink-0" />
                       <div>
                         <h5 className="text-lg font-semibold text-white">Make Connections</h5>
                         <p className="text-white/55">
@@ -160,13 +160,13 @@ const Pricing = () => {
               <div className="md:w-7/12 space-y-6">
                 <div className="flex items-center space-x-3">
                   <FacebookFilled />
-                  <div className="bg-[#3CC455]/10 border border-[#3CC455]/30 rounded-full px-4 py-1">
-                    <span className="text-[#3CC455] text-sm">StrengthHubOnline Community</span>
+                  <div className="bg-[#A3E635]/10 border border-[#A3E635]/30 rounded-full px-4 py-1">
+                    <span className="text-[#A3E635] text-sm">StrengthHubOnline Community</span>
                   </div>
                 </div>
 
                 <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-                  Join Our <span className="text-[#3CC455]">Thriving Community</span>
+                  Join Our <span className="text-[#A3E635]">Thriving Community</span>
                 </h2>
 
                 <p className="text-white/60 text-lg">
@@ -174,16 +174,16 @@ const Pricing = () => {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-                  <div className="flex items-center space-x-3 bg-[#1a1a1a] border border-white/10 rounded-xl p-4 transition-all duration-300 hover:border-[#3CC455]/30">
-                    <Target className="w-6 h-6 text-[#3CC455]" />
+                  <div className="flex items-center space-x-3 bg-[#1a1a1a] border border-white/10 rounded-xl p-4 transition-all duration-300 hover:border-[#A3E635]/30">
+                    <Target className="w-6 h-6 text-[#A3E635]" />
                     <span className="text-white/70">Training Tips</span>
                   </div>
-                  <div className="flex items-center space-x-3 bg-[#1a1a1a] border border-white/10 rounded-xl p-4 transition-all duration-300 hover:border-[#3CC455]/30">
-                    <UserPlus className="w-6 h-6 text-[#3CC455]" />
+                  <div className="flex items-center space-x-3 bg-[#1a1a1a] border border-white/10 rounded-xl p-4 transition-all duration-300 hover:border-[#A3E635]/30">
+                    <UserPlus className="w-6 h-6 text-[#A3E635]" />
                     <span className="text-white/70">Client Transformations</span>
                   </div>
-                  <div className="flex items-center space-x-3 bg-[#1a1a1a] border border-white/10 rounded-xl p-4 transition-all duration-300 hover:border-[#3CC455]/30">
-                    <MessageCircle className="w-6 h-6 text-[#3CC455]" />
+                  <div className="flex items-center space-x-3 bg-[#1a1a1a] border border-white/10 rounded-xl p-4 transition-all duration-300 hover:border-[#A3E635]/30">
+                    <MessageCircle className="w-6 h-6 text-[#A3E635]" />
                     <span className="text-white/70">Active Discussions</span>
                   </div>
                 </div>
@@ -194,7 +194,7 @@ const Pricing = () => {
                   href="https://www.facebook.com/share/g/1Jfa3s7CHz/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full md:w-auto bg-[#1a3a1f] hover:opacity-90 text-white font-semibold px-8 py-4 transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="w-full md:w-auto bg-[#2a3a0f] hover:opacity-90 text-white font-semibold px-8 py-4 transition-all duration-300 flex items-center justify-center space-x-2"
                 >
                   <Share2 className="w-5 h-5" />
                   <span>Join Our Community</span>

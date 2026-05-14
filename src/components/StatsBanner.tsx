@@ -8,33 +8,33 @@ const StatsBanner = () => {
           THERE'S{' '}
           <span className="relative inline-block">
             NO REASON
-            <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#3CC455]" />
+            <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#A3E635]" />
           </span>{' '}
           YOU{' '}
           <span className="relative inline-block">
             CAN'T
-            <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#3CC455]" />
+            <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#A3E635]" />
           </span>{' '}
           DO IT
         </h2>
 
         <div className="flex flex-row md:flex-row justify-center gap-6 md:gap-24">
           <div className="flex flex-col items-center text-center flex-1 md:flex-none">
-            <Zap className="w-6 h-6 md:w-9 md:h-9 text-[#3CC455] mb-2 md:mb-4" strokeWidth={1.5} />
+            <Zap className="w-6 h-6 md:w-9 md:h-9 text-[#A3E635] mb-2 md:mb-4" strokeWidth={1.5} />
             <span className="text-white/60 text-[10px] md:text-sm font-semibold uppercase tracking-widest mt-1 leading-tight">
               8–12 WEEK<br />PHYSIQUE TRANSFORMATIONS
             </span>
           </div>
 
           <div className="flex flex-col items-center text-center flex-1 md:flex-none">
-            <Clock className="w-6 h-6 md:w-9 md:h-9 text-[#3CC455] mb-2 md:mb-4" strokeWidth={1.5} />
+            <Clock className="w-6 h-6 md:w-9 md:h-9 text-[#A3E635] mb-2 md:mb-4" strokeWidth={1.5} />
             <span className="text-white/60 text-[10px] md:text-sm font-semibold uppercase tracking-widest mt-1 leading-tight">
               BUILT FOR<br />BUSY SCHEDULES
             </span>
           </div>
 
           <div className="flex flex-col items-center text-center flex-1 md:flex-none">
-            <TrendingUp className="w-6 h-6 md:w-9 md:h-9 text-[#3CC455] mb-2 md:mb-4" strokeWidth={1.5} />
+            <TrendingUp className="w-6 h-6 md:w-9 md:h-9 text-[#A3E635] mb-2 md:mb-4" strokeWidth={1.5} />
             <span className="text-white/60 text-[10px] md:text-sm font-semibold uppercase tracking-widest mt-1 leading-tight">
               LONG-TERM RESULTS,<br />NOT QUICK FIXES
             </span>

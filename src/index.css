@@ -30,11 +30,11 @@
   }
 
   .nav-link {
-    @apply text-white/70 hover:text-[#3CC455] transition-colors duration-200;
+    @apply text-white/70 hover:text-[#A3E635] transition-colors duration-200;
   }
 
   .nav-link-mobile {
-    @apply block py-2 text-white/70 hover:text-[#3CC455] transition-colors duration-200;
+    @apply block py-2 text-white/70 hover:text-[#A3E635] transition-colors duration-200;
   }
 
   .btn {
@@ -42,11 +42,11 @@
   }
 
   .btn-primary {
-    @apply bg-[#3CC455] text-black hover:opacity-90;
+    @apply bg-[#A3E635] text-black hover:opacity-90;
   }
 
   .btn-secondary {
-    @apply bg-transparent text-white border border-white/30 hover:border-[#3CC455] hover:text-[#3CC455];
+    @apply bg-transparent text-white border border-white/30 hover:border-[#A3E635] hover:text-[#A3E635];
   }
 
   .section {
@@ -58,7 +58,7 @@
   }
 
   .input {
-    @apply w-full px-4 py-3 rounded-lg border border-white/15 bg-[#111] text-white placeholder-white/30 focus:ring-2 focus:ring-[#3CC455] focus:border-[#3CC455] outline-none transition-colors;
+    @apply w-full px-4 py-3 rounded-lg border border-white/15 bg-[#111] text-white placeholder-white/30 focus:ring-2 focus:ring-[#A3E635] focus:border-[#A3E635] outline-none transition-colors;
   }
 }
 
