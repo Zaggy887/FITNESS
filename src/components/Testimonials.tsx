@@ -27,24 +27,18 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: 'Jake R.',
-      result: 'Built strength and confidence',
       quote:
         "I wanted to get more serious with lifting but honestly had no clue what I was doing. Izak made it super simple and easy to follow, and kept me accountable the whole time. He's genuinely different to other trainers, you can tell he actually cares.",
-      image: '/Review1.webp',
     },
     {
       name: 'Daniel K.',
-      result: 'Stayed consistent through a busy college schedule',
       quote:
         "With college my schedule is always changing, so I needed something flexible. The program just worked around my week which made it so much easier to stay consistent. Izak kept me accountable the whole time and made it all really manageable.",
-      image: '/Review2.jpg',
     },
     {
       name: 'Josh S.',
-      result: 'Got in shape while working full time with kids',
       quote:
         "Working full time with two young kids, I don't have time to overthink training. Having an online PT helped so much with efficiency, I could just get in and get it done. Izak's approach is honestly different and the accountability made a huge difference.",
-      image: '/Review3.jpg',
     },
   ];
 
@@ -75,20 +69,9 @@ const Testimonials = () => {
                     {testimonial.quote}
                   </p>
                   <div className="flex items-center gap-4">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover opacity-80"
-                      loading="lazy"
-                    />
-                    <div>
-                      <p className="font-bold text-white">
-                        {testimonial.name}
-                      </p>
-                      <p className="text-sm text-[#A3E635]">
-                        {testimonial.result}
-                      </p>
-                    </div>
+                    <p className="font-bold text-white">
+                      {testimonial.name}
+                    </p>
                   </div>
                   <div className="flex gap-1 mt-4">
                     {[...Array(5)].map((_, i) => (
@@ -115,20 +98,9 @@ const Testimonials = () => {
                   {testimonial.quote}
                 </p>
                 <div className="flex items-center gap-4">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover opacity-80"
-                    loading="lazy"
-                  />
-                  <div>
-                    <p className="font-bold text-white">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-sm text-[#A3E635]">
-                      {testimonial.result}
-                    </p>
-                  </div>
+                  <p className="font-bold text-white">
+                    {testimonial.name}
+                  </p>
                 </div>
                 <div className="flex gap-1 mt-4">
                   {[...Array(5)].map((_, i) => (
