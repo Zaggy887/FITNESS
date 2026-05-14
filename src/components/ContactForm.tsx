@@ -94,8 +94,8 @@ const ContactForm = () => {
             </h2>
 
             <p className="mt-6 text-white/60 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-              Pick a time that works for you. No commitment, no pressure —
-              just a conversation about your goals and how we can help.
+              Get in touch for a free consultation about your individual goals,
+              as well as to discuss larger group bookings.
             </p>
           </div>
 
