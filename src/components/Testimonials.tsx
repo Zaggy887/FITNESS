@@ -45,11 +45,26 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="section bg-[#0a0a0a] text-white py-16"
+      className="section bg-[#0a0a0a] text-white py-16 relative overflow-hidden"
       ref={sectionRef}
     >
-      <div className="container mx-auto px-4">
+      <div
+        className="absolute top-0 left-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block pointer-events-none"
+        style={{ transform: "skewX(12deg) translateX(120px)" }}
+      />
+      <div
+        className="absolute top-0 right-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block pointer-events-none"
+        style={{ transform: "skewX(12deg) translateX(-120px)" }}
+      />
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="fade-in inline-flex flex-col items-center mb-6">
+            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A3E635]">
+              Testimonials
+            </span>
+            <span className="mt-2 h-[2px] w-12 bg-[#A3E635]" />
+          </div>
           <h2 className="fade-in text-3xl font-bold mb-4">
             <span className="text-white">What </span><span className="text-[#A3E635]">Our Clients Say</span>
           </h2>
@@ -124,6 +139,7 @@ const Testimonials = () => {
           </a>
         </div>
       </div>
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-px w-32 bg-gradient-to-r from-transparent via-[#A3E635]/40 to-transparent pointer-events-none" />
     </section>
   );
 };

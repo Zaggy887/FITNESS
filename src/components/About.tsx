@@ -25,9 +25,25 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="section bg-[#0a0a0a] py-20" ref={sectionRef}>
-      <div className="container">
+    <section id="about" className="section bg-[#0a0a0a] py-20 relative overflow-hidden" ref={sectionRef}>
+      {/* Diagonal accent line */}
+      <div
+        className="absolute top-0 left-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block pointer-events-none"
+        style={{ transform: "skewX(-12deg) translateX(120px)" }}
+      />
+      <div
+        className="absolute top-0 right-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block pointer-events-none"
+        style={{ transform: "skewX(-12deg) translateX(-120px)" }}
+      />
+
+      <div className="container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="fade-in inline-flex flex-col items-center mb-6">
+            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A3E635]">
+              Who We Are
+            </span>
+            <span className="mt-2 h-[2px] w-12 bg-[#A3E635]" />
+          </div>
           <h2 className="fade-in mb-6 text-3xl font-bold text-white">
             <span className="text-[#A3E635]">Strength</span>
             <span className="text-white">Hub</span>
@@ -64,6 +80,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-px w-32 bg-gradient-to-r from-transparent via-[#A3E635]/40 to-transparent pointer-events-none" />
     </section>
   );
 };

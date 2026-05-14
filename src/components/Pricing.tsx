@@ -49,9 +49,23 @@ const Pricing = () => {
 
   return (
     <div className="bg-[#0a0a0a]">
-      <section id="pricing" className="section relative text-white pt-20 pb-0" ref={sectionRef}>
+      <section id="pricing" className="section relative text-white pt-20 pb-0 overflow-hidden" ref={sectionRef}>
+        <div
+          className="absolute top-0 left-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block pointer-events-none"
+          style={{ transform: "skewX(-12deg) translateX(120px)" }}
+        />
+        <div
+          className="absolute top-0 right-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block pointer-events-none"
+          style={{ transform: "skewX(-12deg) translateX(-120px)" }}
+        />
         <div className="container relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="fade-in inline-flex flex-col items-center mb-6">
+              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A3E635]">
+                Pricing
+              </span>
+              <span className="mt-2 h-[2px] w-12 bg-[#A3E635]" />
+            </div>
             <h2 className="fade-in text-white text-4xl font-bold mb-4">
               An Investment in Your Best Self
             </h2>

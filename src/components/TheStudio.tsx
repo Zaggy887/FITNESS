@@ -14,7 +14,16 @@ const bonusOfferings = [
 
 const TheStudio = () => {
   return (
-    <section className="bg-[#0a0a0a] text-white pb-10 sm:pb-14">
+    <section className="bg-[#0a0a0a] text-white pb-10 sm:pb-14 relative overflow-hidden">
+      <div
+        className="absolute top-0 left-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block pointer-events-none z-20"
+        style={{ transform: "skewX(12deg) translateX(120px)" }}
+      />
+      <div
+        className="absolute top-0 right-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block pointer-events-none z-20"
+        style={{ transform: "skewX(12deg) translateX(-120px)" }}
+      />
+
       <div className="w-full overflow-hidden mb-8">
         <img
           src="/Battleropes.webp"
@@ -25,6 +34,12 @@ const TheStudio = () => {
       </div>
 
       <div className="container mx-auto px-4">
+        <div className="inline-flex flex-col items-center w-full mb-5">
+          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A3E635]">
+            What You Get
+          </span>
+          <span className="mt-2 h-[2px] w-12 bg-[#A3E635]" />
+        </div>
         <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black mb-5 tracking-tight">
           <span className="text-white">OUR OFFER TO </span>
           <span className="text-[#A3E635]">YOU</span>
@@ -85,6 +100,7 @@ const TheStudio = () => {
 
         </div>
       </div>
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-px w-32 bg-gradient-to-r from-transparent via-[#A3E635]/40 to-transparent pointer-events-none" />
     </section>
   );
 };
