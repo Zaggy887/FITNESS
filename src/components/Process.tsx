@@ -46,25 +46,9 @@ const Process = () => {
   ];
 
   return (
-    <section id="process" className="section bg-[#111] relative overflow-hidden" ref={sectionRef}>
-      {/* Diagonal accent lines */}
-      <div
-        className="absolute top-0 left-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block pointer-events-none"
-        style={{ transform: "skewX(-12deg) translateX(120px)" }}
-      />
-      <div
-        className="absolute top-0 right-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block pointer-events-none"
-        style={{ transform: "skewX(-12deg) translateX(-120px)" }}
-      />
-
-      <div className="container px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="process" className="section bg-[#111] relative" ref={sectionRef}>
+      <div className="container px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="fade-in inline-flex flex-col items-center mb-6">
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A3E635]">
-              The Process
-            </span>
-            <span className="mt-2 h-[2px] w-12 bg-[#A3E635]" />
-          </div>
           <h2 className="fade-in text-3xl font-bold mb-4"><span className="text-white">Where to </span><span className="text-[#A3E635]">Start</span></h2>
           <p className="fade-in text-lg text-[#A3E635] mb-4">
             It's simple, effective, and built around your life.
@@ -120,7 +104,6 @@ const Process = () => {
           </a>
         </div>
       </div>
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-px w-32 bg-gradient-to-r from-transparent via-[#A3E635]/40 to-transparent pointer-events-none" />
     </section>
   );
 };

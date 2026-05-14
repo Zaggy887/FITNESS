@@ -48,25 +48,9 @@ const WhyUs = () => {
   }, []);
 
   return (
-    <section className="section bg-[#0a0a0a] py-20 border-t border-white/10 relative overflow-hidden" ref={sectionRef}>
-      {/* Diagonal accent lines */}
-      <div
-        className="absolute top-0 left-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block pointer-events-none"
-        style={{ transform: "skewX(12deg) translateX(120px)" }}
-      />
-      <div
-        className="absolute top-0 right-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block pointer-events-none"
-        style={{ transform: "skewX(12deg) translateX(-120px)" }}
-      />
-
-      <div className="container relative z-10">
+    <section className="section bg-[#0a0a0a] py-20 border-t border-white/10" ref={sectionRef}>
+      <div className="container">
         <div className="text-center mb-14">
-          <div className="fade-in inline-flex flex-col items-center mb-6">
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A3E635]">
-              Our Edge
-            </span>
-            <span className="mt-2 h-[2px] w-12 bg-[#A3E635]" />
-          </div>
           <h2 className="fade-in text-3xl font-bold text-white mb-3">Why StrengthHubOnline</h2>
           <p className="fade-in text-white/50 text-base">The edge that sets our coaching apart</p>
         </div>
@@ -90,7 +74,6 @@ const WhyUs = () => {
           })}
         </div>
       </div>
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-px w-32 bg-gradient-to-r from-transparent via-[#A3E635]/40 to-transparent pointer-events-none" />
     </section>
   );
 };

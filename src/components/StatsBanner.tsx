@@ -2,16 +2,8 @@ import { Zap, Clock, TrendingUp } from 'lucide-react';
 
 const StatsBanner = () => {
   return (
-    <section className="bg-[#0a0a0a] py-16 px-6 border-b border-white/10 relative overflow-hidden">
-      <div
-        className="absolute top-0 left-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block pointer-events-none"
-        style={{ transform: "skewX(12deg) translateX(120px)" }}
-      />
-      <div
-        className="absolute top-0 right-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block pointer-events-none"
-        style={{ transform: "skewX(12deg) translateX(-120px)" }}
-      />
-      <div className="container mx-auto max-w-5xl relative z-10">
+    <section className="bg-[#0a0a0a] py-16 px-6 border-b border-white/10">
+      <div className="container mx-auto max-w-5xl">
         <h2 className="text-white font-black text-4xl md:text-6xl lg:text-7xl uppercase leading-none mb-12 tracking-tight">
           THERE'S{' '}
           <span className="relative inline-block">

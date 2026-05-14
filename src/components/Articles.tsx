@@ -79,23 +79,9 @@ const Articles = () => {
   );
 
   return (
-    <section id="articles" className="section bg-[#111] relative overflow-hidden" ref={sectionRef}>
-      <div
-        className="absolute top-0 left-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block pointer-events-none"
-        style={{ transform: "skewX(12deg) translateX(120px)" }}
-      />
-      <div
-        className="absolute top-0 right-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block pointer-events-none"
-        style={{ transform: "skewX(12deg) translateX(-120px)" }}
-      />
-      <div className="container relative z-10">
+    <section id="articles" className="section bg-[#111]" ref={sectionRef}>
+      <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="fade-in inline-flex flex-col items-center mb-6">
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A3E635]">
-              Insights
-            </span>
-            <span className="mt-2 h-[2px] w-12 bg-[#A3E635]" />
-          </div>
           <h2 className="fade-in mb-6 text-3xl font-bold text-white">Insights</h2>
           <p className="fade-in text-lg text-white/60">
             Expert perspectives and coaching knowledge to help you train smarter and achieve lasting results.
@@ -116,7 +102,6 @@ const Articles = () => {
           {articles.map((article, index) => renderArticle(article, index))}
         </div>
       </div>
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-px w-32 bg-gradient-to-r from-transparent via-[#A3E635]/40 to-transparent pointer-events-none" />
     </section>
   );
 };
