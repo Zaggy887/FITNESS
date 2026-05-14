@@ -31,8 +31,7 @@ const ContactForm = () => {
     return () => elements?.forEach((el) => observer.unobserve(el));
   }, []);
 
-  // 🔧 Replace this with your actual Calendly link
-  const CALENDLY_URL = 'https://calendly.com/your-handle/free-consultation';
+  const CALENDLY_URL = 'https://calendly.com/strengthhubonline-info';
 
   return (
     <section id="contact" className="section bg-black relative overflow-hidden py-20" ref={sectionRef}>
