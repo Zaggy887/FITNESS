@@ -58,7 +58,7 @@ const Hero = () => {
 
           {/* CTA buttons */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            
+            <a
               href="#contact"
               className="group inline-flex min-w-[260px] items-center justify-center gap-2 bg-[#A3E635] px-8 py-4 text-sm font-bold uppercase tracking-[0.15em] text-black transition hover:bg-[#B8F04A] hover:shadow-[0_0_30px_rgba(163,230,53,0.4)]"
             >
@@ -73,7 +73,7 @@ const Hero = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
-            
+            <a
               href="#about"
               className="inline-flex min-w-[180px] items-center justify-center px-8 py-4 text-sm font-bold uppercase tracking-[0.15em] text-white border border-white/20 transition hover:border-[#A3E635] hover:text-[#A3E635]"
             >
