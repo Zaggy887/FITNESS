@@ -65,7 +65,7 @@ const ContactForm = () => {
                   <p className="text-white/40 text-[11px] uppercase tracking-[0.25em] mb-2 font-semibold">
                     Individual &amp; Group Bookings
                   </p>
-                  
+                  <a
                     href="mailto:info@strengthhub.com"
                     className="text-white text-lg sm:text-xl font-bold hover:text-[#A3E635] transition-colors"
                   >
@@ -75,7 +75,7 @@ const ContactForm = () => {
               </div>
 
               {/* Right: CTA button — matches Hero CTA */}
-              
+              <a
                 href="mailto:info@strengthhub.com"
                 className="group flex-shrink-0 inline-flex items-center justify-center gap-2 bg-[#A3E635] hover:bg-[#B8F04A] hover:shadow-[0_0_30px_rgba(163,230,53,0.4)] text-black py-4 px-7 font-bold uppercase tracking-[0.15em] text-xs transition-all"
               >
