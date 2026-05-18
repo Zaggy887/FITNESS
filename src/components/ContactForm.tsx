@@ -1,90 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import { Calendar, Clock, CheckCircle2, ExternalLink } from 'lucide-react';
+import { Calendar, Clock, CheckCircle2 } from 'lucide-react';
 
-declare global {
-  interface Window {
-    Calendly?: {
-      initInlineWidget: (opts: { url: string; parentElement: HTMLElement }) => void;
-    };
-  }
-}
-
-// ⚠️ This MUST be a specific event link, not just a profile URL.
-// Profile: https://calendly.com/strengthhubonline-info  ❌ won't work
-// Event:   https://calendly.com/strengthhubonline-info/30min  ✅
 const CALENDLY_URL = 'https://calendly.com/strengthhubonline-info/30min';
 const CALENDLY_EMBED_URL = `${CALENDLY_URL}?hide_gdpr_banner=1&background_color=0a0a0a&text_color=ffffff&primary_color=A3E635`;
 
 const ContactForm = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const widgetRef = useRef<HTMLDivElement>(null);
-  const [widgetStatus, setWidgetStatus] = useState<'loading' | 'ready' | 'failed'>('loading');
+  const [iframeLoaded, setIframeLoaded] = useState(false);
 
-  // Calendly script + init
-  useEffect(() => {
-    let cancelled = false;
-    let pollAttempts = 0;
-
-    // Inject CSS once
-    const cssId = 'calendly-widget-css';
-    if (!document.getElementById(cssId)) {
-      const link = document.createElement('link');
-      link.id = cssId;
-      link.rel = 'stylesheet';
-      link.href = 'https://assets.calendly.com/assets/external/widget.css';
-      document.head.appendChild(link);
-    }
-
-    const initWidget = () => {
-      if (cancelled) return;
-      if (!window.Calendly || !widgetRef.current) return false;
-      widgetRef.current.innerHTML = '';
-      try {
-        window.Calendly.initInlineWidget({
-          url: CALENDLY_EMBED_URL,
-          parentElement: widgetRef.current,
-        });
-        setWidgetStatus('ready');
-        return true;
-      } catch (err) {
-        console.error('Calendly init failed:', err);
-        setWidgetStatus('failed');
-        return false;
-      }
-    };
-
-    // Poll for Calendly to be available — handles race conditions reliably
-    const pollForCalendly = () => {
-      if (cancelled) return;
-      if (initWidget()) return;
-      pollAttempts++;
-      if (pollAttempts > 40) {
-        // ~10 seconds with 250ms interval
-        setWidgetStatus('failed');
-        return;
-      }
-      setTimeout(pollForCalendly, 250);
-    };
-
-    // Inject script if not present
-    const scriptId = 'calendly-widget-script';
-    if (!document.getElementById(scriptId)) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.src = 'https://assets.calendly.com/assets/external/widget.js';
-      script.async = true;
-      script.onerror = () => setWidgetStatus('failed');
-      document.body.appendChild(script);
-    }
-
-    pollForCalendly();
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  // Fade-in observer
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -153,43 +76,23 @@ const ContactForm = () => {
             ))}
           </div>
 
-          {/* Calendly widget container */}
+          {/* Calendly inline iframe embed */}
           <div className="fade-in relative bg-[#0a0a0a] border border-white/10 rounded-2xl p-2 sm:p-3 hover:border-[#A3E635]/30 transition-colors duration-500 overflow-hidden">
-            {/* Loading state */}
-            {widgetStatus === 'loading' && (
-              <div className="flex flex-col items-center justify-center h-[700px] gap-4">
+            {!iframeLoaded && (
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 z-10">
                 <div className="w-10 h-10 border-2 border-[#A3E635]/30 border-t-[#A3E635] rounded-full animate-spin" />
                 <p className="text-white/40 text-sm uppercase tracking-[0.2em]">Loading calendar...</p>
               </div>
             )}
-
-            {/* Failed state — fallback to link */}
-            {widgetStatus === 'failed' && (
-              <div className="flex flex-col items-center justify-center h-[400px] gap-6 px-6 text-center">
-                <p className="text-white/70 text-base">
-                  Calendar couldn't load right now. You can book directly through Calendly:
-                </p>
-                <a
-                  href={CALENDLY_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center justify-center gap-2 bg-[#A3E635] hover:bg-[#B8F04A] hover:shadow-[0_0_30px_rgba(163,230,53,0.4)] text-black py-4 px-7 font-bold uppercase tracking-[0.15em] text-xs transition-all"
-                >
-                  Open Calendly
-                  <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1" strokeWidth={2.5} />
-                </a>
-              </div>
-            )}
-
-            {/* Widget mount point — always rendered so the ref is stable */}
-            <div
-              ref={widgetRef}
-              className="calendly-inline-widget rounded-xl overflow-hidden"
-              style={{
-                minWidth: '320px',
-                height: widgetStatus === 'ready' ? '700px' : '0px',
-                display: widgetStatus === 'ready' ? 'block' : 'none',
-              }}
+            <iframe
+              src={CALENDLY_EMBED_URL}
+              title="Book a consultation"
+              width="100%"
+              height="700"
+              frameBorder="0"
+              onLoad={() => setIframeLoaded(true)}
+              className={`rounded-xl transition-opacity duration-500 ${iframeLoaded ? 'opacity-100' : 'opacity-0'}`}
+              style={{ minWidth: '320px' }}
             />
           </div>
 
