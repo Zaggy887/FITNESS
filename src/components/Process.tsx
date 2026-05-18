@@ -78,7 +78,7 @@ const Process = () => {
                 >
                   <div className="relative md:w-1/2 bg-[#1a1a1a] border border-white/10 rounded-xl p-6">
                     <div
-                      className={`absolute top-[-1.5rem] md:top-1/2 md:-translate-y-1/2 w-10 h-10 bg-[#A3E635] rounded-full flex items-center justify-center text-white font-bold text-sm ${numberPosition} ${numberTranslate}`}
+                      className={`absolute top-[-1.5rem] md:top-1/2 md:-translate-y-1/2 w-10 h-10 bg-[#A3E635]/20 border border-[#A3E635] rounded-full flex items-center justify-center text-[#A3E635] font-bold text-sm ${numberPosition} ${numberTranslate}`}
                     >
                       {step}
                     </div>
