@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Calendar, Clock, CheckCircle2 } from 'lucide-react';
 
 const CALENDLY_URL = 'https://calendly.com/strengthhubonline-info/30min';
-const CALENDLY_EMBED_URL = `${CALENDLY_URL}?hide_gdpr_banner=1&background_color=0a0a0a&text_color=ffffff&primary_color=A3E635`;
+const CALENDLY_EMBED_URL = CALENDLY_URL;`;
 
 const ContactForm = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
