@@ -169,7 +169,7 @@ const ContactForm = () => {
                 <p className="text-white/70 text-base">
                   Calendar couldn't load right now. You can book directly through Calendly:
                 </p>
-                
+                <a
                   href={CALENDLY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
