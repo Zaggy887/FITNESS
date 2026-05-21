@@ -65,7 +65,7 @@ const MeetTheCoach = () => {
                   <img
                     src="/IMG_0875.jpg"
                     alt="Coach Zak"
-                    className="w-full h-[420px] object-cover object-[25%_center] transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-[420px] object-cover object-[35%_center] transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
               </div>
