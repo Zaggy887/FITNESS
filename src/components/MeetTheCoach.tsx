@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
-import { Award, Users, GraduationCap, Dumbbell } from 'lucide-react';
+
+
 
 const MeetTheCoach = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -24,28 +25,6 @@ const MeetTheCoach = () => {
     };
   }, []);
 
-  const credentials = [
-    {
-      icon: GraduationCap,
-      title: 'Qualified & Educated',
-      description: 'Degree-qualified in Exercise Science with years of hands-on coaching experience.',
-    },
-    {
-      icon: Users,
-      title: 'Client-Centred Approach',
-      description: 'Every program is tailored to your lifestyle, goals, and training history.',
-    },
-    {
-      icon: Award,
-      title: 'Proven Results',
-      description: 'Hundreds of clients coached to real, lasting transformations.',
-    },
-    {
-      icon: Dumbbell,
-      title: 'Strength Focused',
-      description: 'Building strong foundations through evidence-based strength training.',
-    },
-  ];
 
   return (
     <section id="coach" className="section bg-black relative overflow-hidden" ref={sectionRef}>
@@ -122,21 +101,6 @@ const MeetTheCoach = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
-            {credentials.map(({ icon: Icon, title, description }, index) => (
-              <div
-                key={title}
-                className="fade-in bg-[#1a1a1a] border border-white/10 rounded-xl p-5 text-center hover:border-[#A3E635]/30 transition-colors duration-300"
-                style={{ transitionDelay: `${index * 0.1}s` }}
-              >
-                <div className="w-12 h-12 bg-[#A3E635]/15 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Icon className="w-6 h-6 text-[#A3E635]" />
-                </div>
-                <h4 className="text-white font-semibold text-sm mb-1">{title}</h4>
-                <p className="text-white/50 text-xs leading-relaxed">{description}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
@@ -144,3 +108,6 @@ const MeetTheCoach = () => {
 };
 
 export default MeetTheCoach;
+
+
+export default MeetTheCoach
