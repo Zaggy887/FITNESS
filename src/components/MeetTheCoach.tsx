@@ -108,6 +108,3 @@ const MeetTheCoach = () => {
 };
 
 export default MeetTheCoach;
-
-
-export default MeetTheCoach
