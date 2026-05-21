@@ -1,4 +1,4 @@
-import { Mail } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -18,14 +18,21 @@ const Footer = () => {
           </div>
 
           <div className="text-center md:text-right space-y-4">
-            <h4 className="text-white/70 font-semibold mb-4">Connect with Us</h4>
-            <div className="flex flex-col items-center md:items-end space-y-4">
+            <h4 className="text-white font-bold text-lg mb-2">Contact Coach Zak</h4>
+            <div className="flex flex-col items-center md:items-end space-y-3">
               <a
                 href="mailto:info@strengthhubonline.com"
                 className="flex items-center text-white/60 hover:text-white transition-colors"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 info@strengthhubonline.com
+              </a>
+              <a
+                href="tel:0435754525"
+                className="flex items-center text-white/60 hover:text-white transition-colors"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                0435 754 525
               </a>
             </div>
           </div>
