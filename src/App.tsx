@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import StatsBanner from "./components/StatsBanner";
 import UniqueAbout from "./components/UniqueAbout";
+import MeetTheCoach from "./components/MeetTheCoach";
 import Process from "./components/Process";
 import TheStudio from "./components/TheStudio";
 import Testimonials from "./components/Testimonials";
@@ -15,6 +16,7 @@ function App() {
       <Hero />
       <StatsBanner />
       <UniqueAbout />
+      <MeetTheCoach />
       <Process />
       <TheStudio />
       <Testimonials />
