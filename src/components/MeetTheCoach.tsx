@@ -1,6 +1,30 @@
 import { useEffect, useRef } from 'react';
+import { Dumbbell, GraduationCap, Users, Heart } from 'lucide-react';
 
-
+const credentials = [
+  {
+    icon: Dumbbell,
+    title: '7+ YEARS',
+    description: 'Fitness industry experience',
+  },
+  {
+    icon: GraduationCap,
+    title: 'SPECIALISES IN',
+    description:
+      'student fitness and routine building, professional experience in powerlifting and training clients',
+  },
+  {
+    icon: Users,
+    title: 'RELATABLE',
+    description: 'as a current Monash student',
+  },
+  {
+    icon: Heart,
+    title: 'PASSIONATE ABOUT',
+    description:
+      'supporting people through mentorship services and current fitness coaching',
+  },
+];
 
 const MeetTheCoach = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -25,82 +49,61 @@ const MeetTheCoach = () => {
     };
   }, []);
 
-
   return (
     <section id="coach" className="section bg-black relative overflow-hidden" ref={sectionRef}>
       <div className="container px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="fade-in text-3xl font-bold mb-4">
-            <span className="text-white">Meet the </span>
-            <span className="text-[#A3E635]">Coach</span>
-          </h2>
-          <p className="fade-in text-white/60 text-lg">
-            The person behind every program, every check-in, and every result.
-          </p>
-        </div>
+        <h2 className="fade-in text-4xl md:text-5xl font-bold mb-10 text-left">
+          <span className="text-white">Meet </span>
+          <span className="text-[#A3E635]">Coach Zak</span>
+        </h2>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="fade-in relative group">
-              <div className="relative overflow-hidden rounded-2xl border border-white/10">
-                <img
-                  src="/IMG_0875.jpg"
-                  alt="Coach Zak"
-                  className="w-full h-[480px] object-cover object-[25%_center] transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-10 items-start">
+            <div className="space-y-6">
+              <div className="fade-in relative group">
+                <div className="relative overflow-hidden rounded-2xl border-2 border-[#A3E635]/40">
+                  <img
+                    src="/IMG_0875.jpg"
+                    alt="Coach Zak"
+                    className="w-full h-[420px] object-cover object-[25%_center] transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+              </div>
 
-                <div className="absolute bottom-6 left-6 flex items-end gap-3">
-                  <div className="flex flex-col items-center">
-                    <svg
-                      width="40"
-                      height="60"
-                      viewBox="0 0 40 60"
-                      fill="none"
-                      className="text-[#A3E635] animate-bounce"
-                      style={{ animationDuration: '2s' }}
-                    >
-                      <path
-                        d="M20 0 L20 45 M8 33 L20 45 L32 33"
-                        stroke="currentColor"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">Coach Zak</h3>
-                    <p className="text-[#A3E635] font-medium">Founder, StrengthHubOnline</p>
-                  </div>
+              <div className="fade-in rounded-xl border-2 border-[#A3E635]/40 bg-[#111] p-6">
+                <div className="flex gap-4">
+                  <span className="text-[#A3E635] text-4xl font-bold leading-none shrink-0">&ldquo;</span>
+                  <p className="text-white/80 text-base leading-relaxed">
+                    My goal is simple: to help students{' '}
+                    <span className="text-[#A3E635] font-semibold">build confidence</span>, create
+                    sustainable habits and achieve{' '}
+                    <span className="text-[#A3E635] font-semibold">long term results</span> they're
+                    proud of.
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div className="space-y-6">
-              <p className="fade-in text-white/70 text-lg leading-relaxed">
-                I started StrengthHubOnline because I believe everyone deserves access to
-                quality coaching, no matter where they are. My mission is simple: help you
-                get stronger, move better, and build habits that last a lifetime.
-              </p>
-              <p className="fade-in text-white/70 leading-relaxed">
-                With a background in Exercise Science and years of experience coaching
-                clients from all walks of life, I take a no-nonsense, evidence-based
-                approach to training and nutrition. No fads, no shortcuts -- just smart
-                programming and genuine support.
-              </p>
-
-              <div className="fade-in pt-4">
-                <a
-                  href="#contact"
-                  className="inline-block px-8 py-3 font-semibold text-white bg-[#2a3a0f] hover:bg-[#3a4f15] transition-colors duration-300 rounded-lg"
+            <div className="space-y-4">
+              {credentials.map(({ icon: Icon, title, description }, index) => (
+                <div
+                  key={title}
+                  className="fade-in flex items-start gap-5 rounded-xl bg-[#111] border border-white/10 p-5 hover:border-[#A3E635]/30 transition-colors duration-300"
+                  style={{ transitionDelay: `${index * 0.1}s` }}
                 >
-                  Work with Me
-                </a>
-              </div>
+                  <div className="w-14 h-14 rounded-full border-2 border-[#A3E635]/50 flex items-center justify-center shrink-0">
+                    <Icon className="w-6 h-6 text-[#A3E635]" />
+                  </div>
+                  <div className="border-l-2 border-[#A3E635]/30 pl-5">
+                    <h4 className="text-[#A3E635] font-bold text-base tracking-wide mb-1">
+                      {title}
+                    </h4>
+                    <p className="text-white/70 text-sm leading-relaxed">{description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>
