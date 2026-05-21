@@ -16,7 +16,7 @@ const credentials = [
   {
     icon: Users,
     title: 'RELATABLE',
-    description: 'as a current Monash student',
+    description: 'as a current University student',
   },
   {
     icon: Heart,
