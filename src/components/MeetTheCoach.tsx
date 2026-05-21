@@ -65,14 +65,35 @@ const MeetTheCoach = () => {
             <div className="fade-in relative group">
               <div className="relative overflow-hidden rounded-2xl border border-white/10">
                 <img
-                  src="https://images.pexels.com/photos/6456149/pexels-photo-6456149.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/IMG_0875.jpg"
                   alt="Coach Zak"
-                  className="w-full h-[480px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-[480px] object-cover object-[25%_center] transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6">
-                  <h3 className="text-2xl font-bold text-white">Coach Zak</h3>
-                  <p className="text-[#A3E635] font-medium">Founder, StrengthHubOnline</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+                <div className="absolute bottom-6 left-6 flex items-end gap-3">
+                  <div className="flex flex-col items-center">
+                    <svg
+                      width="40"
+                      height="60"
+                      viewBox="0 0 40 60"
+                      fill="none"
+                      className="text-[#A3E635] animate-bounce"
+                      style={{ animationDuration: '2s' }}
+                    >
+                      <path
+                        d="M20 0 L20 45 M8 33 L20 45 L32 33"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">Coach Zak</h3>
+                    <p className="text-[#A3E635] font-medium">Founder, StrengthHubOnline</p>
+                  </div>
                 </div>
               </div>
             </div>
