@@ -1,5 +1,11 @@
 import { useEffect, useRef } from 'react';
-import { CheckCircle } from 'lucide-react';
+
+const universities = [
+  { logo: '/Monash_LOGO.png', name: 'Monash University' },
+  { logo: '/Deakin_LOGO.png', name: 'Deakin University' },
+  { logo: '/Swinburne_LOGO.png', name: 'Swinburne University' },
+  { logo: '/RMIT_LOGO.png', name: 'RMIT University' },
+];
 
 const Universities = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -8,110 +14,39 @@ const Universities = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
+          if (entry.isIntersecting) entry.target.classList.add('visible');
         });
       },
       { threshold: 0.1 }
     );
-
     const elements = sectionRef.current?.querySelectorAll('.fade-in');
     elements?.forEach((el) => observer.observe(el));
-
-    return () => {
-      elements?.forEach((el) => observer.unobserve(el));
-    };
+    return () => elements?.forEach((el) => observer.unobserve(el));
   }, []);
-
-  const universities = [
-    { logo: '/Uni_Melbourne_LOGO', name: 'The University of Melbourne' },
-    { logo: '/Monash_LOGO.png', name: 'Monash University' },
-    { logo: '/Deakin_LOGO.png', name: 'Deakin University' },
-    { logo: '/Swinburne_LOGO.png', name: 'Swinburne University' },
-    { logo: '/RMIT_LOGO.png', name: 'RMIT University' },
-  ];
 
   return (
     <section
       id="universities"
-      className="section bg-[#111] text-white py-16"
+      className="bg-[#0a0a0a] border-b border-white/[0.05] py-10 sm:py-14"
       ref={sectionRef}
     >
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="fade-in text-white text-3xl font-bold mb-4">University Talent</h2>
-          <p className="fade-in text-white/60 text-lg">
-            We regularly engage with students and societies from Melbourne's top universities, helping us connect with driven talent across business and commerce fields.
-          </p>
+      <div className="container px-4 sm:px-6 lg:px-8">
+        <p className="fade-in text-center text-[11px] uppercase tracking-[0.28em] text-white/18 mb-9">
+          Trusted by leading institutions
+        </p>
+        <div className="fade-in flex flex-wrap items-center justify-center gap-10 sm:gap-14 md:gap-20">
+          {universities.map((uni) => (
+            <img
+              key={uni.name}
+              src={uni.logo}
+              alt={uni.name}
+              className="h-6 sm:h-8 w-auto object-contain brightness-0 invert opacity-20 hover:opacity-40 transition-opacity duration-300"
+              loading="lazy"
+            />
+          ))}
         </div>
-
-        <div className="mb-16">
-          <div className="flex md:hidden gap-6 overflow-x-auto overflow-y-hidden px-2 pb-2 snap-x snap-mandatory">
-            {universities.map((uni, index) => (
-              <div key={index} className="flex-shrink-0 snap-start w-40">
-                <img
-                  src={uni.logo}
-                  alt={`${uni.name} logo`}
-                  className={`${
-                    uni.name === 'The University of Melbourne' ? 'h-24 mt-[-12px]' : 'h-20'
-                  } w-full object-contain mx-auto transition-opacity duration-700 fade-in brightness-0 invert opacity-60`}
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-
-          <div className="hidden md:flex flex-wrap justify-center gap-10">
-            {universities.map((uni, index) => (
-              <div key={index} className="w-[180px]">
-                <img
-                  src={uni.logo}
-                  alt={`${uni.name} logo`}
-                  className={`${
-                    uni.name === 'The University of Melbourne' ? 'h-24 mt-[-12px]' : 'h-20'
-                  } w-full object-contain mx-auto transition-opacity duration-700 fade-in brightness-0 invert opacity-60`}
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="fade-in flex items-start">
-            <CheckCircle className="flex-shrink-0 w-6 h-6 text-[#A3E635] mr-3 mt-1" />
-            <div>
-              <h3 className="text-white text-xl font-semibold mb-2">Direct University Access</h3>
-              <p className="text-white/60">
-                We connect with student societies and attend university events to engage with top student talent.
-              </p>
-            </div>
-          </div>
-
-          <div className="fade-in flex items-start" style={{ transitionDelay: '0.2s' }}>
-            <CheckCircle className="flex-shrink-0 w-6 h-6 text-[#A3E635] mr-3 mt-1" />
-            <div>
-              <h3 className="text-white text-xl font-semibold mb-2">Top Academic Performers</h3>
-              <p className="text-white/60">
-                We select students with strong academics, extracurricular involvement, and high growth potential.
-              </p>
-            </div>
-          </div>
-
-          <div className="fade-in flex items-start" style={{ transitionDelay: '0.4s' }}>
-            <CheckCircle className="flex-shrink-0 w-6 h-6 text-[#A3E635] mr-3 mt-1" />
-            <div>
-              <h3 className="text-white text-xl font-semibold mb-2">Diverse Talent Pool</h3>
-              <p className="text-white/60">
-                Our influence spans across multiple universities, ensuring a diverse range of skills and perspectives.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <p className="mt-12 text-center text-xs text-white/25">
-          *We are not directly affiliated with any university.
+        <p className="mt-10 fade-in text-center text-[10px] text-white/12 uppercase tracking-[0.18em]">
+          *Not directly affiliated with any university.
         </p>
       </div>
     </section>

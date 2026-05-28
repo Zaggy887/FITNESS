@@ -1,8 +1,10 @@
+import { ArrowRight } from 'lucide-react';
+
 const Hero = () => {
   return (
-    <div className="bg-black text-white">
-      {/* Hero video section with seamless blend */}
-      <div className="relative h-[45vh] sm:h-[55vh] lg:h-[65vh] overflow-hidden">
+    <div className="relative bg-black text-white overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0">
         <video
           autoPlay
           muted
@@ -10,85 +12,87 @@ const Hero = () => {
           playsInline
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: "brightness(0.4) contrast(1.1)" }}
+          style={{ filter: 'brightness(0.12) contrast(1.1)' }}
         >
           <source src="/newhome.mp4" type="video/mp4" />
         </video>
-
-        {/* Layered gradients: top vignette, bottom seamless fade to black */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black" />
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-black" />
-
-        {/* Diagonal accent line — subtle nod to slide 1 split */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black" />
         <div
-          className="absolute top-0 right-0 h-full w-px bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent hidden lg:block"
-          style={{ transform: "skewX(-12deg) translateX(-120px)" }}
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] rounded-full blur-[180px] pointer-events-none"
+          style={{ background: 'radial-gradient(ellipse, rgba(163,230,53,0.1), transparent 70%)' }}
         />
       </div>
 
-      {/* Text content section */}
-      <div className="relative -mt-32 bg-gradient-to-b from-transparent via-black to-black px-4 pb-12 pt-8 sm:px-8 sm:pb-16 sm:pt-12 lg:px-10 lg:pt-16">
-        <div className="mx-auto max-w-[920px] text-center">
-          {/* Eyebrow label with accent underline — matches slide style */}
-          <div className="mb-6 inline-flex flex-col items-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A3E635]">
-              Online Personal Training
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <div className="pt-24 sm:pt-32 lg:pt-36" />
+
+        {/* Main text */}
+        <div className="flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-6 pb-8">
+          {/* Eyebrow pill */}
+          <div className="mb-8 inline-flex items-center gap-3 px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.03]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#A3E635]" />
+            <span className="text-white/55 text-[11px] font-medium uppercase tracking-[0.25em]">
+              Enterprise Fitness Platform
             </span>
-            <span className="mt-2 h-[2px] w-12 bg-[#A3E635]" />
           </div>
 
-          {/* Headline */}
-          <h1 className="font-black tracking-tight leading-[1.05]">
-            <span className="block text-white text-3xl sm:text-5xl lg:text-[64px]">
-              Built for{" "}
-              <span className="text-[#A3E635]">Real Results.</span>
-            </span>
+          {/* H1 */}
+          <h1 className="max-w-[860px] text-[42px] sm:text-[64px] lg:text-[88px] font-black tracking-[-0.02em] leading-[1.0]">
+            <span className="text-white">The Fitness Platform</span>
+            <br />
+            <span className="text-[#A3E635]">Built for Universities.</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="mx-auto mt-8 max-w-[680px] text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
-            Expert coaches in body composition, delivering real results through{" "}
-            <span className="font-semibold text-white">personalised 1-on-1 online coaching</span>.
-            Train on your schedule with a{" "}
-            <span className="font-semibold text-white">clear plan</span>,{" "}
-            <span className="font-semibold text-white">accountability</span>, and{" "}
-            <span className="font-semibold text-white">guidance</span>{" "}
-            that keeps you moving forward.
+          <p className="mt-8 max-w-[580px] text-white/40 text-base sm:text-[18px] leading-[1.8]">
+            Give every student a personalised training plan, real-time coaching, and the
+            accountability to thrive — all managed from one powerful institution dashboard.
           </p>
 
-          {/* CTA buttons */}
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          {/* CTAs */}
+          <div className="mt-10 flex flex-col sm:flex-row items-center gap-3">
             <a
               href="#contact"
-              className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-[#A3E635] px-6 sm:px-8 py-3.5 sm:py-4 text-sm font-bold uppercase tracking-[0.15em] text-black transition hover:bg-[#B8F04A] hover:shadow-[0_0_30px_rgba(163,230,53,0.4)]"
+              className="group inline-flex items-center gap-2.5 bg-[#A3E635] text-black px-7 py-4 font-bold text-sm uppercase tracking-[0.12em] transition-all hover:bg-[#B8F04A] hover:shadow-[0_0_50px_rgba(163,230,53,0.2)]"
             >
-              Book Free Consultation
-              <svg
+              Request a Demo
+              <ArrowRight
                 className="w-4 h-4 transition-transform group-hover:translate-x-1"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+                strokeWidth={2.5}
+              />
             </a>
             <a
-              href="#about"
-              className="inline-flex w-full sm:w-auto items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 text-sm font-bold uppercase tracking-[0.15em] text-white border border-white/20 transition hover:border-[#A3E635] hover:text-[#A3E635]"
+              href="#process"
+              className="inline-flex items-center gap-2 px-7 py-4 text-sm font-medium text-white/45 border border-white/10 transition-all hover:border-white/20 hover:text-white/70 tracking-[0.08em] uppercase"
             >
-              Learn More
+              See the Platform
             </a>
           </div>
 
-          {/* Trust strip — optional, can be removed */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.2em] text-white/40">
-            <span>1-on-1 Coaching</span>
-            <span className="hidden sm:inline text-[#A3E635]">•</span>
-            <span>Personalised Plans</span>
-            <span className="hidden sm:inline text-[#A3E635]">•</span>
-            <span>Real Accountability</span>
+          {/* Trust strip */}
+          <div className="mt-14 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-[11px] uppercase tracking-[0.2em] text-white/20">
+            <span>10+ University Partners</span>
+            <span className="hidden sm:inline">·</span>
+            <span>500+ Active Students</span>
+            <span className="hidden sm:inline">·</span>
+            <span>98% Satisfaction Rate</span>
           </div>
+        </div>
+
+        {/* App preview */}
+        <div className="relative flex justify-center pb-0">
+          <div className="relative w-[220px] sm:w-[260px] md:w-[290px]">
+            <div className="absolute -inset-20 bg-[#A3E635]/[0.04] rounded-full blur-[60px] pointer-events-none" />
+            <div className="relative rounded-[2.5rem] border-[5px] border-white/[0.07] bg-black overflow-hidden shadow-[0_0_120px_rgba(0,0,0,0.95)]">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-black rounded-b-2xl z-10" />
+              <img
+                src="/Dashboard.png"
+                alt="StrengthHub Platform Dashboard"
+                className="w-full h-auto block"
+              />
+            </div>
+          </div>
+          <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none" />
         </div>
       </div>
     </div>

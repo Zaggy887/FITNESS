@@ -1,44 +1,27 @@
-import { Zap, Clock, TrendingUp } from 'lucide-react';
+const stats = [
+  { value: '10+', label: 'University Partners' },
+  { value: '500+', label: 'Active Members' },
+  { value: '98%', label: 'Satisfaction Rate' },
+];
 
 const StatsBanner = () => {
   return (
-    <section className="bg-[#0a0a0a] py-10 sm:py-16 px-4 sm:px-6 border-b border-white/10">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-white font-black text-2xl sm:text-4xl md:text-6xl lg:text-7xl uppercase leading-none mb-8 sm:mb-12 tracking-tight">
-          THERE'S{' '}
-          <span className="relative inline-block">
-            NO REASON
-            <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#A3E635]" />
-          </span>{' '}
-          YOU{' '}
-          <span className="relative inline-block">
-            CAN'T
-            <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#A3E635]" />
-          </span>{' '}
-          DO IT
-        </h2>
-
-        <div className="flex flex-row justify-center gap-4 sm:gap-6 md:gap-24">
-          <div className="flex flex-col items-center text-center flex-1 md:flex-none">
-            <Zap className="w-6 h-6 md:w-9 md:h-9 text-[#A3E635] mb-2 md:mb-4" strokeWidth={1.5} />
-            <span className="text-white/60 text-[10px] md:text-sm font-semibold uppercase tracking-widest mt-1 leading-tight">
-              8–12 WEEK<br />PHYSIQUE TRANSFORMATIONS
-            </span>
-          </div>
-
-          <div className="flex flex-col items-center text-center flex-1 md:flex-none">
-            <Clock className="w-6 h-6 md:w-9 md:h-9 text-[#A3E635] mb-2 md:mb-4" strokeWidth={1.5} />
-            <span className="text-white/60 text-[10px] md:text-sm font-semibold uppercase tracking-widest mt-1 leading-tight">
-              BUILT FOR<br />BUSY SCHEDULES
-            </span>
-          </div>
-
-          <div className="flex flex-col items-center text-center flex-1 md:flex-none">
-            <TrendingUp className="w-6 h-6 md:w-9 md:h-9 text-[#A3E635] mb-2 md:mb-4" strokeWidth={1.5} />
-            <span className="text-white/60 text-[10px] md:text-sm font-semibold uppercase tracking-widest mt-1 leading-tight">
-              LONG-TERM RESULTS,<br />NOT QUICK FIXES
-            </span>
-          </div>
+    <section className="bg-black py-16 sm:py-24 px-4 sm:px-6 border-b border-white/[0.05]">
+      <div className="container mx-auto max-w-3xl">
+        <div className="grid grid-cols-3 gap-6 md:gap-16">
+          {stats.map(({ value, label }, i) => (
+            <div key={label} className="flex flex-col items-center text-center">
+              <span
+                className="text-[#A3E635] text-3xl sm:text-5xl md:text-[64px] font-black tracking-tight tabular-nums"
+                style={{ transitionDelay: `${i * 0.1}s` }}
+              >
+                {value}
+              </span>
+              <span className="mt-2.5 text-white/25 text-[10px] sm:text-xs uppercase tracking-[0.22em] leading-snug">
+                {label}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </section>
