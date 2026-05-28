@@ -12,7 +12,7 @@ const testimonials = [
     name: 'Daniel K.',
     role: 'University Student',
     quote:
-      'My schedule changes every week with lectures and exams, so I needed something flexible. The programme worked around my week, which made staying consistent so much easier. Genuinely different to anything else I've tried.',
+      "My schedule changes every week with lectures and exams, so I needed something flexible. The programme worked around my week, which made staying consistent so much easier. Genuinely different to anything else I've tried.",
   },
   {
     name: 'Josh S.',
