@@ -83,81 +83,68 @@ const Navbar = () => {
   return (
     <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        
-        {/* Logo */}
         <a href="/" className="flex flex-col leading-none">
-          <span className="text-white font-black uppercase tracking-tight text-2xl sm:text-3xl">
+          <span className="text-white font-black uppercase tracking-tight text-xl sm:text-2xl md:text-3xl">
             STRENGTH
           </span>
-          <span className="text-white font-black italic uppercase tracking-tight text-xl sm:text-2xl -mt-1">
+          <span className="text-white font-black italic uppercase tracking-tight text-lg sm:text-xl md:text-2xl -mt-1">
             HUB
-            <sup className="text-white text-xs font-bold not-italic align-super ml-0.5">
+            <sup className="text-white text-[10px] sm:text-xs font-bold not-italic align-super ml-0.5">
               ONLINE
             </sup>
           </span>
         </a>
 
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="px-4 sm:px-5 py-2 rounded-full text-white/90 text-sm font-medium
+                       border border-white/30
+                       bg-white/10 backdrop-blur-md
+                       hover:bg-white/20 hover:border-white/50
+                       transition-all duration-300"
+          >
+            Contact Us
+          </button>
 
-        {/* Desktop Contact Button */}
-        <button
-          onClick={() => scrollToSection("contact")}
-          className="hidden md:block px-5 py-2 rounded-full text-white/90 font-medium
-                     border border-white/30
-                     bg-white/10 backdrop-blur-md
-                     hover:bg-white/20 hover:border-white/50
-                     transition-all duration-300"
-        >
-          Contact Us
-        </button>
-
-        {/* Mobile Contact Button */}
-        <button
-          onClick={() => scrollToSection("contact")}
-          className="md:hidden px-5 py-2 rounded-full text-white/90 font-medium
-                     border border-white/30
-                     bg-white/10 backdrop-blur-md
-                     hover:bg-white/20 hover:border-white/50
-                     transition-all duration-300"
-        >
-          Contact Us
-        </button>
+          <button
+            onClick={() => setIsMenuOpen(true)}
+            className="md:hidden text-white hover:text-[#A3E635] transition-colors p-1"
+            aria-label="Open menu"
+          >
+            <Menu size={24} />
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-lg transition-opacity duration-300 ${
-          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        className={`md:hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-lg transition-opacity duration-300 ${
+          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
         }`}
       >
-        {/* Close */}
         <div className="absolute top-4 right-4">
           <button
             onClick={() => setIsMenuOpen(false)}
-            className="text-white hover:text-[#A3E635] transition-colors"
+            className="text-white hover:text-[#A3E635] transition-colors p-1"
           >
             <X size={28} />
           </button>
         </div>
 
-        {/* Links */}
-        <div className="h-full flex flex-col items-center justify-center space-y-6 px-6 animate-mobile-nav">
+        <div className="h-full flex flex-col items-center justify-center space-y-6 px-6">
           {navLink("about", "About", true)}
-          {navLink("process", "Process", true)}
-          {navLink("universities", "Universities", true)}
-          {navLink("articles", "Insights", true)}
-          {navLink("pricing", "Pricing", true)}
-          {navLink("referral", "Referral", true)}
+          {navLink("process", "Platform", true)}
+          {navLink("coach", "Coach", true)}
+          {navLink("testimonials", "Testimonials", true)}
+          {navLink("contact", "Contact", true)}
 
-          {/* Mobile CTA */}
           <button
             onClick={() => scrollToSection("contact")}
-            className="mt-4 px-6 py-2 rounded-full text-white/90 font-medium 
-                       border border-white/30 
-                       bg-white/10 backdrop-blur-md 
-                       hover:bg-white/20 hover:border-white/50 
+            className="mt-4 px-6 py-2.5 rounded-full text-black font-semibold
+                       bg-[#A3E635] hover:bg-[#B8F04A]
                        transition-all duration-300"
           >
-            Contact Us
+            Book Free Consultation
           </button>
         </div>
       </div>

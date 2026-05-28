@@ -14,7 +14,7 @@ const bonusOfferings = [
 
 const TheStudio = () => {
   return (
-    <section className="bg-[#0a0a0a] text-white pb-10 sm:pb-14">
+    <section className="bg-[#0a0a0a] text-white pb-8 sm:pb-14">
       <div className="w-full overflow-hidden mb-8">
         <img
           src="/Battleropes.webp"
@@ -25,7 +25,7 @@ const TheStudio = () => {
       </div>
 
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black mb-5 tracking-tight">
+        <h2 className="text-center text-2xl sm:text-3xl md:text-5xl font-black mb-5 tracking-tight">
           <span className="text-white">OUR OFFER TO </span>
           <span className="text-[#A3E635]">YOU</span>
         </h2>

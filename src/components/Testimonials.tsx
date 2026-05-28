@@ -49,8 +49,8 @@ const Testimonials = () => {
       ref={sectionRef}
     >
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="fade-in text-3xl font-bold mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+          <h2 className="fade-in text-2xl sm:text-3xl font-bold mb-4">
             <span className="text-white">What </span><span className="text-[#A3E635]">Our Clients Say</span>
           </h2>
           <p className="fade-in text-white/60 text-lg">

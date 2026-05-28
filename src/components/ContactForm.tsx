@@ -57,7 +57,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="section bg-black relative overflow-hidden py-20" ref={sectionRef}>
+    <section id="contact" className="section bg-black relative overflow-hidden py-12 sm:py-20" ref={sectionRef}>
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-[0.04] blur-3xl pointer-events-none"
         style={{ background: '#A3E635' }}
@@ -74,7 +74,7 @@ const ContactForm = () => {
               <span className="mt-2 h-[2px] w-12 bg-[#A3E635]" />
             </div>
 
-            <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight leading-[1.05]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-[1.05]">
               Book a{' '}
               <span className="text-[#A3E635]">free consultation.</span>
             </h2>
@@ -86,9 +86,9 @@ const ContactForm = () => {
           </div>
 
           {/* Booking card */}
-          <div className="fade-in relative bg-[#0a0a0a] border border-white/10 rounded-2xl p-10 sm:p-12 hover:border-[#A3E635]/30 transition-colors duration-500">
+          <div className="fade-in relative bg-[#0a0a0a] border border-white/10 rounded-2xl p-5 sm:p-8 md:p-12 hover:border-[#A3E635]/30 transition-colors duration-500">
             {/* Info pills */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-5 mb-8 sm:mb-10">
               {[
                 { icon: Clock, label: '30 minutes', desc: 'Quick & focused' },
                 { icon: Calendar, label: 'Flexible times', desc: 'Pick what suits you' },

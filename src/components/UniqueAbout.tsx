@@ -25,7 +25,7 @@ const UniqueAbout = () => {
 
   return (
     <section
-      className="relative section py-10 overflow-hidden"
+      className="relative section py-8 sm:py-10 overflow-hidden"
       ref={sectionRef}
       style={{
         backgroundImage: "url('https://images.pexels.com/photos/19025671/pexels-photo-19025671.jpeg')",
@@ -35,11 +35,11 @@ const UniqueAbout = () => {
     >
       <div className="absolute inset-0 bg-black/75" />
 
-      <div className="container relative z-10 text-center max-w-3xl mx-auto">
-        <h2 className="fade-in text-4xl md:text-5xl font-extrabold text-white uppercase leading-tight mb-1 tracking-tight">
+      <div className="container relative z-10 text-center max-w-3xl mx-auto px-4">
+        <h2 className="fade-in text-2xl sm:text-4xl md:text-5xl font-extrabold text-white uppercase leading-tight mb-1 tracking-tight">
           WHAT <span className="text-[#A3E635]">WE'll GIVE YOU</span>
         </h2>
-        <p className="fade-in text-white font-semibold text-sm uppercase tracking-widest mb-6">
+        <p className="fade-in text-white font-semibold text-xs sm:text-sm uppercase tracking-widest mb-6">
           "If I give you a fish, you'll eat for a day. If I teach you how to fish, you'll eat for a lifetime."
         </p>
 
