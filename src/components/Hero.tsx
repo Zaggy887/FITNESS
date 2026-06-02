@@ -39,15 +39,6 @@ const Hero = () => {
             build confidence, structure, and take control of everyday life.
           </p>
 
-          <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center lg:items-start gap-4">
-            <a
-              href="#process"
-              className="inline-flex items-center gap-2 px-7 sm:px-9 py-3.5 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-white/40 border border-white/40 transition-all duration-200 hover:text-[#A3E635] hover:border-[#A3E635]"
-            >
-              View the App
-            </a>
-          </div>
-
           <div className="mt-10 sm:mt-16 flex flex-wrap items-center justify-center lg:justify-start gap-x-4 sm:gap-x-8 gap-y-2 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.3em] text-white/20">
             <span>University Partnerships</span>
             <span className="text-[#A3E635]">&bull;</span>
