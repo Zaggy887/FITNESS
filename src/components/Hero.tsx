@@ -48,13 +48,6 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="mt-10 sm:mt-16 flex flex-wrap items-center justify-center lg:justify-start gap-x-4 sm:gap-x-8 gap-y-2 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.3em] text-white/20">
-            <span>University Partnerships</span>
-            <span className="text-[#A3E635]">&bull;</span>
-            <span>Complete Platform</span>
-            <span className="text-[#A3E635]">&bull;</span>
-            <span>Student Wellbeing</span>
-          </div>
         </div>
 
       </div>
