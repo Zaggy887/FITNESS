@@ -149,7 +149,7 @@ const Process = () => {
                 href="#contact"
                 className="inline-block px-8 py-3 font-semibold text-white bg-[#2a3a0f] hover:bg-[#3a4f15] transition-colors duration-300 rounded-lg mt-2"
               >
-                Get Started
+                More about the Platform
               </a>
             </div>
           </div>
