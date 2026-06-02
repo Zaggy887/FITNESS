@@ -21,8 +21,27 @@ const Hero = () => {
 
         {/* Main content */}
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-[100vh] px-4 sm:px-8 lg:px-16 pt-24 pb-0">
-          {/* Left: Text content */}
-          <div className="flex-1 max-w-xl text-center lg:text-left mb-8 lg:mb-0 lg:pr-12">
+          {/* Left: Phone mockup with bottom cut off */}
+          <div className="relative flex-shrink-0 w-[300px] sm:w-[360px] lg:w-[420px] self-end order-2 lg:order-1 mt-8 lg:mt-0">
+            <div
+              className="absolute -inset-10 rounded-full opacity-20 blur-3xl"
+              style={{ background: "radial-gradient(circle, #A3E635 0%, transparent 70%)" }}
+            />
+            <div className="relative">
+              <img
+                src="/Dashboard.png"
+                alt="App Dashboard"
+                className="w-full h-auto rounded-[2.5rem] shadow-2xl"
+                style={{
+                  maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+                  WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Right: Text content */}
+          <div className="flex-1 max-w-xl text-center lg:text-left mb-8 lg:mb-0 lg:pl-16 order-1 lg:order-2">
             <div className="mb-6 inline-flex flex-col items-center lg:items-start">
               <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A3E635]">
                 Online Personal Training
@@ -77,27 +96,6 @@ const Hero = () => {
               <span>Personalised Plans</span>
               <span className="hidden sm:inline text-[#A3E635]">&bull;</span>
               <span>Real Accountability</span>
-            </div>
-          </div>
-
-          {/* Right: Phone mockup with bottom cut off */}
-          <div className="relative flex-shrink-0 w-[260px] sm:w-[300px] lg:w-[340px] self-end">
-            {/* Glow effect behind phone */}
-            <div
-              className="absolute -inset-8 rounded-full opacity-20 blur-3xl"
-              style={{ background: "radial-gradient(circle, #A3E635 0%, transparent 70%)" }}
-            />
-            {/* Phone frame */}
-            <div className="relative">
-              <img
-                src="/Dashboard.png"
-                alt="App Dashboard"
-                className="w-full h-auto rounded-[2.5rem] shadow-2xl"
-                style={{
-                  maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
-                  WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
-                }}
-              />
             </div>
           </div>
         </div>
