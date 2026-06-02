@@ -53,7 +53,7 @@ const Hero = () => {
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-[0.07] pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none"
         src="/homevid.mp4"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 pointer-events-none" />
