@@ -2,7 +2,7 @@ const StatsBanner = () => {
   return (
     <section className="bg-[#0a0a0a] py-10 sm:py-16 px-4 sm:px-6 border-b border-white/10">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-white font-black text-xl sm:text-3xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight">
+        <h2 className="text-white font-black text-3xl sm:text-4xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight">
           A PLATFORM YOUR{' '}
           <span className="relative inline-block">
             PEOPLE
