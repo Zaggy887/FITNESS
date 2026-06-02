@@ -103,6 +103,12 @@ const MeetTheCoach = () => {
           </div>
         </div>
       </div>
+
+      <div className="flex items-center justify-center gap-3 pt-16 sm:pt-20 pb-4">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#A3E635]/60" />
+        <span className="w-1.5 h-1.5 rounded-full bg-[#A3E635]/30" />
+        <span className="w-1.5 h-1.5 rounded-full bg-[#A3E635]/60" />
+      </div>
     </section>
   );
 };
