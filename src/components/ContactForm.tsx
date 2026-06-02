@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Calendar, Clock, CheckCircle2, ArrowRight, ExternalLink } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, ExternalLink } from 'lucide-react';
 
 declare global {
   interface Window {
@@ -77,11 +77,10 @@ const ContactForm = () => {
           </div>
 
           <div className="fade-in relative bg-[#0a0a0a] border border-white/10 rounded-2xl p-5 sm:p-7 md:p-10 hover:border-[#A3E635]/30 transition-colors duration-500">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8 max-w-lg mx-auto">
               {[
                 { icon: Clock, label: '30 minutes', desc: 'Quick walkthrough' },
                 { icon: Calendar, label: 'Flexible times', desc: 'Pick what suits you' },
-                { icon: CheckCircle2, label: 'No commitment', desc: 'Completely free' },
               ].map(({ icon: Icon, label, desc }) => (
                 <div
                   key={label}
@@ -126,8 +125,6 @@ const ContactForm = () => {
             <span>Response within 24 hours</span>
             <span className="text-[#A3E635]">•</span>
             <span>Universities &amp; corporates welcome</span>
-            <span className="text-[#A3E635]">•</span>
-            <span>No commitment required</span>
           </div>
         </div>
       </div>
