@@ -1,4 +1,23 @@
+import { useState, useEffect } from 'react';
+
+const platformImages = [
+  { src: '/Dashboard.png', alt: 'StrengthHub Dashboard' },
+  { src: '/Workout.png', alt: 'StrengthHub Workouts' },
+  { src: '/Nutrtion.png', alt: 'StrengthHub Nutrition' },
+  { src: '/Progress.png', alt: 'StrengthHub Progress' },
+  { src: '/Community.png', alt: 'StrengthHub Community' },
+];
+
 const Hero = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % platformImages.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="bg-black text-white min-h-screen flex items-center">
       <div className="w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-24 py-24 sm:py-28 flex flex-col lg:flex-row items-center gap-10 sm:gap-16 lg:gap-20">
@@ -9,15 +28,23 @@ const Hero = () => {
             className="absolute -inset-16 rounded-full opacity-25 blur-3xl pointer-events-none"
             style={{ background: "radial-gradient(circle, #A3E635 0%, transparent 70%)" }}
           />
-          <img
-            src="/Dashboard.png"
-            alt="StrengthHub App"
-            className="relative w-full h-auto rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.9)]"
-            style={{
-              maskImage: "linear-gradient(to bottom, black 72%, transparent 100%)",
-              WebkitMaskImage: "linear-gradient(to bottom, black 72%, transparent 100%)",
-            }}
-          />
+          <div className="relative w-full">
+            {platformImages.map((image, index) => (
+              <img
+                key={image.src}
+                src={image.src}
+                alt={image.alt}
+                className={`w-full h-auto rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.9)] transition-opacity duration-1000 ease-in-out ${
+                  index === 0 ? 'relative' : 'absolute inset-0'
+                }`}
+                style={{
+                  opacity: index === activeIndex ? 1 : 0,
+                  maskImage: "linear-gradient(to bottom, black 72%, transparent 100%)",
+                  WebkitMaskImage: "linear-gradient(to bottom, black 72%, transparent 100%)",
+                }}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Right: Text */}
