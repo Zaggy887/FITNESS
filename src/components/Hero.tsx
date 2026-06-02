@@ -47,8 +47,17 @@ const Hero = () => {
   }, [startTyping]);
 
   return (
-    <div className="bg-black text-white min-h-screen flex items-center">
-      <div className="w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-24 py-24 sm:py-28 flex flex-col lg:flex-row items-center gap-10 sm:gap-16 lg:gap-20">
+    <div className="relative bg-black text-white min-h-screen flex items-center overflow-hidden">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-[0.07] pointer-events-none"
+        src="/homevid.mp4"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 pointer-events-none" />
+      <div className="relative w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-24 py-24 sm:py-28 flex flex-col lg:flex-row items-center gap-10 sm:gap-16 lg:gap-20">
 
         {/* Left: Phone mockup */}
         <div className="relative flex-shrink-0 w-[200px] sm:w-[280px] lg:w-[360px]">
