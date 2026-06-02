@@ -4,23 +4,23 @@ import { ShieldCheck, BarChart3, Zap, Globe } from 'lucide-react';
 const features = [
   {
     icon: ShieldCheck,
-    title: 'Expert-Led Programming',
-    body: 'Every program on the platform is built and overseen by qualified coaches with real-world experience in strength, body composition, and lifestyle fitness.',
+    title: 'Built to complement your life, not take over.',
+    body: 'Life gets busy. StrengthHub adapts with you so staying consistent never feels like another thing on your plate.',
   },
   {
     icon: BarChart3,
-    title: 'Data-Driven Progress',
-    body: 'Members track workouts, nutrition, and habits in one place. Organisations get insight into engagement and outcomes across their cohort.',
+    title: 'Promotes understanding and health literacy.',
+    body: "We don't just hand you a plan. We help you understand your body and your habits so the results last well beyond the semester.",
   },
   {
     icon: Zap,
-    title: 'Instant Access, Zero Friction',
-    body: 'No equipment required to get started. The platform is fully mobile-first — students and staff can train on their schedule, from anywhere.',
+    title: 'Instant Access.',
+    body: 'No equipment, no setup, no barriers. Open the app and go.',
   },
   {
     icon: Globe,
-    title: 'Scalable for Any Organisation',
-    body: 'Whether you\'re a student union, university, or corporate, the platform scales to your size and integrates with your existing wellbeing initiatives.',
+    title: 'Real Human Programming.',
+    body: 'Every program is written by a real coach with real experience. Not generated. Not recycled.',
   },
 ];
 
