@@ -63,13 +63,6 @@ const Process = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % screens.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [activeIndex]);
-
   const active = screens[activeIndex];
 
   return (
@@ -120,7 +113,7 @@ const Process = () => {
               </div>
             </div>
 
-            <div key={active.id} className="text-center lg:text-left space-y-6 animate-fade-in">
+            <div className="text-center lg:text-left space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#A3E635]/10 border border-[#A3E635]/20">
                 <active.icon className="w-5 h-5 text-[#A3E635]" />
                 <span className="text-[#A3E635] font-semibold text-sm tracking-wide uppercase">
