@@ -41,10 +41,10 @@ const Hero = () => {
 
           <div className="mt-12 flex flex-col sm:flex-row items-start gap-4">
             <a
-              href="#contact"
+              href="#process"
               className="group inline-flex items-center gap-3 bg-[#A3E635] px-9 py-4 text-sm font-bold uppercase tracking-[0.15em] text-black transition-all duration-200 hover:bg-[#B8F04A] hover:shadow-[0_0_50px_rgba(163,230,53,0.45)]"
             >
-              Book a Demo
+              View the App
               <svg
                 className="w-4 h-4 transition-transform group-hover:translate-x-1"
                 fill="none"
@@ -54,12 +54,6 @@ const Hero = () => {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
-            <a
-              href="#process"
-              className="inline-flex items-center gap-2 px-9 py-4 text-sm font-bold uppercase tracking-[0.15em] text-white/40 transition-all duration-200 hover:text-[#A3E635]"
-            >
-              View the App
             </a>
           </div>
 
