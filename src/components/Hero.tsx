@@ -42,7 +42,7 @@ const Hero = () => {
           <div className="mt-12 flex flex-col sm:flex-row items-start gap-4">
             <a
               href="#process"
-              className="inline-flex items-center gap-2 px-9 py-4 text-sm font-bold uppercase tracking-[0.15em] text-white/40 transition-all duration-200 hover:text-[#A3E635]"
+              className="inline-flex items-center gap-2 px-9 py-4 text-sm font-bold uppercase tracking-[0.15em] text-white/40 border border-white/40 transition-all duration-200 hover:text-[#A3E635] hover:border-[#A3E635]"
             >
               View the App
             </a>
