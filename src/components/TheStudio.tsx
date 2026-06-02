@@ -1,15 +1,17 @@
 const offerings = [
-  "A fully branded, white-label ready fitness platform your organisation can deploy to students or staff immediately",
-  "Structured workout programs across strength, conditioning, and mobility — built by certified coaches and updated regularly",
-  "Nutrition tracking and education built into the app, focused on sustainable habits rather than restrictive dieting",
-  "Real-time progress tracking across workouts, weight, habits, and consistency so members can see measurable results",
-  "A community feature that keeps your cohort connected, motivated, and accountable to each other",
-  "Ongoing expert coach support available to members through the platform, with fast response times",
+  "Access to the StrengthHub Online platform, ready to deploy to your members immediately.",
+  "Structured programs across strength, conditioning and mobility built and overseen by a qualified coach.",
+  "Nutrition tracking and education built into the app. Real understanding over restrictive rules.",
+  "Progress tracking across workouts, weight, habits and consistency so members understand what is driving their results.",
+  "A community feature that keeps your cohort connected, motivated and accountable to each other.",
+  "Ongoing expert coach support available to members through the platform with fast response times.",
 ];
 
 const bonusOfferings = [
-  "Promotional distribution through student union newsletters, learning portals, and campus-facing channels",
-  "Onboarding support and setup assistance for your organisation at no additional cost",
+  "Assistance evaluating lifestyle habits across sleep, nutrition, movement and recovery",
+  "Health literacy resources that build lasting knowledge, not just short term results",
+  "Personalised pathways, habit tracking, challenges and leaderboards",
+  "Full onboarding support and setup assistance at no additional cost",
 ];
 
 const TheStudio = () => {
@@ -27,8 +29,8 @@ const TheStudio = () => {
 
       <div className="container mx-auto px-4">
         <h2 className="text-center text-xl sm:text-3xl md:text-5xl font-black mb-2 tracking-tight">
-          <span className="text-white">WHAT YOUR ORGANISATION </span>
-          <span className="text-[#A3E635]">GETS</span>
+          <span className="text-white">AN EXAMPLE OF WHAT YOUR ORGANISATION COULD </span>
+          <span className="text-[#A3E635]">GET</span>
         </h2>
         <p className="text-center text-white/40 text-sm uppercase tracking-[0.2em] mb-10">Everything included. No extras.</p>
       </div>
