@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
+
+const TAGLINE = 'Fitness & Wellness Platform';
 
 const platformImages = [
   { src: '/Dashboard.png', alt: 'StrengthHub Dashboard' },
@@ -10,6 +12,9 @@ const platformImages = [
 
 const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [typedText, setTypedText] = useState('');
+  const [hasStartedTyping, setHasStartedTyping] = useState(false);
+  const taglineRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,6 +22,29 @@ const Hero = () => {
     }, 6000);
     return () => clearInterval(interval);
   }, []);
+
+  const startTyping = useCallback(() => {
+    if (hasStartedTyping) return;
+    setHasStartedTyping(true);
+    let i = 0;
+    const timer = setInterval(() => {
+      i++;
+      setTypedText(TAGLINE.slice(0, i));
+      if (i >= TAGLINE.length) clearInterval(timer);
+    }, 60);
+    return () => clearInterval(timer);
+  }, [hasStartedTyping]);
+
+  useEffect(() => {
+    const el = taglineRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) startTyping(); },
+      { threshold: 0.5 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [startTyping]);
 
   return (
     <div className="bg-black text-white min-h-screen flex items-center">
@@ -52,8 +80,14 @@ const Hero = () => {
 
         {/* Right: Text */}
         <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
-          <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.35em] text-[#A3E635] mb-6 sm:mb-8">
-            Fitness &amp; Wellness Platform
+          <span
+            ref={taglineRef}
+            className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.35em] text-[#A3E635] mb-6 sm:mb-8 inline-block min-h-[1.2em]"
+          >
+            {typedText}
+            {typedText.length < TAGLINE.length && (
+              <span className="inline-block w-[1px] h-[1em] bg-[#A3E635] ml-[2px] align-middle animate-pulse" />
+            )}
           </span>
 
           <h1 className="font-black tracking-tight leading-[0.95] text-[40px] sm:text-[56px] md:text-[72px] lg:text-[88px] xl:text-[100px]">
