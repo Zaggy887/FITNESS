@@ -51,9 +51,9 @@ const Universities = () => {
         </div>
 
         <div className="mb-16">
-          <div className="flex md:hidden gap-6 overflow-x-auto overflow-y-hidden px-2 pb-2 snap-x snap-mandatory">
+          <div className="flex md:hidden gap-4 overflow-x-auto overflow-y-hidden px-2 pb-4 snap-x snap-mandatory -mx-2">
             {universities.map((uni, index) => (
-              <div key={index} className="flex-shrink-0 snap-start w-40">
+              <div key={index} className="flex-shrink-0 snap-start w-32 sm:w-40">
                 <img
                   src={uni.logo}
                   alt={`${uni.name} logo`}

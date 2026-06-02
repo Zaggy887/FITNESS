@@ -26,7 +26,7 @@ const TheStudio = () => {
       </div>
 
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-2xl sm:text-3xl md:text-5xl font-black mb-2 tracking-tight">
+        <h2 className="text-center text-xl sm:text-3xl md:text-5xl font-black mb-2 tracking-tight">
           <span className="text-white">WHAT YOUR ORGANISATION </span>
           <span className="text-[#A3E635]">GETS</span>
         </h2>
@@ -56,9 +56,9 @@ const TheStudio = () => {
             Also Included
           </p>
 
-          <ul className="mb-10 space-y-4">
+          <ul className="mb-10 space-y-4 max-w-xl md:mx-auto">
             {bonusOfferings.map((item, i) => (
-              <li key={i} className="flex items-start gap-3 md:justify-center">
+              <li key={i} className="flex items-start gap-3">
                 <span className="mt-[7px] w-2 h-2 rounded-full bg-[#A3E635] flex-shrink-0" />
                 <p className="text-white/70 text-sm sm:text-[15px] leading-relaxed">
                   {item}
@@ -70,7 +70,7 @@ const TheStudio = () => {
           <div className="text-center">
             <a
               href="#contact"
-              className="group inline-flex items-center gap-3 bg-[#A3E635] px-9 py-4 text-sm font-bold uppercase tracking-[0.15em] text-black transition-all duration-200 hover:bg-[#B8F04A] hover:shadow-[0_0_40px_rgba(163,230,53,0.4)]"
+              className="group inline-flex items-center justify-center gap-3 bg-[#A3E635] px-7 sm:px-9 py-3.5 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-black transition-all duration-200 hover:bg-[#B8F04A] hover:shadow-[0_0_40px_rgba(163,230,53,0.4)] w-full sm:w-auto"
             >
               Partner With Us
             </a>

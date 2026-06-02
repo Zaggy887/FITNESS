@@ -84,21 +84,21 @@ const Navbar = () => {
     <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="/" className="flex flex-col leading-none">
-          <span className="text-white font-black uppercase tracking-tight text-xl sm:text-2xl md:text-3xl">
+          <span className="text-white font-black uppercase tracking-tight text-lg sm:text-2xl md:text-3xl">
             STRENGTH
           </span>
-          <span className="text-white font-black italic uppercase tracking-tight text-lg sm:text-xl md:text-2xl -mt-1">
+          <span className="text-white font-black italic uppercase tracking-tight text-base sm:text-xl md:text-2xl -mt-1">
             HUB
-            <sup className="text-white text-[10px] sm:text-xs font-bold not-italic align-super ml-0.5">
+            <sup className="text-white text-[9px] sm:text-xs font-bold not-italic align-super ml-0.5">
               ONLINE
             </sup>
           </span>
         </a>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <button
             onClick={() => scrollToSection("contact")}
-            className="px-4 sm:px-5 py-2 rounded-full text-white/90 text-sm font-medium
+            className="px-3 sm:px-5 py-2 rounded-full text-white/90 text-xs sm:text-sm font-medium
                        border border-white/30
                        bg-white/10 backdrop-blur-md
                        hover:bg-white/20 hover:border-white/50
@@ -109,7 +109,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setIsMenuOpen(true)}
-            className="md:hidden text-white hover:text-[#A3E635] transition-colors p-1"
+            className="md:hidden text-white hover:text-[#A3E635] transition-colors p-2"
             aria-label="Open menu"
           >
             <Menu size={24} />

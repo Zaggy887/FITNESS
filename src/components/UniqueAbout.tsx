@@ -64,11 +64,11 @@ const UniqueAbout = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {features.map(({ icon: Icon, title, body }, i) => (
               <div
                 key={title}
-                className="fade-in bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 hover:border-[#A3E635]/30 transition-colors duration-300"
+                className="fade-in bg-[#0a0a0a] border border-white/10 rounded-2xl p-5 sm:p-8 hover:border-[#A3E635]/30 transition-colors duration-300"
                 style={{ transitionDelay: `${i * 0.08}s` }}
               >
                 <div className="w-11 h-11 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/20 flex items-center justify-center mb-6">

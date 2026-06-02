@@ -12,7 +12,7 @@ const Footer = () => {
                 HUB<sup className="text-white text-xs font-bold not-italic align-super ml-0.5">ONLINE</sup>
               </span>
             </div>
-            <p className="mt-2 text-white/50 max-w-md">
+            <p className="mt-2 text-white/50 text-sm sm:text-base max-w-md">
               The fitness &amp; wellness platform built for universities and organisations.
             </p>
           </div>
@@ -22,16 +22,16 @@ const Footer = () => {
             <div className="flex flex-col items-center md:items-end space-y-3">
               <a
                 href="mailto:info@strengthhubonline.com"
-                className="flex items-center text-white/60 hover:text-white transition-colors"
+                className="flex items-center text-sm sm:text-base text-white/60 hover:text-white transition-colors"
               >
-                <Mail className="w-5 h-5 mr-2" />
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0" />
                 info@strengthhubonline.com
               </a>
               <a
                 href="tel:0435754525"
-                className="flex items-center text-white/60 hover:text-white transition-colors"
+                className="flex items-center text-sm sm:text-base text-white/60 hover:text-white transition-colors"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0" />
                 0435 754 525
               </a>
             </div>

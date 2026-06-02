@@ -51,7 +51,7 @@ const MeetTheCoach = () => {
     <section id="coach" className="section bg-black relative overflow-hidden" ref={sectionRef}>
       <div className="container px-4 sm:px-6 lg:px-8">
         <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#A3E635]">Our Story</span>
-        <h2 className="fade-in text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-8 sm:mb-10 text-left">
+        <h2 className="fade-in text-2xl sm:text-4xl md:text-5xl font-bold mt-4 mb-6 sm:mb-10 text-left">
           <span className="text-white">Founded by </span>
           <span className="text-[#A3E635]">Coach Zak</span>
         </h2>
@@ -64,7 +64,7 @@ const MeetTheCoach = () => {
                   <img
                     src="/IMG_0875.jpg"
                     alt="Zak — Founder, StrengthHub Online"
-                    className="w-full h-[280px] sm:h-[360px] lg:h-[420px] object-cover object-[35%_center] transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-[240px] sm:h-[360px] lg:h-[420px] object-cover object-[35%_center] transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
               </div>

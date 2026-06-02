@@ -74,7 +74,7 @@ const ContactForm = () => {
               <span className="mt-2 h-[2px] w-12 bg-[#A3E635]" />
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-[1.05]">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-[1.05]">
               Book a{' '}
               <span className="text-[#A3E635]">free demo.</span>
             </h2>
@@ -116,7 +116,7 @@ const ContactForm = () => {
             <div className="flex flex-col items-center text-center">
               <button
                 onClick={openCalendlyPopup}
-                className="group inline-flex items-center justify-center gap-3 bg-[#A3E635] hover:bg-[#B8F04A] hover:shadow-[0_0_30px_rgba(163,230,53,0.4)] text-black py-4 px-9 font-bold uppercase tracking-[0.15em] text-sm rounded-lg transition-all duration-300"
+                className="group inline-flex items-center justify-center gap-3 bg-[#A3E635] hover:bg-[#B8F04A] hover:shadow-[0_0_30px_rgba(163,230,53,0.4)] text-black py-3.5 sm:py-4 px-7 sm:px-9 font-bold uppercase tracking-[0.15em] text-xs sm:text-sm rounded-lg transition-all duration-300 w-full sm:w-auto"
               >
                 Book a Free Demo
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" strokeWidth={2.5} />
@@ -139,7 +139,7 @@ const ContactForm = () => {
           </div>
 
           {/* Bottom trust strip */}
-          <div className="fade-in mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.2em] text-white/40">
+          <div className="fade-in mt-8 flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-8 gap-y-2 text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white/40">
             <span>Response within 24 hours</span>
             <span className="text-[#A3E635]">•</span>
             <span>Universities &amp; corporates welcome</span>

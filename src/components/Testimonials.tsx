@@ -63,9 +63,9 @@ const Testimonials = () => {
 
         <div className="mb-12">
           {/* Mobile */}
-          <div className="md:hidden flex gap-6 overflow-x-auto overflow-y-hidden px-2 pb-2 snap-x snap-mandatory">
+          <div className="md:hidden flex gap-4 overflow-x-auto overflow-y-hidden px-2 pb-4 snap-x snap-mandatory -mx-2">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="flex-shrink-0 snap-start w-[85%]">
+              <div key={index} className="flex-shrink-0 snap-start w-[80vw] max-w-[320px]">
                 <div className="bg-[#111] border border-white/10 rounded-xl p-6 h-full">
                   <Quote className="w-8 h-8 text-[#A3E635]/60 mb-4" />
                   <p className="text-white/70 mb-6 italic">{testimonial.quote}</p>
@@ -105,7 +105,7 @@ const Testimonials = () => {
         <div className="text-center">
           <a
             href="#contact"
-            className="group inline-flex items-center gap-3 bg-[#A3E635] px-9 py-4 text-sm font-bold uppercase tracking-[0.15em] text-black transition-all duration-200 hover:bg-[#B8F04A] hover:shadow-[0_0_40px_rgba(163,230,53,0.4)]"
+            className="group inline-flex items-center justify-center gap-3 bg-[#A3E635] px-7 sm:px-9 py-3.5 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-black transition-all duration-200 hover:bg-[#B8F04A] hover:shadow-[0_0_40px_rgba(163,230,53,0.4)] w-full sm:w-auto"
           >
             Partner With Us
           </a>

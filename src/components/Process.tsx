@@ -78,12 +78,12 @@ const Process = () => {
           </p>
         </div>
 
-        <div className="fade-in flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 max-w-2xl mx-auto">
+        <div className="fade-in flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 max-w-2xl mx-auto px-2">
           {screens.map(({ id, label, icon: Icon }, index) => (
             <button
               key={id}
               onClick={() => setActiveIndex(index)}
-              className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 min-h-[44px] ${
                 activeIndex === index
                   ? 'bg-[#A3E635] text-black'
                   : 'bg-white/5 text-white/60 hover:bg-white/10 hover:text-white'
@@ -98,7 +98,7 @@ const Process = () => {
         <div className="fade-in max-w-5xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="flex justify-center">
-              <div className="relative w-[240px] sm:w-[280px] md:w-[300px]">
+              <div className="relative w-[200px] sm:w-[260px] md:w-[300px]">
                 <div className="relative rounded-[2.5rem] border-[6px] border-white/10 bg-black overflow-hidden shadow-2xl shadow-[#A3E635]/5">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-black rounded-b-2xl z-10" />
                   <img
@@ -130,7 +130,7 @@ const Process = () => {
                   <button
                     key={screen.id}
                     onClick={() => setActiveIndex(index)}
-                    className={`w-14 h-14 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
+                    className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
                       activeIndex === index
                         ? 'border-[#A3E635] scale-105'
                         : 'border-white/10 opacity-50 hover:opacity-80'

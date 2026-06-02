@@ -1,10 +1,10 @@
 const Hero = () => {
   return (
     <div className="bg-black text-white min-h-screen flex items-center">
-      <div className="w-full max-w-[1400px] mx-auto px-8 lg:px-24 py-28 flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
+      <div className="w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-24 py-24 sm:py-28 flex flex-col lg:flex-row items-center gap-10 sm:gap-16 lg:gap-20">
 
         {/* Left: Phone mockup */}
-        <div className="relative flex-shrink-0 w-[260px] sm:w-[300px] lg:w-[360px]">
+        <div className="relative flex-shrink-0 w-[200px] sm:w-[280px] lg:w-[360px]">
           <div
             className="absolute -inset-16 rounded-full opacity-25 blur-3xl pointer-events-none"
             style={{ background: "radial-gradient(circle, #A3E635 0%, transparent 70%)" }}
@@ -12,7 +12,7 @@ const Hero = () => {
           <img
             src="/Dashboard.png"
             alt="StrengthHub App"
-            className="relative w-full h-auto rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.9)]"
+            className="relative w-full h-auto rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.9)]"
             style={{
               maskImage: "linear-gradient(to bottom, black 72%, transparent 100%)",
               WebkitMaskImage: "linear-gradient(to bottom, black 72%, transparent 100%)",
@@ -21,36 +21,36 @@ const Hero = () => {
         </div>
 
         {/* Right: Text */}
-        <div className="flex-1 flex flex-col items-start">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.35em] text-[#A3E635] mb-8">
+        <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
+          <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.35em] text-[#A3E635] mb-6 sm:mb-8">
             Fitness &amp; Wellness Platform
           </span>
 
-          <h1 className="font-black tracking-tight leading-[0.95] text-[56px] sm:text-[72px] lg:text-[88px] xl:text-[100px]">
+          <h1 className="font-black tracking-tight leading-[0.95] text-[40px] sm:text-[56px] md:text-[72px] lg:text-[88px] xl:text-[100px]">
             Built for<br />
             <span className="text-[#A3E635]">you</span> &amp;<br />
             everybody<br />
             around <span className="text-[#A3E635]">you</span>
           </h1>
 
-          <p className="mt-10 text-lg sm:text-xl leading-relaxed text-white/50 max-w-[480px]">
+          <p className="mt-6 sm:mt-10 text-base sm:text-lg md:text-xl leading-relaxed text-white/50 max-w-[480px]">
             StrengthHub Online is the{" "}
             <span className="text-white/90 font-medium">starting point for helping young people</span>{" "}
             build confidence, structure, and take control of everyday life.
           </p>
 
-          <div className="mt-12 flex flex-col sm:flex-row items-start gap-4">
+          <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center lg:items-start gap-4">
             <a
               href="#process"
-              className="inline-flex items-center gap-2 px-9 py-4 text-sm font-bold uppercase tracking-[0.15em] text-white/40 border border-white/40 transition-all duration-200 hover:text-[#A3E635] hover:border-[#A3E635]"
+              className="inline-flex items-center gap-2 px-7 sm:px-9 py-3.5 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-white/40 border border-white/40 transition-all duration-200 hover:text-[#A3E635] hover:border-[#A3E635]"
             >
               View the App
             </a>
           </div>
 
-          <div className="mt-16 flex items-center gap-8 text-[10px] uppercase tracking-[0.3em] text-white/20">
+          <div className="mt-10 sm:mt-16 flex flex-wrap items-center justify-center lg:justify-start gap-x-4 sm:gap-x-8 gap-y-2 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.3em] text-white/20">
             <span>University Partnerships</span>
-            <span className="text-[#A3E635]">bull;</span>
+            <span className="text-[#A3E635]">&bull;</span>
             <span>Complete Platform</span>
             <span className="text-[#A3E635]">&bull;</span>
             <span>Student Wellbeing</span>
