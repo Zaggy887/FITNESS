@@ -28,8 +28,8 @@ const Hero = () => {
 
           <h1 className="font-black tracking-tight leading-[0.95] text-[56px] sm:text-[72px] lg:text-[88px] xl:text-[100px]">
             Built for<br />
-            <span className="text-[#A3E635]">Organisations</span><br />
-            &amp; Universities.
+            <span className="text-[#A3E635]">you</span><br />
+            &amp; 
           </h1>
 
           <p className="mt-10 text-lg sm:text-xl leading-relaxed text-white/50 max-w-[480px]">
