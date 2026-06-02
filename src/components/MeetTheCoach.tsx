@@ -81,21 +81,21 @@ const MeetTheCoach = () => {
               </div>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-6 sm:space-y-8 py-2">
               {credentials.map(({ icon: Icon, title, description }, index) => (
                 <div
                   key={title}
-                  className="fade-in flex items-start gap-3 sm:gap-5 rounded-xl bg-[#111] border border-white/10 p-4 sm:p-5 hover:border-[#A3E635]/30 transition-colors duration-300"
+                  className="fade-in flex items-start gap-4 sm:gap-5"
                   style={{ transitionDelay: `${index * 0.1}s` }}
                 >
-                  <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full border-2 border-[#A3E635]/50 flex items-center justify-center shrink-0">
-                    <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#A3E635]" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-[#A3E635]/40 flex items-center justify-center shrink-0">
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-[#A3E635]" />
                   </div>
-                  <div className="border-l-2 border-[#A3E635]/30 pl-3 sm:pl-5">
-                    <h4 className="text-[#A3E635] font-bold text-base tracking-wide mb-1">
+                  <div>
+                    <h4 className="text-white font-bold text-sm sm:text-base tracking-wide mb-1">
                       {title}
                     </h4>
-                    <p className="text-white/70 text-sm leading-relaxed">{description}</p>
+                    <p className="text-white/50 text-sm leading-relaxed">{description}</p>
                   </div>
                 </div>
               ))}
