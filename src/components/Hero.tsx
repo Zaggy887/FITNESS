@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 
-const TAGLINE = 'Fitness & Wellness Platform';
+const TAGLINE = 'A Fitness & Wellness Platform';
 
 const platformImages = [
   { src: '/Dashboard.png', alt: 'StrengthHub Dashboard' },
