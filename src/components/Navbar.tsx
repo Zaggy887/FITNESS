@@ -1,8 +1,6 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
@@ -41,37 +39,21 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? "hidden" : "";
-  }, [isMenuOpen]);
-
   const scrollToSection = (id: string) => {
     const el = id === 'referral'
       ? document.querySelector('#referral')
       : document.getElementById(id);
 
     if (!el) return;
-
-    const isMobile = window.innerWidth < 768;
-
-    if (isMobile) {
-      setIsMenuOpen(false);
-      setTimeout(() => {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 350);
-    } else {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  const navLink = (id: string, label: string, mobile = false) => {
-    const base = mobile
-      ? "text-white text-lg font-light hover:text-[#A3E635] transition-colors"
-      : `transition-colors ${
-          activeSection === id
-            ? "text-[#A3E635] font-medium"
-            : "text-white hover:text-[#A3E635]"
-        }`;
+  const _navLink = (id: string, label: string) => {
+    const base = `transition-colors ${
+      activeSection === id
+        ? "text-[#A3E635] font-medium"
+        : "text-white hover:text-[#A3E635]"
+    }`;
 
     return (
       <button onClick={() => scrollToSection(id)} className={base}>
@@ -95,59 +77,16 @@ const Navbar = () => {
           </span>
         </a>
 
-        <div className="flex items-center gap-2 sm:gap-3">
-          <button
-            onClick={() => scrollToSection("contact")}
-            className="px-3 sm:px-5 py-2 rounded-full text-white/90 text-xs sm:text-sm font-medium
-                       border border-white/30
-                       bg-white/10 backdrop-blur-md
-                       hover:bg-white/20 hover:border-white/50
-                       transition-all duration-300"
-          >
-            Book an Appointment
-          </button>
-
-          <button
-            onClick={() => setIsMenuOpen(true)}
-            className="md:hidden text-white hover:text-[#A3E635] transition-colors p-2"
-            aria-label="Open menu"
-          >
-            <Menu size={24} />
-          </button>
-        </div>
-      </div>
-
-      <div
-        className={`md:hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-lg transition-opacity duration-300 ${
-          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
-        }`}
-      >
-        <div className="absolute top-4 right-4">
-          <button
-            onClick={() => setIsMenuOpen(false)}
-            className="text-white hover:text-[#A3E635] transition-colors p-1"
-          >
-            <X size={28} />
-          </button>
-        </div>
-
-        <div className="h-full flex flex-col items-center justify-center space-y-6 px-6">
-          {navLink("about", "About", true)}
-          {navLink("universities", "Partners", true)}
-          {navLink("process", "Platform", true)}
-          {navLink("coach", "Our Story", true)}
-          {navLink("testimonials", "Testimonials", true)}
-          {navLink("contact", "Contact", true)}
-
-          <button
-            onClick={() => scrollToSection("contact")}
-            className="mt-4 px-6 py-2.5 rounded-full text-black font-semibold
-                       bg-[#A3E635] hover:bg-[#B8F04A]
-                       transition-all duration-300"
-          >
-            Book an Appointment
-          </button>
-        </div>
+        <button
+          onClick={() => scrollToSection("contact")}
+          className="px-3 sm:px-5 py-2 rounded-full text-white/90 text-xs sm:text-sm font-medium
+                     border border-white/30
+                     bg-white/10 backdrop-blur-md
+                     hover:bg-white/20 hover:border-white/50
+                     transition-all duration-300"
+        >
+          Book an Appointment
+        </button>
       </div>
     </nav>
   );
