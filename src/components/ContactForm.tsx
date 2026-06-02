@@ -75,13 +75,13 @@ const ContactForm = () => {
             </div>
 
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-[1.05]">
-              Book a{' '}
-              <span className="text-[#A3E635]">free demo.</span>
+              Book an{' '}
+              <span className="text-[#A3E635]">appointment.</span>
             </h2>
 
             <p className="mt-6 text-white/60 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
               Interested in bringing StrengthHub Online to your university or organisation?
-              Book a free 30-minute demo and we'll walk you through the platform.
+              Book a free 30-minute appointment and we'll walk you through the platform.
             </p>
           </div>
 
@@ -118,7 +118,7 @@ const ContactForm = () => {
                 onClick={openCalendlyPopup}
                 className="group inline-flex items-center justify-center gap-3 bg-[#A3E635] hover:bg-[#B8F04A] hover:shadow-[0_0_30px_rgba(163,230,53,0.4)] text-black py-3.5 sm:py-4 px-7 sm:px-9 font-bold uppercase tracking-[0.15em] text-xs sm:text-sm rounded-lg transition-all duration-300 w-full sm:w-auto"
               >
-                Book a Free Demo
+                Book an Appointment
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" strokeWidth={2.5} />
               </button>
 

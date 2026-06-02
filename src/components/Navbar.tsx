@@ -104,7 +104,7 @@ const Navbar = () => {
                        hover:bg-white/20 hover:border-white/50
                        transition-all duration-300"
           >
-            Book a Demo
+            Book an Appointment
           </button>
 
           <button
@@ -145,7 +145,7 @@ const Navbar = () => {
                        bg-[#A3E635] hover:bg-[#B8F04A]
                        transition-all duration-300"
           >
-            Book a Demo
+            Book an Appointment
           </button>
         </div>
       </div>
