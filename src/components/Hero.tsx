@@ -56,18 +56,16 @@ const Hero = () => {
             className="absolute -inset-16 rounded-full opacity-25 blur-3xl pointer-events-none"
             style={{ background: "radial-gradient(circle, #A3E635 0%, transparent 70%)" }}
           />
-          <div className="relative w-full">
+          <div className="relative w-full" style={{ aspectRatio: '9 / 19.5' }}>
             {platformImages.map((image, index) => (
               <img
                 key={image.src}
                 src={image.src}
                 alt={image.alt}
-                loading={index === 0 ? 'eager' : 'lazy'}
-                decoding={index === 0 ? 'sync' : 'async'}
-                fetchPriority={index === 0 ? 'high' : 'low'}
-                className={`w-full h-auto rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.9)] transition-opacity duration-1000 ease-in-out ${
-                  index === 0 ? 'relative' : 'absolute inset-0'
-                }`}
+                loading="eager"
+                decoding="async"
+                fetchPriority={index === 0 ? 'high' : 'auto'}
+                className="absolute inset-0 w-full h-full object-cover rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.9)] transition-opacity duration-1000 ease-in-out will-change-[opacity]"
                 style={{
                   opacity: index === activeIndex ? 1 : 0,
                   maskImage: "linear-gradient(to bottom, black 72%, transparent 100%)",
