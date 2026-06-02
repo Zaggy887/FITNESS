@@ -1,38 +1,11 @@
 import { useEffect, useRef } from 'react';
-import { Calendar, Clock, ArrowRight, ExternalLink } from 'lucide-react';
+import { Calendar, Clock, ExternalLink } from 'lucide-react';
 
-declare global {
-  interface Window {
-    Calendly?: {
-      initPopupWidget: (opts: { url: string }) => void;
-    };
-  }
-}
 
 const CALENDLY_URL = 'https://calendly.com/strengthhubonline-info/30min';
 
 const ContactForm = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const cssId = 'calendly-widget-css';
-    if (!document.getElementById(cssId)) {
-      const link = document.createElement('link');
-      link.id = cssId;
-      link.rel = 'stylesheet';
-      link.href = 'https://assets.calendly.com/assets/external/widget.css';
-      document.head.appendChild(link);
-    }
-
-    const scriptId = 'calendly-widget-script';
-    if (!document.getElementById(scriptId)) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.src = 'https://assets.calendly.com/assets/external/widget.js';
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -47,14 +20,6 @@ const ContactForm = () => {
     elements?.forEach((el) => observer.observe(el));
     return () => elements?.forEach((el) => observer.unobserve(el));
   }, []);
-
-  const openCalendlyPopup = () => {
-    if (window.Calendly) {
-      window.Calendly.initPopupWidget({ url: CALENDLY_URL });
-    } else {
-      window.open(CALENDLY_URL, '_blank');
-    }
-  };
 
   return (
     <section id="contact" className="section bg-black relative overflow-hidden py-10 sm:py-16" ref={sectionRef}>
@@ -101,22 +66,14 @@ const ContactForm = () => {
             </div>
 
             <div className="flex flex-col items-center text-center">
-              <button
-                onClick={openCalendlyPopup}
-                className="group inline-flex items-center justify-center gap-3 bg-[#A3E635] hover:bg-[#B8F04A] hover:shadow-[0_0_30px_rgba(163,230,53,0.4)] text-black py-3 sm:py-3.5 px-7 sm:px-8 font-bold uppercase tracking-[0.15em] text-xs sm:text-sm rounded-lg transition-all duration-300 w-full sm:w-auto"
-              >
-                Book a Call
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" strokeWidth={2.5} />
-              </button>
-
               <a
                 href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center gap-1.5 text-white/40 hover:text-[#A3E635] text-[11px] uppercase tracking-[0.15em] transition-colors"
+                className="group inline-flex items-center justify-center gap-3 bg-[#A3E635] hover:bg-[#B8F04A] hover:shadow-[0_0_30px_rgba(163,230,53,0.4)] text-black py-3 sm:py-3.5 px-7 sm:px-8 font-bold uppercase tracking-[0.15em] text-xs sm:text-sm rounded-lg transition-all duration-300 w-full sm:w-auto"
               >
-                Open in new tab
-                <ExternalLink className="w-3 h-3" strokeWidth={2} />
+                Open in New Tab
+                <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1" strokeWidth={2.5} />
               </a>
             </div>
           </div>
