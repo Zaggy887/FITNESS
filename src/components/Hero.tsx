@@ -11,7 +11,7 @@ const Hero = () => {
           />
           <img
             src="/Dashboard.png"
-            alt="App Dashboard"
+            alt="StrengthHub App"
             className="relative w-full h-auto rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.9)]"
             style={{
               maskImage: "linear-gradient(to bottom, black 72%, transparent 100%)",
@@ -23,19 +23,19 @@ const Hero = () => {
         {/* Right: Text */}
         <div className="flex-1 flex flex-col items-start">
           <span className="text-[11px] font-semibold uppercase tracking-[0.35em] text-[#A3E635] mb-8">
-            Online Personal Training
+            Fitness &amp; Wellness Platform
           </span>
 
-          <h1 className="font-black tracking-tight leading-[0.95] text-[60px] sm:text-[80px] lg:text-[96px] xl:text-[110px]">
+          <h1 className="font-black tracking-tight leading-[0.95] text-[56px] sm:text-[72px] lg:text-[88px] xl:text-[100px]">
             Built for<br />
-            <span className="text-[#A3E635]">Real</span><br />
-            Results.
+            <span className="text-[#A3E635]">Organisations</span><br />
+            &amp; Universities.
           </h1>
 
-          <p className="mt-10 text-lg sm:text-xl leading-relaxed text-white/50 max-w-[460px]">
-            Expert coaches in body composition —{" "}
-            <span className="text-white/90 font-medium">personalised 1-on-1 coaching</span>{" "}
-            with a clear plan, real accountability, and guidance that keeps you moving forward.
+          <p className="mt-10 text-lg sm:text-xl leading-relaxed text-white/50 max-w-[480px]">
+            StrengthHub Online provides a{" "}
+            <span className="text-white/90 font-medium">complete digital fitness platform</span>{" "}
+            — workouts, nutrition, progress tracking, and community — deployed for your students or staff.
           </p>
 
           <div className="mt-12 flex flex-col sm:flex-row items-start gap-4">
@@ -43,7 +43,7 @@ const Hero = () => {
               href="#contact"
               className="group inline-flex items-center gap-3 bg-[#A3E635] px-9 py-4 text-sm font-bold uppercase tracking-[0.15em] text-black transition-all duration-200 hover:bg-[#B8F04A] hover:shadow-[0_0_50px_rgba(163,230,53,0.45)]"
             >
-              Book Free Consultation
+              Book a Demo
               <svg
                 className="w-4 h-4 transition-transform group-hover:translate-x-1"
                 fill="none"
@@ -55,19 +55,19 @@ const Hero = () => {
               </svg>
             </a>
             <a
-              href="#about"
+              href="#process"
               className="inline-flex items-center gap-2 px-9 py-4 text-sm font-bold uppercase tracking-[0.15em] text-white/40 transition-all duration-200 hover:text-[#A3E635]"
             >
-              Learn More
+              View the App
             </a>
           </div>
 
           <div className="mt-16 flex items-center gap-8 text-[10px] uppercase tracking-[0.3em] text-white/20">
-            <span>1-on-1 Coaching</span>
+            <span>University Partnerships</span>
             <span className="text-[#A3E635]">&bull;</span>
-            <span>Personalised Plans</span>
+            <span>Complete Platform</span>
             <span className="text-[#A3E635]">&bull;</span>
-            <span>Real Accountability</span>
+            <span>Student Wellbeing</span>
           </div>
         </div>
 

@@ -35,14 +35,18 @@ const Universities = () => {
   return (
     <section
       id="universities"
-      className="section bg-[#111] text-white py-16"
+      className="section bg-[#0a0a0a] text-white py-16 border-t border-white/10"
       ref={sectionRef}
     >
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="fade-in text-white text-3xl font-bold mb-4">University Talent</h2>
-          <p className="fade-in text-white/60 text-lg">
-            We regularly engage with students and societies from Melbourne's top universities, helping us connect with driven talent across business and commerce fields.
+          <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#A3E635]">Trusted By</span>
+          <h2 className="fade-in text-white text-3xl font-bold mt-4 mb-4">
+            Partnering with Melbourne's{' '}
+            <span className="text-[#A3E635]">Leading Universities</span>
+          </h2>
+          <p className="fade-in text-white/50 text-base max-w-xl mx-auto">
+            StrengthHub Online works with universities and organisations to bring structured fitness and wellness programs directly to their students and staff.
           </p>
         </div>
 
@@ -55,14 +59,14 @@ const Universities = () => {
                   alt={`${uni.name} logo`}
                   className={`${
                     uni.name === 'The University of Melbourne' ? 'h-24 mt-[-12px]' : 'h-20'
-                  } w-full object-contain mx-auto transition-opacity duration-700 fade-in brightness-0 invert opacity-60`}
+                  } w-full object-contain mx-auto fade-in brightness-0 invert opacity-40`}
                   loading="lazy"
                 />
               </div>
             ))}
           </div>
 
-          <div className="hidden md:flex flex-wrap justify-center gap-10">
+          <div className="hidden md:flex flex-wrap justify-center items-center gap-14">
             {universities.map((uni, index) => (
               <div key={index} className="w-[180px]">
                 <img
@@ -70,7 +74,7 @@ const Universities = () => {
                   alt={`${uni.name} logo`}
                   className={`${
                     uni.name === 'The University of Melbourne' ? 'h-24 mt-[-12px]' : 'h-20'
-                  } w-full object-contain mx-auto transition-opacity duration-700 fade-in brightness-0 invert opacity-60`}
+                  } w-full object-contain mx-auto fade-in brightness-0 invert opacity-40 hover:opacity-75 transition-opacity duration-300`}
                   loading="lazy"
                 />
               </div>
@@ -78,41 +82,31 @@ const Universities = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="fade-in flex items-start">
-            <CheckCircle className="flex-shrink-0 w-6 h-6 text-[#A3E635] mr-3 mt-1" />
-            <div>
-              <h3 className="text-white text-xl font-semibold mb-2">Direct University Access</h3>
-              <p className="text-white/60">
-                We connect with student societies and attend university events to engage with top student talent.
-              </p>
-            </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="fade-in bg-[#111] border border-white/10 rounded-xl p-6 hover:border-[#A3E635]/30 transition-colors duration-300">
+            <CheckCircle className="w-6 h-6 text-[#A3E635] mb-4" />
+            <h3 className="text-white text-lg font-bold mb-2">Aligned with Wellbeing Initiatives</h3>
+            <p className="text-white/50 text-sm leading-relaxed">
+              All programs are designed to align with university wellbeing frameworks and institutional policies.
+            </p>
           </div>
 
-          <div className="fade-in flex items-start" style={{ transitionDelay: '0.2s' }}>
-            <CheckCircle className="flex-shrink-0 w-6 h-6 text-[#A3E635] mr-3 mt-1" />
-            <div>
-              <h3 className="text-white text-xl font-semibold mb-2">Top Academic Performers</h3>
-              <p className="text-white/60">
-                We select students with strong academics, extracurricular involvement, and high growth potential.
-              </p>
-            </div>
+          <div className="fade-in bg-[#111] border border-white/10 rounded-xl p-6 hover:border-[#A3E635]/30 transition-colors duration-300" style={{ transitionDelay: '0.1s' }}>
+            <CheckCircle className="w-6 h-6 text-[#A3E635] mb-4" />
+            <h3 className="text-white text-lg font-bold mb-2">Built for Student Life</h3>
+            <p className="text-white/50 text-sm leading-relaxed">
+              Flexible, accessible, and designed around the demands of study — available anytime, anywhere on mobile.
+            </p>
           </div>
 
-          <div className="fade-in flex items-start" style={{ transitionDelay: '0.4s' }}>
-            <CheckCircle className="flex-shrink-0 w-6 h-6 text-[#A3E635] mr-3 mt-1" />
-            <div>
-              <h3 className="text-white text-xl font-semibold mb-2">Diverse Talent Pool</h3>
-              <p className="text-white/60">
-                Our influence spans across multiple universities, ensuring a diverse range of skills and perspectives.
-              </p>
-            </div>
+          <div className="fade-in bg-[#111] border border-white/10 rounded-xl p-6 hover:border-[#A3E635]/30 transition-colors duration-300" style={{ transitionDelay: '0.2s' }}>
+            <CheckCircle className="w-6 h-6 text-[#A3E635] mb-4" />
+            <h3 className="text-white text-lg font-bold mb-2">Campus &amp; Newsletter Promotion</h3>
+            <p className="text-white/50 text-sm leading-relaxed">
+              Distributed through student unions, learning homepages, and sidebar visibility across partner institutions.
+            </p>
           </div>
         </div>
-
-        <p className="mt-12 text-center text-xs text-white/25">
-          *We are not directly affiliated with any university.
-        </p>
       </div>
     </section>
   );

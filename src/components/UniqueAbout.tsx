@@ -1,4 +1,28 @@
 import { useEffect, useRef } from 'react';
+import { ShieldCheck, BarChart3, Zap, Globe } from 'lucide-react';
+
+const features = [
+  {
+    icon: ShieldCheck,
+    title: 'Expert-Led Programming',
+    body: 'Every program on the platform is built and overseen by qualified coaches with real-world experience in strength, body composition, and lifestyle fitness.',
+  },
+  {
+    icon: BarChart3,
+    title: 'Data-Driven Progress',
+    body: 'Members track workouts, nutrition, and habits in one place. Organisations get insight into engagement and outcomes across their cohort.',
+  },
+  {
+    icon: Zap,
+    title: 'Instant Access, Zero Friction',
+    body: 'No equipment required to get started. The platform is fully mobile-first — students and staff can train on their schedule, from anywhere.',
+  },
+  {
+    icon: Globe,
+    title: 'Scalable for Any Organisation',
+    body: 'Whether you\'re a student union, university, or corporate, the platform scales to your size and integrates with your existing wellbeing initiatives.',
+  },
+];
 
 const UniqueAbout = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -24,40 +48,38 @@ const UniqueAbout = () => {
   }, []);
 
   return (
-    <section
-      className="relative section py-8 sm:py-10 overflow-hidden"
-      ref={sectionRef}
-      style={{
-        backgroundImage: "url('https://images.pexels.com/photos/19025671/pexels-photo-19025671.jpeg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      <div className="absolute inset-0 bg-black/75" />
+    <section id="about" className="relative section bg-black py-20 sm:py-28 overflow-hidden" ref={sectionRef}>
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-[0.04] blur-3xl pointer-events-none" style={{ background: '#A3E635' }} />
 
-      <div className="container relative z-10 text-center max-w-3xl mx-auto px-4">
-        <h2 className="fade-in text-2xl sm:text-4xl md:text-5xl font-extrabold text-white uppercase leading-tight mb-1 tracking-tight">
-          WHAT <span className="text-[#A3E635]">WE'll GIVE YOU</span>
-        </h2>
-        <p className="fade-in text-white font-semibold text-xs sm:text-sm uppercase tracking-widest mb-6">
-          "If I give you a fish, you'll eat for a day. If I teach you how to fish, you'll eat for a lifetime."
-        </p>
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-14">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#A3E635]">Why StrengthHub Online</span>
+            <h2 className="fade-in mt-4 text-3xl sm:text-5xl font-black text-white leading-tight tracking-tight">
+              More than a fitness app.<br />
+              <span className="text-[#A3E635]">A wellbeing solution.</span>
+            </h2>
+            <p className="fade-in mt-6 text-white/50 text-lg max-w-2xl leading-relaxed">
+              We go beyond generic wellness apps. StrengthHub Online pairs a powerful platform with real coaching expertise — giving your organisation a fitness solution people actually engage with.
+            </p>
+          </div>
 
-        <p className="fade-in text-white font-bold text-lg md:text-xl leading-relaxed mb-6">
-          We focus on more than just giving you a program. We show you how to train properly, stay consistent, and build habits that you choose to stay.
-        </p>
-
-        <p className="fade-in text-white/90 font-semibold text-sm md:text-base leading-relaxed mb-4">
-          You will be held accountable throughout the process, with regular check ins and updates to your program so you keep progressing.
-        </p>
-
-        <p className="fade-in text-white/80 font-semibold text-sm md:text-base leading-relaxed mb-4">
-          Our coaches have real experience across powerlifting, bodybuilding, weight loss and overall lifestyle consulting, so you'll be taught from people who have genuinely been through it themselves.
-        </p>
-
-        <p className="fade-in text-white/70 italic text-sm md:text-base leading-relaxed">
-          We want to help you build a balanced lifestyle where your biggest asset (your health) is optimised to support everything else you do, without taking away from your work, your social life, or your relationships.
-        </p>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {features.map(({ icon: Icon, title, body }, i) => (
+              <div
+                key={title}
+                className="fade-in bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 hover:border-[#A3E635]/30 transition-colors duration-300"
+                style={{ transitionDelay: `${i * 0.08}s` }}
+              >
+                <div className="w-11 h-11 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/20 flex items-center justify-center mb-6">
+                  <Icon className="w-5 h-5 text-[#A3E635]" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-white font-bold text-lg mb-3">{title}</h3>
+                <p className="text-white/50 text-sm leading-relaxed">{body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

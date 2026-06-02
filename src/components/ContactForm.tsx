@@ -69,19 +69,19 @@ const ContactForm = () => {
           <div className="fade-in text-center mb-12">
             <div className="inline-flex flex-col items-center mb-6">
               <p className="text-[#A3E635] text-xs font-semibold uppercase tracking-[0.25em]">
-                Book Your Session
+                Get in Touch
               </p>
               <span className="mt-2 h-[2px] w-12 bg-[#A3E635]" />
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-[1.05]">
               Book a{' '}
-              <span className="text-[#A3E635]">free consultation.</span>
+              <span className="text-[#A3E635]">free demo.</span>
             </h2>
 
             <p className="mt-6 text-white/60 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-              Get in touch for a free consultation about your individual goals,
-              as well as to discuss larger group bookings.
+              Interested in bringing StrengthHub Online to your university or organisation?
+              Book a free 30-minute demo and we'll walk you through the platform.
             </p>
           </div>
 
@@ -90,9 +90,9 @@ const ContactForm = () => {
             {/* Info pills */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-5 mb-8 sm:mb-10">
               {[
-                { icon: Clock, label: '30 minutes', desc: 'Quick & focused' },
+                { icon: Clock, label: '30 minutes', desc: 'Platform walkthrough' },
                 { icon: Calendar, label: 'Flexible times', desc: 'Pick what suits you' },
-                { icon: CheckCircle2, label: 'No commitment', desc: 'Free consultation' },
+                { icon: CheckCircle2, label: 'No commitment', desc: 'Completely free' },
               ].map(({ icon: Icon, label, desc }) => (
                 <div
                   key={label}
@@ -118,12 +118,12 @@ const ContactForm = () => {
                 onClick={openCalendlyPopup}
                 className="group inline-flex items-center justify-center gap-3 bg-[#A3E635] hover:bg-[#B8F04A] hover:shadow-[0_0_30px_rgba(163,230,53,0.4)] text-black py-4 px-9 font-bold uppercase tracking-[0.15em] text-sm rounded-lg transition-all duration-300"
               >
-                Book Free Consultation
+                Book a Free Demo
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" strokeWidth={2.5} />
               </button>
 
               <p className="mt-4 text-white/40 text-sm">
-                Opens our scheduling calendar — pick a time that suits you
+                Opens our scheduling calendar — pick a time that works for you
               </p>
 
               <a
@@ -142,7 +142,7 @@ const ContactForm = () => {
           <div className="fade-in mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.2em] text-white/40">
             <span>Response within 24 hours</span>
             <span className="text-[#A3E635]">•</span>
-            <span>Free initial consultation</span>
+            <span>Universities &amp; corporates welcome</span>
             <span className="text-[#A3E635]">•</span>
             <span>No commitment required</span>
           </div>

@@ -1,28 +1,26 @@
 import { useEffect, useRef } from 'react';
-import { Dumbbell, GraduationCap, Users, Heart } from 'lucide-react';
+import { Dumbbell, GraduationCap, Users, Lightbulb } from 'lucide-react';
 
 const credentials = [
   {
     icon: Dumbbell,
     title: '7+ YEARS',
-    description: 'Fitness industry experience',
+    description: 'Of hands-on fitness industry experience across strength training, body composition, and lifestyle coaching.',
   },
   {
     icon: GraduationCap,
-    title: 'SPECIALISES IN',
-    description:
-      'student fitness and routine building, professional experience in powerlifting and training clients',
+    title: 'BUILT FROM THE INSIDE',
+    description: 'Founded by a university student with firsthand experience of the barriers students face when trying to stay fit.',
   },
   {
     icon: Users,
-    title: 'RELATABLE',
-    description: 'as a current University student',
+    title: 'STUDENT-FIRST APPROACH',
+    description: 'Every program and feature is designed around the realities of student life — flexible, achievable, and engaging.',
   },
   {
-    icon: Heart,
-    title: 'PASSIONATE ABOUT',
-    description:
-      'supporting people through mentorship services and current fitness coaching',
+    icon: Lightbulb,
+    title: 'MISSION-DRIVEN',
+    description: 'We exist to make high-quality fitness coaching and education accessible to every student and organisation, not just those who can afford a PT.',
   },
 ];
 
@@ -52,8 +50,9 @@ const MeetTheCoach = () => {
   return (
     <section id="coach" className="section bg-black relative overflow-hidden" ref={sectionRef}>
       <div className="container px-4 sm:px-6 lg:px-8">
-        <h2 className="fade-in text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-10 text-left">
-          <span className="text-white">Meet </span>
+        <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#A3E635]">Our Story</span>
+        <h2 className="fade-in text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-8 sm:mb-10 text-left">
+          <span className="text-white">Founded by </span>
           <span className="text-[#A3E635]">Coach Zak</span>
         </h2>
 
@@ -64,7 +63,7 @@ const MeetTheCoach = () => {
                 <div className="relative overflow-hidden rounded-2xl border-2 border-[#A3E635]/40">
                   <img
                     src="/IMG_0875.jpg"
-                    alt="Coach Zak"
+                    alt="Zak — Founder, StrengthHub Online"
                     className="w-full h-[280px] sm:h-[360px] lg:h-[420px] object-cover object-[35%_center] transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
@@ -74,13 +73,11 @@ const MeetTheCoach = () => {
                 <div className="flex gap-4">
                   <span className="text-[#A3E635] text-4xl font-bold leading-none shrink-0">&ldquo;</span>
                   <p className="text-white/80 text-base leading-relaxed">
-                    My goal is simple: to help students{' '}
-                    <span className="text-[#A3E635] font-semibold">build confidence</span>, create
-                    sustainable habits and achieve{' '}
-                    <span className="text-[#A3E635] font-semibold">long term results</span> they're
-                    proud of.
+                    I built StrengthHub Online because I saw how many students wanted to improve their health but had no clear, affordable path to do it.{' '}
+                    <span className="text-[#A3E635] font-semibold">This platform is the answer.</span>
                   </p>
                 </div>
+                <p className="mt-4 text-white/40 text-sm pl-10">— Zak, Founder &amp; Head Coach</p>
               </div>
             </div>
 

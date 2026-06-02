@@ -104,7 +104,7 @@ const Navbar = () => {
                        hover:bg-white/20 hover:border-white/50
                        transition-all duration-300"
           >
-            Contact Us
+            Book a Demo
           </button>
 
           <button
@@ -133,8 +133,9 @@ const Navbar = () => {
 
         <div className="h-full flex flex-col items-center justify-center space-y-6 px-6">
           {navLink("about", "About", true)}
+          {navLink("universities", "Partners", true)}
           {navLink("process", "Platform", true)}
-          {navLink("coach", "Coach", true)}
+          {navLink("coach", "Our Story", true)}
           {navLink("testimonials", "Testimonials", true)}
           {navLink("contact", "Contact", true)}
 
@@ -144,7 +145,7 @@ const Navbar = () => {
                        bg-[#A3E635] hover:bg-[#B8F04A]
                        transition-all duration-300"
           >
-            Book Free Consultation
+            Book a Demo
           </button>
         </div>
       </div>

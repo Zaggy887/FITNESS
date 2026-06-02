@@ -13,12 +13,12 @@ const Footer = () => {
               </span>
             </div>
             <p className="mt-2 text-white/50 max-w-md">
-              Expert online personal training for clients worldwide, built around real results.
+              The fitness &amp; wellness platform built for universities and organisations.
             </p>
           </div>
 
           <div className="text-center md:text-right space-y-4">
-            <h4 className="text-white font-bold text-lg mb-2">Contact Coach Zak</h4>
+            <h4 className="text-white font-bold text-lg mb-2">Get in Touch</h4>
             <div className="flex flex-col items-center md:items-end space-y-3">
               <a
                 href="mailto:info@strengthhubonline.com"

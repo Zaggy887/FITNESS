@@ -27,18 +27,21 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: 'Jake R.',
+      role: 'Deakin University Student',
       quote:
-        "I wanted to get more serious with lifting but honestly had no clue what I was doing. Izak made it super simple and easy to follow, and kept me accountable the whole time. He's genuinely different to other trainers, you can tell he actually cares.",
+        "I'd always wanted to get consistent with training but never knew where to start. StrengthHub gave me a clear plan, tracked everything in one place, and the community kept me accountable. I've genuinely stuck with it for months now.",
     },
     {
       name: 'Daniel K.',
+      role: 'Monash University Student',
       quote:
-        "With college my schedule is always changing, so I needed something flexible. The program just worked around my week which made it so much easier to stay consistent. Izak kept me accountable the whole time and made it all really manageable.",
+        "Between assignments and part-time work, fitting in exercise always felt impossible. The app works around my week — I can train whenever I have a gap. It's the first fitness program I've actually stuck to.",
     },
     {
       name: 'Josh S.',
+      role: 'RMIT University Student',
       quote:
-        "Working full time with two young kids, I don't have time to overthink training. Having an online PT helped so much with efficiency, I could just get in and get it done. Izak's approach is honestly different and the accountability made a huge difference.",
+        "The nutrition and workout tracking in one app is a game changer. I finally understand what I'm eating and why. The coach support through the platform is fast and actually useful — not just generic advice.",
     },
   ];
 
@@ -51,10 +54,10 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
           <h2 className="fade-in text-2xl sm:text-3xl font-bold mb-4">
-            <span className="text-white">What </span><span className="text-[#A3E635]">Our Clients Say</span>
+            <span className="text-white">What </span><span className="text-[#A3E635]">Students Say</span>
           </h2>
           <p className="fade-in text-white/60 text-lg">
-            Clients who trusted us to transform their bodies
+            Real results from students across Melbourne's top universities
           </p>
         </div>
 
@@ -65,20 +68,12 @@ const Testimonials = () => {
               <div key={index} className="flex-shrink-0 snap-start w-[85%]">
                 <div className="bg-[#111] border border-white/10 rounded-xl p-6 h-full">
                   <Quote className="w-8 h-8 text-[#A3E635]/60 mb-4" />
-                  <p className="text-white/70 mb-6 italic">
-                    {testimonial.quote}
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <p className="font-bold text-white">
-                      {testimonial.name}
-                    </p>
-                  </div>
+                  <p className="text-white/70 mb-6 italic">{testimonial.quote}</p>
+                  <p className="font-bold text-white">{testimonial.name}</p>
+                  <p className="text-white/40 text-xs mt-1">{testimonial.role}</p>
                   <div className="flex gap-1 mt-4">
                     {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-4 h-4 fill-[#A3E635] text-[#A3E635]"
-                      />
+                      <Star key={i} className="w-4 h-4 fill-[#A3E635] text-[#A3E635]" />
                     ))}
                   </div>
                 </div>
@@ -94,20 +89,12 @@ const Testimonials = () => {
                 className="fade-in bg-[#111] border border-white/10 rounded-xl p-6 hover:border-[#A3E635]/40 transition-colors duration-300"
               >
                 <Quote className="w-8 h-8 text-[#A3E635]/60 mb-4" />
-                <p className="text-white/70 mb-6 italic">
-                  {testimonial.quote}
-                </p>
-                <div className="flex items-center gap-4">
-                  <p className="font-bold text-white">
-                    {testimonial.name}
-                  </p>
-                </div>
+                <p className="text-white/70 mb-6 italic">{testimonial.quote}</p>
+                <p className="font-bold text-white">{testimonial.name}</p>
+                <p className="text-white/40 text-xs mt-1">{testimonial.role}</p>
                 <div className="flex gap-1 mt-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-4 h-4 fill-[#A3E635] text-[#A3E635]"
-                    />
+                    <Star key={i} className="w-4 h-4 fill-[#A3E635] text-[#A3E635]" />
                   ))}
                 </div>
               </div>
@@ -118,9 +105,9 @@ const Testimonials = () => {
         <div className="text-center">
           <a
             href="#contact"
-            className="inline-block px-8 py-3 bg-[#2a3a0f] text-white font-semibold hover:opacity-90 transition-opacity"
+            className="group inline-flex items-center gap-3 bg-[#A3E635] px-9 py-4 text-sm font-bold uppercase tracking-[0.15em] text-black transition-all duration-200 hover:bg-[#B8F04A] hover:shadow-[0_0_40px_rgba(163,230,53,0.4)]"
           >
-            Start Your Transformation
+            Partner With Us
           </a>
         </div>
       </div>
