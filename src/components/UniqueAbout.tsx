@@ -59,9 +59,6 @@ const UniqueAbout = () => {
               More than a fitness app.<br />
               <span className="text-[#A3E635]">A wellbeing solution.</span>
             </h2>
-            <p className="fade-in mt-6 text-white/50 text-lg max-w-2xl leading-relaxed">
-              We go beyond generic wellness apps. StrengthHub Online pairs a powerful platform with real coaching expertise — giving your organisation a fitness solution people actually engage with.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
