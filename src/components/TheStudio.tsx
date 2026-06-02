@@ -32,7 +32,6 @@ const TheStudio = () => {
           <span className="text-white">AN EXAMPLE OF WHAT YOUR ORGANISATION COULD </span>
           <span className="text-[#A3E635]">GET</span>
         </h2>
-        <p className="text-center text-white/40 text-sm uppercase tracking-[0.2em] mb-10">Everything included. No extras.</p>
       </div>
 
       <div className="container mx-auto px-4">
