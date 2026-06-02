@@ -33,9 +33,9 @@ const Hero = () => {
           </h1>
 
           <p className="mt-10 text-lg sm:text-xl leading-relaxed text-white/50 max-w-[480px]">
-            StrengthHub Online provides a{" "}
-            <span className="text-white/90 font-medium">complete digital fitness platform</span>{" "}
-            — workouts, nutrition, progress tracking, and community — deployed for your students or staff.
+            StrengthHub Online is the{" "}
+            <span className="text-white/90 font-medium">starting point for helping young people</span>{" "}
+            build confidence, structure, and take control of everyday life.
           </p>
 
           <div className="mt-12 flex flex-col sm:flex-row items-start gap-4">
