@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import StatsBanner from "./components/StatsBanner";
-import Universities from "./components/Universities";
 import UniqueAbout from "./components/UniqueAbout";
 import Process from "./components/Process";
 import TheStudio from "./components/TheStudio";
@@ -16,7 +15,6 @@ function App() {
       <Navbar />
       <Hero />
       <StatsBanner />
-      <Universities />
       <UniqueAbout />
       <Process />
       <TheStudio />
