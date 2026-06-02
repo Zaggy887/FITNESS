@@ -64,7 +64,7 @@ const Hero = () => {
 
           <div className="mt-16 flex items-center gap-8 text-[10px] uppercase tracking-[0.3em] text-white/20">
             <span>University Partnerships</span>
-            <span className="text-[#A3E635]">&bull;</span>
+            <span className="text-[#A3E635]">bull;</span>
             <span>Complete Platform</span>
             <span className="text-[#A3E635]">&bull;</span>
             <span>Student Wellbeing</span>
