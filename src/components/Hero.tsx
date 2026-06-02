@@ -34,6 +34,9 @@ const Hero = () => {
                 key={image.src}
                 src={image.src}
                 alt={image.alt}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                decoding={index === 0 ? 'sync' : 'async'}
+                fetchPriority={index === 0 ? 'high' : 'low'}
                 className={`w-full h-auto rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.9)] transition-opacity duration-1000 ease-in-out ${
                   index === 0 ? 'relative' : 'absolute inset-0'
                 }`}

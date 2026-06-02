@@ -64,6 +64,8 @@ const MeetTheCoach = () => {
                   <img
                     src="/IMG_0875.jpg"
                     alt="Zak — Founder, StrengthHub Online"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-[240px] sm:h-[360px] lg:h-[420px] object-cover object-[35%_center] transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>

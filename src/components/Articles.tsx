@@ -26,7 +26,7 @@ const Articles = () => {
   const articles = [
     {
       title: 'The Science of Effective Online Personal Training',
-      image: 'https://images.pexels.com/photos/4162449/pexels-photo-4162449.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://images.pexels.com/photos/4162449/pexels-photo-4162449.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1',
       desc: 'Discover how virtual coaching combines cutting-edge technology with proven training principles to deliver results that match or exceed in-person training.',
       link: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8555781/',
       alt: 'Person training with online guidance',
@@ -34,7 +34,7 @@ const Articles = () => {
     },
     {
       title: 'Building Sustainable Fitness Habits',
-      image: 'https://images.pexels.com/photos/4058220/pexels-photo-4058220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://images.pexels.com/photos/4058220/pexels-photo-4058220.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1',
       desc: 'Learn the psychology behind lasting lifestyle changes and how personalized coaching helps create habits that stick for the long term.',
       link: 'https://www.healthline.com/nutrition/how-to-build-healthy-habits',
       alt: 'Healthy lifestyle habits',
@@ -42,7 +42,7 @@ const Articles = () => {
     },
     {
       title: 'Why Personalization Matters in Fitness',
-      image: 'https://images.pexels.com/photos/4498606/pexels-photo-4498606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://images.pexels.com/photos/4498606/pexels-photo-4498606.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1',
       desc: 'Generic workout plans fail because everyone is unique. Explore how customized training programs accelerate your progress and prevent burnout.',
       link: 'https://www.verywellfit.com/benefits-of-personal-training-1231142',
       alt: 'Personalized fitness coaching',
@@ -59,6 +59,8 @@ const Articles = () => {
         <img
           src={article.image}
           alt={article.alt}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-110 brightness-75"
         />
       </div>

@@ -105,6 +105,8 @@ const Process = () => {
                     key={active.id}
                     src={active.image}
                     alt={active.label}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-auto block animate-fade-in"
                   />
                 </div>
@@ -139,6 +141,8 @@ const Process = () => {
                     <img
                       src={screen.image}
                       alt={screen.label}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover object-top"
                     />
                   </button>

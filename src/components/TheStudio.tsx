@@ -24,6 +24,7 @@ const TheStudio = () => {
           className="w-full object-cover h-[150px] sm:h-[260px] md:h-[320px]"
           style={{ objectPosition: '50% 20%' }}
           loading="lazy"
+          decoding="async"
         />
       </div>
 
