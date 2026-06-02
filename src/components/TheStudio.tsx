@@ -73,7 +73,7 @@ const TheStudio = () => {
               href="#contact"
               className="group inline-flex items-center justify-center gap-3 bg-[#A3E635] px-7 sm:px-9 py-3.5 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-black transition-all duration-200 hover:bg-[#B8F04A] hover:shadow-[0_0_40px_rgba(163,230,53,0.4)] w-full sm:w-auto"
             >
-              Partner With Us
+              Find out More
             </a>
           </div>
 
