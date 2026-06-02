@@ -5,7 +5,6 @@ import UniqueAbout from "./components/UniqueAbout";
 import Process from "./components/Process";
 import TheStudio from "./components/TheStudio";
 import MeetTheCoach from "./components/MeetTheCoach";
-import Testimonials from "./components/Testimonials";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 
@@ -19,7 +18,6 @@ function App() {
       <Process />
       <TheStudio />
       <MeetTheCoach />
-      <Testimonials />
       <ContactForm />
       <Footer />
     </div>
