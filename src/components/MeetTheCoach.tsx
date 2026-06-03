@@ -15,7 +15,7 @@ const credentials = [
   {
     icon: Users,
     title: 'STUDENT FIRST APPROACH',
-    description: 'Every program and feature is designed around the realities of student life — flexible, achievable, and engaging.',
+    description: 'Every program and feature is designed around the realities of student life, flexible, achievable, and engaging.',
   },
   {
     icon: Lightbulb,
