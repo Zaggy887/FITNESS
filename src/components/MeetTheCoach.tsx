@@ -5,22 +5,22 @@ const credentials = [
   {
     icon: Dumbbell,
     title: '7+ YEARS',
-    description: 'Of hands-on fitness industry experience across strength training, body composition, and lifestyle coaching.',
+    description: 'Hands-on experience in strength, body composition, and lifestyle coaching.',
   },
   {
     icon: GraduationCap,
     title: 'BUILT FROM THE INSIDE',
-    description: 'Founded by a university student with firsthand experience of the barriers students face when trying to stay fit.',
+    description: 'Founded by a student who knows the barriers to staying fit at uni.',
   },
   {
     icon: Users,
     title: 'STUDENT FIRST APPROACH',
-    description: 'Every program and feature is designed around the realities of student life, flexible, achievable, and engaging.',
+    description: 'Programs built around student life, flexible, achievable, and engaging.',
   },
   {
     icon: Lightbulb,
     title: 'MISSION-DRIVEN',
-    description: 'We exist to make high-quality fitness coaching and education accessible to every student and organisation, not just those who can afford a PT.',
+    description: 'Quality fitness coaching made accessible to every student, not just those who can afford a PT.',
   },
 ];
 
@@ -83,21 +83,21 @@ const MeetTheCoach = () => {
               </div>
             </div>
 
-            <div className="space-y-6 sm:space-y-8 py-2">
+            <div className="space-y-4 sm:space-y-6 py-1">
               {credentials.map(({ icon: Icon, title, description }, index) => (
                 <div
                   key={title}
-                  className="fade-in flex items-start gap-4 sm:gap-5"
+                  className="fade-in flex items-start gap-3 sm:gap-4"
                   style={{ transitionDelay: `${index * 0.1}s` }}
                 >
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-[#A3E635]/40 flex items-center justify-center shrink-0">
+                  <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#A3E635]/40 flex items-center justify-center shrink-0">
                     <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-[#A3E635]" />
                   </div>
                   <div>
-                    <h4 className="text-white font-bold text-sm sm:text-base tracking-wide mb-1">
+                    <h4 className="text-white font-bold text-[13px] sm:text-base tracking-wide mb-0.5 sm:mb-1">
                       {title}
                     </h4>
-                    <p className="text-white/50 text-sm leading-relaxed">{description}</p>
+                    <p className="text-white/50 text-[13px] sm:text-sm leading-snug sm:leading-relaxed">{description}</p>
                   </div>
                 </div>
               ))}
