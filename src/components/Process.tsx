@@ -100,15 +100,24 @@ const Process = () => {
             <div className="flex justify-center">
               <div className="relative w-[200px] sm:w-[260px] md:w-[300px]">
                 <div className="relative rounded-[2.5rem] border-[6px] border-white/10 bg-black overflow-hidden shadow-2xl shadow-[#A3E635]/5">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-black rounded-b-2xl z-10" />
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-black rounded-b-2xl z-20" />
                   <img
-                    key={active.id}
-                    src={active.image}
-                    alt={active.label}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-auto block animate-fade-in"
+                    src={screens[0].image}
+                    alt=""
+                    aria-hidden="true"
+                    className="w-full h-auto block invisible"
                   />
+                  {screens.map((screen, index) => (
+                    <img
+                      key={screen.id}
+                      src={screen.image}
+                      alt={screen.label}
+                      decoding="async"
+                      className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-300 ${
+                        activeIndex === index ? 'opacity-100' : 'opacity-0'
+                      }`}
+                    />
+                  ))}
                 </div>
 
                 <div className="absolute -inset-8 bg-[#A3E635]/5 rounded-full blur-3xl -z-10" />
@@ -141,7 +150,6 @@ const Process = () => {
                     <img
                       src={screen.image}
                       alt={screen.label}
-                      loading="lazy"
                       decoding="async"
                       className="w-full h-full object-cover object-top"
                     />
