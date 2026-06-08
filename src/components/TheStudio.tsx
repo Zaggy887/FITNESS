@@ -21,7 +21,7 @@ const TheStudio = () => {
         <img
           src="/image copy copy copy.png"
           alt="StrengthHub Platform"
-          className="w-full object-cover h-[150px] sm:h-[260px] md:h-[320px] object-[50%_20%] md:object-[50%_60%]"
+          className="w-full object-cover h-[200px] sm:h-[260px] md:h-[320px] object-[50%_55%] md:object-[50%_60%]"
           loading="lazy"
           decoding="async"
         />
