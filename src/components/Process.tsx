@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { LayoutDashboard, Dumbbell, Apple, TrendingUp, Users } from 'lucide-react';
+import { LayoutDashboard, Dumbbell, Apple, TrendingUp, Users, ExternalLink } from 'lucide-react';
 
 const screens = [
   {
@@ -158,10 +158,13 @@ const Process = () => {
               </div>
 
               <a
-                href="#contact"
-                className="inline-block px-8 py-3 font-semibold text-white bg-[#2a3a0f] hover:bg-[#3a4f15] transition-colors duration-300 rounded-lg mt-2"
+                href="https://strengthhubonline.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-3 font-semibold text-white bg-[#2a3a0f] hover:bg-[#3a4f15] transition-colors duration-300 rounded-lg mt-2"
               >
-                More about the Platform
+                View Demo App
+                <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </div>
