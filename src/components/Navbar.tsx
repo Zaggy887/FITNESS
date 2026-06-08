@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { ExternalLink } from 'lucide-react';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('');
@@ -87,7 +88,7 @@ const Navbar = () => {
                      hover:bg-white/20 hover:border-white/50
                      transition-all duration-300"
         >
-          View Demo
+          View Demo <ExternalLink className="inline w-3.5 h-3.5 ml-1" />
         </a>
       </div>
     </nav>
