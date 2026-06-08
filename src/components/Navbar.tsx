@@ -88,7 +88,7 @@ const Navbar = () => {
                      hover:bg-white/20 hover:border-white/50
                      transition-all duration-300"
         >
-          View Demo <ExternalLink className="inline w-3.5 h-3.5 ml-1" />
+          App Demo <ExternalLink className="inline w-3.5 h-3.5 ml-1" />
         </a>
       </div>
     </nav>
