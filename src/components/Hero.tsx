@@ -103,9 +103,7 @@ const Hero = () => {
 
           <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center lg:items-start gap-4">
             <a
-              href="https://calendly.com/strengthhubonline-info/30min"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
               className="inline-flex items-center gap-2 px-7 sm:px-9 py-3.5 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-white/40 border border-white/40 transition-all duration-200 hover:text-[#A3E635] hover:border-[#A3E635]"
             >
               Book Appointment
