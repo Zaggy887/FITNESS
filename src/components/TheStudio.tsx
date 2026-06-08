@@ -19,7 +19,7 @@ const TheStudio = () => {
     <section className="bg-[#0a0a0a] text-white pb-8 sm:pb-14 border-t border-white/10">
       <div className="w-full overflow-hidden mb-8">
         <img
-          src="/image copy.png"
+          src="/image copy copy copy.png"
           alt="StrengthHub Platform"
           className="w-full object-cover h-[150px] sm:h-[260px] md:h-[320px]"
           style={{ objectPosition: '50% 20%' }}
