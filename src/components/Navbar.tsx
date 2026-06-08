@@ -77,16 +77,18 @@ const Navbar = () => {
           </span>
         </a>
 
-        <button
-          onClick={() => scrollToSection("contact")}
+        <a
+          href="https://strengthhubonline.app"
+          target="_blank"
+          rel="noopener noreferrer"
           className="px-3 sm:px-5 py-2 rounded-full text-white/90 text-xs sm:text-sm font-medium
                      border border-white/30
                      bg-white/10 backdrop-blur-md
                      hover:bg-white/20 hover:border-white/50
                      transition-all duration-300"
         >
-          Book an Appointment
-        </button>
+          View Demo
+        </a>
       </div>
     </nav>
   );
