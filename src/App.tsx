@@ -7,8 +7,23 @@ import TheStudio from "./components/TheStudio";
 import MeetTheCoach from "./components/MeetTheCoach";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 function App() {
+  const isPrivacyPage = window.location.pathname.replace(/\/+$/, '') === '/privacy';
+
+  if (isPrivacyPage) {
+    document.title = 'Privacy Policy | StrengthHub Online';
+
+    return (
+      <div className="min-h-screen">
+        <Navbar />
+        <PrivacyPolicy />
+        <Footer />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen">
       <Navbar />

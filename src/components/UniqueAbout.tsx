@@ -1,81 +1,67 @@
-import { useEffect, useRef } from 'react';
-import { ShieldCheck, BarChart3, Zap, Globe } from 'lucide-react';
+import { Brain, CalendarRange, Dumbbell, Leaf, MessageCircle, Users } from 'lucide-react';
 
 const features = [
   {
-    icon: ShieldCheck,
-    title: 'Built to complement your life, not take over.',
-    body: 'Life gets busy. StrengthHub adapts with you so staying consistent never feels like another thing on your plate.',
+    icon: Dumbbell,
+    title: 'Personalised training',
+    body: 'Structured gym, home and bodyweight programs built around goals, experience, schedule and available equipment.',
+    accent: '#7ED957',
   },
   {
-    icon: BarChart3,
-    title: 'Promotes understanding and health literacy.',
-    body: "We don't just hand you a plan. We help you understand your body and your habits so the results last well beyond the semester.",
+    icon: Leaf,
+    title: 'Nutrition made practical',
+    body: 'Budget-friendly recipes, simple meal guidance and daily check-ins that build understanding without restrictive rules.',
+    accent: '#F5A524',
   },
   {
-    icon: Zap,
-    title: 'Instant Access.',
-    body: 'No equipment, no setup, no barriers. Open the app and go.',
+    icon: Brain,
+    title: 'Habits and wellbeing',
+    body: 'Students can track movement, sleep, water, nutrition and training together, making progress easier to understand.',
+    accent: '#8B5CF6',
   },
   {
-    icon: Globe,
-    title: 'Real Human Programming.',
-    body: 'Every program is written by a real coach with real experience. Not generated. Not recycled.',
+    icon: CalendarRange,
+    title: 'Plan Around Your Life',
+    body: 'Busy periods can be planned in advance so training can pause, reduce or shift instead of simply falling apart.',
+    accent: '#8B5CF6',
+  },
+  {
+    icon: MessageCircle,
+    title: 'Support when it matters',
+    body: 'An in-app coach helps students navigate training, routines and common barriers with clear educational guidance.',
+    accent: '#3B82F6',
+  },
+  {
+    icon: Users,
+    title: 'Campus connection',
+    body: 'University, residence and society communities can share wins, join challenges and make healthy activity feel social.',
+    accent: '#7ED957',
   },
 ];
 
 const UniqueAbout = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = sectionRef.current?.querySelectorAll('.fade-in');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => {
-      elements?.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
-
   return (
-    <section id="about" className="relative section bg-black py-20 sm:py-28 overflow-hidden" ref={sectionRef}>
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-[0.04] blur-3xl pointer-events-none" style={{ background: '#A3E635' }} />
+    <section id="platform" className="relative overflow-hidden bg-[#0A0A0B] py-20 text-white sm:py-28">
+      <div className="pointer-events-none absolute right-[-12rem] top-10 h-[30rem] w-[30rem] rounded-full bg-[#7ED957]/5 blur-[100px]" />
+      <div className="container relative">
+        <div className="max-w-3xl">
+          <p className="eyebrow">The platform</p>
+          <h2 className="section-heading mt-4">One place for the habits that shape student wellbeing.</h2>
+          <p className="section-copy mt-5">
+            StrengthHub does more than display workouts. It connects training, everyday habits, practical food education, progress and community so students can see how the pieces work together.
+          </p>
+        </div>
 
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-14">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#A3E635]">Why StrengthHub Online</span>
-            <h2 className="fade-in mt-4 text-3xl sm:text-5xl font-black text-white leading-tight tracking-tight">
-              More than a fitness app.<br />
-              <span className="text-[#A3E635]">A wellbeing solution.</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            {features.map(({ icon: Icon, title, body }, i) => (
-              <div
-                key={title}
-                className="fade-in bg-[#0a0a0a] border border-white/10 rounded-2xl p-5 sm:p-8 hover:border-[#A3E635]/30 transition-colors duration-300"
-                style={{ transitionDelay: `${i * 0.08}s` }}
-              >
-                <div className="w-11 h-11 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/20 flex items-center justify-center mb-6">
-                  <Icon className="w-5 h-5 text-[#A3E635]" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-white font-bold text-lg mb-3">{title}</h3>
-                <p className="text-white/50 text-sm leading-relaxed">{body}</p>
+        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {features.map(({ icon: Icon, title, body, accent }) => (
+            <article key={title} className="group rounded-[1.4rem] border border-white/[0.08] bg-[#121214] p-6 transition duration-300 hover:-translate-y-1 hover:border-white/15">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl" style={{ backgroundColor: `${accent}18`, border: `1px solid ${accent}35` }}>
+                <Icon className="h-5 w-5" style={{ color: accent }} strokeWidth={1.8} />
               </div>
-            ))}
-          </div>
+              <h3 className="mt-5 text-lg font-bold tracking-tight text-white">{title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-white/50">{body}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

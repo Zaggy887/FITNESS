@@ -1,119 +1,76 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
-
-const TAGLINE = 'A Fitness & Wellness Platform';
-
-const platformImages = [
-  { src: '/Dashboard.png', alt: 'StrengthHub Dashboard' },
-  { src: '/Workout.png', alt: 'StrengthHub Workouts' },
-  { src: '/Nutrtion.png', alt: 'StrengthHub Nutrition' },
-  { src: '/Progress.png', alt: 'StrengthHub Progress' },
-  { src: '/Community.png', alt: 'StrengthHub Community' },
-];
+import { ArrowDown, ExternalLink, GraduationCap, ShieldCheck } from 'lucide-react';
 
 const Hero = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [typedText, setTypedText] = useState('');
-  const [hasStartedTyping, setHasStartedTyping] = useState(false);
-  const taglineRef = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % platformImages.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const startTyping = useCallback(() => {
-    if (hasStartedTyping) return;
-    setHasStartedTyping(true);
-    let i = 0;
-    const timer = setInterval(() => {
-      i++;
-      setTypedText(TAGLINE.slice(0, i));
-      if (i >= TAGLINE.length) clearInterval(timer);
-    }, 60);
-    return () => clearInterval(timer);
-  }, [hasStartedTyping]);
-
-  useEffect(() => {
-    const el = taglineRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) startTyping(); },
-      { threshold: 0.5 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [startTyping]);
-
   return (
-    <div className="bg-black text-white min-h-screen flex items-center">
-      <div className="w-full max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-24 py-24 sm:py-28 flex flex-col lg:flex-row items-center gap-10 sm:gap-16 lg:gap-20">
+    <section id="top" className="relative min-h-screen overflow-hidden bg-[#0A0A0B] pt-[72px] text-white">
+      <div className="pointer-events-none absolute left-[-12rem] top-[16%] h-[36rem] w-[36rem] rounded-full bg-[#7ED957]/10 blur-[120px]" />
+      <div className="pointer-events-none absolute right-[-12rem] top-[35%] h-[32rem] w-[32rem] rounded-full bg-[#3B82F6]/[0.08] blur-[120px]" />
 
-        {/* Left: Phone mockup */}
-        <div className="relative flex-shrink-0 w-[200px] sm:w-[280px] lg:w-[360px]">
-          <div
-            className="absolute -inset-16 rounded-full opacity-25 blur-3xl pointer-events-none"
-            style={{ background: "radial-gradient(circle, #A3E635 0%, transparent 70%)" }}
-          />
-          <div className="relative w-full" style={{ aspectRatio: '9 / 19.5' }}>
-            {platformImages.map((image, index) => (
-              <img
-                key={image.src}
-                src={image.src}
-                alt={image.alt}
-                loading="eager"
-                decoding="async"
-                fetchPriority={index === 0 ? 'high' : 'auto'}
-                className="absolute inset-0 w-full h-full object-cover rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.9)] transition-opacity duration-1000 ease-in-out will-change-[opacity]"
-                style={{
-                  opacity: index === activeIndex ? 1 : 0,
-                  maskImage: "linear-gradient(to bottom, black 72%, transparent 100%)",
-                  WebkitMaskImage: "linear-gradient(to bottom, black 72%, transparent 100%)",
-                }}
-              />
-            ))}
+      <div className="container relative grid min-h-[calc(100vh-72px)] items-center gap-14 py-16 lg:grid-cols-[1.04fr_0.96fr] lg:gap-10 lg:py-20">
+        <div className="max-w-3xl">
+          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#7ED957]/25 bg-[#7ED957]/10 px-3.5 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#9FE264]">
+            <GraduationCap className="h-4 w-4" /> Built for Australian university life
           </div>
-        </div>
 
-        {/* Right: Text */}
-        <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
-          <span
-            ref={taglineRef}
-            className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.35em] text-[#A3E635] mb-6 sm:mb-8 inline-block min-h-[1.2em]"
-          >
-            {typedText}
-            {typedText.length < TAGLINE.length && (
-              <span className="inline-block w-[1px] h-[1em] bg-[#A3E635] ml-[2px] align-middle animate-pulse" />
-            )}
-          </span>
-
-          <h1 className="font-black tracking-tight leading-[0.95] text-[40px] sm:text-[56px] md:text-[72px] lg:text-[88px] xl:text-[100px]">
-            Built for<br />
-            <span className="text-[#A3E635]">you</span> &amp;<br />
-            everybody<br />
-            around <span className="text-[#A3E635]">you</span>
+          <h1 className="max-w-[760px] text-[2.8rem] font-black leading-[0.94] tracking-[-0.065em] text-white sm:text-[4.7rem] lg:text-[5.6rem] xl:text-[6.25rem]">
+            Training built around <span className="text-[#7ED957]">student life.</span>
           </h1>
 
-          <p className="mt-6 sm:mt-10 text-base sm:text-lg md:text-xl leading-relaxed text-white/50 max-w-[480px]">
-            StrengthHub Online is the{" "}
-            <span className="text-white/90 font-medium">starting point for helping young people</span>{" "}
-            build confidence, structure, and take control of everyday life.
+          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/[0.58] sm:text-xl">
+            StrengthHub Online brings fitness, nutrition education, habit support and campus community into one student-friendly platform. It helps young people build confidence and consistency without expecting life to revolve around the gym.
           </p>
 
-          <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center lg:items-start gap-4">
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 px-7 sm:px-9 py-3.5 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-white/40 border border-white/40 transition-all duration-200 hover:text-[#A3E635] hover:border-[#A3E635]"
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <button
+              onClick={() => document.getElementById('platform')?.scrollIntoView({ behavior: 'smooth' })}
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#7ED957] px-7 py-4 text-sm font-bold text-[#0A0A0B] transition hover:bg-[#9FE264]"
             >
-              Book Appointment
+              Explore the platform <ArrowDown className="h-4 w-4" />
+            </button>
+            <a
+              href="https://strengthhubonline.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.05] px-7 py-4 text-sm font-bold text-white transition hover:border-white/30 hover:bg-white/[0.08]"
+            >
+              View app demo <ExternalLink className="h-4 w-4" />
             </a>
           </div>
 
+          <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/45">
+            <span className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-[#7ED957]" /> Evidence-informed education</span>
+            <span className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-[#7ED957]" /> Flexible around busy periods</span>
+            <span className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-[#7ED957]" /> Designed for real students</span>
+          </div>
         </div>
 
+        <div className="relative mx-auto w-full max-w-[620px] lg:ml-auto">
+          <div className="absolute inset-10 rounded-full bg-[#7ED957]/10 blur-[90px]" />
+          <div className="relative mx-auto w-[min(78vw,280px)] sm:w-[310px] lg:w-[345px]">
+            <div className="rounded-[2.7rem] border border-white/15 bg-[#121214] p-2 shadow-[0_45px_120px_rgba(0,0,0,0.8)]">
+              <div className="aspect-[9/19.5] overflow-hidden rounded-[2.25rem] bg-black">
+                <img
+                  src="/app-dashboard-2026.png"
+                  alt="StrengthHub Online student dashboard"
+                  className="h-full w-full object-contain object-top"
+                  fetchPriority="high"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="absolute left-0 top-[18%] hidden max-w-[200px] rounded-2xl border border-white/10 bg-[#121214]/[0.92] p-4 shadow-2xl backdrop-blur-xl sm:block lg:-left-7">
+            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#7ED957]">Plan Around Your Life</p>
+            <p className="mt-2 text-sm font-semibold leading-snug text-white">Training adapts around exams, travel, work and busy weeks.</p>
+          </div>
+
+          <div className="absolute bottom-[13%] right-0 hidden max-w-[190px] rounded-2xl border border-white/10 bg-[#121214]/[0.92] p-4 shadow-2xl backdrop-blur-xl sm:block lg:-right-5">
+            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#3B82F6]">12-minute workouts</p>
+            <p className="mt-2 text-sm font-semibold leading-snug text-white">Quick, guided sessions when time and equipment are limited.</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

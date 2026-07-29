@@ -1,19 +1,17 @@
+const moments = ['Exams', 'Placement', 'Casual work', 'Commuting', 'Tight budgets', 'Changing routines'];
+
 const StatsBanner = () => {
   return (
-    <section className="bg-[#0a0a0a] py-10 sm:py-16 px-4 sm:px-6 border-b border-white/10">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-white font-black text-3xl sm:text-4xl md:text-5xl lg:text-7xl uppercase leading-none tracking-tight">
-          A PLATFORM YOUR{' '}
-          <span className="relative inline-block">
-            PEOPLE
-            <span className="absolute bottom-0 left-0 w-full h-[2px] sm:h-[3px] bg-[#A3E635]" />
-          </span>{' '}
-          WILL{' '}
-          <span className="relative inline-block">
-            ACTUALLY USE
-            <span className="absolute bottom-0 left-0 w-full h-[2px] sm:h-[3px] bg-[#A3E635]" />
-          </span>
-        </h2>
+    <section className="border-y border-white/[0.07] bg-[#101012] py-8">
+      <div className="container">
+        <p className="mb-5 text-center text-[10px] font-bold uppercase tracking-[0.26em] text-white/35">Designed around the parts of student life most fitness apps ignore</p>
+        <div className="flex flex-wrap justify-center gap-2.5">
+          {moments.map((moment) => (
+            <span key={moment} className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-semibold text-white/65">
+              {moment}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );
