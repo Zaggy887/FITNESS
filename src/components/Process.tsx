@@ -7,8 +7,8 @@ const screens = [
     label: 'Dashboard',
     icon: LayoutDashboard,
     image: '/app-dashboard-2026.png',
-    title: 'A daily plan students can understand at a glance.',
-    description: 'Readiness, today’s priorities, habits, training and busy-period support come together in one clear home screen.',
+    title: 'A daily plan young adults can understand at a glance.',
+    description: 'Readiness, today’s priorities, habits, training and support during busy periods come together in one clear home screen.',
     points: ['Daily progress checklist', 'Readiness and habit overview', 'Today’s training plan', 'Plan Around Your Life'],
   },
   {
@@ -17,7 +17,7 @@ const screens = [
     icon: Dumbbell,
     image: '/app-workout-2026.png',
     title: 'Guided training without the cost of a personal trainer.',
-    description: 'Students receive a structured plan, exercise guidance, live workout tracking and flexible alternatives for shorter days.',
+    description: 'Young adults receive a structured plan, exercise guidance, live workout tracking and flexible alternatives for shorter days.',
     points: ['Personalised programs', 'Exercise form guidance', 'Set, rep and progress logging', '12-minute bodyweight sessions'],
   },
   {
@@ -25,16 +25,16 @@ const screens = [
     label: 'Nutrition',
     icon: Apple,
     image: '/app-nutrition-2026.png',
-    title: 'Food education that fits student budgets and routines.',
+    title: 'Food education that fits young adult budgets and routines.',
     description: 'The app focuses on practical choices and health literacy rather than perfection, rigid meal plans or confusing rules.',
-    points: ['Daily nutrition check-ins', 'Budget-friendly recipes', 'Balanced meal education', 'Vegan and dietary options'],
+    points: ['Daily nutrition check ins', 'Budget friendly recipes', 'Balanced meal education', 'Vegan and dietary options'],
   },
   {
     id: 'progress',
     label: 'Progress',
     icon: TrendingUp,
     image: '/app-progress-2026.png',
-    title: 'Progress students can actually see and learn from.',
+    title: 'Progress young adults can actually see and learn from.',
     description: 'Training, strength, habits, sleep, steps and weight trends are presented together so improvement feels visible and motivating.',
     points: ['Customisable progress metrics', 'Strength and workout trends', 'Habit consistency', 'Clear goals and streaks'],
   },
@@ -44,8 +44,8 @@ const screens = [
     icon: Users,
     image: '/app-community-2026.png',
     title: 'A healthier campus feels easier when people do it together.',
-    description: 'Students can connect through university, residence and society groups rather than a generic global fitness feed.',
-    points: ['Campus and society groups', 'Challenges and leaderboards', 'Training partner matching', 'Events and shared wins'],
+    description: 'Young adults can connect through university, residence, society and partner organisation groups rather than a generic global fitness feed.',
+    points: ['Campus and organisation groups', 'Challenges and leaderboards', 'Training partner matching', 'Events and shared wins'],
   },
 ];
 
@@ -67,7 +67,7 @@ const Process = () => {
         <div className="mx-auto max-w-3xl text-center" data-reveal>
           <p className="eyebrow">Inside the app</p>
           <h2 className="section-heading mt-4">Built to feel useful every day, not impressive once.</h2>
-          <p className="section-copy mx-auto mt-5">Each part of the platform has a clear role in helping students make healthier choices independently.</p>
+          <p className="section-copy mx-auto mt-5">Each part of the platform has a clear role in helping students and young adults make healthier choices independently.</p>
         </div>
 
         <div className="mx-auto mt-10 flex max-w-4xl snap-x snap-mandatory gap-2 overflow-x-auto overscroll-x-contain pb-2 [scrollbar-width:none] sm:justify-center [&::-webkit-scrollbar]:hidden" data-reveal data-delay="1">

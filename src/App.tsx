@@ -45,7 +45,7 @@ function App() {
   }
 
   if (path === '/universities') {
-    document.title = 'For Universities | StrengthHub Online';
+    document.title = 'For Universities & Organisations | StrengthHub Online';
 
     return (
       <div className="page-enter min-h-screen">
@@ -74,7 +74,7 @@ function App() {
     );
   }
 
-  document.title = 'StrengthHub Online | Student Fitness & Wellbeing Platform';
+  document.title = 'StrengthHub Online | Young Adult Fitness & Wellbeing Platform';
 
   return (
     <div className="page-enter min-h-screen">

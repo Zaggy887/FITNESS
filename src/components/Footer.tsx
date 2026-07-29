@@ -13,7 +13,7 @@ const Footer = () => {
             className="block h-auto w-[240px] max-w-full"
             loading="lazy"
           />
-          <p className="mt-3 max-w-md text-sm leading-relaxed text-white/[0.38]">A fitness and wellbeing platform designed around Australian university students.</p>
+          <p className="mt-3 max-w-md text-sm leading-relaxed text-white/[0.38]">An Australian fitness and wellbeing platform for students and young adults, delivered with universities, organisations, health and wellbeing brands, and gyms.</p>
         </div>
 
         <div className="flex flex-col gap-3 text-sm text-white/50 sm:flex-row sm:flex-wrap sm:gap-x-6 xl:justify-end">

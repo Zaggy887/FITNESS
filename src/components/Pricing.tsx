@@ -63,18 +63,18 @@ const Pricing = () => {
 
           <div className="grid md:grid-cols-1 gap-8">
             <div className="fade-in bg-[#111] border border-white/10 rounded-2xl p-10 hover:border-[#A3E635]/40 transition-colors duration-300">
-              <h3 className="text-2xl font-bold text-[#A3E635] mb-4">Simple. Transparent. Results-Driven.</h3>
+              <h3 className="text-2xl font-bold text-[#A3E635] mb-4">Simple. Transparent. Focused on Results.</h3>
               <p className="text-white/60 mb-6">
                 We support you throughout your entire coaching journey. If you're not satisfied within the first 30 days, we'll make it right. We stand behind every program we deliver.
               </p>
               <div className="mb-8 text-center">
                 <p className="text-5xl font-extrabold text-white">$199</p>
-                <p className="text-white/50 text-md mt-1">Per month. Cancel anytime. No lock-in contracts.</p>
+                <p className="text-white/50 text-md mt-1">Per month. Cancel anytime. No fixed term contracts.</p>
               </div>
               <ul className="space-y-4 text-white/60">
                 {[
                   'Fully personalised training and nutrition plan',
-                  'Weekly check-ins with your dedicated coach',
+                  'Weekly check ins with your dedicated coach',
                   '30-day satisfaction guarantee',
                   'Program adjustments as you progress',
                   'Ongoing support throughout your journey',
@@ -170,7 +170,7 @@ const Pricing = () => {
                 </h2>
 
                 <p className="text-white/60 text-lg">
-                  Be part of a growing community of people committed to transforming their health and fitness. Connect with coaches, clients, and like-minded individuals.
+                  Be part of a growing community of people committed to transforming their health and fitness. Connect with coaches, clients, and people who share your goals.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">

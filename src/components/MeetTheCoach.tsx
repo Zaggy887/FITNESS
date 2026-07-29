@@ -4,17 +4,17 @@ const credentials = [
   {
     icon: Dumbbell,
     title: '7+ years of training experience',
-    description: 'Hands-on experience across strength, body composition and sustainable lifestyle change.',
+    description: 'Practical experience across strength, body composition and sustainable lifestyle change.',
   },
   {
     icon: GraduationCap,
-    title: 'Built from inside student life',
+    title: 'Built from inside young adult life',
     description: 'Founded by a university student who understands exams, commuting, work and changing routines.',
   },
   {
     icon: Users,
-    title: 'Student-first by design',
-    description: 'The platform is built to feel achievable and useful, not like another obligation students fail to maintain.',
+    title: 'Designed around young adults',
+    description: 'The platform is built to feel achievable and useful, not like another obligation young people fail to maintain.',
   },
   {
     icon: Lightbulb,
