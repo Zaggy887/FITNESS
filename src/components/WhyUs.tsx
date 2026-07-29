@@ -5,12 +5,12 @@ const cards = [
   {
     icon: Activity,
     title: 'Proven Results',
-    description: 'Science-backed programming that delivers measurable body composition changes',
+    description: 'Programming informed by science that delivers measurable body composition changes',
   },
   {
     icon: Heart,
     title: 'Personalised Coaching',
-    description: 'Programs built around your goals, lifestyle, and equipment — not a one-size-fits-all plan',
+    description: 'Programs built around your goals, lifestyle, and equipment rather than a generic plan',
   },
   {
     icon: Zap,
@@ -20,7 +20,7 @@ const cards = [
   {
     icon: Target,
     title: 'Accountability First',
-    description: 'Regular check-ins, progress tracking, and adjustments to keep you moving forward',
+    description: 'Regular check ins, progress tracking, and adjustments to keep you moving forward',
   },
 ];
 
