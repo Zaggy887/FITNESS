@@ -3,161 +3,62 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    color-scheme: dark;
+  }
+
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    background: #0a0a0b;
   }
 
   body {
-    @apply font-sans text-gray-800 bg-white;
+    margin: 0;
     overflow-x: hidden;
+    background: #0a0a0b;
+    color: #fff;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
   }
 
-  h1 {
-    @apply text-4xl md:text-5xl font-bold leading-tight;
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
   }
 
-  h2 {
-    @apply text-3xl md:text-4xl font-bold leading-tight;
-  }
-
-  h3 {
-    @apply text-2xl md:text-3xl font-bold leading-snug;
+  ::selection {
+    background: rgba(126, 217, 87, 0.28);
+    color: #fff;
   }
 }
 
 @layer components {
   .container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply mx-auto w-full max-w-[1280px] px-5 sm:px-7 lg:px-10;
   }
 
-  .nav-link {
-    @apply text-white/70 hover:text-[#A3E635] transition-colors duration-200;
+  .eyebrow {
+    @apply text-[11px] font-bold uppercase tracking-[0.24em] text-[#7ED957];
   }
 
-  .nav-link-mobile {
-    @apply block py-2 text-white/70 hover:text-[#A3E635] transition-colors duration-200;
+  .section-heading {
+    @apply max-w-4xl text-3xl font-black leading-[1.04] tracking-[-0.05em] text-white sm:text-5xl lg:text-[3.55rem];
   }
 
-  .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all duration-200;
-  }
-
-  .btn-primary {
-    @apply bg-[#A3E635] text-black hover:opacity-90;
-  }
-
-  .btn-secondary {
-    @apply bg-transparent text-white border border-white/30 hover:border-[#A3E635] hover:text-[#A3E635];
-  }
-
-  .section {
-    @apply py-12 sm:py-16 md:py-24;
-  }
-
-  .card {
-    @apply bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200;
-  }
-
-  .input {
-    @apply w-full px-4 py-3 rounded-lg border border-white/15 bg-[#111] text-white placeholder-white/30 focus:ring-2 focus:ring-[#A3E635] focus:border-[#A3E635] outline-none transition-colors;
+  .section-copy {
+    @apply max-w-2xl text-base leading-relaxed text-white/[0.52] sm:text-lg;
   }
 }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInSlow {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.3s ease-out forwards;
-}
-
-.animate-fade-in-slow {
-  animation: fadeInSlow 0.6s ease-out forwards;
-}
-
-.animate-fade-in-slower {
-  animation: fadeInSlow 0.9s ease-out forwards;
-}
-
-.animate-slide-up {
-  animation: slideUp 0.8s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes circleDraw {
-  from { stroke-dashoffset: 226; }
-  to { stroke-dashoffset: 0; }
-}
-
-@keyframes checkDraw {
-  from { stroke-dashoffset: 50; }
-  to { stroke-dashoffset: 0; }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.5s ease-out forwards;
-}
-
-.animate-circle-draw {
-  animation: circleDraw 0.6s ease-out forwards;
-}
-
-.animate-check-draw {
-  stroke-dashoffset: 50;
-  animation: checkDraw 0.4s ease-out 0.5s forwards;
-}
-
-@media (max-width: 768px) {
-  .swipe-container {
-    @apply overflow-x-auto snap-x snap-mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .swipe-item {
-    @apply snap-center w-full flex-shrink-0;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

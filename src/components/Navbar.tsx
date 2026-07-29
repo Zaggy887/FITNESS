@@ -1,96 +1,77 @@
-import { useEffect, useState } from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Menu, X } from 'lucide-react';
+import { useState } from 'react';
+
+const links = [
+  { id: 'platform', label: 'Platform' },
+  { id: 'student-life', label: 'Student life' },
+  { id: 'universities', label: 'For universities' },
+  { id: 'story', label: 'Our story' },
+];
 
 const Navbar = () => {
-  const [activeSection, setActiveSection] = useState('');
+  const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll('section[id]');
-      let current = '';
-      let maxVisible = 0;
-
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        const visible = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
-
-        if (section.id === 'pricing') {
-          const referralElement = document.querySelector('#referral');
-          if (referralElement) {
-            const referralRect = referralElement.getBoundingClientRect();
-            if (referralRect.top < window.innerHeight / 2 && referralRect.bottom > window.innerHeight / 2) {
-              current = 'referral';
-              maxVisible = Infinity;
-              return;
-            }
-          }
-        }
-
-        if (visible > maxVisible) {
-          maxVisible = visible;
-          current = section.id;
-        }
-      });
-
-      setActiveSection(current);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToSection = (id: string) => {
-    const el = id === 'referral'
-      ? document.querySelector('#referral')
-      : document.getElementById(id);
-
-    if (!el) return;
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
-  const _navLink = (id: string, label: string) => {
-    const base = `transition-colors ${
-      activeSection === id
-        ? "text-[#A3E635] font-medium"
-        : "text-white hover:text-[#A3E635]"
-    }`;
-
-    return (
-      <button onClick={() => scrollToSection(id)} className={base}>
-        {label}
-      </button>
-    );
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setOpen(false);
   };
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="/" className="flex flex-col leading-none">
-          <span className="text-white font-black uppercase tracking-tight text-lg sm:text-2xl md:text-3xl">
-            STRENGTH
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.07] bg-[#0A0A0B]/[0.85] backdrop-blur-xl">
+      <div className="container flex h-[72px] items-center justify-between">
+        <button onClick={() => scrollTo('top')} className="flex flex-col text-left leading-none" aria-label="Go to top">
+          <span className="text-lg font-black uppercase tracking-[-0.04em] text-white sm:text-xl">STRENGTH</span>
+          <span className="-mt-0.5 text-base font-black italic uppercase tracking-[-0.04em] text-white sm:text-lg">
+            HUB<sup className="ml-0.5 align-super text-[8px] font-bold not-italic tracking-normal text-[#7ED957]">ONLINE</sup>
           </span>
-          <span className="text-white font-black italic uppercase tracking-tight text-base sm:text-xl md:text-2xl -mt-1">
-            HUB
-            <sup className="text-white text-[9px] sm:text-xs font-bold not-italic align-super ml-0.5">
-              ONLINE
-            </sup>
-          </span>
-        </a>
+        </button>
 
-        <a
-          href="https://strengthhubonline.app"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-3 sm:px-5 py-2 rounded-full text-white/90 text-xs sm:text-sm font-medium
-                     border border-white/30
-                     bg-white/10 backdrop-blur-md
-                     hover:bg-white/20 hover:border-white/50
-                     transition-all duration-300"
-        >
-          App Demo <ExternalLink className="inline w-3.5 h-3.5 ml-1" />
-        </a>
+        <div className="hidden items-center gap-7 lg:flex">
+          {links.map((link) => (
+            <button key={link.id} onClick={() => scrollTo(link.id)} className="text-sm font-medium text-white/[0.58] transition-colors hover:text-white">
+              {link.label}
+            </button>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-2.5">
+          <a
+            href="https://strengthhubonline.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2.5 text-sm font-semibold text-white transition hover:border-[#7ED957]/45 hover:bg-[#7ED957]/10 sm:inline-flex"
+          >
+            App demo <ExternalLink className="h-3.5 w-3.5" />
+          </a>
+          <button
+            onClick={() => setOpen((value) => !value)}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-white lg:hidden"
+            aria-label="Toggle navigation"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
+
+      {open && (
+        <div className="border-t border-white/[0.07] bg-[#0A0A0B] px-5 py-5 lg:hidden">
+          <div className="flex flex-col gap-1">
+            {links.map((link) => (
+              <button key={link.id} onClick={() => scrollTo(link.id)} className="rounded-xl px-3 py-3 text-left text-sm font-semibold text-white/75 hover:bg-white/[0.05] hover:text-white">
+                {link.label}
+              </button>
+            ))}
+            <a
+              href="https://strengthhubonline.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-[#7ED957] px-4 py-3 text-sm font-bold text-[#0A0A0B]"
+            >
+              Open app demo <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

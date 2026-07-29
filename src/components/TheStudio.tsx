@@ -1,85 +1,94 @@
-const offerings = [
-  "Access to the StrengthHub Online platform, ready to deploy to your members immediately.",
-  "Structured programs across strength, conditioning and mobility built and overseen by a qualified coach.",
-  "Nutrition tracking and education built into the app. Real understanding over restrictive rules.",
-  "Progress tracking across workouts, weight, habits and consistency so members understand what is driving their results.",
-  "A community feature that keeps your cohort connected, motivated and accountable to each other.",
-  "Ongoing expert coach support available to members through the platform with fast response times.",
+import { Building2, CalendarRange, Check, Clock3, HeartHandshake, Users } from 'lucide-react';
+
+const studentFeatures = [
+  {
+    icon: CalendarRange,
+    title: 'Busy weeks are expected',
+    body: 'Plan Around Your Life lets students prepare for exams, placements, travel and other demanding periods before routines break down.',
+  },
+  {
+    icon: Clock3,
+    title: 'Short still counts',
+    body: 'Guided 12-minute bodyweight sessions give students a realistic option when time, space or gym access is limited.',
+  },
+  {
+    icon: HeartHandshake,
+    title: 'Education over pressure',
+    body: 'Clear fitness and food guidance builds confidence and health literacy without shame, extremes or an all-or-nothing mindset.',
+  },
 ];
 
-const bonusOfferings = [
-  "Assistance evaluating lifestyle habits across sleep, nutrition, movement and recovery",
-  "Health literacy resources that build lasting knowledge, not just short term results",
-  "Personalised pathways, habit tracking, challenges and leaderboards",
-  "Full onboarding support and setup assistance at no additional cost",
+const universityBenefits = [
+  'A branded or co-branded digital wellbeing offering for students',
+  'Support across movement, strength, everyday habits and practical nutrition education',
+  'Campus, residence, faculty or society challenges and communities',
+  'Flexible onboarding and rollout support for your student cohort',
+  'Optional workshops, activations and tailored university initiatives',
+  'A platform students can continue using beyond a single event or campaign',
 ];
 
 const TheStudio = () => {
   return (
-    <section className="bg-[#0a0a0a] text-white pb-8 sm:pb-14 border-t border-white/10">
-      <div className="w-full overflow-hidden mb-8">
-        <img
-          src="/image copy copy copy.png"
-          alt="StrengthHub Platform"
-          className="w-full object-cover h-[200px] sm:h-[260px] md:h-[320px] object-[50%_55%] md:object-[50%_60%]"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
+    <>
+      <section id="student-life" className="bg-[#0A0A0B] py-20 text-white sm:py-28">
+        <div className="container">
+          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div>
+              <p className="eyebrow">Designed for real student life</p>
+              <h2 className="section-heading mt-4">Consistency should bend, not break.</h2>
+              <p className="section-copy mt-5">
+                University life changes from week to week. StrengthHub is designed to remain useful when schedules become unpredictable, motivation dips or the perfect routine is not possible.
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              {studentFeatures.map(({ icon: Icon, title, body }) => (
+                <article key={title} className="rounded-[1.4rem] border border-white/[0.08] bg-[#121214] p-5">
+                  <Icon className="h-5 w-5 text-[#7ED957]" />
+                  <h3 className="mt-4 text-base font-bold text-white">{title}</h3>
+                  <p className="mt-2.5 text-sm leading-relaxed text-white/[0.48]">{body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div className="container mx-auto px-4">
-        <h2 className="text-center text-xl sm:text-3xl md:text-5xl font-black mb-2 tracking-tight">
-          <span className="text-white">AN EXAMPLE OF WHAT YOUR ORGANISATION COULD </span>
-          <span className="text-[#A3E635]">GET</span>
-        </h2>
-      </div>
+      <section id="universities" className="relative overflow-hidden border-y border-white/[0.07] bg-[#121214] py-20 text-white sm:py-28">
+        <div className="pointer-events-none absolute left-[-8rem] top-0 h-[28rem] w-[28rem] rounded-full bg-[#7ED957]/[0.07] blur-[100px]" />
+        <div className="container relative grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+          <div>
+            <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-[#7ED957]/25 bg-[#7ED957]/10">
+              <Building2 className="h-6 w-6 text-[#7ED957]" />
+            </div>
+            <p className="eyebrow mt-6">For Australian universities</p>
+            <h2 className="section-heading mt-4">A wellbeing platform students will actually open.</h2>
+            <p className="section-copy mt-5">
+              StrengthHub can complement student wellbeing, sport, residential, orientation and engagement initiatives with practical support students can access wherever they are.
+            </p>
 
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-
-          <ul className="mb-10 space-y-6 md:flex md:flex-col md:items-center">
-            {offerings.map((item, i) => (
-              <li key={i} className="flex items-start gap-4 group w-full max-w-xl">
-                <div className="flex-shrink-0 w-8">
-                  <span className="text-[#A3E635] text-sm font-semibold tabular-nums tracking-widest">
-                    {`0${i + 1}`}
-                  </span>
-                </div>
-                <div className="w-[1px] self-stretch bg-white/10 group-hover:bg-[#A3E635]/40 transition-colors" />
-                <p className="text-white/75 text-sm sm:text-[15px] leading-relaxed">
-                  {item}
-                </p>
-              </li>
-            ))}
-          </ul>
-
-          <p className="text-[#A3E635] font-bold tracking-[0.25em] text-xs uppercase mb-4 md:text-center">
-            Also Included
-          </p>
-
-          <ul className="mb-10 space-y-4 max-w-xl md:mx-auto">
-            {bonusOfferings.map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <span className="mt-[7px] w-2 h-2 rounded-full bg-[#A3E635] flex-shrink-0" />
-                <p className="text-white/70 text-sm sm:text-[15px] leading-relaxed">
-                  {item}
-                </p>
-              </li>
-            ))}
-          </ul>
-
-          <div className="text-center">
-            <a
-              href="#contact"
-              className="group inline-flex items-center justify-center gap-3 bg-[#A3E635] px-7 sm:px-9 py-3.5 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-black transition-all duration-200 hover:bg-[#B8F04A] hover:shadow-[0_0_40px_rgba(163,230,53,0.4)] w-full sm:w-auto"
-            >
-              Find out More
-            </a>
+            <div className="mt-8 flex items-center gap-3 rounded-2xl border border-white/[0.08] bg-[#0A0A0B] p-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#7ED957]/[0.12]"><Users className="h-5 w-5 text-[#7ED957]" /></div>
+              <p className="text-sm leading-relaxed text-white/60"><span className="font-bold text-white">Flexible delivery.</span> Roll out to a targeted cohort, residential community, student organisation or wider university population.</p>
+            </div>
           </div>
 
+          <div className="rounded-[1.7rem] border border-white/[0.09] bg-[#0A0A0B] p-6 sm:p-8">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#7ED957]">What a university partnership can include</p>
+            <div className="mt-6 grid gap-4">
+              {universityBenefits.map((benefit) => (
+                <div key={benefit} className="flex items-start gap-3 border-b border-white/[0.06] pb-4 last:border-0 last:pb-0">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#7ED957]"><Check className="h-3 w-3 text-[#0A0A0B]" strokeWidth={3} /></span>
+                  <p className="text-sm leading-relaxed text-white/[0.68] sm:text-[15px]">{benefit}</p>
+                </div>
+              ))}
+            </div>
+            <a href="#contact" className="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-[#7ED957] px-6 py-4 text-sm font-bold text-[#0A0A0B] transition hover:bg-[#9FE264] sm:w-auto">
+              Discuss a university rollout
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

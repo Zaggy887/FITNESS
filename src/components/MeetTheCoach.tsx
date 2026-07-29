@@ -1,115 +1,66 @@
-import { useEffect, useRef } from 'react';
-import { Dumbbell, GraduationCap, Users, Lightbulb } from 'lucide-react';
+import { Dumbbell, GraduationCap, Lightbulb, Users } from 'lucide-react';
 
 const credentials = [
   {
     icon: Dumbbell,
-    title: '7+ YEARS',
-    description: 'Hands-on experience in strength, body composition, and lifestyle coaching.',
+    title: '7+ years of training experience',
+    description: 'Hands-on experience across strength, body composition and sustainable lifestyle change.',
   },
   {
     icon: GraduationCap,
-    title: 'BUILT FROM THE INSIDE',
-    description: 'Founded by a student who knows the barriers to staying fit at uni.',
+    title: 'Built from inside student life',
+    description: 'Founded by a university student who understands exams, commuting, work and changing routines.',
   },
   {
     icon: Users,
-    title: 'STUDENT FIRST APPROACH',
-    description: 'Programs built around student life, flexible, achievable, and engaging.',
+    title: 'Student-first by design',
+    description: 'The platform is built to feel achievable and useful, not like another obligation students fail to maintain.',
   },
   {
     icon: Lightbulb,
-    title: 'MISSION-DRIVEN',
-    description: 'Quality fitness coaching made accessible to every student, not just those who can afford a PT.',
+    title: 'Focused on independence',
+    description: 'The goal is to help young people understand fitness and wellbeing well enough to make confident choices themselves.',
   },
 ];
 
 const MeetTheCoach = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = sectionRef.current?.querySelectorAll('.fade-in');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => {
-      elements?.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
-
   return (
-    <section id="coach" className="section bg-black relative overflow-hidden" ref={sectionRef}>
-      <div className="container px-4 sm:px-6 lg:px-8">
-        <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#A3E635]">Our Story</span>
-        <h2 className="fade-in text-2xl sm:text-4xl md:text-5xl font-bold mt-4 mb-6 sm:mb-10 text-left">
-          <span className="text-white">Founded by </span>
-          <span className="text-[#A3E635]">Coach Zak</span>
-        </h2>
-
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-start">
-            <div className="space-y-4 sm:space-y-6">
-              <div className="fade-in relative group">
-                <div className="relative overflow-hidden rounded-2xl border-2 border-[#A3E635]/40">
-                  <img
-                    src="/IMG_0875.jpg"
-                    alt="Zak — Founder, StrengthHub Online"
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-[240px] sm:h-[360px] lg:h-[420px] object-cover object-[35%_center] transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-              </div>
-
-              <div className="fade-in rounded-xl border-2 border-[#A3E635]/40 bg-[#111] p-4 sm:p-6">
-                <div className="flex gap-4">
-                  <span className="text-[#A3E635] text-4xl font-bold leading-none shrink-0">&ldquo;</span>
-                  <p className="text-white/80 text-base leading-relaxed">
-                    I built StrengthHub Online because I saw how many students wanted to improve their health but had no clear, affordable path to do it.{' '}
-                    <span className="text-[#A3E635] font-semibold">This platform is the answer.</span>
-                  </p>
-                </div>
-                <p className="mt-4 text-white/40 text-sm pl-10">— Zak, Founder &amp; Head Coach</p>
+    <section id="story" className="bg-[#0A0A0B] py-20 text-white sm:py-28">
+      <div className="container">
+        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-20">
+          <div className="relative">
+            <div className="absolute -inset-6 rounded-[2.5rem] bg-[#7ED957]/[0.08] blur-[55px]" />
+            <div className="relative overflow-hidden rounded-[1.8rem] border border-white/10 bg-[#121214]">
+              <img src="/IMG_0875.jpg" alt="Zak, founder of StrengthHub Online" className="h-[360px] w-full object-cover object-[35%_center] sm:h-[520px]" loading="lazy" />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/70 to-transparent p-6 pt-20">
+                <p className="text-xl font-black text-white">Zak Sztrochlic</p>
+                <p className="mt-1 text-sm font-semibold text-[#7ED957]">Founder, StrengthHub Online</p>
               </div>
             </div>
+          </div>
 
-            <div className="space-y-4 sm:space-y-6 py-1">
-              {credentials.map(({ icon: Icon, title, description }, index) => (
-                <div
-                  key={title}
-                  className="fade-in flex items-start gap-3 sm:gap-4"
-                  style={{ transitionDelay: `${index * 0.1}s` }}
-                >
-                  <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#A3E635]/40 flex items-center justify-center shrink-0">
-                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-[#A3E635]" />
+          <div>
+            <p className="eyebrow">Our story</p>
+            <h2 className="section-heading mt-4">Created because better health support should feel accessible.</h2>
+            <blockquote className="mt-7 border-l-2 border-[#7ED957] pl-5 text-lg leading-relaxed text-white/[0.72] sm:text-xl">
+              “I built StrengthHub because many students want to improve their health but do not have a clear, affordable or sustainable place to start.”
+            </blockquote>
+
+            <div className="mt-9 grid gap-5 sm:grid-cols-2">
+              {credentials.map(({ icon: Icon, title, description }) => (
+                <div key={title} className="flex items-start gap-3.5">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#7ED957]/20 bg-[#7ED957]/10">
+                    <Icon className="h-[1.125rem] w-[1.125rem] text-[#7ED957]" />
                   </div>
                   <div>
-                    <h4 className="text-white font-bold text-[13px] sm:text-base tracking-wide mb-0.5 sm:mb-1">
-                      {title}
-                    </h4>
-                    <p className="text-white/50 text-[13px] sm:text-sm leading-snug sm:leading-relaxed">{description}</p>
+                    <h3 className="text-sm font-bold text-white">{title}</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-white/45">{description}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="flex items-center justify-center gap-3 pt-16 sm:pt-20 pb-4">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#A3E635]/60" />
-        <span className="w-1.5 h-1.5 rounded-full bg-[#A3E635]/30" />
-        <span className="w-1.5 h-1.5 rounded-full bg-[#A3E635]/60" />
       </div>
     </section>
   );
