@@ -33,16 +33,21 @@ const TheStudio = () => {
       <section id="student-life" className="bg-[#0A0A0B] py-20 text-white sm:py-28">
         <div className="container">
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-            <div>
+            <div data-reveal="left">
               <p className="eyebrow">Designed for real student life</p>
-              <h2 className="section-heading mt-4">Consistency should bend, not break.</h2>
+              <h1 className="section-heading mt-4">Consistency should bend, not break.</h1>
               <p className="section-copy mt-5">
                 University life changes from week to week. StrengthHub is designed to remain useful when schedules become unpredictable, motivation dips or the perfect routine is not possible.
               </p>
             </div>
             <div className="grid gap-4 md:grid-cols-3">
-              {studentFeatures.map(({ icon: Icon, title, body }) => (
-                <article key={title} className="rounded-[1.4rem] border border-white/[0.08] bg-[#121214] p-5">
+              {studentFeatures.map(({ icon: Icon, title, body }, index) => (
+                <article
+                  key={title}
+                  data-reveal="scale"
+                  data-delay={String(index + 1)}
+                  className="rounded-[1.4rem] border border-white/[0.08] bg-[#121214] p-5 transition duration-300 hover:-translate-y-1 hover:border-[#7ED957]/25"
+                >
                   <Icon className="h-5 w-5 text-[#7ED957]" />
                   <h3 className="mt-4 text-base font-bold text-white">{title}</h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-white/[0.48]">{body}</p>
@@ -56,7 +61,7 @@ const TheStudio = () => {
       <section id="universities" className="relative overflow-hidden border-y border-white/[0.07] bg-[#121214] py-20 text-white sm:py-28">
         <div className="pointer-events-none absolute left-[-8rem] top-0 h-[28rem] w-[28rem] rounded-full bg-[#7ED957]/[0.07] blur-[100px]" />
         <div className="container relative grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
-          <div>
+          <div data-reveal="left">
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-[#7ED957]/25 bg-[#7ED957]/10">
               <Building2 className="h-6 w-6 text-[#7ED957]" />
             </div>
@@ -72,7 +77,7 @@ const TheStudio = () => {
             </div>
           </div>
 
-          <div className="rounded-[1.7rem] border border-white/[0.09] bg-[#0A0A0B] p-6 sm:p-8">
+          <div className="rounded-[1.7rem] border border-white/[0.09] bg-[#0A0A0B] p-6 sm:p-8" data-reveal="right" data-delay="1">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#7ED957]">What a university partnership can include</p>
             <div className="mt-6 grid gap-4">
               {universityBenefits.map((benefit) => (

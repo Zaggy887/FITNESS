@@ -14,7 +14,7 @@ const PrivacyPolicy = () => {
 
       <div className="container relative">
         <article className="mx-auto max-w-[820px] py-14 sm:py-20">
-          <header className="border-b border-white/[0.08] pb-10 sm:pb-12">
+          <header className="border-b border-white/[0.08] pb-10 sm:pb-12" data-reveal>
             <p className="eyebrow">StrengthHub Online</p>
             <h1 className="mt-4 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl">
               Privacy Policy

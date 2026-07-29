@@ -8,15 +8,19 @@ import MeetTheCoach from "./components/MeetTheCoach";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import HomeSections from "./components/HomeSections";
+import useScrollAnimation from "./hooks/useScrollAnimation";
 
 function App() {
-  const isPrivacyPage = window.location.pathname.replace(/\/+$/, '') === '/privacy';
+  useScrollAnimation();
 
-  if (isPrivacyPage) {
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+
+  if (path === '/privacy') {
     document.title = 'Privacy Policy | StrengthHub Online';
 
     return (
-      <div className="min-h-screen">
+      <div className="page-enter min-h-screen">
         <Navbar />
         <PrivacyPolicy />
         <Footer />
@@ -24,15 +28,60 @@ function App() {
     );
   }
 
+  if (path === '/platform') {
+    document.title = 'Platform | StrengthHub Online';
+
+    return (
+      <div className="page-enter min-h-screen">
+        <Navbar />
+        <main className="pt-[72px]">
+          <UniqueAbout />
+          <Process />
+          <ContactForm />
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (path === '/universities') {
+    document.title = 'For Universities | StrengthHub Online';
+
+    return (
+      <div className="page-enter min-h-screen">
+        <Navbar />
+        <main className="pt-[72px]">
+          <TheStudio />
+          <ContactForm />
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (path === '/about') {
+    document.title = 'Our Story | StrengthHub Online';
+
+    return (
+      <div className="page-enter min-h-screen">
+        <Navbar />
+        <main className="pt-[72px]">
+          <MeetTheCoach />
+          <ContactForm />
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  document.title = 'StrengthHub Online | Student Fitness & Wellbeing Platform';
+
   return (
-    <div className="min-h-screen">
+    <div className="page-enter min-h-screen">
       <Navbar />
       <Hero />
       <StatsBanner />
-      <UniqueAbout />
-      <Process />
-      <TheStudio />
-      <MeetTheCoach />
+      <HomeSections />
       <ContactForm />
       <Footer />
     </div>

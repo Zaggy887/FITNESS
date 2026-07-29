@@ -3,7 +3,7 @@ import { ExternalLink, Mail, Phone } from 'lucide-react';
 const Footer = () => {
   return (
     <footer className="border-t border-white/[0.07] bg-[#0A0A0B] py-10 text-white">
-      <div className="container flex flex-col gap-8 xl:flex-row xl:items-end xl:justify-between">
+      <div className="container flex flex-col gap-8 xl:flex-row xl:items-end xl:justify-between" data-reveal>
         <div>
           <img
             src="/strengthhub-logo.png"

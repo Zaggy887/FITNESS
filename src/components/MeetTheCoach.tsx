@@ -28,7 +28,7 @@ const MeetTheCoach = () => {
     <section id="story" className="bg-[#0A0A0B] py-20 text-white sm:py-28">
       <div className="container">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-20">
-          <div className="relative">
+          <div className="relative" data-reveal="left">
             <div className="absolute -inset-6 rounded-[2.5rem] bg-[#7ED957]/[0.08] blur-[55px]" />
             <div className="relative overflow-hidden rounded-[1.8rem] border border-white/10 bg-[#121214]">
               <img src="/IMG_0875.jpg" alt="Zak, founder of StrengthHub Online" className="h-[360px] w-full object-cover object-[35%_center] sm:h-[520px]" loading="lazy" />
@@ -39,9 +39,9 @@ const MeetTheCoach = () => {
             </div>
           </div>
 
-          <div>
+          <div data-reveal="right" data-delay="1">
             <p className="eyebrow">Our story</p>
-            <h2 className="section-heading mt-4">Created because better health support should feel accessible.</h2>
+            <h1 className="section-heading mt-4">Created because better health support should feel accessible.</h1>
             <blockquote className="mt-7 border-l-2 border-[#7ED957] pl-5 text-lg leading-relaxed text-white/[0.72] sm:text-xl">
               “I built StrengthHub because many students want to improve their health but do not have a clear, affordable or sustainable place to start.”
             </blockquote>
