@@ -12,6 +12,11 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const scrollTo = (id: string) => {
+    if (window.location.pathname !== '/') {
+      window.location.href = id === 'top' ? '/' : `/#${id}`;
+      return;
+    }
+
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     setOpen(false);
   };
