@@ -3,7 +3,7 @@ const moments = ['Exams', 'Placement', 'Casual work', 'Commuting', 'Tight budget
 const StatsBanner = () => {
   return (
     <section className="border-y border-white/[0.07] bg-[#101012] py-8">
-      <div className="container">
+      <div className="container" data-reveal>
         <p className="mb-5 text-center text-[10px] font-bold uppercase tracking-[0.26em] text-white/35">Designed around the parts of student life most fitness apps ignore</p>
         <div className="flex flex-wrap justify-center gap-2.5">
           {moments.map((moment) => (

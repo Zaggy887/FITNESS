@@ -7,7 +7,7 @@ const ContactForm = () => {
     <section id="contact" className="relative overflow-hidden bg-[#101012] py-20 text-white sm:py-28">
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[28rem] w-[28rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#7ED957]/[0.07] blur-[110px]" />
       <div className="container relative">
-        <div className="mx-auto max-w-3xl rounded-[1.8rem] border border-white/[0.09] bg-[#0A0A0B] p-7 text-center shadow-[0_35px_100px_rgba(0,0,0,0.35)] sm:p-12">
+        <div className="mx-auto max-w-3xl rounded-[1.8rem] border border-white/[0.09] bg-[#0A0A0B] p-7 text-center shadow-[0_35px_100px_rgba(0,0,0,0.35)] sm:p-12" data-reveal="scale">
           <p className="eyebrow">See whether StrengthHub fits your university</p>
           <h2 className="mt-4 text-3xl font-black tracking-[-0.045em] text-white sm:text-5xl">Let’s talk about your students.</h2>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/[0.52]">

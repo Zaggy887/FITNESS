@@ -64,20 +64,20 @@ const Process = () => {
   return (
     <section className="bg-[#101012] py-20 text-white sm:py-28">
       <div className="container">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-3xl text-center" data-reveal>
           <p className="eyebrow">Inside the app</p>
           <h2 className="section-heading mt-4">Built to feel useful every day, not impressive once.</h2>
           <p className="section-copy mx-auto mt-5">Each part of the platform has a clear role in helping students make healthier choices independently.</p>
         </div>
 
-        <div className="mx-auto mt-10 flex max-w-4xl snap-x snap-mandatory gap-2 overflow-x-auto overscroll-x-contain pb-2 [scrollbar-width:none] sm:justify-center [&::-webkit-scrollbar]:hidden">
+        <div className="mx-auto mt-10 flex max-w-4xl snap-x snap-mandatory gap-2 overflow-x-auto overscroll-x-contain pb-2 [scrollbar-width:none] sm:justify-center [&::-webkit-scrollbar]:hidden" data-reveal data-delay="1">
           {screens.map(({ id, label, icon: Icon }, index) => (
             <button
               key={id}
               onClick={() => setActiveIndex(index)}
               aria-pressed={activeIndex === index}
-              className={`inline-flex min-h-11 shrink-0 snap-start items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold transition ${
-                activeIndex === index ? 'bg-[#7ED957] text-[#0A0A0B]' : 'border border-white/[0.08] bg-white/[0.04] text-white/55 hover:text-white'
+              className={`inline-flex min-h-11 shrink-0 snap-start items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold transition-all duration-300 ${
+                activeIndex === index ? 'scale-[1.02] bg-[#7ED957] text-[#0A0A0B] shadow-[0_8px_28px_rgba(126,217,87,0.18)]' : 'border border-white/[0.08] bg-white/[0.04] text-white/55 hover:text-white'
               }`}
             >
               <Icon className="h-4 w-4" /> {label}
@@ -86,7 +86,7 @@ const Process = () => {
         </div>
 
         <div className="mt-12 grid items-center gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20">
-          <div className="relative mx-auto w-[min(78vw,280px)] sm:w-[295px] lg:w-[320px]">
+          <div className="relative mx-auto w-[min(78vw,280px)] sm:w-[295px] lg:w-[320px]" data-reveal="left">
             <div className="absolute inset-10 rounded-full bg-[#7ED957]/10 blur-[80px]" />
             <div className="relative overflow-hidden rounded-[2.6rem] border border-white/15 bg-[#0A0A0B] p-2 shadow-[0_35px_100px_rgba(0,0,0,0.65)]">
               <div className="aspect-[9/19.5] overflow-hidden rounded-[2.2rem] bg-black">
@@ -94,7 +94,7 @@ const Process = () => {
                   key={active.id}
                   src={active.image}
                   alt={`${active.label} screen in StrengthHub Online`}
-                  className="block h-full w-full object-contain object-top"
+                  className="screen-swap block h-full w-full object-contain object-top"
                   loading="eager"
                   decoding="async"
                 />
@@ -102,18 +102,20 @@ const Process = () => {
             </div>
           </div>
 
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#7ED957]/20 bg-[#7ED957]/10 px-3.5 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#9FE264]">
-              <ActiveIcon className="h-4 w-4" /> {active.label}
-            </div>
-            <h3 className="mt-5 max-w-2xl text-3xl font-black leading-tight tracking-[-0.04em] text-white sm:text-4xl">{active.title}</h3>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-white/55 sm:text-lg">{active.description}</p>
-            <div className="mt-7 grid gap-3 sm:grid-cols-2">
-              {active.points.map((point) => (
-                <div key={point} className="flex items-center gap-3 rounded-xl border border-white/[0.07] bg-[#121214] px-4 py-3.5 text-sm font-semibold text-white/[0.72]">
-                  <span className="h-2 w-2 rounded-full bg-[#7ED957]" /> {point}
-                </div>
-              ))}
+          <div data-reveal="right" data-delay="1">
+            <div key={`copy-${active.id}`} className="screen-copy-enter">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#7ED957]/20 bg-[#7ED957]/10 px-3.5 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#9FE264]">
+                <ActiveIcon className="h-4 w-4" /> {active.label}
+              </div>
+              <h3 className="mt-5 max-w-2xl text-3xl font-black leading-tight tracking-[-0.04em] text-white sm:text-4xl">{active.title}</h3>
+              <p className="mt-5 max-w-xl text-base leading-relaxed text-white/55 sm:text-lg">{active.description}</p>
+              <div className="mt-7 grid gap-3 sm:grid-cols-2">
+                {active.points.map((point) => (
+                  <div key={point} className="flex items-center gap-3 rounded-xl border border-white/[0.07] bg-[#121214] px-4 py-3.5 text-sm font-semibold text-white/[0.72]">
+                    <span className="h-2 w-2 rounded-full bg-[#7ED957]" /> {point}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

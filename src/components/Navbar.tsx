@@ -54,13 +54,13 @@ const Navbar = () => {
             aria-expanded={open}
             aria-controls="mobile-navigation"
           >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {open ? <X className="nav-icon-enter h-5 w-5" /> : <Menu className="nav-icon-enter h-5 w-5" />}
           </button>
         </div>
       </div>
 
       {open && (
-        <div id="mobile-navigation" className="border-t border-white/[0.07] bg-[#0A0A0B] px-5 py-5 lg:hidden">
+        <div id="mobile-navigation" className="mobile-nav-enter border-t border-white/[0.07] bg-[#0A0A0B] px-5 py-5 lg:hidden">
           <div className="flex flex-col gap-1">
             {links.map((link) => (
               <a

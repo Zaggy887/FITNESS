@@ -44,7 +44,7 @@ const UniqueAbout = () => {
     <section id="platform" className="relative overflow-hidden bg-[#0A0A0B] py-20 text-white sm:py-28">
       <div className="pointer-events-none absolute right-[-12rem] top-10 h-[30rem] w-[30rem] rounded-full bg-[#7ED957]/5 blur-[100px]" />
       <div className="container relative">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl" data-reveal>
           <p className="eyebrow">The platform</p>
           <h1 className="section-heading mt-4">One place for the habits that shape student wellbeing.</h1>
           <p className="section-copy mt-5">
@@ -53,8 +53,13 @@ const UniqueAbout = () => {
         </div>
 
         <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {features.map(({ icon: Icon, title, body, accent }) => (
-            <article key={title} className="group rounded-[1.4rem] border border-white/[0.08] bg-[#121214] p-6 transition duration-300 hover:-translate-y-1 hover:border-white/15">
+          {features.map(({ icon: Icon, title, body, accent }, index) => (
+            <article
+              key={title}
+              data-reveal="scale"
+              data-delay={String((index % 3) + 1)}
+              className="group rounded-[1.4rem] border border-white/[0.08] bg-[#121214] p-6 transition duration-300 hover:-translate-y-1 hover:border-white/15"
+            >
               <div className="flex h-11 w-11 items-center justify-center rounded-xl" style={{ backgroundColor: `${accent}18`, border: `1px solid ${accent}35` }}>
                 <Icon className="h-5 w-5" style={{ color: accent }} strokeWidth={1.8} />
               </div>

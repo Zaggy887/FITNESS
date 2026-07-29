@@ -9,15 +9,18 @@ import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import HomeSections from "./components/HomeSections";
+import useScrollAnimation from "./hooks/useScrollAnimation";
 
 function App() {
+  useScrollAnimation();
+
   const path = window.location.pathname.replace(/\/+$/, '') || '/';
 
   if (path === '/privacy') {
     document.title = 'Privacy Policy | StrengthHub Online';
 
     return (
-      <div className="min-h-screen">
+      <div className="page-enter min-h-screen">
         <Navbar />
         <PrivacyPolicy />
         <Footer />
@@ -29,7 +32,7 @@ function App() {
     document.title = 'Platform | StrengthHub Online';
 
     return (
-      <div className="min-h-screen">
+      <div className="page-enter min-h-screen">
         <Navbar />
         <main className="pt-[72px]">
           <UniqueAbout />
@@ -45,7 +48,7 @@ function App() {
     document.title = 'For Universities | StrengthHub Online';
 
     return (
-      <div className="min-h-screen">
+      <div className="page-enter min-h-screen">
         <Navbar />
         <main className="pt-[72px]">
           <TheStudio />
@@ -60,7 +63,7 @@ function App() {
     document.title = 'Our Story | StrengthHub Online';
 
     return (
-      <div className="min-h-screen">
+      <div className="page-enter min-h-screen">
         <Navbar />
         <main className="pt-[72px]">
           <MeetTheCoach />
@@ -74,7 +77,7 @@ function App() {
   document.title = 'StrengthHub Online | Student Fitness & Wellbeing Platform';
 
   return (
-    <div className="min-h-screen">
+    <div className="page-enter min-h-screen">
       <Navbar />
       <Hero />
       <StatsBanner />

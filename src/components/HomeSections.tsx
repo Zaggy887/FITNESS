@@ -28,7 +28,7 @@ const HomeSections = () => {
   return (
     <section className="bg-[#0A0A0B] py-16 text-white sm:py-24">
       <div className="container">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl" data-reveal>
           <p className="eyebrow">Explore StrengthHub</p>
           <h2 className="section-heading mt-4">Find the detail you need, without the endless scroll.</h2>
           <p className="section-copy mt-5">
@@ -37,10 +37,12 @@ const HomeSections = () => {
         </div>
 
         <div className="mt-10 grid gap-4 lg:grid-cols-3">
-          {sections.map(({ href, icon: Icon, eyebrow, title, description }) => (
+          {sections.map(({ href, icon: Icon, eyebrow, title, description }, index) => (
             <a
               key={href}
               href={href}
+              data-reveal="scale"
+              data-delay={String(index + 1)}
               className="group flex min-h-[260px] flex-col rounded-[1.5rem] border border-white/[0.08] bg-[#121214] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#7ED957]/35 hover:bg-[#151517] sm:p-7"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#7ED957]/25 bg-[#7ED957]/10">
