@@ -63,12 +63,13 @@ const Process = () => {
           <p className="section-copy mx-auto mt-5">Each part of the platform has a clear role in helping students make healthier choices independently.</p>
         </div>
 
-        <div className="mx-auto mt-10 flex max-w-4xl gap-2 overflow-x-auto pb-2 sm:justify-center">
+        <div className="mx-auto mt-10 flex max-w-4xl snap-x snap-mandatory gap-2 overflow-x-auto overscroll-x-contain pb-2 [scrollbar-width:none] sm:justify-center [&::-webkit-scrollbar]:hidden">
           {screens.map(({ id, label, icon: Icon }, index) => (
             <button
               key={id}
               onClick={() => setActiveIndex(index)}
-              className={`inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold transition ${
+              aria-pressed={activeIndex === index}
+              className={`inline-flex min-h-11 shrink-0 snap-start items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold transition ${
                 activeIndex === index ? 'bg-[#7ED957] text-[#0A0A0B]' : 'border border-white/[0.08] bg-white/[0.04] text-white/55 hover:text-white'
               }`}
             >
@@ -78,18 +79,20 @@ const Process = () => {
         </div>
 
         <div className="mt-12 grid items-center gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20">
-          <div className="relative mx-auto w-[245px] sm:w-[295px] lg:w-[320px]">
+          <div className="relative mx-auto w-[min(78vw,280px)] sm:w-[295px] lg:w-[320px]">
             <div className="absolute inset-10 rounded-full bg-[#7ED957]/10 blur-[80px]" />
             <div className="relative overflow-hidden rounded-[2.6rem] border border-white/15 bg-[#0A0A0B] p-2 shadow-[0_35px_100px_rgba(0,0,0,0.65)]">
-              {screens.map((screen, index) => (
-                <img
-                  key={screen.id}
-                  src={screen.image}
-                  alt={`${screen.label} screen in StrengthHub Online`}
-                  className={`${index === activeIndex ? 'block' : 'hidden'} w-full rounded-[2.2rem]`}
-                  loading={index === 0 ? 'eager' : 'lazy'}
-                />
-              ))}
+              <div className="aspect-[9/19.5] overflow-hidden rounded-[2.2rem] bg-black">
+                {screens.map((screen, index) => (
+                  <img
+                    key={screen.id}
+                    src={screen.image}
+                    alt={`${screen.label} screen in StrengthHub Online`}
+                    className={`${index === activeIndex ? 'block' : 'hidden'} h-full w-full object-contain object-top`}
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                  />
+                ))}
+              </div>
             </div>
           </div>
 

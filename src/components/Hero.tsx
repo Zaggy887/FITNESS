@@ -12,7 +12,7 @@ const Hero = () => {
             <GraduationCap className="h-4 w-4" /> Built for Australian university life
           </div>
 
-          <h1 className="max-w-[760px] text-[3.35rem] font-black leading-[0.94] tracking-[-0.065em] text-white sm:text-[4.7rem] lg:text-[5.6rem] xl:text-[6.25rem]">
+          <h1 className="max-w-[760px] text-[2.8rem] font-black leading-[0.94] tracking-[-0.065em] text-white sm:text-[4.7rem] lg:text-[5.6rem] xl:text-[6.25rem]">
             Training built around <span className="text-[#7ED957]">student life.</span>
           </h1>
 
@@ -46,9 +46,16 @@ const Hero = () => {
 
         <div className="relative mx-auto w-full max-w-[620px] lg:ml-auto">
           <div className="absolute inset-10 rounded-full bg-[#7ED957]/10 blur-[90px]" />
-          <div className="relative mx-auto w-[250px] sm:w-[310px] lg:w-[345px]">
+          <div className="relative mx-auto w-[min(78vw,280px)] sm:w-[310px] lg:w-[345px]">
             <div className="rounded-[2.7rem] border border-white/15 bg-[#121214] p-2 shadow-[0_45px_120px_rgba(0,0,0,0.8)]">
-              <img src="/app-dashboard-2026.png" alt="StrengthHub Online student dashboard" className="block w-full rounded-[2.25rem]" fetchPriority="high" />
+              <div className="aspect-[9/19.5] overflow-hidden rounded-[2.25rem] bg-black">
+                <img
+                  src="/app-dashboard-2026.png"
+                  alt="StrengthHub Online student dashboard"
+                  className="h-full w-full object-contain object-top"
+                  fetchPriority="high"
+                />
+              </div>
             </div>
           </div>
 

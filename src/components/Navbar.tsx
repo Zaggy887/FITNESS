@@ -45,8 +45,10 @@ const Navbar = () => {
           </a>
           <button
             onClick={() => setOpen((value) => !value)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-white lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-white lg:hidden"
             aria-label="Toggle navigation"
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -54,7 +56,7 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="border-t border-white/[0.07] bg-[#0A0A0B] px-5 py-5 lg:hidden">
+        <div id="mobile-navigation" className="border-t border-white/[0.07] bg-[#0A0A0B] px-5 py-5 lg:hidden">
           <div className="flex flex-col gap-1">
             {links.map((link) => (
               <button key={link.id} onClick={() => scrollTo(link.id)} className="rounded-xl px-3 py-3 text-left text-sm font-semibold text-white/75 hover:bg-white/[0.05] hover:text-white">

@@ -13,6 +13,10 @@
     background: #0a0a0b;
   }
 
+  section[id] {
+    scroll-margin-top: 72px;
+  }
+
   body {
     margin: 0;
     overflow-x: hidden;
@@ -26,6 +30,12 @@
   button,
   a {
     -webkit-tap-highlight-color: transparent;
+  }
+
+  button:focus-visible,
+  a:focus-visible {
+    outline: 2px solid #7ed957;
+    outline-offset: 3px;
   }
 
   ::selection {
