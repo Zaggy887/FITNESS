@@ -5,12 +5,14 @@ const Footer = () => {
     <footer className="border-t border-white/[0.07] bg-[#0A0A0B] py-10 text-white">
       <div className="container flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <div>
-          <div className="flex flex-col leading-none">
-            <span className="text-xl font-black uppercase tracking-[-0.04em] text-white">STRENGTH</span>
-            <span className="-mt-0.5 text-lg font-black italic uppercase tracking-[-0.04em] text-white">
-              HUB<sup className="ml-0.5 align-super text-[8px] font-bold not-italic tracking-normal text-[#7ED957]">ONLINE</sup>
-            </span>
-          </div>
+          <img
+            src="/strengthhub-logo.png"
+            alt="StrengthHub Online"
+            width={3360}
+            height={630}
+            className="block h-auto w-[240px] max-w-full"
+            loading="lazy"
+          />
           <p className="mt-3 max-w-md text-sm leading-relaxed text-white/[0.38]">A fitness and wellbeing platform designed around Australian university students.</p>
         </div>
 

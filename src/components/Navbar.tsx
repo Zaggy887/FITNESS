@@ -19,11 +19,14 @@ const Navbar = () => {
   return (
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.07] bg-[#0A0A0B]/[0.85] backdrop-blur-xl">
       <div className="container flex h-[72px] items-center justify-between">
-        <button onClick={() => scrollTo('top')} className="flex flex-col text-left leading-none" aria-label="Go to top">
-          <span className="text-lg font-black uppercase tracking-[-0.04em] text-white sm:text-xl">STRENGTH</span>
-          <span className="-mt-0.5 text-base font-black italic uppercase tracking-[-0.04em] text-white sm:text-lg">
-            HUB<sup className="ml-0.5 align-super text-[8px] font-bold not-italic tracking-normal text-[#7ED957]">ONLINE</sup>
-          </span>
+        <button onClick={() => scrollTo('top')} className="flex min-h-11 items-center text-left" aria-label="Go to top">
+          <img
+            src="/strengthhub-logo.png"
+            alt=""
+            width={3360}
+            height={630}
+            className="block h-auto w-[190px] max-w-[60vw] sm:w-[220px]"
+          />
         </button>
 
         <div className="hidden items-center gap-7 lg:flex">
