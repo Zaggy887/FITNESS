@@ -1,5 +1,5 @@
 import { Apple, Dumbbell, LayoutDashboard, TrendingUp, Users } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const screens = [
   {
@@ -54,6 +54,13 @@ const Process = () => {
   const active = screens[activeIndex];
   const ActiveIcon = active.icon;
 
+  useEffect(() => {
+    screens.forEach((screen) => {
+      const image = new Image();
+      image.src = screen.image;
+    });
+  }, []);
+
   return (
     <section className="bg-[#101012] py-20 text-white sm:py-28">
       <div className="container">
@@ -83,15 +90,14 @@ const Process = () => {
             <div className="absolute inset-10 rounded-full bg-[#7ED957]/10 blur-[80px]" />
             <div className="relative overflow-hidden rounded-[2.6rem] border border-white/15 bg-[#0A0A0B] p-2 shadow-[0_35px_100px_rgba(0,0,0,0.65)]">
               <div className="aspect-[9/19.5] overflow-hidden rounded-[2.2rem] bg-black">
-                {screens.map((screen, index) => (
-                  <img
-                    key={screen.id}
-                    src={screen.image}
-                    alt={`${screen.label} screen in StrengthHub Online`}
-                    className={`${index === activeIndex ? 'block' : 'hidden'} h-full w-full object-contain object-top`}
-                    loading={index === 0 ? 'eager' : 'lazy'}
-                  />
-                ))}
+                <img
+                  key={active.id}
+                  src={active.image}
+                  alt={`${active.label} screen in StrengthHub Online`}
+                  className="block h-full w-full object-contain object-top"
+                  loading="eager"
+                  decoding="async"
+                />
               </div>
             </div>
           </div>

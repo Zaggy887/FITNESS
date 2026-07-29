@@ -41,7 +41,7 @@ const MeetTheCoach = () => {
 
           <div>
             <p className="eyebrow">Our story</p>
-            <h2 className="section-heading mt-4">Created because better health support should feel accessible.</h2>
+            <h1 className="section-heading mt-4">Created because better health support should feel accessible.</h1>
             <blockquote className="mt-7 border-l-2 border-[#7ED957] pl-5 text-lg leading-relaxed text-white/[0.72] sm:text-xl">
               “I built StrengthHub because many students want to improve their health but do not have a clear, affordable or sustainable place to start.”
             </blockquote>

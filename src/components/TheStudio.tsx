@@ -35,7 +35,7 @@ const TheStudio = () => {
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div>
               <p className="eyebrow">Designed for real student life</p>
-              <h2 className="section-heading mt-4">Consistency should bend, not break.</h2>
+              <h1 className="section-heading mt-4">Consistency should bend, not break.</h1>
               <p className="section-copy mt-5">
                 University life changes from week to week. StrengthHub is designed to remain useful when schedules become unpredictable, motivation dips or the perfect routine is not possible.
               </p>

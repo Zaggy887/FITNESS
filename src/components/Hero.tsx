@@ -21,12 +21,12 @@ const Hero = () => {
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <button
-              onClick={() => document.getElementById('platform')?.scrollIntoView({ behavior: 'smooth' })}
+            <a
+              href="/platform"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#7ED957] px-7 py-4 text-sm font-bold text-[#0A0A0B] transition hover:bg-[#9FE264]"
             >
-              Explore the platform <ArrowDown className="h-4 w-4" />
-            </button>
+              Explore the platform <ArrowDown className="h-4 w-4 -rotate-90" />
+            </a>
             <a
               href="https://strengthhubonline.app"
               target="_blank"

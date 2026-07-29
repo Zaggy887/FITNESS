@@ -2,29 +2,20 @@ import { ExternalLink, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const links = [
-  { id: 'platform', label: 'Platform' },
-  { id: 'student-life', label: 'Student life' },
-  { id: 'universities', label: 'For universities' },
-  { id: 'story', label: 'Our story' },
+  { href: '/', label: 'Home' },
+  { href: '/platform', label: 'Platform' },
+  { href: '/universities', label: 'For universities' },
+  { href: '/about', label: 'Our story' },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
-  const scrollTo = (id: string) => {
-    if (window.location.pathname !== '/') {
-      window.location.href = id === 'top' ? '/' : `/#${id}`;
-      return;
-    }
-
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    setOpen(false);
-  };
+  const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.07] bg-[#0A0A0B]/[0.85] backdrop-blur-xl">
       <div className="container flex h-[72px] items-center justify-between">
-        <button onClick={() => scrollTo('top')} className="flex min-h-11 items-center text-left" aria-label="Go to top">
+        <a href="/" className="flex min-h-11 items-center text-left" aria-label="StrengthHub Online home">
           <img
             src="/strengthhub-logo.png"
             alt=""
@@ -32,13 +23,18 @@ const Navbar = () => {
             height={630}
             className="block h-auto w-[190px] max-w-[60vw] sm:w-[220px]"
           />
-        </button>
+        </a>
 
         <div className="hidden items-center gap-7 lg:flex">
           {links.map((link) => (
-            <button key={link.id} onClick={() => scrollTo(link.id)} className="text-sm font-medium text-white/[0.58] transition-colors hover:text-white">
+            <a
+              key={link.href}
+              href={link.href}
+              aria-current={currentPath === link.href ? 'page' : undefined}
+              className={`text-sm font-medium transition-colors hover:text-white ${currentPath === link.href ? 'text-white' : 'text-white/[0.58]'}`}
+            >
               {link.label}
-            </button>
+            </a>
           ))}
         </div>
 
@@ -67,9 +63,15 @@ const Navbar = () => {
         <div id="mobile-navigation" className="border-t border-white/[0.07] bg-[#0A0A0B] px-5 py-5 lg:hidden">
           <div className="flex flex-col gap-1">
             {links.map((link) => (
-              <button key={link.id} onClick={() => scrollTo(link.id)} className="rounded-xl px-3 py-3 text-left text-sm font-semibold text-white/75 hover:bg-white/[0.05] hover:text-white">
+              <a
+                key={link.href}
+                href={link.href}
+                aria-current={currentPath === link.href ? 'page' : undefined}
+                onClick={() => setOpen(false)}
+                className={`rounded-xl px-3 py-3 text-left text-sm font-semibold hover:bg-white/[0.05] hover:text-white ${currentPath === link.href ? 'bg-white/[0.05] text-white' : 'text-white/75'}`}
+              >
                 {link.label}
-              </button>
+              </a>
             ))}
             <a
               href="https://strengthhubonline.app"

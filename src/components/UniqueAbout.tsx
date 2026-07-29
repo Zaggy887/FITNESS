@@ -46,7 +46,7 @@ const UniqueAbout = () => {
       <div className="container relative">
         <div className="max-w-3xl">
           <p className="eyebrow">The platform</p>
-          <h2 className="section-heading mt-4">One place for the habits that shape student wellbeing.</h2>
+          <h1 className="section-heading mt-4">One place for the habits that shape student wellbeing.</h1>
           <p className="section-copy mt-5">
             StrengthHub does more than display workouts. It connects training, everyday habits, practical food education, progress and community so students can see how the pieces work together.
           </p>
