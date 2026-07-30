@@ -65,7 +65,7 @@ const PrivacyPolicy = () => {
                   <ul className="mt-2 list-disc space-y-1.5 pl-6 marker:text-[#7ED957]">
                     <li>Your goals, training experience and preferences.</li>
                     <li>Workouts, sessions and exercises you log.</li>
-                    <li>Nutrition entries, meal logs and food &quot;check-in&quot; tags.</li>
+                    <li>Nutrition entries, meal logs and food &quot;check in&quot; tags.</li>
                     <li>Body metrics you choose to enter, such as weight, and streaks/progress.</li>
                     <li>Any injuries, limitations or dietary preferences you tell the app so it can tailor guidance to you.</li>
                   </ul>
@@ -75,7 +75,7 @@ const PrivacyPolicy = () => {
                   <h3 className="font-bold text-white">Meal photos (only when you use the photo scan)</h3>
                   <ul className="mt-2 list-disc space-y-1.5 pl-6 marker:text-[#7ED957]">
                     <li>
-                      When you take or upload a photo of a meal, the image is sent to Google&apos;s Gemini AI to estimate its nutrition (see section 4). <strong className="font-semibold text-white">We do not store your meal photos on our servers</strong> — only the resulting estimate (for example the meal name and calorie/macro figures) is saved to your account if you choose to log it.
+                      When you take or upload a photo of a meal, the image is sent to Google&apos;s Gemini AI to estimate its nutrition (see section 4). <strong className="font-semibold text-white">We do not store your meal photos on our servers.</strong> Only the resulting estimate (for example the meal name and calorie/macro figures) is saved to your account if you choose to log it.
                     </li>
                   </ul>
                 </div>
@@ -93,7 +93,7 @@ const PrivacyPolicy = () => {
                   <h3 className="font-bold text-white">Technical data</h3>
                   <ul className="mt-2 list-disc space-y-1.5 pl-6 marker:text-[#7ED957]">
                     <li>
-                      Basic information needed to run a mobile app and keep it secure (for example app version and general error information). We do <strong className="font-semibold text-white">not</strong> use third-party analytics or advertising SDKs.
+                      Basic information needed to run a mobile app and keep it secure (for example app version and general error information). We do <strong className="font-semibold text-white">not</strong> use external analytics or advertising SDKs.
                     </li>
                   </ul>
                 </div>
@@ -133,7 +133,7 @@ const PrivacyPolicy = () => {
                     <li>
                       <strong className="font-semibold text-white">Meal photo scan:</strong> the photo you submit is sent to Google&apos;s Gemini AI to estimate its nutrition. The result is an <strong className="font-semibold text-white">estimate only</strong> and is not a substitute for a nutrition label or professional dietary advice.
                     </li>
-                    <li>Any other AI-assisted guidance sends the relevant text you provide to Google&apos;s Gemini AI to generate a response.</li>
+                    <li>Any other guidance assisted by AI sends the relevant text you provide to Google&apos;s Gemini AI to generate a response.</li>
                   </ul>
                 </div>
                 <p>
@@ -150,8 +150,8 @@ const PrivacyPolicy = () => {
                 <div>
                   <p>We share data only with the service providers that run the app for us, and only as needed to provide the service:</p>
                   <ul className="mt-2 list-disc space-y-1.5 pl-6 marker:text-[#7ED957]">
-                    <li><strong className="font-semibold text-white">Google Firebase</strong> — authentication, cloud database and storage, and hosting (Google LLC / Google Cloud).</li>
-                    <li><strong className="font-semibold text-white">Google Gemini (via Firebase AI Logic)</strong> — to power the AI features described in section 4.</li>
+                    <li><strong className="font-semibold text-white">Google Firebase:</strong> authentication, cloud database and storage, and hosting (Google LLC / Google Cloud).</li>
+                    <li><strong className="font-semibold text-white">Google Gemini (via Firebase AI Logic):</strong> powers the AI features described in section 4.</li>
                   </ul>
                 </div>
                 <p>
@@ -175,7 +175,7 @@ const PrivacyPolicy = () => {
                 7. How long we keep your data
               </h2>
               <p className="mt-5">
-                We keep your account and app data for as long as your account is active. If you delete your account (see section 8), we delete or de-identify your personal data that we hold, except where we are required to keep certain records by law.
+                We keep your account and app data for as long as your account is active. If you delete your account (see section 8), we delete your personal data or remove identifying details, except where we are required to keep certain records by law.
               </p>
             </section>
 
@@ -187,9 +187,9 @@ const PrivacyPolicy = () => {
                 <div>
                   <p>You can:</p>
                   <ul className="mt-2 list-disc space-y-1.5 pl-6 marker:text-[#7ED957]">
-                    <li><strong className="font-semibold text-white">Access and correct</strong> your information — most of it is editable directly in the app.</li>
-                    <li><strong className="font-semibold text-white">Delete your account and data</strong> — you can request deletion from within the app or by emailing {emailLink}. When you delete your account, we remove your login and associated personal data.</li>
-                    <li><strong className="font-semibold text-white">Control notifications</strong> — turn reminders on or off in the app&apos;s settings or in your device settings.</li>
+                    <li><strong className="font-semibold text-white">Access and correct</strong> your information. Most of it is editable directly in the app.</li>
+                    <li><strong className="font-semibold text-white">Delete your account and data.</strong> You can request deletion from within the app or by emailing {emailLink}. When you delete your account, we remove your login and associated personal data.</li>
+                    <li><strong className="font-semibold text-white">Control notifications.</strong> Turn reminders on or off in the app&apos;s settings or in your device settings.</li>
                     <li><strong className="font-semibold text-white">Contact us</strong> about any privacy request at {emailLink}.</li>
                   </ul>
                 </div>
@@ -213,7 +213,7 @@ const PrivacyPolicy = () => {
                 10. Health and wellbeing disclaimer
               </h2>
               <p className="mt-5">
-                StrengthHub Online provides <strong className="font-semibold text-white">general fitness, training and nutrition information for health and wellbeing</strong>. It is <strong className="font-semibold text-white">not a medical device</strong> and does not provide medical advice, diagnosis or treatment. Calorie and nutrition figures (including AI photo estimates) are approximate. Always seek advice from a qualified professional before making significant changes to your exercise or diet, and for any medical or mental-health concern.
+                StrengthHub Online provides <strong className="font-semibold text-white">general fitness, training and nutrition information for health and wellbeing</strong>. It is <strong className="font-semibold text-white">not a medical device</strong> and does not provide medical advice, diagnosis or treatment. Calorie and nutrition figures (including AI photo estimates) are approximate. Always seek advice from a qualified professional before making significant changes to your exercise or diet, and for any medical or mental health concern.
               </p>
             </section>
 

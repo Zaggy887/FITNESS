@@ -8,10 +8,10 @@ const ContactForm = () => {
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[28rem] w-[28rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#7ED957]/[0.07] blur-[110px]" />
       <div className="container relative">
         <div className="mx-auto max-w-3xl rounded-[1.8rem] border border-white/[0.09] bg-[#0A0A0B] p-7 text-center shadow-[0_35px_100px_rgba(0,0,0,0.35)] sm:p-12" data-reveal="scale">
-          <p className="eyebrow">See whether StrengthHub fits your university</p>
-          <h2 className="mt-4 text-3xl font-black tracking-[-0.045em] text-white sm:text-5xl">Let’s talk about your students.</h2>
+          <p className="eyebrow">See whether StrengthHub fits your organisation</p>
+          <h2 className="mt-4 text-3xl font-black tracking-[-0.045em] text-white sm:text-5xl">Let’s talk about the young adults you support.</h2>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/[0.52]">
-            Book a free 30-minute walkthrough to explore the app, discuss your student cohort and see how a tailored rollout could work.
+            Book a free 30 minute walkthrough to explore the app, discuss your audience or cohort and see how a tailored university or organisational rollout could work.
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
@@ -30,7 +30,7 @@ const ContactForm = () => {
               <Mail className="h-4 w-4" /> Email us
             </a>
           </div>
-          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-white/30">Melbourne, Australia · Flexible university partnerships</p>
+          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-white/30">Melbourne, Australia · Flexible university and organisational partnerships</p>
         </div>
       </div>
     </section>

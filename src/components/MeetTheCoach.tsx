@@ -4,17 +4,17 @@ const credentials = [
   {
     icon: Dumbbell,
     title: '7+ years of training experience',
-    description: 'Hands-on experience across strength, body composition and sustainable lifestyle change.',
+    description: 'Practical experience across strength, body composition and sustainable lifestyle change.',
   },
   {
     icon: GraduationCap,
-    title: 'Built from inside student life',
+    title: 'Built from inside young adult life',
     description: 'Founded by a university student who understands exams, commuting, work and changing routines.',
   },
   {
     icon: Users,
-    title: 'Student-first by design',
-    description: 'The platform is built to feel achievable and useful, not like another obligation students fail to maintain.',
+    title: 'Designed around young adults',
+    description: 'The platform is built to feel achievable and useful, not like another obligation young people fail to maintain.',
   },
   {
     icon: Lightbulb,
@@ -31,7 +31,14 @@ const MeetTheCoach = () => {
           <div className="relative" data-reveal="left">
             <div className="absolute -inset-6 rounded-[2.5rem] bg-[#7ED957]/[0.08] blur-[55px]" />
             <div className="relative overflow-hidden rounded-[1.8rem] border border-white/10 bg-[#121214]">
-              <img src="/IMG_0875.jpg" alt="Zak, founder of StrengthHub Online" className="h-[360px] w-full object-cover object-[35%_center] sm:h-[520px]" loading="lazy" />
+              <img
+                src="/founder-zak-upright.jpg"
+                alt="Zak Sztrochlic, founder of StrengthHub Online"
+                width={900}
+                height={1200}
+                className="h-[360px] w-full object-cover object-[35%_center] sm:h-[520px]"
+                decoding="async"
+              />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/70 to-transparent p-6 pt-20">
                 <p className="text-xl font-black text-white">Zak Sztrochlic</p>
                 <p className="mt-1 text-sm font-semibold text-[#7ED957]">Founder, StrengthHub Online</p>

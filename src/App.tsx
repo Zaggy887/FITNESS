@@ -9,6 +9,8 @@ import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import HomeSections from "./components/HomeSections";
+import NotFound from "./components/NotFound";
+import StickyMobileCta from "./components/StickyMobileCta";
 import useScrollAnimation from "./hooks/useScrollAnimation";
 
 function App() {
@@ -40,12 +42,13 @@ function App() {
           <ContactForm />
         </main>
         <Footer />
+        <StickyMobileCta />
       </div>
     );
   }
 
   if (path === '/universities') {
-    document.title = 'For Universities | StrengthHub Online';
+    document.title = 'For Universities & Organisations | StrengthHub Online';
 
     return (
       <div className="page-enter min-h-screen">
@@ -55,6 +58,7 @@ function App() {
           <ContactForm />
         </main>
         <Footer />
+        <StickyMobileCta />
       </div>
     );
   }
@@ -70,11 +74,26 @@ function App() {
           <ContactForm />
         </main>
         <Footer />
+        <StickyMobileCta />
       </div>
     );
   }
 
-  document.title = 'StrengthHub Online | Student Fitness & Wellbeing Platform';
+  if (path !== '/') {
+    document.title = 'Page not found | StrengthHub Online';
+
+    return (
+      <div className="page-enter min-h-screen">
+        <Navbar />
+        <div className="pt-[72px]">
+          <NotFound />
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  document.title = 'StrengthHub Online | Young Adult Fitness & Wellbeing Platform';
 
   return (
     <div className="page-enter min-h-screen">
@@ -84,6 +103,7 @@ function App() {
       <HomeSections />
       <ContactForm />
       <Footer />
+      <StickyMobileCta />
     </div>
   );
 }

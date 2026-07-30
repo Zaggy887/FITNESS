@@ -27,7 +27,7 @@ const Articles = () => {
     {
       title: 'The Science of Effective Online Personal Training',
       image: 'https://images.pexels.com/photos/4162449/pexels-photo-4162449.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1',
-      desc: 'Discover how virtual coaching combines cutting-edge technology with proven training principles to deliver results that match or exceed in-person training.',
+      desc: 'Discover how virtual coaching combines advanced technology with proven training principles to deliver results that match or exceed training in person.',
       link: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8555781/',
       alt: 'Person training with online guidance',
       date: 'January 15, 2024',
