@@ -34,6 +34,24 @@ const ContactForm = () => {
 
       if (error) throw error;
 
+      try {
+        await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/contact-notify`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          },
+          body: JSON.stringify({
+            full_name: form.full_name.trim(),
+            email: form.email.trim(),
+            phone: form.phone.trim(),
+            goals: form.goals.trim(),
+          }),
+        });
+      } catch (notifyErr) {
+        console.error('Notification email failed:', notifyErr);
+      }
+
       setStatus('success');
       setForm({ full_name: '', email: '', phone: '', goals: '' });
     } catch (err) {
