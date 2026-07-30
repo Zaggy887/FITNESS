@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="pointer-events-none absolute right-[-12rem] top-[35%] h-[32rem] w-[32rem] rounded-full bg-[#3B82F6]/[0.08] blur-[120px]" />
 
       <div className="container relative grid min-h-[calc(100vh-72px)] items-center gap-8 py-16 sm:gap-12 lg:grid-cols-[1.04fr_0.96fr] lg:grid-rows-[auto_auto] lg:gap-x-10 lg:gap-y-8 lg:py-20">
-        <div className="max-w-3xl lg:col-start-1 lg:row-start-1 lg:self-end" data-reveal>
+        <div className="order-1 max-w-3xl lg:col-start-1 lg:row-start-1 lg:self-end lg:order-none" data-reveal>
           <div className="mb-7 hidden items-center gap-2 rounded-full border border-[#7ED957]/25 bg-[#7ED957]/10 px-3.5 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#9FE264] sm:inline-flex">
             <GraduationCap className="h-4 w-4" /> Built for Australian students and young adults
           </div>
@@ -21,7 +21,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="relative -mt-3 mx-auto w-full max-w-[620px] md:mt-0 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:ml-auto lg:self-center order-first lg:order-none" data-reveal="scale" data-delay="1">
+        <div className="relative order-2 -mt-3 mx-auto w-full max-w-[620px] md:mt-0 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:ml-auto lg:self-center lg:order-none" data-reveal="scale" data-delay="1">
           <div className="absolute inset-10 rounded-full bg-[#7ED957]/10 blur-[90px]" />
           <div className="relative mx-auto w-[min(64vw,240px)] sm:w-[310px] lg:w-[345px]">
             <div className="rounded-[2.7rem] border border-white/15 bg-[#121214] p-2 shadow-[0_45px_120px_rgba(0,0,0,0.8)]">
@@ -47,7 +47,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="max-w-3xl lg:col-start-1 lg:row-start-2 lg:self-start" data-reveal data-delay="1">
+        <div className="order-3 max-w-3xl lg:col-start-1 lg:row-start-2 lg:self-start lg:order-none" data-reveal data-delay="1">
           <div className="flex flex-col gap-3 sm:flex-row">
             <a
               href="https://strengthhubonline.app"
