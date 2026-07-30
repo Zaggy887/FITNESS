@@ -1,4 +1,4 @@
-import { ArrowDown, ExternalLink, GraduationCap, ShieldCheck } from 'lucide-react';
+import { ArrowRight, ExternalLink, GraduationCap, ShieldCheck } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -50,20 +50,23 @@ const Hero = () => {
         <div className="max-w-3xl lg:col-start-1 lg:row-start-2 lg:self-start" data-reveal data-delay="1">
           <div className="flex flex-col gap-3 sm:flex-row">
             <a
-              href="/platform"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#7ED957] px-7 py-4 text-sm font-bold text-[#0A0A0B] transition hover:bg-[#9FE264]"
-            >
-              Explore the platform <ArrowDown className="h-4 w-4 -rotate-90" />
-            </a>
-            <a
               href="https://strengthhubonline.app"
               target="_blank"
               rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#7ED957] px-7 py-4 text-sm font-bold text-[#0A0A0B] transition hover:bg-[#9FE264]"
+            >
+              Try the app <ExternalLink className="h-4 w-4" />
+            </a>
+            <a
+              href="/universities"
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.05] px-7 py-4 text-sm font-bold text-white transition hover:border-white/30 hover:bg-white/[0.08]"
             >
-              View app demo <ExternalLink className="h-4 w-4" />
+              For universities <ArrowRight className="h-4 w-4" />
             </a>
           </div>
+          <a href="/platform" className="mt-3 inline-flex min-h-11 items-center gap-2 px-1 text-sm font-semibold text-white/55 transition hover:text-white">
+            Explore how the platform works <ArrowRight className="h-4 w-4" />
+          </a>
 
           <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/45">
             <span className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-[#7ED957]" /> Evidence informed education</span>

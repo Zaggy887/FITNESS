@@ -9,6 +9,8 @@ import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import HomeSections from "./components/HomeSections";
+import NotFound from "./components/NotFound";
+import StickyMobileCta from "./components/StickyMobileCta";
 import useScrollAnimation from "./hooks/useScrollAnimation";
 
 function App() {
@@ -40,6 +42,7 @@ function App() {
           <ContactForm />
         </main>
         <Footer />
+        <StickyMobileCta />
       </div>
     );
   }
@@ -55,6 +58,7 @@ function App() {
           <ContactForm />
         </main>
         <Footer />
+        <StickyMobileCta />
       </div>
     );
   }
@@ -70,6 +74,21 @@ function App() {
           <ContactForm />
         </main>
         <Footer />
+        <StickyMobileCta />
+      </div>
+    );
+  }
+
+  if (path !== '/') {
+    document.title = 'Page not found | StrengthHub Online';
+
+    return (
+      <div className="page-enter min-h-screen">
+        <Navbar />
+        <div className="pt-[72px]">
+          <NotFound />
+        </div>
+        <Footer />
       </div>
     );
   }
@@ -84,6 +103,7 @@ function App() {
       <HomeSections />
       <ContactForm />
       <Footer />
+      <StickyMobileCta />
     </div>
   );
 }

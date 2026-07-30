@@ -34,10 +34,10 @@ const Navbar = () => {
       <div className="container relative z-20 flex h-[72px] items-center justify-between">
         <a href="/" className="flex min-h-11 items-center text-left" aria-label="StrengthHub Online home">
           <img
-            src="/strengthhub-logo.png"
+            src="/strengthhub-logo-960.png"
             alt=""
-            width={3360}
-            height={630}
+            width={960}
+            height={180}
             className="block h-auto w-[190px] max-w-[60vw] sm:w-[220px]"
           />
         </a>
