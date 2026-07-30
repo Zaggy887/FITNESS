@@ -5,7 +5,6 @@ import UniqueAbout from "./components/UniqueAbout";
 import Process from "./components/Process";
 import TheStudio from "./components/TheStudio";
 import MeetTheCoach from "./components/MeetTheCoach";
-import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import HomeSections from "./components/HomeSections";
@@ -39,7 +38,6 @@ function App() {
         <main className="pt-[72px]">
           <UniqueAbout />
           <Process />
-          <ContactForm />
         </main>
         <Footer />
         <StickyMobileCta />
@@ -55,7 +53,6 @@ function App() {
         <Navbar />
         <main className="pt-[72px]">
           <TheStudio />
-          <ContactForm />
         </main>
         <Footer />
         <StickyMobileCta />
@@ -71,7 +68,6 @@ function App() {
         <Navbar />
         <main className="pt-[72px]">
           <MeetTheCoach />
-          <ContactForm />
         </main>
         <Footer />
         <StickyMobileCta />
@@ -101,7 +97,6 @@ function App() {
       <Hero />
       <StatsBanner />
       <HomeSections />
-      <ContactForm />
       <Footer />
       <StickyMobileCta />
     </div>
