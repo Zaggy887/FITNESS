@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Calendar, ExternalLink, Mail, Send, CheckCircle2, Loader2 } from 'lucide-react';
-import { supabase } from '../lib/supabase';
+import { supabase, isSupabaseConfigured } from '../lib/supabase';
 
 const CALENDLY_URL = 'https://calendly.com/strengthhubonline-info/30min';
 
@@ -19,6 +19,12 @@ const ContactForm = () => {
     e.preventDefault();
     setStatus('submitting');
     setErrorMsg('');
+
+    if (!isSupabaseConfigured) {
+      setErrorMsg('Form submissions are not configured yet. Please email us directly.');
+      setStatus('error');
+      return;
+    }
 
     try {
       const { error } = await supabase.from('contact_submissions').insert({
