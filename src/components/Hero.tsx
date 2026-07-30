@@ -23,7 +23,7 @@ const Hero = () => {
 
         <div className="relative -mt-3 mx-auto w-full max-w-[620px] md:mt-0 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:ml-auto lg:self-center order-first lg:order-none" data-reveal="scale" data-delay="1">
           <div className="absolute inset-10 rounded-full bg-[#7ED957]/10 blur-[90px]" />
-          <div className="relative mx-auto w-[min(78vw,280px)] sm:w-[310px] lg:w-[345px]">
+          <div className="relative mx-auto w-[min(64vw,240px)] sm:w-[310px] lg:w-[345px]">
             <div className="rounded-[2.7rem] border border-white/15 bg-[#121214] p-2 shadow-[0_45px_120px_rgba(0,0,0,0.8)]">
               <div className="aspect-[9/19.5] overflow-hidden rounded-[2.25rem] bg-black">
                 <img
