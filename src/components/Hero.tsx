@@ -16,10 +16,11 @@ const Hero = () => {
             Training built around <span className="text-[#7ED957]">student life.</span>
           </h1>
 
-          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/[0.58] sm:text-xl">
+        </div>
+
+        <p className="order-3 max-w-2xl text-lg leading-relaxed text-white/[0.58] sm:hidden" data-reveal>
             StrengthHub Online brings fitness, nutrition education, habit support and community into one platform designed for young adults. Built for students and adaptable for universities and organisations across Australia, it helps young people build confidence and consistency without expecting life to revolve around the gym.
           </p>
-        </div>
 
         <div className="relative order-2 -mt-3 mx-auto w-full max-w-[620px] md:mt-0 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:ml-auto lg:self-center lg:order-none" data-reveal="scale" data-delay="1">
           <div className="absolute inset-10 rounded-full bg-[#7ED957]/10 blur-[90px]" />
@@ -47,7 +48,10 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="order-3 max-w-3xl lg:col-start-1 lg:row-start-2 lg:self-start lg:order-none" data-reveal data-delay="1">
+        <div className="order-4 max-w-3xl lg:col-start-1 lg:row-start-2 lg:self-start lg:order-none" data-reveal data-delay="1">
+          <p className="hidden sm:block mb-7 max-w-2xl text-lg leading-relaxed text-white/[0.58] sm:text-xl">
+            StrengthHub Online brings fitness, nutrition education, habit support and community into one platform designed for young adults. Built for students and adaptable for universities and organisations across Australia, it helps young people build confidence and consistency without expecting life to revolve around the gym.
+          </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <a
               href="https://strengthhubonline.app"
