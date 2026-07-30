@@ -21,7 +21,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="relative -mt-3 mx-auto w-full max-w-[620px] md:mt-0 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:ml-auto lg:self-center" data-reveal="scale" data-delay="1">
+        <div className="relative -mt-3 mx-auto w-full max-w-[620px] md:mt-0 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:ml-auto lg:self-center order-first lg:order-none" data-reveal="scale" data-delay="1">
           <div className="absolute inset-10 rounded-full bg-[#7ED957]/10 blur-[90px]" />
           <div className="relative mx-auto w-[min(78vw,280px)] sm:w-[310px] lg:w-[345px]">
             <div className="rounded-[2.7rem] border border-white/15 bg-[#121214] p-2 shadow-[0_45px_120px_rgba(0,0,0,0.8)]">
@@ -53,7 +53,7 @@ const Hero = () => {
               href="https://strengthhubonline.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#7ED957] px-7 py-4 text-sm font-bold text-[#0A0A0B] transition hover:bg-[#9FE264]"
+              className="hidden sm:inline-flex items-center justify-center gap-2 rounded-xl bg-[#7ED957] px-7 py-4 text-sm font-bold text-[#0A0A0B] transition hover:bg-[#9FE264]"
             >
               Try the app <ExternalLink className="h-4 w-4" />
             </a>
